@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ChiPy Coding Workshops</title><link>https://chicagopython.github.io/</link><description>The Chicago Python User Group's coding workshops for Python Project Night.</description><atom:link href="https://chicagopython.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:chicago-sig-organizers@python.org"&gt;Chicago Python User Group&lt;/a&gt; 
+&lt;a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html"&gt;
+&lt;img alt="Gnu Public License version 3.0"
+style="border-width:0;"
+src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Fri, 15 Mar 2019 12:52:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs></channel></rss>
