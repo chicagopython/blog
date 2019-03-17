@@ -3,7 +3,7 @@
 &lt;a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html"&gt;
 &lt;img alt="Gnu Public License version 3.0"
 style="border-width:0;"
-src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Sat, 16 Mar 2019 15:14:59 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Python Koans</title><link>https://chicagopython.github.io/posts/python-koans/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;p&gt;For this exercise we will learn the Zen of Python using Test Driven Development.
+src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Sun, 17 Mar 2019 04:05:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Python Koans</title><link>https://chicagopython.github.io/posts/python-koans/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;p&gt;For this exercise we will learn the Zen of Python using Test Driven Development.
 Python Koans is a suite of broken tests, which are written against Python code that demonstrate how to Pythonic code.
 Your job is to fix the broken tests by filling in the missing parts of the code.&lt;/p&gt;
 &lt;ul&gt;
@@ -19,15 +19,13 @@ would be using, change into python2 or python3 directory.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;You'll see an output like&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Thinking AboutLists
   test_creating_lists has damaged your karma.&lt;/p&gt;
 &lt;p&gt;You have not yet reached enlightenment ...
   AssertionError: '-=&amp;gt; FILL ME IN! &amp;lt;=-' != 0&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
 &lt;p&gt;Please meditate on the following code:
  File "/Users/t/Downloads/python_koans-chipy_mentorship_coding_dojo_2/python3/koans/about_lists.py", line 14, in test_creating_lists
     self.assertEqual(__, len(empty_list))&lt;/p&gt;
