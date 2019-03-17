@@ -2,8 +2,8 @@
 .. title: Django Project Night Tracker
 .. slug: django-project-night-tracker
 .. date: 2019-03-17 01:11:33 UTC-05:00
-.. tags: django, webdev
-.. category: 
+.. tags: django
+.. category:  web-dev
 .. link: 
 .. description: 
 .. type: text
