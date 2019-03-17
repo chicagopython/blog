@@ -16,7 +16,7 @@
 <meta name="msapplication-TileColor" content="#00aba9">
 <meta name="theme-color" content="#cceeff">
 <!-- favicons generated using http://realfavicongenerator.net/ --><!--[if lt IE 9]><script src="assets/js/html5shiv-printshiv.min.js"></script><![endif]--><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="prefetch" href="posts/django-project-night-tracker/" type="text/html">
+<link rel="prefetch" href="posts/flask-app-for-exchange-rates/" type="text/html">
 </head>
 <body>
     <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -32,7 +32,117 @@
     
     
     </ul></nav></header><main id="content"><div class="postindex">
-    <article class="h-entry post-text"><img src="assets/img/team-sales-business-meeting_4460x4460.jpg" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/django-project-night-tracker/" class="u-url">Django Project Night Tracker</a></h3>
+    <article class="h-entry post-text"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2850&amp;q=80" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/flask-app-for-exchange-rates/" class="u-url">Flask App for Exchange Rates</a></h3>
+    <span class="metadata">
+        <time datetime="2019-03-17T10:39:07-05:00">March 17, 2019</time><i class="fas fa-tags"></i>
+        
+      <ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="categories/cat_web-dev/" rel="category"> web-dev</a></li>
+            <li><a class="tag p-category" href="categories/flask/" rel="tag">flask</a></li>
+      </ul></span>
+    <!--
+    <div class="p-summary entry-summary">
+    <div><h2>Flask App for Exchange Rates</h2>
+<h3>Objective</h3>
+<p>All developers in the modern day need to understand web technologies at some level. Whether you're interacting with a Jupyter notebook or querying a web api, understanding how a CLIENT requests information from a SERVER and to see how the SERVER produces its response is incredibly valuable.</p>
+<h3>Overview</h3>
+<p>We will make a web app that serves as both a CLIENT to an external api (exchangeratesapi.io). This app will show conversion rates for currencies, and then add some more complex data.</p>
+<h3>Prerequisites</h3>
+<p>For this project we recommend all use Atom (or Sublime) to write code and a shell/terminal to execute the program. All instructions will be given assuming a Python 3.6 install.</p>
+<p>You should probably have the <a href="http://flask.pocoo.org/docs/1.0/quickstart/">Flask documentation</a> up as we go through the exercise.</p>
+<h3>Initial Setup</h3>
+<p>Create a folder for this project: <code>mkdir mentorship_web &amp;&amp; cd mentorship_web</code></p>
+<p>If you are using Linux or OS X, run the following to create a new virtualenv</p>
+<pre class="code literal-block"><span></span>python3 -m venv venv
+source venv/bin/activate
+</pre>
+
+
+<p>On Windows, run the following</p>
+<pre class="code literal-block"><span></span>python3 -m venv venv
+venv\Scripts\activate
+</pre>
+
+
+<p>Install Flask, our main web-app: <code>pip install flask</code></p>
+<p>Create a new file called <code>app.py</code></p>
+<pre class="code literal-block"><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s2">"Hello World!"</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre>
+
+
+<p>Run your flask app: <code>python app.py</code></p>
+<p>It should display a link, paste that in your browser to see the running code.</p>
+<h3>Display some Exchange Rates</h3>
+<p>Define a dictionary with three entries like the following inside your hello route:</p>
+<pre class="code literal-block"><span></span>exchange_rates = {
+  'EUR': '...',
+  'GBP': '...',
+    ' 
+</pre>
+
+
+<p>Pick any currencies you want! We'll display the values as they convert to USD (because we are in Chicago). Better specify that now for clarity. Add this line just bellow your <code>app =</code> definition, we'll use it later:</p>
+<pre class="code literal-block"><span></span>BASE_CURRENCY = 'USD'
+</pre>
+
+
+<p>Of course, fill in the <code>...</code> with real currency values, otherwise our site is pointless! Use a tool like <a href="https://www.x-rates.com/table/?from=USD&amp;amount=1">X-Rates</a> to look up the currency conversions.</p>
+<p>Now update the return string in the hello route to include the information about these currencies.</p>
+<h3>Make it Beautiful</h3>
+<p>Returning strings is fine...I suppose. But I want big, beautiful HTML! Research Flask's <a href="http://flask.pocoo.org/docs/1.0/quickstart/#rendering-templates"><code>render_template</code> function</a> and add some beautiful looking HTML to format your. Hint: You'll want to create a <code>templates/</code> folder in the same directory as your <code>app.py</code>, and if you aren't using a kind of loop in your template...it's going to get real tough for you later! </p>
+<p>Test your work by adding another currency to your <code>exchange_rates</code> dictionary and watch how your page changes.</p>
+<h3>Refactor</h3>
+<p>Define a function right under your <code>BASE_CURRENCY</code> definition that looks like the following:</p>
+<pre class="code literal-block"><span></span>def exchange_rates():
+  return # Move your dictionary here
+</pre>
+
+
+<p>Then replace any references in your code to use the function instead of defining the dictionary in your route!</p>
+<h3>Automatic Data</h3>
+<p>Now comes the fun part. What if we could get the exchange rates on a live feed from a third party service? We can with <a href="http://exchangeratesapi.io">ExchangeRatesAPI.io</a>. This is a free api that runs over simple HTTPS! We'll have something like the following: </p>
+<pre class="code literal-block"><span></span>def exchange_rates():
+  response = requests.get('https://api.exchangeratesapi.io/latest')
+  return # What are we going to put here now? 
+</pre>
+
+
+<p>Read up on <a href="http://docs.python-requests.org/en/master/user/quickstart/#json-response-content">Requests' built in JSON Parsing</a> and try to extract the data from the API response. Your end goal is to return all of the 
+currencies from this function. </p>
+<p>Hint: This problem is a great time to use the Python debugger (<a href="https://docs.python.org/3/library/pdb.html"><code>pdb</code></a>)! Insert the following line before the <code>return</code> command and interact with your server on the command line. So cool! </p>
+<pre class="code literal-block"><span></span><span class="kn">import</span> <span class="nn">pdb</span><span class="p">;</span> <span class="n">pdb</span><span class="o">.</span><span class="n">set_trace</span><span class="p">()</span>
+</pre>
+
+
+<h4>Correct Currency</h4>
+<p>Are we sure the previous step is getting us the currency in our <code>BASE_CURRENCY</code> variable? Investigate the <a href="http://exchangeratesapi.io">api docs</a> to find out how you can change the base currency to the one we want.</p>
+<h2>You DID it! Now what?</h2>
+<p>From here on out we are trusting that you can use the documentation, look for resources on your own, and come up with clever solutions to these problems. Try each one, and if you get stuck, move on to a different one! Ask for help if you want more clarification or can't think of a way to do it. </p>
+<h3>Information Overload</h3>
+<p>Could we provide a form that would let people get only the currency they want? I don't need every currency. We'd probably use some kind of html form. And I bet Flask has some documentation on receiving requests from the client.</p>
+<p>e.g. Instead of <code>JPY-&gt;*</code> I only want to see <code>USD-&gt;GBP</code> or I only want to see <code>USD-&gt;JPY</code>.</p>
+<h3>Order by Value</h3>
+<p>How could we order the currencies by the value of the currency?</p>
+<p>e.g. If something is <code>.00001 USD</code>, lets list that last, and if something is <code>987654321 USD</code> lets list that first.</p>
+<h3>User-Specified Base Currency</h3>
+<p>Some users of our product have complained, rightfully, that they can only get the currency listed in <code>USD</code>. We should let them specify what currency they want.</p>
+<p>e.g. Instead of <code>USD-&gt;*</code> I want to see <code>CNY-&gt;*</code></p>
+<h4>Bonus: Links to each user-specified currency from the currency list</h4>
+<p>Wouldn't it be great if each currency as it appeared would link to its own currency conversion?</p>
+<p>e.g. From the home page I could click on <code>JPY</code> to find out all of the conversions from <code>JPY-&gt;*</code>. </p>
+<h3>Caching</h3>
+<p>Do we really need to use an API request every time we do a call? How could we store the results of each run to avoid API abuse.</p></div>    <hr/>
+    </div>-->
+    </article><article class="h-entry post-text"><img src="assets/img/team-sales-business-meeting_4460x4460.jpg" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/django-project-night-tracker/" class="u-url">Django Project Night Tracker</a></h3>
     <span class="metadata">
         <time datetime="2019-03-17T01:11:33-05:00">March 17, 2019</time><i class="fas fa-tags"></i>
         
