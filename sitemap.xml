@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>https://chicagopython.github.io/archive.html</loc>
-  <lastmod>2019-03-17T15:53:00Z</lastmod>
+  <lastmod>2019-03-17T18:43:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/categories/</loc>
@@ -67,11 +67,15 @@
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/</loc>
-  <lastmod>2019-03-17T15:53:00Z</lastmod>
+  <lastmod>2019-03-17T17:13:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/command-line-app-for-grouping-project-night-challengers/</loc>
   <lastmod>2019-03-17T15:16:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://chicagopython.github.io/posts/data-analysis-with-pandas/</loc>
+  <lastmod>2019-03-17T17:13:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/django-project-night-tracker/</loc>
@@ -88,6 +92,10 @@
  <url>
   <loc>https://chicagopython.github.io/posts/flask-collage-for-project-night-challengers/</loc>
   <lastmod>2019-03-17T15:16:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://chicagopython.github.io/posts/introduction-to-text-analysis-with-sklearn/</loc>
+  <lastmod>2019-03-17T17:02:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/python-koans/</loc>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html prefix="            og: http://ogp.me/ns# article: http://ogp.me/ns/article#     " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Data Analysis with Pandas | ChiPy Coding Workshops</title>
+<link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#18354c">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://chicagopython.github.io/posts/data-analysis-with-pandas/">
+<link rel="icon" href="../../favicon.ico" sizes="16x16">
+<link rel="manifest" href="../../site.webmanifest">
+<link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#1f91c2">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="theme-color" content="#cceeff">
+<!-- favicons generated using http://realfavicongenerator.net/ --><!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<meta name="author" content="Chicago Python User Group">
+<link rel="prev" href="../introduction-to-text-analysis-with-sklearn/" title="Introduction to Text Analysis with sklearn" type="text/html">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-beta/katex.min.css" integrity="sha256-sI/DdD47R/Sa54XZDNFjRWlS+Dv8MC5xfkqQLRh0Jes=" crossorigin="anonymous">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+         
+    <header id="header" class="hidden-print"><nav id="menu"><a href="https://chicagopython.github.io/" title="ChiPy Coding Workshops" rel="home">
+        <img src="../../assets/img/chipy-chipmunk.png" alt="ChiPy Coding Workshops" id="logo" aria-hidden>
+          ChiPy Coding Workshops
+    </a>
+
+    <ul>
+<li><a href="../../categories/">Categories</a></li>
+                <li><a href="../../about/">About</a></li>
+    
+    
+    </ul></nav></header><main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><div class="metadata">
+              <p class="commentline">
+        
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/data-analysis-with-pandas.html">Comments</a>
+
+
+          
+
+        </p>
+</div>
+        
+    <h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Data Analysis with Pandas</a></h1>
+
+        <time datetime="2019-03-17T12:08:50-05:00" itemprop="datePublished">March 17, 2019</time></header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Data-Analysis-using-Pandas">Data Analysis using Pandas<a class="anchor-link" href="#Data-Analysis-using-Pandas">¶</a>
+</h4>
+<p>Pandas has become the defacto package for data analysis. In this workshop, we are going to use the basics of pandas to analyze the interests of today's group. We are going to use meetup.com's api and fetch the list of interests that are listed in each of our meetup.com profile. We will compute which interests are common, which are uncommon, and find out which of the two members have most similar interests. Lets get started by importing the essentials.</p>
+<p>You would need meetup.com's python api and pandas installed.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">meetup.api</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">combinations</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Next we need your meetup.com API. You will find it <a href="https://secure.meetup.com/meetup_api/key/">https://secure.meetup.com/meetup_api/key/</a> 
+Also we need today's event id. The event id created under Chicago Pythonistas is <strong>233460758</strong> and that under Chicago Python user group is <strong>236205125</strong>. Use the one that has the higher number of RSVPs so that you get more data points. As an additional exercise, you might go for merging the two sets of RSVPs - but that's not needed for the workshop.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">API_KEY</span> <span class="o">=</span> <span class="s1">''</span>
+<span class="n">event_id</span><span class="o">=</span><span class="s1">''</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The following function uses the api and loads the data into a pandas data frame. Note we are a bit sloppy both in style and how we load the data. In actual production code, we should add adequate logging with well-defined exceptions to indicate what's going wrong.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [114]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">get_members</span><span class="p">(</span><span class="n">event_id</span><span class="p">):</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">meetup</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">API_KEY</span><span class="p">)</span>
+    <span class="n">rsvps</span><span class="o">=</span><span class="n">client</span><span class="o">.</span><span class="n">GetRsvps</span><span class="p">(</span><span class="n">event_id</span><span class="o">=</span><span class="n">event_id</span><span class="p">,</span> <span class="n">urlname</span><span class="o">=</span><span class="s1">'_ChiPy_'</span><span class="p">)</span>
+    <span class="n">member_id</span> <span class="o">=</span> <span class="s1">','</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s1">'member'</span><span class="p">][</span><span class="s1">'member_id'</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">rsvps</span><span class="o">.</span><span class="n">results</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">client</span><span class="o">.</span><span class="n">GetMembers</span><span class="p">(</span><span class="n">member_id</span><span class="o">=</span><span class="n">member_id</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_topics</span><span class="p">(</span><span class="n">members</span><span class="p">):</span>
+    <span class="n">topics</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="n">members</span><span class="o">.</span><span class="n">results</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">member</span><span class="p">[</span><span class="s1">'topics'</span><span class="p">]:</span>
+                <span class="n">topics</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="s1">'name'</span><span class="p">])</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">pass</span>
+
+    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">topics</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">df_topics</span><span class="p">(</span><span class="n">event_id</span><span class="p">):</span>
+    <span class="n">members</span> <span class="o">=</span> <span class="n">get_members</span><span class="p">(</span><span class="n">event_id</span><span class="o">=</span><span class="n">event_id</span><span class="p">)</span>
+    <span class="n">topics</span> <span class="o">=</span> <span class="n">get_topics</span><span class="p">(</span><span class="n">members</span><span class="p">)</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'name'</span><span class="p">,</span><span class="s1">'id'</span><span class="p">,</span><span class="s1">'thumb_link'</span><span class="p">]</span> <span class="o">+</span> <span class="n">topics</span>
+    
+    <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span> 
+    <span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="n">members</span><span class="o">.</span><span class="n">results</span><span class="p">:</span>
+        <span class="n">topic_vector</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">topics</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">topic</span> <span class="ow">in</span> <span class="n">member</span><span class="p">[</span><span class="s1">'topics'</span><span class="p">]:</span>
+            <span class="n">index</span> <span class="o">=</span> <span class="n">topics</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">topic</span><span class="p">[</span><span class="s1">'name'</span><span class="p">])</span>        
+            <span class="n">topic_vector</span><span class="p">[</span><span class="n">index</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">member</span><span class="p">[</span><span class="s1">'name'</span><span class="p">],</span> <span class="n">member</span><span class="p">[</span><span class="s1">'id'</span><span class="p">],</span> <span class="n">member</span><span class="p">[</span><span class="s1">'photo'</span><span class="p">][</span><span class="s1">'thumb_link'</span><span class="p">]]</span> <span class="o">+</span> <span class="n">topic_vector</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">pass</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span>
+    
+    <span class="c1">#df.to_csv('output.csv', sep=";")</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So you need to call the df_topics function with the event id and it would give you back a pandas dataframe containing basic information of a member and along with all possible interests. If the member has indicated interest, that column will have a one, if not then the column will have a zero.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Load-data-from-meetup.com-into-a-dataframe-by-calling-df_topics-with-the-event-id-as-parameter">Load data from meetup.com into a dataframe by calling df_topics with the event id as parameter<a class="anchor-link" href="#Load-data-from-meetup.com-into-a-dataframe-by-calling-df_topics-with-the-event-id-as-parameter">¶</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="What-does-the-first-and-last-10-rows-of-the-dataset-look-like?">What does the first and last 10 rows of the dataset look like?<a class="anchor-link" href="#What-does-the-first-and-last-10-rows-of-the-dataset-look-like?">¶</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="What-are-the-column-names?">What are the column names?<a class="anchor-link" href="#What-are-the-column-names?">¶</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Additional-Exercise:-Can-you-merge-the-two-data-for-two-events-into-one-data-frame-and-remove-the-dups?">Additional Exercise: Can you merge the two data for two events into one data frame and remove the dups?<a class="anchor-link" href="#Additional-Exercise:-Can-you-merge-the-two-data-for-two-events-into-one-data-frame-and-remove-the-dups?">¶</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="What-are-the-top-10-most-common-interests-of-today’s-attendees?">What are the top 10 most common interests of today’s attendees?<a class="anchor-link" href="#What-are-the-top-10-most-common-interests-of-today%E2%80%99s-attendees?">¶</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="What-is-the-third-most-popular-and-third-least-popular-topic-of-interest?-Are-there-ties?">What is the third most popular and third least popular topic of interest? Are there ties?<a class="anchor-link" href="#What-is-the-third-most-popular-and-third-least-popular-topic-of-interest?-Are-there-ties?">¶</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Which-members-have-the-third-most-popular-interest?">Which members have the third most popular interest?<a class="anchor-link" href="#Which-members-have-the-third-most-popular-interest?">¶</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Which-members-have-the-third-most-popular-interest?">Which members have the third most popular interest?<a class="anchor-link" href="#Which-members-have-the-third-most-popular-interest?">¶</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Which-memebers-have-the-highest-number-of-topics-of-interest?">Which memebers have the highest number of topics of interest?<a class="anchor-link" href="#Which-memebers-have-the-highest-number-of-topics-of-interest?">¶</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="What-is-the-average-number-of-topics-of-interest?">What is the average number of topics of interest?<a class="anchor-link" href="#What-is-the-average-number-of-topics-of-interest?">¶</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Which-two-members-have-the-most-common-overlap-of-interests?">Which two members have the most common overlap of interests?<a class="anchor-link" href="#Which-two-members-have-the-most-common-overlap-of-interests?">¶</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="How-many-members-are-there-who-have-no-overlaps-at-all?">How many members are there who have no overlaps at all?<a class="anchor-link" href="#How-many-members-are-there-who-have-no-overlaps-at-all?">¶</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Given-a-member-which-other-member(s)-have-the-most-common-interests?">Given a member which other member(s) have the most common interests?<a class="anchor-link" href="#Given-a-member-which-other-member(s)-have-the-most-common-interests?">¶</a>
+</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><div>
+    <span class="hidden-print">
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></span>
+    <span class="hidden-print">
+      <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script><script type="IN/Share" data-url="https://chicagopython.github.io/posts/data-analysis-with-pandas/"></script></span>
+    </div>
+    <nav><ul class="pager hidden-print">
+<li>
+            <a href="../introduction-to-text-analysis-with-sklearn/" rel="prev" class="previous" title="Introduction to Text Analysis with sklearn"><span aria-hidden="true">‹ </span>Older</a>
+        </li>
+        <li>
+            <span class="disabled">Newer<span aria-hidden="true"> ›</span></span>
+        </li>
+    </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="chicagopython",
+            disqus_url="https://chicagopython.github.io/posts/data-analysis-with-pandas/",
+        disqus_title="Data Analysis with Pandas",
+        disqus_identifier="cache/posts/data-analysis-with-pandas.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-beta/katex.min.js" integrity="sha256-mxaM9VWtRj1wBtn50/EDUUe4m3t39ExE+xEPyrxVB8I=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-beta/contrib/auto-render.min.js" integrity="sha256-9uFJqVHnc71lPswxPcpJP49zqhdqp7DFqX68yHs358I=" crossorigin="anonymous"></script><script>
+                renderMathInElement(document.body,
+                    {
+                        
+delimiters: [
+    {left: "$$", right: "$$", display: true},
+    {left: "\\[", right: "\\]", display: true},
+    {left: "$", right: "$", display: false},
+    {left: "\\(", right: "\\)", display: false}
+]
+
+                    }
+                );
+            </script><script>var disqus_shortname="chicagopython";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script></main><footer id="footer"><p class="light-sans">© Chicago Python User Group · Subscribe via <a href="../../rss.xml">RSS</a> · Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a> · 
+<a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html">
+<img alt="Gnu Public License version 3.0" style="border-width:0;" src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"></a></p>
+            
+        </footer>
+</body>
+</html>
