@@ -18,7 +18,7 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "Chicago Python User Group"  # (translatable)
-BLOG_TITLE = "ChiPy Coding Workshops"  # (translatable)
+BLOG_TITLE = "Python Project Night Challenges"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "https://chicagopython.github.io/"
