@@ -1,7 +1,7 @@
 <!--
 .. title: Flask App for Exchange Rates
 .. slug: flask-app-for-exchange-rates
-.. date: 2019-03-17 10:39:07 UTC-05:00
+.. date: 2019-03-21 18:00:00 UTC-05:00
 .. tags: flask
 .. category: web-dev
 .. link: 
