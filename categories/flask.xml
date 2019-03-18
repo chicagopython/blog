@@ -3,7 +3,7 @@
 &lt;a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html"&gt;
 &lt;img alt="Gnu Public License version 3.0"
 style="border-width:0;"
-src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Mon, 18 Mar 2019 02:51:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Flask App for Exchange Rates</title><link>https://chicagopython.github.io/posts/flask-app-for-exchange-rates/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;Flask App for Exchange Rates&lt;/h2&gt;
+src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Mon, 18 Mar 2019 03:07:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Flask App for Exchange Rates</title><link>https://chicagopython.github.io/posts/flask-app-for-exchange-rates/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;Flask App for Exchange Rates&lt;/h2&gt;
 &lt;h3&gt;Objective&lt;/h3&gt;
 &lt;p&gt;All developers in the modern day need to understand web technologies at some level. Whether you're interacting with a Jupyter notebook or querying a web api, understanding how a CLIENT requests information from a SERVER and to see how the SERVER produces its response is incredibly valuable.&lt;/p&gt;
 &lt;h3&gt;Overview&lt;/h3&gt;
@@ -101,7 +101,7 @@ currencies from this function. &lt;/p&gt;
 &lt;p&gt;Wouldn't it be great if each currency as it appeared would link to its own currency conversion?&lt;/p&gt;
 &lt;p&gt;e.g. From the home page I could click on &lt;code&gt;JPY&lt;/code&gt; to find out all of the conversions from &lt;code&gt;JPY-&amp;gt;*&lt;/code&gt;. &lt;/p&gt;
 &lt;h3&gt;Caching&lt;/h3&gt;
-&lt;p&gt;Do we really need to use an API request every time we do a call? How could we store the results of each run to avoid API abuse.&lt;/p&gt;&lt;/div&gt;</description><category>flask</category><guid>https://chicagopython.github.io/posts/flask-app-for-exchange-rates/</guid><pubDate>Sun, 17 Mar 2019 15:39:07 GMT</pubDate></item><item><title>Flask Collage for Project Night Challengers</title><link>https://chicagopython.github.io/posts/flask-collage-for-project-night-challengers/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;Flask Collage for Project Night Challengers&lt;/h2&gt;
+&lt;p&gt;Do we really need to use an API request every time we do a call? How could we store the results of each run to avoid API abuse.&lt;/p&gt;&lt;/div&gt;</description><category>flask</category><guid>https://chicagopython.github.io/posts/flask-app-for-exchange-rates/</guid><pubDate>Thu, 21 Mar 2019 23:00:00 GMT</pubDate></item><item><title>Flask Collage for Project Night Challengers</title><link>https://chicagopython.github.io/posts/flask-collage-for-project-night-challengers/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;Flask Collage for Project Night Challengers&lt;/h2&gt;
 &lt;p&gt;Build a small web app using Flask which accepts the meetup.com event id for tonight
 as a parameter and would fetch the profile pictures of all the attendees to create a
 collage. &lt;a href="https://twitter.com/Tathagata/status/746302962830540801"&gt;Here&lt;/a&gt; is an example
