@@ -3,12 +3,85 @@
 &lt;a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html"&gt;
 &lt;img alt="Gnu Public License version 3.0"
 style="border-width:0;"
-src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Thu, 18 Apr 2019 12:33:35 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Chipmunks Data Science</title><link>https://chicagopython.github.io/posts/chipmunks-data-science/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Thu, 18 Apr 2019 22:52:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>ChiPy Chipmunk Project Night </title><link>https://chicagopython.github.io/posts/chipy-chipmunks/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Project Night Purpose&lt;/h3&gt;
+&lt;p&gt;Many people assume data scientists spend all day visualizing data and making impressive predictive models. While this isn’t untrue, the luckiest and most productive data scientists spend a lot of their time communicating. They communicate their model results - as well as their assumptions and limitations when making their models and doing analysis - in a way that is digestible to their stakeholders and colleagues. &lt;/p&gt;
+&lt;p&gt;Tonight’s project is aimed towards that aspect of communication. You will be asked to make assumptions as a team - particularly as they pertain to this problem and what the stakeholders need. There are no exactly correct assumptions or answers for this project night. There may be assumptions and answers that clearly don’t have evidence to support them, but do not feel bogged down by getting the “right” answer.&lt;/p&gt;
+&lt;p&gt;Most importantly - have fun. While this project night covers serious concepts, it is ridiculously silly and meant to be taken with a bit of lighthearted exploration and plenty of opportunities to make mistakes.&lt;/p&gt;
+&lt;h3&gt;Setting up your environment&lt;/h3&gt;
+&lt;p&gt;This project is contained in a jupyter notebook and is assuming you have Python 3.+ installed on your machine. If this is your fisrt project night, we recommend creating a folder for the project night repo: &lt;code&gt;mkdir chipy_projects &amp;amp;&amp;amp; cd chipy_projects&lt;/code&gt;. If you already have the project night repository on your machine, go to that directory and pull from master.&lt;/p&gt;
+&lt;p&gt;If you are using Linux or OS X, run the following to create a new virtualenv:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python3 -m venv chipmunk
+source chipmunk/bin/activate
+&lt;/pre&gt;
+
+
+&lt;p&gt;On Windows, run the following&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python3 -m venv chipmunk 
+chipmunk\Scripts\activate
+&lt;/pre&gt;
+
+
+&lt;h3&gt;Getting the project&lt;/h3&gt;
+&lt;p&gt;The project is in the ChiPy project night repo. If you do not have the repository already, run &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/chicagopython/CodingWorkshops.git
+&lt;/pre&gt;
+
+
+&lt;p&gt;Now we will:&lt;/p&gt;
+&lt;p&gt;Go to the project:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;cd CodingWorkshops/problems/data_science/chipmunks
+&lt;/pre&gt;
+
+
+&lt;p&gt;Install the packages we need into our environment:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pip install -r requirements.txt
+&lt;/pre&gt;
+
+
+&lt;p&gt;Run our jupyter notebook server for the project:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;jupyter notebook
+&lt;/pre&gt;
+
+
+&lt;h3&gt;Have fun!&lt;/h3&gt;&lt;/div&gt;</description><category>analytics</category><category>EDA</category><category>pandas</category><category>statistics</category><guid>https://chicagopython.github.io/posts/chipy-chipmunks/</guid><pubDate>Thu, 18 Apr 2019 23:00:00 GMT</pubDate></item><item><title>Chipmunks Data Science</title><link>https://chicagopython.github.io/posts/chipmunks-data-science/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Oh,-no!-We've-had-a-data-crash."&gt;Oh, no! We've had a data crash.&lt;a class="anchor-link" href="https://chicagopython.github.io/posts/chipmunks-data-science/#Oh,-no!-We've-had-a-data-crash."&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;As ChiPy leadership was preparing for &lt;a href="https://us.pycon.org/2019/"&gt;PyCon&lt;/a&gt; at the end of this month, they found that the dataset on our infamous &lt;em&gt;ChiPy chipmunks&lt;/em&gt; has disapeared. While they transition from Oracle to Postgres, the leadership team has enlisted your help as data scientists to analyze some salvaged chipmunk data. The PyCon organizers had a few questions about coding in Chicago, ChiPy, and chipmunks that need answers. We will get to those questions shortly, but first let's get to the data. If you haven't set up your environment, make sure to checkout the project night page on the &lt;a href="http://chicagopython.github.io/chipy-chipmunks"&gt;website&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="Project-Night-Purpose"&gt;Project Night Purpose&lt;a class="anchor-link" href="https://chicagopython.github.io/posts/chipmunks-data-science/#Project-Night-Purpose"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Many people assume data scientists spend all day visualizing data and making impressive predictive models. While this isn’t untrue, the luckiest and most productive data scientists spend a lot of their time communicating. They communicate their model results - as well as their assumptions and limitations when making their models and doing analysis - in a way that is digestible to their stakeholders and colleagues.&lt;/p&gt;
+&lt;p&gt;Tonight’s project is aimed towards that aspect of communication. You will be asked to make assumptions as a team - particularly as they pertain to this problem and what the stakeholders need. There are no exactly correct assumptions or answers for this project night. There may be assumptions and answers that clearly don’t have evidence to support them, but do not feel bogged down by getting the “right” answer.&lt;/p&gt;
+&lt;p&gt;Most importantly - have fun. While this project night covers serious concepts, it is ridiculously silly and meant to be taken with a bit of lighthearted exploration and plenty of opportunities to make mistakes.&lt;/p&gt;
+&lt;h2 id="Oh,-no!-We've-had-a-data-crash."&gt;Oh, no! We've had a data crash.&lt;a class="anchor-link" href="https://chicagopython.github.io/posts/chipmunks-data-science/#Oh,-no!-We've-had-a-data-crash."&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;As ChiPy leadership was preparing for &lt;a href="https://us.pycon.org/2019/"&gt;PyCon&lt;/a&gt; at the end of this month, they found that the dataset on our infamous &lt;em&gt;ChiPy chipmunks&lt;/em&gt; has disapeared. While they transition from Oracle to Postgres, the leadership team has enlisted your help as data scientists to analyze some salvaged chipmunk data. The PyCon organizers had a few questions about coding in Chicago, ChiPy, and chipmunks that need answers. We will get to those questions shortly, but first let's get to the data.&lt;/p&gt;
 &lt;h3 id="Reading-in-the-Data"&gt;Reading in the Data&lt;a class="anchor-link" href="https://chicagopython.github.io/posts/chipmunks-data-science/#Reading-in-the-Data"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The salvaged chipmunk dataset is &lt;code&gt;chipmunk.csv&lt;/code&gt;. The wonderful &lt;a href="https://pandas.pydata.org/"&gt;pandas&lt;/a&gt; library, built on &lt;a href="http://www.numpy.org/"&gt;numpy&lt;/a&gt;, will let the team read in the data.&lt;/p&gt;
 &lt;h4 style="color: #f92828;text-decoration: underline;"&gt;ChiPy Check-in&lt;/h4&gt;&lt;p&gt;Now is a good time to check in with the team. Is anyone familiar with &lt;code&gt;pandas&lt;/code&gt; and &lt;code&gt;numpy&lt;/code&gt;? Discuss with your team what these libraries are, what they allow data scientists to do, and then decide on what &lt;code&gt;pandas&lt;/code&gt; function will read in our data.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="Setting-up-your-environment"&gt;Setting up your environment&lt;a class="anchor-link" href="https://chicagopython.github.io/posts/chipmunks-data-science/#Setting-up-your-environment"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;This project is contained in a jupyter notebook and is assuming you have Python 3.+ installed on your machine. If this is your fisrt project night, we recommend creating a folder for the project night repo: &lt;code&gt;mkdir chipy_projects &amp;amp;&amp;amp; cd chipy_projects&lt;/code&gt;. If you already have the project night repository on your machine, go to that directory and pull from master.&lt;/p&gt;
+&lt;p&gt;If you are using Linux or OS X, run the following to create a new virtualenv:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;python3 -m venv chipmunk
+source chipmunk/bin/activate&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;On Windows, run the following&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;python3 -m venv chipmunk 
+chipmunk\Scripts\activate&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id="Getting-the-project"&gt;Getting the project&lt;a class="anchor-link" href="https://chicagopython.github.io/posts/chipmunks-data-science/#Getting-the-project"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The project is in the ChiPy project night repo. If you do not have the repository already, run&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/chicagopython/CodingWorkshops.git&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we will:&lt;/p&gt;
+&lt;p&gt;Go to the project:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd CodingWorkshops/problems/data_science/chipmunks&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Install the packages we need into our environment:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pip install -r requirements.txt&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Run our jupyter notebook server for the project:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;jupyter notebook&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The dataset is in the &lt;code&gt;csv&lt;/code&gt; file &lt;code&gt;chipmunks.csv&lt;/code&gt;.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -309,7 +382,7 @@ src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copy
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Question-#3"&gt;Question #3&lt;a class="anchor-link" href="https://chicagopython.github.io/posts/chipmunks-data-science/#Question-#3"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;ChiPy leadership wants to send 20 lucky chipmunks to cheer the lovely folks at PyCon. They have asked us to make a predictive model that can be used on their chipmunk data when it is recovered. To do this we will:&lt;/p&gt;
+&lt;h3 id="Question-#3"&gt;Question #3&lt;a class="anchor-link" href="https://chicagopython.github.io/posts/chipmunks-data-science/#Question-#3"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;ChiPy leadership wants to send 20 lucky ChiPy chipmunks to cheer the lovely folks at PyCon. However, it's unlikely that the data recovery efforts will be able to recover who is/isn't a member of ChiPy! ChiPy leadership has asked us to develop a predictive model to identify members as part of the process to allocate the 20 free tickets. To do this we will:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Make a train/test split to evaluate our model&lt;/li&gt;
 &lt;li&gt;Scale our data&lt;/li&gt;
@@ -2499,41 +2572,4 @@ If you see an error&lt;/p&gt;
 
 
 &lt;p&gt;Thanks! Thats all folks!
-If you found a bug or think you some instructions are missing - just open a issue in this repository.&lt;/p&gt;&lt;/div&gt;</description><category>cli</category><category>python-101</category><guid>https://chicagopython.github.io/posts/command-line-app-for-grouping-project-night-challengers/</guid><pubDate>Sun, 17 Mar 2019 04:59:16 GMT</pubDate></item><item><title>Python Koans</title><link>https://chicagopython.github.io/posts/python-koans/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;p&gt;For this exercise we will learn the Zen of Python using Test Driven Development.
-Python Koans is a suite of broken tests, which are written against Python code that demonstrate how to Pythonic code.
-Your job is to fix the broken tests by filling in the missing parts of the code.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Download the zip of python_koans from &lt;a href="https://github.com/tathagata/python_koans/archive/chipy_mentorship_coding_dojo.zip"&gt;here&lt;/a&gt;. This is a fork of the original repository without some of the simpler examples.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Unzip the archive. Change into the directory created and then depending on which version of Python you
-would be using, change into python2 or python3 directory.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Run &lt;code&gt;./run.sh&lt;/code&gt; or &lt;code&gt;./run.bat&lt;/code&gt; depending on if you are in a unix or windows environment.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;You'll see an output like&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Thinking AboutLists
-  test_creating_lists has damaged your karma.&lt;/p&gt;
-&lt;p&gt;You have not yet reached enlightenment ...
-  AssertionError: '-=&amp;gt; FILL ME IN! &amp;lt;=-' != 0&lt;/p&gt;
-&lt;p&gt;Please meditate on the following code:
- File "/Users/t/Downloads/python_koans-chipy_mentorship_coding_dojo_2/python3/koans/about_lists.py", line 14, in test_creating_lists
-    self.assertEqual(__, len(empty_list))&lt;/p&gt;
-&lt;p&gt;You have completed 0 koans and 1 lessons.
-You are now 206 koans and 36 lessons away from reaching enlightenment.&lt;/p&gt;
-&lt;p&gt;Beautiful is better than ugly.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Open the file that follows "Please meditate on the following code" in your text editor and put the appropriate fix.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Run &lt;code&gt;./run.sh&lt;/code&gt; or &lt;code&gt;./run.bat&lt;/code&gt; depending on if you are in a unix or windows environment. If your fix is correct, you'll see the error message has been replaced with a new one. Great! you have fixed one test, so now move on to the next one by repeating the above steps.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>testing</category><guid>https://chicagopython.github.io/posts/python-koans/</guid><pubDate>Sat, 22 Jul 2017 11:00:00 GMT</pubDate></item></channel></rss>
+If you found a bug or think you some instructions are missing - just open a issue in this repository.&lt;/p&gt;&lt;/div&gt;</description><category>cli</category><category>python-101</category><guid>https://chicagopython.github.io/posts/command-line-app-for-grouping-project-night-challengers/</guid><pubDate>Sun, 17 Mar 2019 04:59:16 GMT</pubDate></item></channel></rss>

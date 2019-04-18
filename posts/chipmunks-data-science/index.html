@@ -17,6 +17,7 @@
 <!-- favicons generated using http://realfavicongenerator.net/ --><!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <meta name="author" content="Chicago Python User Group">
 <link rel="prev" href="../flask-app-for-exchange-rates/" title="Flask App for Exchange Rates" type="text/html">
+<link rel="next" href="../chipy-chipmunks/" title="ChiPy Chipmunk Project Night " type="text/html">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-beta/katex.min.css" integrity="sha256-sI/DdD47R/Sa54XZDNFjRWlS+Dv8MC5xfkqQLRh0Jes=" crossorigin="anonymous">
 </head>
@@ -53,14 +54,55 @@
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Project-Night-Purpose">Project Night Purpose<a class="anchor-link" href="#Project-Night-Purpose">¶</a>
+</h2>
+<p>Many people assume data scientists spend all day visualizing data and making impressive predictive models. While this isn’t untrue, the luckiest and most productive data scientists spend a lot of their time communicating. They communicate their model results - as well as their assumptions and limitations when making their models and doing analysis - in a way that is digestible to their stakeholders and colleagues.</p>
+<p>Tonight’s project is aimed towards that aspect of communication. You will be asked to make assumptions as a team - particularly as they pertain to this problem and what the stakeholders need. There are no exactly correct assumptions or answers for this project night. There may be assumptions and answers that clearly don’t have evidence to support them, but do not feel bogged down by getting the “right” answer.</p>
+<p>Most importantly - have fun. While this project night covers serious concepts, it is ridiculously silly and meant to be taken with a bit of lighthearted exploration and plenty of opportunities to make mistakes.</p>
 <h2 id="Oh,-no!-We've-had-a-data-crash.">Oh, no! We've had a data crash.<a class="anchor-link" href="#Oh,-no!-We've-had-a-data-crash.">¶</a>
 </h2>
-<p>As ChiPy leadership was preparing for <a href="https://us.pycon.org/2019/">PyCon</a> at the end of this month, they found that the dataset on our infamous <em>ChiPy chipmunks</em> has disapeared. While they transition from Oracle to Postgres, the leadership team has enlisted your help as data scientists to analyze some salvaged chipmunk data. The PyCon organizers had a few questions about coding in Chicago, ChiPy, and chipmunks that need answers. We will get to those questions shortly, but first let's get to the data. If you haven't set up your environment, make sure to checkout the project night page on the <a href="http://chicagopython.github.io/chipy-chipmunks">website</a>.</p>
+<p>As ChiPy leadership was preparing for <a href="https://us.pycon.org/2019/">PyCon</a> at the end of this month, they found that the dataset on our infamous <em>ChiPy chipmunks</em> has disapeared. While they transition from Oracle to Postgres, the leadership team has enlisted your help as data scientists to analyze some salvaged chipmunk data. The PyCon organizers had a few questions about coding in Chicago, ChiPy, and chipmunks that need answers. We will get to those questions shortly, but first let's get to the data.</p>
 <h3 id="Reading-in-the-Data">Reading in the Data<a class="anchor-link" href="#Reading-in-the-Data">¶</a>
 </h3>
 <p>The salvaged chipmunk dataset is <code>chipmunk.csv</code>. The wonderful <a href="https://pandas.pydata.org/">pandas</a> library, built on <a href="http://www.numpy.org/">numpy</a>, will let the team read in the data.</p>
 <h4 style="color: #f92828;text-decoration: underline;">ChiPy Check-in</h4>
 <p>Now is a good time to check in with the team. Is anyone familiar with <code>pandas</code> and <code>numpy</code>? Discuss with your team what these libraries are, what they allow data scientists to do, and then decide on what <code>pandas</code> function will read in our data.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Setting-up-your-environment">Setting up your environment<a class="anchor-link" href="#Setting-up-your-environment">¶</a>
+</h3>
+<p>This project is contained in a jupyter notebook and is assuming you have Python 3.+ installed on your machine. If this is your fisrt project night, we recommend creating a folder for the project night repo: <code>mkdir chipy_projects &amp;&amp; cd chipy_projects</code>. If you already have the project night repository on your machine, go to that directory and pull from master.</p>
+<p>If you are using Linux or OS X, run the following to create a new virtualenv:</p>
+
+<pre><code>python3 -m venv chipmunk
+source chipmunk/bin/activate</code></pre>
+<p>On Windows, run the following</p>
+
+<pre><code>python3 -m venv chipmunk 
+chipmunk\Scripts\activate</code></pre>
+<h3 id="Getting-the-project">Getting the project<a class="anchor-link" href="#Getting-the-project">¶</a>
+</h3>
+<p>The project is in the ChiPy project night repo. If you do not have the repository already, run</p>
+
+<pre><code>git clone https://github.com/chicagopython/CodingWorkshops.git</code></pre>
+<p>Now we will:</p>
+<p>Go to the project:</p>
+
+<pre><code>cd CodingWorkshops/problems/data_science/chipmunks</code></pre>
+<p>Install the packages we need into our environment:</p>
+
+<pre><code>pip install -r requirements.txt</code></pre>
+<p>Run our jupyter notebook server for the project:</p>
+
+<pre><code>jupyter notebook</code></pre>
+<p>The dataset is in the <code>csv</code> file <code>chipmunks.csv</code>.</p>
 
 </div>
 </div>
@@ -390,7 +432,7 @@
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Question-#3">Question #3<a class="anchor-link" href="#Question-#3">¶</a>
 </h3>
-<p>ChiPy leadership wants to send 20 lucky chipmunks to cheer the lovely folks at PyCon. They have asked us to make a predictive model that can be used on their chipmunk data when it is recovered. To do this we will:</p>
+<p>ChiPy leadership wants to send 20 lucky ChiPy chipmunks to cheer the lovely folks at PyCon. However, it's unlikely that the data recovery efforts will be able to recover who is/isn't a member of ChiPy! ChiPy leadership has asked us to develop a predictive model to identify members as part of the process to allocate the 20 free tickets. To do this we will:</p>
 <ul>
 <li>Make a train/test split to evaluate our model</li>
 <li>Scale our data</li>
@@ -565,7 +607,7 @@
             <a href="../flask-app-for-exchange-rates/" rel="prev" class="previous" title="Flask App for Exchange Rates"><span aria-hidden="true">‹ </span>Older</a>
         </li>
         <li>
-            <span class="disabled">Newer<span aria-hidden="true"> ›</span></span>
+            <a href="../chipy-chipmunks/" rel="next" class="next" title="ChiPy Chipmunk Project Night ">Newer<span aria-hidden="true"> ›</span></a>
         </li>
     </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         
