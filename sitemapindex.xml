@@ -7,50 +7,50 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://chicagopython.github.io/categories/cat_python-101.xml</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/cat_web-dev.xml</loc>
-  <lastmod>2019-03-18T03:07:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/cicd.xml</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/cli.xml</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/django.xml</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/flask.xml</loc>
-  <lastmod>2019-03-18T03:07:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/pytest.xml</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/python-101.xml</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/testing.xml</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/web-dev.xml</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/rss.xml</loc>
-  <lastmod>2019-03-18T03:07:00Z</lastmod>
+  <lastmod>2019-04-18T12:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/sitemap.xml</loc>
-  <lastmod>2019-03-18T03:07:00Z</lastmod>
+  <lastmod>2019-04-18T12:33:00Z</lastmod>
  </sitemap>
 </sitemapindex>

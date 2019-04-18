@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html prefix="            og: http://ogp.me/ns# article: http://ogp.me/ns/article#     " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Chipmunks Data Science | Python Project Night Challenges</title>
+<link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#18354c">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://chicagopython.github.io/posts/chipmunks-data-science/">
+<link rel="icon" href="../../favicon.ico" sizes="16x16">
+<link rel="manifest" href="../../site.webmanifest">
+<link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#1f91c2">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="theme-color" content="#cceeff">
+<!-- favicons generated using http://realfavicongenerator.net/ --><!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<meta name="author" content="Chicago Python User Group">
+<link rel="prev" href="../flask-app-for-exchange-rates/" title="Flask App for Exchange Rates" type="text/html">
+<meta name="twitter:card" content="summary">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-beta/katex.min.css" integrity="sha256-sI/DdD47R/Sa54XZDNFjRWlS+Dv8MC5xfkqQLRh0Jes=" crossorigin="anonymous">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+         
+    <header id="header" class="hidden-print"><nav id="menu"><a href="https://chicagopython.github.io/" title="Python Project Night Challenges" rel="home">
+        <img src="../../assets/img/chipy-chipmunk.png" alt="Python Project Night Challenges" id="logo" aria-hidden>
+          Python Project Night Challenges
+    </a>
+
+    <ul>
+<li><a href="../../categories/">Categories</a></li>
+                <li><a href="../../about/">About</a></li>
+    
+    
+    </ul></nav></header><main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><div class="metadata">
+              <p class="commentline">
+        
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/chipmunks-data-science.html">Comments</a>
+
+
+          
+
+        </p>
+</div>
+        
+    <h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Chipmunks Data Science</a></h1>
+
+        <time datetime="2019-04-17T22:39:06-05:00" itemprop="datePublished">April 17, 2019</time></header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Oh,-no!-We've-had-a-data-crash.">Oh, no! We've had a data crash.<a class="anchor-link" href="#Oh,-no!-We've-had-a-data-crash.">¶</a>
+</h2>
+<p>As ChiPy leadership was preparing for <a href="https://us.pycon.org/2019/">PyCon</a> at the end of this month, they found that the dataset on our infamous <em>ChiPy chipmunks</em> has disapeared. While they transition from Oracle to Postgres, the leadership team has enlisted your help as data scientists to analyze some salvaged chipmunk data. The PyCon organizers had a few questions about coding in Chicago, ChiPy, and chipmunks that need answers. We will get to those questions shortly, but first let's get to the data. If you haven't set up your environment, make sure to checkout the project night page on the <a href="http://chicagopython.github.io/chipy-chipmunks">website</a>.</p>
+<h3 id="Reading-in-the-Data">Reading in the Data<a class="anchor-link" href="#Reading-in-the-Data">¶</a>
+</h3>
+<p>The salvaged chipmunk dataset is <code>chipmunk.csv</code>. The wonderful <a href="https://pandas.pydata.org/">pandas</a> library, built on <a href="http://www.numpy.org/">numpy</a>, will let the team read in the data.</p>
+<h4 style="color: #f92828;text-decoration: underline;">ChiPy Check-in</h4>
+<p>Now is a good time to check in with the team. Is anyone familiar with <code>pandas</code> and <code>numpy</code>? Discuss with your team what these libraries are, what they allow data scientists to do, and then decide on what <code>pandas</code> function will read in our data.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Read in the data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Exploring-the-data">Exploring the data<a class="anchor-link" href="#Exploring-the-data">¶</a>
+</h3>
+<p>We need to be familiar with our data before we can answer questions about ChiPy and our chipmunks. Let's start with some questions we would ask of <em>any</em> dataset:</p>
+<ul>
+<li>How many rows are in this dataset? What does each row represent?</li>
+<li>What does the data look like? Check the first 5 rows</li>
+<li>Is there missing data? If so, how much is missing?</li>
+<li>What columns are categorical?</li>
+<li>What are the unique number of observations for each column?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Check the number of rows</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## See first 5 rows of data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Check for missing data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Check for categorical data and unique number of values</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Was-there-missing-data?">Was there missing data?<a class="anchor-link" href="#Was-there-missing-data?">¶</a>
+</h3>
+<p>We will keep exploring the data and start answering questions soon, but first let's address missing data (if there is any). What columns have missing data? What kind of data is missing?</p>
+<h4 style="color: #f92828;text-decoration: underline;">ChiPy Check-in</h4>
+<p>This a great point for discussion. If there is missing data - why might it be missing? Discuss some possible reasons with your team and decide on a reason that makes sense.</p>
+<p><a href="https://en.wikipedia.org/wiki/Imputation_(statistics">Imputation</a>) is the process of replacing missing data with some estimated value. The process can be as complicated (or simple) as you would like it to be! Given the possible reason for our missing data, what is an acceptable imputation?</p>
+<p>Impute any missing data in your dataset and note what assumptions you made as a team. If you are not sure how to replace data in <code>pandas</code>, feel free to use google like a proper data scientist.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Replace any missing data here</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Check your data for missing values to see if it worked!</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Stakeholder-Questions">Stakeholder Questions<a class="anchor-link" href="#Stakeholder-Questions">¶</a>
+</h2>
+<h3 id="Question-#1">Question #1<a class="anchor-link" href="#Question-#1">¶</a>
+</h3>
+<p>The great folks at PyCon want to know all about ChiPy and our chipmunks. They have heard that <strong>ChiPy is an inclusive and open community</strong>. Can we support that claim with our data? Given that the <code>ChiPy</code> column takes a value of <code>1</code> for a ChiPy chipmunk and a value of <code>0</code> for chipmunks not in ChiPy, start to explore this question.</p>
+<p>Some ideas to get you started:</p>
+<ul>
+<li>Are chipmunks of different species represented in ChiPy?</li>
+<li>Are chipmunks of different sizes represented in ChiPy?</li>
+<li>Are chipmunks of different careers represented in ChiPy?</li>
+<li>Are spotted and not spotted chipmunks represented in ChiPy?</li>
+</ul>
+<h4 style="color: #f92828;text-decoration: underline;">ChiPy Check-in</h4>
+<p>There are no right or wrong answers here, only well supported or poorly supported ones! Discuss as a group the aspects of the data you have looked at and if it constitutes enough evidence to justify an answer.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Exploration of species</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Exploration of size</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Exploration of careers</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Exploration of spotted vs non-spotted</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Question-#2">Question #2<a class="anchor-link" href="#Question-#2">¶</a>
+</h3>
+<p>The word on the street at PyCon is that chipmunks that live in Chicago enjoy coding more than those that don't. Is this not true? Given that the <code>chicago</code> column takes a value of <code>1</code> for chipmunks that live in Chicago and a value of <code>0</code> for chipmunks that do not, explore this question.</p>
+<ul>
+<li>Visualize the distributions of <code>coding_enjoyment</code> for chipmunks that do and do not live in Chicago.</li>
+<li>Come up with a way to test our question.</li>
+</ul>
+<h4 style="color: #f92828;text-decoration: underline;">ChiPy Check-in</h4>
+<p>Coming up with a proper way to test stakeholder questions can be an artform as well as a science. We have imported a few statistical tests below that may (or may not) be appropriate for our question. First consider a way to frame our question as something to <em>disprove</em> (those familiar with jargon, let's construct a <a href="https://en.wikipedia.org/wiki/Null_hypothesis">null hypothesis</a>) - then conduct a test that may disprove it. Reading the documentation for the imported tests below may prove to be very helpful!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="k">import</span> <span class="n">ttest_ind</span><span class="p">,</span> <span class="n">levene</span><span class="p">,</span> <span class="n">chisquare</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Beautiful plot</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Statistical Test</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Question-#2,-Continued">Question #2, Continued<a class="anchor-link" href="#Question-#2,-Continued">¶</a>
+</h3>
+<p>We have now compared two groups of chipmunks - those that live in Chicago and those that do not - and have either rejected or failed to reject a null hypothesis. What values did the statistical test return and what do they mean? Can we be confident in our results? How confident?</p>
+<p>Regardless of our test results, what are the limitations of the test? One limitation is that we have information in our data that is <em>related</em> to being in Chicago and might also have an effect on enjoyment of coding. <a href="https://en.wikipedia.org/wiki/Regression_analysis">Regression analysis</a> will allow us to examine the relationship between living in Chicago and enjoyment of coding while controlling for membership in ChiPy. Use the <code>statsmodels</code> package to regress <code>chicago</code> and <code>ChiPy</code> on <code>coding_enjoyment</code>. See <a href="https://www.statsmodels.org/stable/index.html">this example</a> for assistance.</p>
+<h4 style="color: #f92828;text-decoration: underline;">ChiPy Check-in</h4>
+<p>This regression model still has limitations, and there could be an entire project night on this task alone. What steps would need to be taken if we controlled for more characteristics of our data?</p>
+<p>This is also a good time to discuss what kind of information we are looking for in our regression model. What are coefficients and what do they mean? What is a p-value? Is it similar to a p-value from the statistical tests above?</p>
+<p>Lastly, modeling is fun, but don't forget the original question! Do chipmunks that live in Chicago enjoy coding more than those that don't?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">import</span> <span class="nn">statsmodels.formula.api</span> <span class="k">as</span> <span class="nn">smf</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Regression model and summary</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Question-#3">Question #3<a class="anchor-link" href="#Question-#3">¶</a>
+</h3>
+<p>ChiPy leadership wants to send 20 lucky chipmunks to cheer the lovely folks at PyCon. They have asked us to make a predictive model that can be used on their chipmunk data when it is recovered. To do this we will:</p>
+<ul>
+<li>Make a train/test split to evaluate our model</li>
+<li>Scale our data</li>
+<li>Fit several models</li>
+<li>Decide on an evaluation metric</li>
+<li>Select this best model</li>
+</ul>
+<h4 style="color: #f92828;text-decoration: underline;">ChiPy Check-in</h4>
+<p>The cell below transforms our data so that every feature (jargon for column) is numeric. Discuss with your team why this is could be an important step. Engineering features could also be an entire project night!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wide_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">drop_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wide_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="k">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="k">import</span> <span class="n">BernoulliNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="k">import</span> <span class="n">KNeighborsClassifier</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">wide_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'ChiPy'</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> 
+                                                    <span class="n">wide_data</span><span class="o">.</span><span class="n">ChiPy</span><span class="p">,</span> 
+                                                    <span class="n">test_size</span><span class="o">=</span><span class="mf">0.33</span><span class="p">,</span> 
+                                                    <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Scale data</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Train models</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 style="color: #f92828;text-decoration: underline;">ChiPy Check-in</h4>
+<p>Having the proper evaluation metric is the most important process in predictive modeling. Below we have imported accuracy, precision, and recall. What are each of these metrics and when should they be used? Given that we want to give 20 PyCon tickets to only ChiPy chipmunks, which metric is most appropriate here? Black box evaluation methods like <code>classification_report</code> will not be helpful here given the constraint of only having 20 tickets.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">precision_score</span><span class="p">,</span> <span class="n">recall_score</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">confusion_matrix</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Get predictions...</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Evaluate models, optimizing your predictions for 20 chipmunks!</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><div>
+    <span class="hidden-print">
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></span>
+    <span class="hidden-print">
+      <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script><script type="IN/Share" data-url="https://chicagopython.github.io/posts/chipmunks-data-science/"></script></span>
+    </div>
+    <nav><ul class="pager hidden-print">
+<li>
+            <a href="../flask-app-for-exchange-rates/" rel="prev" class="previous" title="Flask App for Exchange Rates"><span aria-hidden="true">‹ </span>Older</a>
+        </li>
+        <li>
+            <span class="disabled">Newer<span aria-hidden="true"> ›</span></span>
+        </li>
+    </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="chicagopython-github-io",
+            disqus_url="https://chicagopython.github.io/posts/chipmunks-data-science/",
+        disqus_title="Chipmunks Data Science",
+        disqus_identifier="cache/posts/chipmunks-data-science.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-beta/katex.min.js" integrity="sha256-mxaM9VWtRj1wBtn50/EDUUe4m3t39ExE+xEPyrxVB8I=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-beta/contrib/auto-render.min.js" integrity="sha256-9uFJqVHnc71lPswxPcpJP49zqhdqp7DFqX68yHs358I=" crossorigin="anonymous"></script><script>
+                renderMathInElement(document.body,
+                    {
+                        
+delimiters: [
+    {left: "$$", right: "$$", display: true},
+    {left: "\\[", right: "\\]", display: true},
+    {left: "$", right: "$", display: false},
+    {left: "\\(", right: "\\)", display: false}
+]
+
+                    }
+                );
+            </script><script>var disqus_shortname="chicagopython-github-io";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script></main><footer id="footer"><p class="light-sans">© Chicago Python User Group · Subscribe via <a href="../../rss.xml">RSS</a> · Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a> · 
+<a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html">
+<img alt="Gnu Public License version 3.0" style="border-width:0;" src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"></a></p>
+            
+        </footer>
+</body>
+</html>

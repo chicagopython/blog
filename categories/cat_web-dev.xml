@@ -3,7 +3,7 @@
 &lt;a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html"&gt;
 &lt;img alt="Gnu Public License version 3.0"
 style="border-width:0;"
-src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Mon, 18 Mar 2019 03:07:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Flask App for Exchange Rates</title><link>https://chicagopython.github.io/posts/flask-app-for-exchange-rates/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;Flask App for Exchange Rates&lt;/h2&gt;
+src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Thu, 18 Apr 2019 03:42:03 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Flask App for Exchange Rates</title><link>https://chicagopython.github.io/posts/flask-app-for-exchange-rates/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;Flask App for Exchange Rates&lt;/h2&gt;
 &lt;h3&gt;Objective&lt;/h3&gt;
 &lt;p&gt;All developers in the modern day need to understand web technologies at some level. Whether you're interacting with a Jupyter notebook or querying a web api, understanding how a CLIENT requests information from a SERVER and to see how the SERVER produces its response is incredibly valuable.&lt;/p&gt;
 &lt;h3&gt;Overview&lt;/h3&gt;

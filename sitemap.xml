@@ -7,98 +7,102 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://chicagopython.github.io/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/about/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/archive.html</loc>
-  <lastmod>2019-03-18T03:07:00Z</lastmod>
+  <lastmod>2019-04-18T12:33:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/categories/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/categories/cat_python-101/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/categories/cat_web-dev/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/categories/cicd/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/categories/cli/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/categories/django/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/categories/flask/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/categories/pytest/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/categories/python-101/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/categories/testing/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/categories/web-dev/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://chicagopython.github.io/posts/chipmunks-data-science/</loc>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/command-line-app-for-grouping-project-night-challengers/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/data-analysis-with-pandas/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/django-project-night-tracker/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/flask-app-for-exchange-rates/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/flask-app-to-group-project-night-challengers/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/flask-collage-for-project-night-challengers/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/introduction-to-text-analysis-with-sklearn/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/python-koans/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/unit-testing-and-continuous-integration-with-pytest-travis/</loc>
-  <lastmod>2019-03-18T02:51:00Z</lastmod>
+  <lastmod>2019-04-18T03:42:00Z</lastmod>
  </url>
 </urlset>
