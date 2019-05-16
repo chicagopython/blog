@@ -44,7 +44,7 @@ That’s awesome! Project night is a great place to get started. If you have les
 Q: What do I need to bring to Project Night?
 
 - A laptop with working wifi and power cord.
-- Python 3. Yep, Python 3 ONLY (https://www.python.org/downloads/).
+- Python 3. Yep, Python 3 ONLY. To install Python 3, follow the instructions [here](https://realpython.com/installing-python/).
 - A text editor/IDE. For the Challenges we suggest installing either Visual Studio Code (https://code.visualstudio.com/) or Sublime Text (https://www.sublimetext.com/3) for easy setup and to make it easy to collaborate with others.
 
 Q: I have another question not listed above. Where do I ask?
