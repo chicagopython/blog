@@ -3,7 +3,379 @@
 &lt;a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html"&gt;
 &lt;img alt="Gnu Public License version 3.0"
 style="border-width:0;"
-src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Thu, 18 Apr 2019 22:52:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>ChiPy Chipmunk Project Night </title><link>https://chicagopython.github.io/posts/chipy-chipmunks/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Project Night Purpose&lt;/h3&gt;
+src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Thu, 16 May 2019 05:23:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>trackcoder</title><link>https://chicagopython.github.io/posts/trackcoder/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;1. trackcoder: The Mentorship Journal&lt;/h2&gt;
+&lt;p&gt;Chipy's mentorship program is an extra-ordinary jounery for becoming a better developer.
+As a mentee, you are expected to do a lot - you read new articles/books, write code,
+debug and troubleshoot, pair program with other mentees in coding workshop or your mentor.
+This is involves managing time efficiently and doing the effective things.
+But as the old adage goes, "you can't manage what you can't measure".&lt;/p&gt;
+&lt;p&gt;This project is the first of the three part series of building tools for the mentees for
+tracking time. The end goal of such a tool will be to give you a tool that helps you record mini
+journal entires every day. The tool would also show you insight into your learning patterns
+allowing you to make better decisions on when allocating time for self directed learnings beyond the
+mentorship program.  &lt;/p&gt;
+&lt;h3&gt;1.1. The Done list&lt;/h3&gt;
+&lt;p&gt;Lets say you were to keep an account of every thing you have accomplished during your mentorship.
+The minimalistic way for doing that would be noting things down in a text file - think of it as
+a journal that you update frequently.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    Date: 02/20/2019
+    first blog post completed 🏅
+    learned about using click at project night
+    updated cli for the app
+
+    Date: 02/21/2019
+    read good article on decorators http://realpython.org/
+    refactored to use decorators for orthogonal logic
+    debugging decorators
+    met with mentor to fix decorator issues
+&lt;/pre&gt;
+
+
+&lt;p&gt;With a little bit of effort, you can capture two more data points with each of the accomplishment
+you are recording in this mini journal entry.&lt;/p&gt;
+&lt;p&gt;(a) the time spent
+(b) the type of activity&lt;/p&gt;
+&lt;p&gt;These will form the basis of gaining insights into your personal learning patterns.&lt;/p&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="sr"&gt;/20/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;
+&lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;blogging&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="n"&gt;mins&lt;/span&gt;
+&lt;span class="n"&gt;learned&lt;/span&gt; &lt;span class="n"&gt;about&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;click&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;project&lt;/span&gt; &lt;span class="n"&gt;night&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pair_programming&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="n"&gt;mins&lt;/span&gt;
+&lt;span class="n"&gt;updated&lt;/span&gt; &lt;span class="n"&gt;cli&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;coding&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt; &lt;span class="n"&gt;mins&lt;/span&gt;
+
+&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="sr"&gt;/21/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;
+&lt;span class="n"&gt;read&lt;/span&gt; &lt;span class="n"&gt;good&lt;/span&gt; &lt;span class="n"&gt;article&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;decorators&lt;/span&gt; &lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;://&lt;/span&gt;&lt;span class="n"&gt;realpython&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;org&lt;/span&gt;&lt;span class="o"&gt;/,&lt;/span&gt; &lt;span class="n"&gt;research&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;45&lt;/span&gt; &lt;span class="n"&gt;mins&lt;/span&gt;
+&lt;span class="n"&gt;refactored&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;use&lt;/span&gt; &lt;span class="n"&gt;decorators&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;orthogonal&lt;/span&gt; &lt;span class="n"&gt;logic&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;coding&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="n"&gt;mins&lt;/span&gt;
+&lt;span class="n"&gt;debugging&lt;/span&gt; &lt;span class="n"&gt;decorators&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debugging&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="n"&gt;mins&lt;/span&gt;
+&lt;span class="n"&gt;met&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;mentor&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;fix&lt;/span&gt; &lt;span class="n"&gt;decorator&lt;/span&gt; &lt;span class="n"&gt;issues&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;mentor&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt; &lt;span class="n"&gt;mins&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;While recording each of these activities have taken up time, you'll probably find one was
+more useful than the other. So add another field to your
+entry, effectiveness and refactor a little bit.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;02/20/2019, first blog post, blogging, 120 mins, 4
+02/20/2019, learned about using click at project night, pair_programming, 120 mins, 4
+02/20/2019, updated cli for the app, coding, 20 mins, 3
+02/21/2019, read good article on decorators http://realpython.org/, research, 45 mins, 4
+02/21/2019, refactored to use decorators for orthogonal logic, coding, 30 mins, 3
+02/21/2019, debugging decorators, debugging, 30 mins, 2
+02/21/2019, met with mentor to fix decorator issues, mentor, 60 mins, 5
+&lt;/pre&gt;
+
+
+&lt;p&gt;If you save this file as a .csv now and open it in excel, you'll be able to get an account of how your time has been spent by selecting all the rows
+for the last but one column. Taking the next step, you can very easily build a bar graph of time spent per day by including the first column.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="csv.png" src="https://chicagopython.github.io/images/csv.png"&gt;&lt;/p&gt;
+&lt;p&gt;We could have stopped right here and let you continue with a spreadsheet. as a system for your mentorship journal. But lets make it a fun, reliable,and smooth.&lt;/p&gt;
+&lt;h4&gt;1.1.1. The Data structure&lt;/h4&gt;
+&lt;p&gt;Having looked at the data we intend to capture, lets try to reason how each entry in the row
+can be represented by variables in a script and what their type would be like.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    task: str
+    description: str
+    timestamp: datetime.timestamp
+    mins: int
+    effective: int
+    done: bool
+&lt;/pre&gt;
+
+
+&lt;p&gt;Note: I have sneaked in a variable &lt;code&gt;done&lt;/code&gt;, which can tell us if this task is completed. We would not use it right now, but with a little bit of effort we can use this field to enhance this app to have a Todo list feature. With these as a member variables, we can now define a &lt;code&gt;class&lt;/code&gt; for our &lt;code&gt;app.py&lt;/code&gt;. A class is nothing but an abstract representation of how each of our data record (or object) should look like and behave.&lt;/p&gt;
+&lt;p&gt;You'll find this in &lt;code&gt;app.py&lt;/code&gt;-s line 16-22.&lt;/p&gt;
+&lt;h4&gt;1.1.2. Replacing csv with a database&lt;/h4&gt;
+&lt;p&gt;csv or spreadsheets are a good start for storing data, but are not without limitations. For project like ours, where we are looking to do automation, analytics and integration with more than one system we should be better of using a database.
+There are a lot of databases to chose from, however but for something simple like ours we will use the &lt;code&gt;sqlite&lt;/code&gt; that comes with the python installation. Lets now look at the different ways how we can capture the data in a python script, persist it into the database, and as well as retrieve it for further processing.&lt;/p&gt;
+&lt;h5&gt;1.1.2.1. Object Relational Mapper (ORM)&lt;/h5&gt;
+&lt;p&gt;Each of your mini journal entry would be first captured as
+a Python object using the &lt;code&gt;app.py&lt;/code&gt; script that we will build in part 1. &lt;code&gt;app.py&lt;/code&gt; will also convert the python object
+into a database record using an Object Relatoinal Mapper(orm) and persist the data into the database. If you want to retrieve/update/delete a record from the database, the ORM allows you to use a similar Pythonic code to get the data back.&lt;/p&gt;
+&lt;h5&gt;1.1.2.2. SQL/Pandas&lt;/h5&gt;
+&lt;p&gt;While the ORM allows you to write Python directly, the primary mechanism for querying the data in relational databases is
+Structed Query Language (SQL) which is english like query language that allows you to create,
+retrieve, summarize and analyze the data. We would be using SQL and pandas in part three for analysis of the data.&lt;/p&gt;
+&lt;h4&gt;1.1.3. Building the app in three parts&lt;/h4&gt;
+&lt;p&gt;&lt;img alt="project.png" src="https://chicagopython.github.io/images/project.png"&gt;&lt;/p&gt;
+&lt;h4&gt;1.1.4. Part 1: The terminal client&lt;/h4&gt;
+&lt;p&gt;Since most of our development time is spent on a terminal, in part 1 we will be building a terminal based client. The client will provide a simple interface to add a data record of your mini journal entry into the database.&lt;/p&gt;
+&lt;h4&gt;1.1.5. Part 2: Web interface&lt;/h4&gt;
+&lt;p&gt;After the database has been populated with entries we made in part 1, we will build a web interface that pulls
+up data from the database and presents a dashboard to show where time was spent.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="dashboard" src="https://chicagopython.github.io/images/dashboard.gif"&gt;&lt;/p&gt;
+&lt;h4&gt;1.1.6. Part 3: Data Analysis&lt;/h4&gt;
+&lt;p&gt;Once the data enty and output part is complete, in part 3, we will use data science tools to
+answer questions regarding your learning patterns. As a strech goal, we will enhance the dashboard built in part 2, with metrics and insights coming out of part 3.&lt;/p&gt;
+&lt;h3&gt;1.2. Part 1&lt;/h3&gt;
+&lt;p&gt;In this project we will explore&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How to build command line applications using &lt;code&gt;prompt_toolkit&lt;/code&gt;, &lt;code&gt;click&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;How to store data in sqlite database that comes with Python using &lt;code&gt;peewee&lt;/code&gt; ORM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;1.3. Setup Instructions&lt;/h3&gt;
+&lt;p&gt;You will need a text editor like Visual Studio Code, Atom or Sublime Text. Since this
+you'll be working in a group, having an editor that does not get in the way of solving
+the problem is essential. So stick to what every one in your team is familiar with.&lt;/p&gt;
+&lt;h4&gt;1.3.1. Download .zip from github&lt;/h4&gt;
+&lt;p&gt;If you are not familiar with &lt;code&gt;git&lt;/code&gt;, you can download the repository from &lt;a href="https://github.com/chicagopython/CodingWorkshops/archive/master.zip"&gt;here&lt;/a&gt;.
+Clicking on the link will download a .zip file to your computer. Next you need to
+navigate to the folder where it was downloaded and unzip the folder. Once you have
+the CodingWorkshop directory, you can go to step 1.5.&lt;/p&gt;
+&lt;h4&gt;1.3.2. Git and Github [Optional]&lt;/h4&gt;
+&lt;p&gt;After completing the steps below you should have a github account and be able to push
+your local changes to this repository to github.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Follow the setup steps described &lt;a href="https://help.github.com/articles/set-up-git/"&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Read the steps described in &lt;a href="https://help.github.com/articles/fork-a-repo"&gt;fork a repo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use the steps described above to fork this repository &lt;a href="https://github.com/chicagopython/CodingWorkshops"&gt;CodingWorkshops&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The changes that you make as a part of this exercise, will be pushed to the fork you created for this
+repository.&lt;/p&gt;
+&lt;p&gt;In case you have already have created a fork of this repository in your github account, you will
+want to bring it up to date with the recent changes. In that case,
+you will need to do the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://help.github.com/articles/configuring-a-remote-for-a-fork/"&gt;configuring a remote fork&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://help.github.com/articles/syncing-a-fork/"&gt;syncing a fork&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;1.4. Python&lt;/h3&gt;
+&lt;p&gt;This project has made no attempt to be compatible with Python 2.7. 😎&lt;/p&gt;
+&lt;p&gt;Recommended version: Python 3.6 or higher.&lt;/p&gt;
+&lt;h3&gt;1.5. Quick Git command refresher [Optional]&lt;/h3&gt;
+&lt;p&gt;Below are the few most used git commands&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git checkout master          # checkout to master branch
+git checkout -b feature/cool # crate a new branch feature/cool
+git add -u                   # stage all the updates for commit
+git commit -am "Adding changes and commiting with a comment"
+git push origin master       # push commits to develop/ci branch
+&lt;/pre&gt;
+
+
+&lt;p&gt;Note for this exercise, we will be working on the master branch directly. However,
+that is NOT a best practice. Branches are cheap in git, so a new feature or fix
+would first go to a branch, get tested, code reviewed and finally merged to master.&lt;/p&gt;
+&lt;h3&gt;1.6. Documentation references&lt;/h3&gt;
+&lt;p&gt;Below are the libraries used by this program.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://python-prompt-toolkit.readthedocs.io/en/master/"&gt;prompt_toolkit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://click.pocoo.org/5/"&gt;click&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.peewee-orm.com/en/latest/"&gt;peewee&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;1.7. Exercise 0: Project Setup&lt;/h3&gt;
+&lt;p&gt;After completing the steps in setup, you should have the cloned versoin of the fork of &lt;code&gt;CodingWorkshop&lt;/code&gt;
+repository in your local machine. Lets take the time to look at the structure of this
+project. All code is located under &lt;code&gt;/problems/py101/trackcoder&lt;/code&gt; directory. So from your
+terminal go to the directory where you have cloned the repository.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;cd path/to/CodingWorkshop/problems/py101/trackcoder
+&lt;/pre&gt;
+
+
+&lt;p&gt;Make sure you are in this directory for the remainder of this project.&lt;/p&gt;
+&lt;p&gt;Run &lt;code&gt;pwd&lt;/code&gt; (&lt;code&gt;cwd&lt;/code&gt; for Windows) on the command prompt to find out which directory you
+are on.&lt;/p&gt;
+&lt;p&gt;Your output should end in &lt;code&gt;problems/py101/trackcoder&lt;/code&gt; and contain the files described
+below.&lt;/p&gt;
+&lt;h4&gt;1.7.1. &lt;code&gt;app.py&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;This file contains the code required to get you started with building the project.
+You will be building on top of what has been provided in this file.&lt;/p&gt;
+&lt;h4&gt;1.7.2. &lt;code&gt;Makefile&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;This file contains the commands that are required building the project.
+You can run &lt;code&gt;make help&lt;/code&gt; to see what are the options.&lt;/p&gt;
+&lt;p&gt;Note Makefile would not work on Windows out of the box.&lt;/p&gt;
+&lt;h4&gt;1.7.3. &lt;code&gt;Pipfile&lt;/code&gt; and &lt;code&gt;Pipfile.lock&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;These two files are used by &lt;code&gt;pipenv&lt;/code&gt; to create a virtual enviornment that
+isolates all the dependencies of this project from other python projects in your computer.
+Learn more about &lt;a href="https://docs.pipenv.org/"&gt;pipenv&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;1.8. Exercise 1: Build&lt;/h3&gt;
+&lt;p&gt;From the &lt;code&gt;/problems/py101/trackcoder&lt;/code&gt; directory, run&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;make
+&lt;/pre&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Which packages got installed?&lt;/li&gt;
+&lt;li&gt;Which version of python is getting used?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Skip this exercise for Windows. Install the dependencies using&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pip install prompt_toolkit Click peewee
+&lt;/pre&gt;
+
+
+&lt;h3&gt;1.9. Exercise 2: Run the program&lt;/h3&gt;
+&lt;p&gt;First shell into your virtual environment&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;make shell
+&lt;/pre&gt;
+
+
+&lt;p&gt;This should activate your virtual enviornment, i.e. give you access to a python
+environment where all the dependencies for this project has been installed.&lt;/p&gt;
+&lt;p&gt;Note: If the above command errors out, or you are on Windows, run the following to get into
+a shell with the virtualenv acitvated.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pipenv shell
+&lt;/pre&gt;
+
+
+&lt;p&gt;If everything fails,&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pip install prompt_toolkit Click peewee
+&lt;/pre&gt;
+
+
+&lt;p&gt;Start by running&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python app.py --help
+&lt;/pre&gt;
+
+
+&lt;p&gt;What are the possible options that command has?
+Run each option with --help option to see what is the help message provided.&lt;/p&gt;
+&lt;h3&gt;1.10. Exercise 3: Fix the help message&lt;/h3&gt;
+&lt;h4&gt;1.10.1. Interactive mode&lt;/h4&gt;
+&lt;p&gt;Running &lt;code&gt;app.py&lt;/code&gt; with &lt;code&gt;-i&lt;/code&gt; - should start the app in interactive mode.
+Once in interactive mode, there are two commands &lt;code&gt;add&lt;/code&gt; and &lt;code&gt;show&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;add&lt;/code&gt; command allows adding a new &lt;code&gt;Task&lt;/code&gt;. The format is&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;% add b 10 first paragraph of first blog post&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;here &lt;code&gt;b&lt;/code&gt; is the abbreviations for blogging, &lt;code&gt;10&lt;/code&gt; shows the time taken for the task. Rest of the sentence is comment.
+There are only 6 possible Task types&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;blogging (b)&lt;/li&gt;
+&lt;li&gt;coding (c)&lt;/li&gt;
+&lt;li&gt;debugging (d)&lt;/li&gt;
+&lt;li&gt;pair programming at project night (p)&lt;/li&gt;
+&lt;li&gt;research (r)&lt;/li&gt;
+&lt;li&gt;meeting with mentor (m)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For example, an interactive session might look like&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;% add b 10 first blog post&lt;/span&gt;
+&lt;span class="c"&gt;% add c 10 finished cli&lt;/span&gt;
+&lt;span class="c"&gt;% add d 120 debugging decorators&lt;/span&gt;
+&lt;span class="c"&gt;% add m 120 always keep the final presentation in mind&lt;/span&gt;
+&lt;span class="c"&gt;% add r 60 read articles on pandas&lt;/span&gt;
+&lt;span class="c"&gt;% add p 120 learned about decorators&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;/blockquote&gt;
+&lt;p&gt;The &lt;code&gt;show&lt;/code&gt; command allows listing of all the &lt;code&gt;Task&lt;/code&gt;-s added till now.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;% show&lt;/span&gt;
+&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="n"&gt;finished&lt;/span&gt; &lt;span class="n"&gt;cli&lt;/span&gt;
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="n"&gt;debugging&lt;/span&gt; &lt;span class="n"&gt;decorators&lt;/span&gt;
+&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="n"&gt;always&lt;/span&gt; &lt;span class="n"&gt;keep&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;final&lt;/span&gt; &lt;span class="n"&gt;presentation&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;mind&lt;/span&gt;
+&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt; &lt;span class="n"&gt;read&lt;/span&gt; &lt;span class="n"&gt;articles&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;pandas&lt;/span&gt;
+&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="n"&gt;learned&lt;/span&gt; &lt;span class="n"&gt;about&lt;/span&gt; &lt;span class="n"&gt;decorators&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;/blockquote&gt;
+&lt;p&gt;For this exercise you need to update add helpful messages that will summarize what each
+of the options for &lt;code&gt;app.py&lt;/code&gt; stand for.&lt;/p&gt;
+&lt;h3&gt;1.11. Exercise 4: Run in interactive mode&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python app.py -i
+&lt;/pre&gt;
+
+
+&lt;p&gt;Add some tasks and list them out by using the commands shown above. Play around with the up/down
+arrow keys to access history of the commands.&lt;/p&gt;
+&lt;p&gt;Exit the session using &lt;code&gt;ctrl+D&lt;/code&gt;. From your command prompt, run &lt;code&gt;ls -l&lt;/code&gt; in linux or mac or &lt;code&gt;dir&lt;/code&gt;
+in windows. What is the name of the file that gets created?&lt;/p&gt;
+&lt;p&gt;Using sqlite3&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sqlite3 to_do_list.db 'select * from ToDo;'
+&lt;/pre&gt;
+
+
+&lt;p&gt;Compare the output that you get from running &lt;code&gt;show&lt;/code&gt; and using the command above.&lt;/p&gt;
+&lt;h3&gt;1.12. Exercise 4: Run in non-interactive mode&lt;/h3&gt;
+&lt;p&gt;For ease of entering data the program can also be run in non-interactive mode&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python app.py -a b 30  "first blog post completed"
+python app.py -s
+&lt;/pre&gt;
+
+
+&lt;p&gt;Add a few tasks that have been completed and list them non-interactively.
+Note you'll need to put the description in quotes in this mode.&lt;/p&gt;
+&lt;h4&gt;1.12.1. Optional: For non-windows users only&lt;/h4&gt;
+&lt;p&gt;You can further simplify entering tracking your time by adding a bash shell alias.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;alias&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;function&lt;/span&gt; &lt;span class="n"&gt;_add&lt;/span&gt;&lt;span class="p"&gt;(){&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="s"&gt;"$@"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="n"&gt;_add&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;Then from your shell you can&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;$ add c &lt;span class="m"&gt;30&lt;/span&gt; &lt;span class="s2"&gt;"finished oauth"&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;Add a similar shell alias for the &lt;code&gt;show&lt;/code&gt; command.&lt;/p&gt;
+&lt;h3&gt;1.13. Exercise 5: Error handling&lt;/h3&gt;
+&lt;p&gt;Currently we have two commands &lt;code&gt;add&lt;/code&gt; and &lt;code&gt;show&lt;/code&gt;. Lets say the user made a typo,
+or was creative while trying to input a command.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;% add c api 30 complete&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;instead of&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;% add c 30 api complete&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;This results in the program crashing horribly with huge stack trace.
+Add error handling to handle cases when the program is unable to &lt;code&gt;parse&lt;/code&gt; the input
+passed by the user.&lt;/p&gt;
+&lt;h3&gt;1.14. Exercise 6: Enhance the show command&lt;/h3&gt;
+&lt;p&gt;Enhance the show command to summarize the output by task category.
+Your summary should include how much time was spent on each of the task category.&lt;/p&gt;
+&lt;p&gt;As seen above, we are using sqlite3. You may choose to do your summary calculation
+using sql or write the logic in python.&lt;/p&gt;
+&lt;h3&gt;1.15. Exercise 7: Add a field for task complete or not&lt;/h3&gt;
+&lt;p&gt;Next take a look at&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;ToDo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Model&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;This class has a list of fields - task, description, timestamp, mins, done.
+Till now we have not been using this field. It has a default value of &lt;code&gt;True&lt;/code&gt;
+to indicate that a completed task is being added.&lt;/p&gt;
+&lt;p&gt;However, it might not always be the case. You might want to log your work,
+and still have incomplete tasks. In fact, logging often and logging early is
+encouraged! In order to faciliate that we need to optionally
+take a fourth parameter in the input for adding a new task.&lt;/p&gt;
+&lt;p&gt;Take a look at the decorator right above the &lt;code&gt;main&lt;/code&gt; function&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;@click.option('--add', '-a', nargs=3, type=(click.STRING, int, click.STRING), \
+            default=(None, None, None))
+&lt;/pre&gt;
+
+
+&lt;p&gt;This is the starting point for allowing taking in an extra input.
+You will find the relevant documentation &lt;a href="http://click.pocoo.org/5/options/"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Hint: Note the type of the field is boolean.
+You will need to modify the &lt;code&gt;parse&lt;/code&gt;, &lt;code&gt;add&lt;/code&gt; and the &lt;code&gt;main&lt;/code&gt; function in order to complete
+this exercise.&lt;/p&gt;
+&lt;h3&gt;1.16. Exercise 8: Enhance the summary&lt;/h3&gt;
+&lt;p&gt;Enhance your summary function to show how many tasks are in progress and how many are complete.
+How you want to format the information is completely up to your choice.&lt;/p&gt;
+&lt;h3&gt;1.17. Exercise 9: Hashtags&lt;/h3&gt;
+&lt;p&gt;Now that you have enabled the flag to indicate if a task is complete or not, you
+can log a much fine grained prorgress of your tasks. You can tag your task with
+arbitary hashtags in order to provide better semantic information. For example:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;% add p 120 #data_science learned about precision/recall&lt;/span&gt;
+&lt;span class="c"&gt;% add b 120 finished the blogpost&lt;/span&gt;
+&lt;span class="c"&gt;% add p 30 #data_science learned about roc curves&lt;/span&gt;
+&lt;span class="c"&gt;% add p 30 #webdev added a flask interface&lt;/span&gt;
+&lt;span class="c"&gt;% add d 30 #issues/7 found a bug, new github issue&lt;/span&gt;
+&lt;span class="c"&gt;% add p 30 #issues/7 closed github issue 7&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;Enhance the show command to optionally take a hashtag as parameter, that will filter out only
+tasks which have that hashtag. Accrodingly your summary should reflect only
+data relevant to that hashtag.&lt;/p&gt;
+&lt;h3&gt;1.18. Exercise 10: Add a field for effectiveness&lt;/h3&gt;
+&lt;p&gt;Next its time to add a score to your efforts. Add a field to the &lt;code&gt;ToDo&lt;/code&gt; class called effective,
+where you can record how effective a task was. An effective score is a number between 1 to 5,
+1 being the lowest and 5 being the highest.&lt;/p&gt;
+&lt;p&gt;Armed with this data, you should be able to answer
+(i) what is taking up most of your time?
+(ii) which activities are the most effective for your growth&lt;/p&gt;&lt;/div&gt;</description><guid>https://chicagopython.github.io/posts/trackcoder/</guid><pubDate>Thu, 16 May 2019 04:48:53 GMT</pubDate></item><item><title>ChiPy Chipmunk Project Night </title><link>https://chicagopython.github.io/posts/chipy-chipmunks/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Project Night Purpose&lt;/h3&gt;
 &lt;p&gt;Many people assume data scientists spend all day visualizing data and making impressive predictive models. While this isn’t untrue, the luckiest and most productive data scientists spend a lot of their time communicating. They communicate their model results - as well as their assumptions and limitations when making their models and doing analysis - in a way that is digestible to their stakeholders and colleagues. &lt;/p&gt;
 &lt;p&gt;Tonight’s project is aimed towards that aspect of communication. You will be asked to make assumptions as a team - particularly as they pertain to this problem and what the stakeholders need. There are no exactly correct assumptions or answers for this project night. There may be assumptions and answers that clearly don’t have evidence to support them, but do not feel bogged down by getting the “right” answer.&lt;/p&gt;
 &lt;p&gt;Most importantly - have fun. While this project night covers serious concepts, it is ridiculously silly and meant to be taken with a bit of lighthearted exploration and plenty of opportunities to make mistakes.&lt;/p&gt;
@@ -2314,262 +2686,4 @@ programming language provides so that there is minimum duplication of code.&lt;/
 that you have implemented earlier for grouping your list of people into teams
 should now be used for creating your teams.&lt;/p&gt;
 &lt;p&gt;Thanks! Thats all folks!
-If you found a bug or think you some instructions are missing - just open a issue in this repository.&lt;/p&gt;&lt;/div&gt;</description><category>flask</category><category>web-dev</category><guid>https://chicagopython.github.io/posts/flask-app-to-group-project-night-challengers/</guid><pubDate>Sun, 17 Mar 2019 05:12:37 GMT</pubDate></item><item><title>Command line App for Grouping Project Night Challengers</title><link>https://chicagopython.github.io/posts/command-line-app-for-grouping-project-night-challengers/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;Command line App for Grouping Project Night Challengers&lt;/h2&gt;
-&lt;p&gt;The organizers of Project Nights need your help! Grouping people for
-team projects is a manual task. Why do it manually, when
-we can automate it?&lt;/p&gt;
-&lt;h3&gt;Is this project for you&lt;/h3&gt;
-&lt;p&gt;Before you progress further, let's check if we are ready to solve this. You should&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Have a personal computer with working wifi and power chord&lt;/li&gt;
-&lt;li&gt;Have Python 3 installed on your computer. Yep, Python 3 only.&lt;/li&gt;
-&lt;li&gt;Have &lt;a href="https://atom.io/"&gt;Atom&lt;/a&gt; or &lt;a href="https://www.sublimetext.com/3"&gt;Sublime Text&lt;/a&gt; installed in your computer.&lt;/li&gt;
-&lt;li&gt;Have written &amp;amp; ran programs in Python from the command line&lt;/li&gt;
-&lt;li&gt;Have some idea about lists, dictionaries and functions&lt;/li&gt;
-&lt;li&gt;Have some idea about &lt;code&gt;virtualenv&lt;/code&gt; and installing packages with &lt;code&gt;pip&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;This project is not tested using Jupyter Notebook, PyCharm,
-Spider, or any other ide/text editor/programming environment for that matter.
-Atom or Sublime Text and the command line are the only supported development environment for this project.&lt;/p&gt;
-&lt;p&gt;Short url for this page: &lt;strong&gt;https://git.io/vdv43&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Sounds reasonable? Then let's dive in - and build an awesome command line app using python.&lt;/p&gt;
-&lt;h3&gt;Can command line applications be cool&lt;/h3&gt;
-&lt;p&gt;You bet!
-Checkout this PyCon 2017 video on which this project is based&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.youtube.com/watch?feature=player_embedded&amp;amp;v=hJhZhLg3obk" target="_blank"&gt;&lt;img src="http://img.youtube.com/vi/hJhZhLg3obk/0.jpg" alt="Amjith Ramanujam Awesome Command Line Tools PyCon 2017" width="560" height="315" border="10"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The slides are available &lt;a href="https://speakerdeck.com/pycon2017/amjith-ramanujam-awesome-command-line-tools"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;h4&gt;What is a Team Project&lt;/h4&gt;
-&lt;p&gt;Glad you asked! A team project is an hour long problem solving session where each team
-consists of four members of different expertise level. The teams are formed from the
-list of attendees of the project night.&lt;/p&gt;
-&lt;h4&gt;The Objective&lt;/h4&gt;
-&lt;p&gt;Our objective is to build an awesome command line application in Python3 that
-- allows creating list of people who want to participate in a team project
-- once the list is created, the program automatically creates teams of four&lt;/p&gt;
-&lt;h4&gt;A Balanced Team&lt;/h4&gt;
-&lt;p&gt;To keep the team composition balanced in terms of experience, we want every team
-to have two members with more experience than the other two.
-Measuring experience is very subjective and difficult, but we will keep it simple.
-We will rely on a (not very scientific) metic - lines of code written till date.&lt;/p&gt;
-&lt;p&gt;We will create a list by taking names of people from tonight's RSVP list. Along with their name we will also include the number of lines of code that person has written till date in Python or an equivalent language. Imagine this as a tool that one of the organizers uses to checkin attendees as they start coming in on the day of Project Night.&lt;/p&gt;
-&lt;p&gt;And yeah, this number of lines can be just a rough estimate. As a
-reference, the linux kernel is over 23 million lines of code!&lt;/p&gt;
-&lt;h4&gt;Bootstrap&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;If you are familiar with &lt;code&gt;git&lt;/code&gt;, run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/chicagopython/CodingWorkshops.git
-&lt;/pre&gt;
-
-
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;If not, go to https://github.com/chicagopython/CodingWorkshops&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;Click on the Download Zip and unzip the file that gets downloaded&lt;/li&gt;
-&lt;li&gt;From your command line, change directory to the path where you have downloaded it.&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;On linux or OS X&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; cd path/to/CodingWorkshops/problems/py101/python_team_project/
-&lt;/pre&gt;
-
-
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;On Windows&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; cd path\to\CodingWorkshops\problems\py101\python_team_project
-&lt;/pre&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Here you will find the basic skeleton of the app under &lt;code&gt;app.py&lt;/code&gt;. (after September 21, 2017)&lt;/p&gt;
-&lt;h4&gt;Set up virtualenv&lt;/h4&gt;
-&lt;p&gt;If you are using Linux or OS X, run the following to create a new virtualenv&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-python app.py
-&lt;/pre&gt;
-
-
-&lt;p&gt;On Windows, run the following&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python3 -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-python app.py
-&lt;/pre&gt;
-
-
-&lt;p&gt;&lt;a href="https://asciinema.org/a/M1hP91h153PuOPEjVYbot6jPj"&gt;&lt;img alt="asciicast" src="https://asciinema.org/a/M1hP91h153PuOPEjVYbot6jPj.png"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Next let's get started by looking into the code.&lt;/p&gt;
-&lt;h3&gt;Feature 0: Look into app.py&lt;/h3&gt;
-&lt;p&gt;app.py is the script contains some code to get you started.
-We will be using two external libraries for this
-program.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python_prompt_toolkit
-meetup-api
-&lt;/pre&gt;
-
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;prompt_toolkit&lt;/code&gt; makes it easy for building awesome command line apps&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;meetup-api&lt;/code&gt; provides us with the data for the meetup&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;asciinema&lt;/code&gt; which is also in the &lt;code&gt;requirements.txt&lt;/code&gt; isn't strictly necessary and we'll talk about it last&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;execute&lt;/code&gt; function is where you would be writing your application logic.&lt;/p&gt;
-&lt;p&gt;You should not require to make changes to &lt;code&gt;main&lt;/code&gt; and &lt;code&gt;get_names&lt;/code&gt; functions. In an upcoming project nights we will dig into &lt;code&gt;get_names&lt;/code&gt; and make changes to it.&lt;/p&gt;
-&lt;p&gt;Next let's run app.py&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   python3 app.py
-&lt;/pre&gt;
-
-
-&lt;p&gt;This should drop you to a prompt.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;Type in something to that prompt.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; Hola amigo
-&amp;gt; You issued: Hola amigo
-&lt;/pre&gt;
-
-
-&lt;p&gt;Try a few more&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; Gracias
-&amp;gt; You issued:Gracias
-&lt;/pre&gt;
-
-
-&lt;p&gt;You can now press the up arrow key and access the history of the commands you have issued. To exit out of the program, you can type Ctrl-D.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;GoodBye!&lt;/p&gt;
-&lt;h4&gt;Feature 1: Implement the Add command&lt;/h4&gt;
-&lt;p&gt;Next let's create a command where the user of the program can register new participants to build up the list of users from whom teams will be formed.&lt;/p&gt;
-&lt;p&gt;The command should look like the following&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;add &amp;lt;name&amp;gt; &amp;lt;number of lines&amp;gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;where &lt;name&gt; is the full name of the person as it appears in the
-meetup.com and &lt;lines&gt; is the  number of lines of code
-that person has written in Python or a similar programming language in their life.&lt;/lines&gt;&lt;/name&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;add Tathagata Dasgupta 1&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4&gt;Feature 2: Add some error checking (optional)&lt;/h4&gt;
-&lt;p&gt;You might be asking what if the user incorrectly types something that is not a number
-for the &lt;code&gt;number of lines&lt;/code&gt;. Indeed that would be incorrect. Show an error message
-if &lt;number of lines&gt; is not a number.&lt;/number&gt;&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    &amp;gt; add Tathagata Dasgupta o
-    ERROR: number of lines should be, er, a "number"
-&lt;/pre&gt;
-
-
-&lt;p&gt;Are there other error conditions that can arise?&lt;/p&gt;
-&lt;h3&gt;Feature 2: Implement a List command&lt;/h3&gt;
-&lt;p&gt;Next add a new command list.
-Show the number of people added and prints the total count
-and the median of the line count.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    &amp;gt; add Tathagata Dasgupta 1
-    &amp;gt; add Jason Wirth 2
-    &amp;gt; add Adam Bain 3
-    &amp;gt; add Brian Ray 4
-    &amp;gt; add Guido van Rossum 5
-    &amp;gt; list
-    &amp;gt; People added so far:
-    Tathagata Dasgupta, 1
-    Jason Wirth, 2
-    Adam Bain, 3
-    Brian Ray, 4
-    Guido Van Rossum, 5
-
-    Number of people: 5
-    Median line count: 3
-&lt;/pre&gt;
-
-
-&lt;p&gt;Your output need not be exactly the same, but should show the
-correct data. The Median line count will be used in the next
-features.
-Hint: Python3 has the statistics module, so you can use&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;statistics&lt;/span&gt;
-&lt;span class="n"&gt;statistics&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;median&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;h3&gt;Feature 3: Add the teams command (optional)&lt;/h3&gt;
-&lt;p&gt;The next command we will implement is &lt;code&gt;teams&lt;/code&gt; command. Let's say you
-have added a few people already and know what the median line count
-is for the people you have added so far. On issuing the &lt;code&gt;teams&lt;/code&gt; command
-it should output teams of four such that each team contains
-  - 2 person who have written less than the median lines of code
-  - 2 person who has written more than written more than median&lt;/p&gt;
-&lt;p&gt;If there are less the four people left to group, then group them
-together.&lt;/p&gt;
-&lt;p&gt;With our running example, there would be a team of four, and the
-remaining 1 should be in another group.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    &amp;gt; teams
-    Group 1: Tathagata Dasgupta, Jason Wirth, Brian Ray, Guido Van Rossum
-    Group 2: Adam Bain
-&lt;/pre&gt;
-
-
-&lt;h3&gt;Feature 4. Enhance Team command (optional)&lt;/h3&gt;
-&lt;p&gt;Add a unique team name&lt;/p&gt;
-&lt;h3&gt;Feature 5. Enhance Team command (optional)&lt;/h3&gt;
-&lt;p&gt;Make up random room names and add a room name for each team.&lt;/p&gt;
-&lt;h3&gt;Feature 6. Enhance Teams command (optional)&lt;/h3&gt;
-&lt;p&gt;Print the teams sorted with the average number of lines of code for each team.&lt;/p&gt;
-&lt;h3&gt;Feature 7. Auto-completion for commands (optional)&lt;/h3&gt;
-&lt;p&gt;Adding auto completion is easy with &lt;code&gt;prompt_toolkit&lt;/code&gt;. In &lt;code&gt;app.py&lt;/code&gt; the following line is used to include the
-&lt;code&gt;add&lt;/code&gt; command to auto-completion.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    command_completer = WordCompleter(['add'], ignore_case=True)
-&lt;/pre&gt;
-
-
-&lt;p&gt;Add the remaining commands.&lt;/p&gt;
-&lt;h3&gt;Feature 8. Auto-completion for participant names (optional)&lt;/h3&gt;
-&lt;p&gt;Typing in names of the attendees of project night would be time consuming
-and error prone. Let's add auto-completion magic to it!&lt;/p&gt;
-&lt;p&gt;The funcion &lt;code&gt;get_names&lt;/code&gt; uses meetup-api and returns a list of names for the attendees.
-All you need to do is include a call to &lt;code&gt;get_names&lt;/code&gt; in the command_completer.&lt;/p&gt;
-&lt;h3&gt;Feature 9. Tell the world (optional, OS X or Linux only)&lt;/h3&gt;
-&lt;p&gt;We have also installed asciinema - a tool that allows you
-to create recordings of your terminal sessions. In order to tell
-the world what your team has made, let's make a small recording.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt; ascriinmea rec teamname.json
-&lt;/pre&gt;
-
-
-&lt;p&gt;Run your program and show off all the cool features you have built in your app.
-To finish recording hit Ctrl-D.
-Next play the recordings&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt; asciinema play teamname.json
-&lt;/pre&gt;
-
-
-&lt;p&gt;Once the playback looks good, upload it to the interwebs.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt; asciinema upload teamname.json
-&lt;/pre&gt;
-
-
-&lt;p&gt;Finally, tweet the link to @chicagopython with "Python Project Night
-Mentorship". Include the twitter handles of your team members.&lt;/p&gt;
-&lt;p&gt;Note: This is tested only in OS X. Let me know your experience for running it on
-other operating systems.
-If you see an error&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    asciinema needs a UTF-8 native locale to run. Check the output of `locale` command.
-&lt;/pre&gt;
-
-
-&lt;p&gt;the run the following command before running asciinema.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    export LC_ALL=en_US.UTF-8
-&lt;/pre&gt;
-
-
-&lt;p&gt;Thanks! Thats all folks!
-If you found a bug or think you some instructions are missing - just open a issue in this repository.&lt;/p&gt;&lt;/div&gt;</description><category>cli</category><category>python-101</category><guid>https://chicagopython.github.io/posts/command-line-app-for-grouping-project-night-challengers/</guid><pubDate>Sun, 17 Mar 2019 04:59:16 GMT</pubDate></item></channel></rss>
+If you found a bug or think you some instructions are missing - just open a issue in this repository.&lt;/p&gt;&lt;/div&gt;</description><category>flask</category><category>web-dev</category><guid>https://chicagopython.github.io/posts/flask-app-to-group-project-night-challengers/</guid><pubDate>Sun, 17 Mar 2019 05:12:37 GMT</pubDate></item></channel></rss>

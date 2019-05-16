@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html prefix="            og: http://ogp.me/ns# article: http://ogp.me/ns/article#     " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>trackcoder | Python Project Night Challenges</title>
+<link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#18354c">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://chicagopython.github.io/posts/trackcoder/">
+<link rel="icon" href="../../favicon.ico" sizes="16x16">
+<link rel="manifest" href="../../site.webmanifest">
+<link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#1f91c2">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="theme-color" content="#cceeff">
+<!-- favicons generated using http://realfavicongenerator.net/ --><!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<meta name="author" content="Chicago Python User Group">
+<link rel="prev" href="../chipy-chipmunks/" title="ChiPy Chipmunk Project Night " type="text/html">
+<meta name="twitter:card" content="summary">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+         
+    <header id="header" class="hidden-print"><nav id="menu"><a href="https://chicagopython.github.io/" title="Python Project Night Challenges" rel="home">
+        <img src="../../assets/img/chipy-chipmunk.png" alt="Python Project Night Challenges" id="logo" aria-hidden>
+          Python Project Night Challenges
+    </a>
+
+    <ul>
+<li><a href="../../categories/">Categories</a></li>
+                <li><a href="../../about/">About</a></li>
+    
+    
+    </ul></nav></header><main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><div class="metadata">
+              <p class="commentline">
+        
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/trackcoder.html">Comments</a>
+
+
+          
+
+        </p>
+</div>
+        
+    <h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">trackcoder</a></h1>
+
+        <time datetime="2019-05-15T23:48:53-05:00" itemprop="datePublished">May 15, 2019</time><a href="../../categories/cat_python-101">python-101</a>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<h2>1. trackcoder: The Mentorship Journal</h2>
+<p>Chipy's mentorship program is an extra-ordinary jounery for becoming a better developer.
+As a mentee, you are expected to do a lot - you read new articles/books, write code,
+debug and troubleshoot, pair program with other mentees in coding workshop or your mentor.
+This is involves managing time efficiently and doing the effective things.
+But as the old adage goes, "you can't manage what you can't measure".</p>
+<p>This project is the first of the three part series of building tools for the mentees for
+tracking time. The end goal of such a tool will be to give you a tool that helps you record mini
+journal entires every day. The tool would also show you insight into your learning patterns
+allowing you to make better decisions on when allocating time for self directed learnings beyond the
+mentorship program.  </p>
+<h3>1.1. The Done list</h3>
+<p>Lets say you were to keep an account of every thing you have accomplished during your mentorship.
+The minimalistic way for doing that would be noting things down in a text file - think of it as
+a journal that you update frequently.</p>
+<pre class="code literal-block"><span></span>    Date: 02/20/2019
+    first blog post completed 🏅
+    learned about using click at project night
+    updated cli for the app
+
+    Date: 02/21/2019
+    read good article on decorators http://realpython.org/
+    refactored to use decorators for orthogonal logic
+    debugging decorators
+    met with mentor to fix decorator issues
+</pre>
+
+
+<p>With a little bit of effort, you can capture two more data points with each of the accomplishment
+you are recording in this mini journal entry.</p>
+<p>(a) the time spent
+(b) the type of activity</p>
+<p>These will form the basis of gaining insights into your personal learning patterns.</p>
+<p>For example:</p>
+<pre class="code literal-block"><span></span><span class="n">Date</span><span class="o">:</span> <span class="mi">02</span><span class="sr">/20/</span><span class="mi">2019</span>
+<span class="n">first</span> <span class="n">blog</span> <span class="n">post</span><span class="o">,</span> <span class="n">blogging</span><span class="o">,</span> <span class="mi">120</span> <span class="n">mins</span>
+<span class="n">learned</span> <span class="n">about</span> <span class="n">using</span> <span class="n">click</span> <span class="n">at</span> <span class="n">project</span> <span class="n">night</span><span class="o">,</span> <span class="n">pair_programming</span><span class="o">,</span> <span class="mi">120</span> <span class="n">mins</span>
+<span class="n">updated</span> <span class="n">cli</span> <span class="k">for</span> <span class="n">the</span> <span class="n">app</span><span class="o">,</span> <span class="n">coding</span><span class="o">,</span> <span class="mi">20</span> <span class="n">mins</span>
+
+<span class="n">Date</span><span class="o">:</span> <span class="mi">02</span><span class="sr">/21/</span><span class="mi">2019</span>
+<span class="n">read</span> <span class="n">good</span> <span class="n">article</span> <span class="n">on</span> <span class="n">decorators</span> <span class="n">http</span><span class="o">://</span><span class="n">realpython</span><span class="o">.</span><span class="na">org</span><span class="o">/,</span> <span class="n">research</span><span class="o">,</span> <span class="mi">45</span> <span class="n">mins</span>
+<span class="n">refactored</span> <span class="n">to</span> <span class="n">use</span> <span class="n">decorators</span> <span class="k">for</span> <span class="n">orthogonal</span> <span class="n">logic</span><span class="o">,</span> <span class="n">coding</span><span class="o">,</span> <span class="mi">30</span> <span class="n">mins</span>
+<span class="n">debugging</span> <span class="n">decorators</span><span class="o">,</span> <span class="n">debugging</span><span class="o">,</span> <span class="mi">30</span> <span class="n">mins</span>
+<span class="n">met</span> <span class="k">with</span> <span class="n">mentor</span> <span class="n">to</span> <span class="n">fix</span> <span class="n">decorator</span> <span class="n">issues</span><span class="o">,</span> <span class="n">mentor</span><span class="o">,</span> <span class="mi">60</span> <span class="n">mins</span>
+</pre>
+
+
+<p>While recording each of these activities have taken up time, you'll probably find one was
+more useful than the other. So add another field to your
+entry, effectiveness and refactor a little bit.</p>
+<pre class="code literal-block"><span></span>02/20/2019, first blog post, blogging, 120 mins, 4
+02/20/2019, learned about using click at project night, pair_programming, 120 mins, 4
+02/20/2019, updated cli for the app, coding, 20 mins, 3
+02/21/2019, read good article on decorators http://realpython.org/, research, 45 mins, 4
+02/21/2019, refactored to use decorators for orthogonal logic, coding, 30 mins, 3
+02/21/2019, debugging decorators, debugging, 30 mins, 2
+02/21/2019, met with mentor to fix decorator issues, mentor, 60 mins, 5
+</pre>
+
+
+<p>If you save this file as a .csv now and open it in excel, you'll be able to get an account of how your time has been spent by selecting all the rows
+for the last but one column. Taking the next step, you can very easily build a bar graph of time spent per day by including the first column.</p>
+<p><img alt="csv.png" src="../../images/csv.png"></p>
+<p>We could have stopped right here and let you continue with a spreadsheet. as a system for your mentorship journal. But lets make it a fun, reliable,and smooth.</p>
+<h4>1.1.1. The Data structure</h4>
+<p>Having looked at the data we intend to capture, lets try to reason how each entry in the row
+can be represented by variables in a script and what their type would be like.</p>
+<pre class="code literal-block"><span></span>    task: str
+    description: str
+    timestamp: datetime.timestamp
+    mins: int
+    effective: int
+    done: bool
+</pre>
+
+
+<p>Note: I have sneaked in a variable <code>done</code>, which can tell us if this task is completed. We would not use it right now, but with a little bit of effort we can use this field to enhance this app to have a Todo list feature. With these as a member variables, we can now define a <code>class</code> for our <code>app.py</code>. A class is nothing but an abstract representation of how each of our data record (or object) should look like and behave.</p>
+<p>You'll find this in <code>app.py</code>-s line 16-22.</p>
+<h4>1.1.2. Replacing csv with a database</h4>
+<p>csv or spreadsheets are a good start for storing data, but are not without limitations. For project like ours, where we are looking to do automation, analytics and integration with more than one system we should be better of using a database.
+There are a lot of databases to chose from, however but for something simple like ours we will use the <code>sqlite</code> that comes with the python installation. Lets now look at the different ways how we can capture the data in a python script, persist it into the database, and as well as retrieve it for further processing.</p>
+<h5>1.1.2.1. Object Relational Mapper (ORM)</h5>
+<p>Each of your mini journal entry would be first captured as
+a Python object using the <code>app.py</code> script that we will build in part 1. <code>app.py</code> will also convert the python object
+into a database record using an Object Relatoinal Mapper(orm) and persist the data into the database. If you want to retrieve/update/delete a record from the database, the ORM allows you to use a similar Pythonic code to get the data back.</p>
+<h5>1.1.2.2. SQL/Pandas</h5>
+<p>While the ORM allows you to write Python directly, the primary mechanism for querying the data in relational databases is
+Structed Query Language (SQL) which is english like query language that allows you to create,
+retrieve, summarize and analyze the data. We would be using SQL and pandas in part three for analysis of the data.</p>
+<h4>1.1.3. Building the app in three parts</h4>
+<p><img alt="project.png" src="../../images/project.png"></p>
+<h4>1.1.4. Part 1: The terminal client</h4>
+<p>Since most of our development time is spent on a terminal, in part 1 we will be building a terminal based client. The client will provide a simple interface to add a data record of your mini journal entry into the database.</p>
+<h4>1.1.5. Part 2: Web interface</h4>
+<p>After the database has been populated with entries we made in part 1, we will build a web interface that pulls
+up data from the database and presents a dashboard to show where time was spent.</p>
+<p><img alt="dashboard" src="../../images/dashboard.gif"></p>
+<h4>1.1.6. Part 3: Data Analysis</h4>
+<p>Once the data enty and output part is complete, in part 3, we will use data science tools to
+answer questions regarding your learning patterns. As a strech goal, we will enhance the dashboard built in part 2, with metrics and insights coming out of part 3.</p>
+<h3>1.2. Part 1</h3>
+<p>In this project we will explore</p>
+<ul>
+<li>How to build command line applications using <code>prompt_toolkit</code>, <code>click</code>
+</li>
+<li>How to store data in sqlite database that comes with Python using <code>peewee</code> ORM</li>
+</ul>
+<h3>1.3. Setup Instructions</h3>
+<p>You will need a text editor like Visual Studio Code, Atom or Sublime Text. Since this
+you'll be working in a group, having an editor that does not get in the way of solving
+the problem is essential. So stick to what every one in your team is familiar with.</p>
+<h4>1.3.1. Download .zip from github</h4>
+<p>If you are not familiar with <code>git</code>, you can download the repository from <a href="https://github.com/chicagopython/CodingWorkshops/archive/master.zip">here</a>.
+Clicking on the link will download a .zip file to your computer. Next you need to
+navigate to the folder where it was downloaded and unzip the folder. Once you have
+the CodingWorkshop directory, you can go to step 1.5.</p>
+<h4>1.3.2. Git and Github [Optional]</h4>
+<p>After completing the steps below you should have a github account and be able to push
+your local changes to this repository to github.</p>
+<ul>
+<li>Follow the setup steps described <a href="https://help.github.com/articles/set-up-git/">here</a>
+</li>
+<li>Read the steps described in <a href="https://help.github.com/articles/fork-a-repo">fork a repo</a>
+</li>
+<li>Use the steps described above to fork this repository <a href="https://github.com/chicagopython/CodingWorkshops">CodingWorkshops</a>
+</li>
+</ul>
+<p>The changes that you make as a part of this exercise, will be pushed to the fork you created for this
+repository.</p>
+<p>In case you have already have created a fork of this repository in your github account, you will
+want to bring it up to date with the recent changes. In that case,
+you will need to do the following:</p>
+<ul>
+<li><a href="https://help.github.com/articles/configuring-a-remote-for-a-fork/">configuring a remote fork</a></li>
+<li><a href="https://help.github.com/articles/syncing-a-fork/">syncing a fork</a></li>
+</ul>
+<h3>1.4. Python</h3>
+<p>This project has made no attempt to be compatible with Python 2.7. 😎</p>
+<p>Recommended version: Python 3.6 or higher.</p>
+<h3>1.5. Quick Git command refresher [Optional]</h3>
+<p>Below are the few most used git commands</p>
+<pre class="code literal-block"><span></span>git checkout master          # checkout to master branch
+git checkout -b feature/cool # crate a new branch feature/cool
+git add -u                   # stage all the updates for commit
+git commit -am "Adding changes and commiting with a comment"
+git push origin master       # push commits to develop/ci branch
+</pre>
+
+
+<p>Note for this exercise, we will be working on the master branch directly. However,
+that is NOT a best practice. Branches are cheap in git, so a new feature or fix
+would first go to a branch, get tested, code reviewed and finally merged to master.</p>
+<h3>1.6. Documentation references</h3>
+<p>Below are the libraries used by this program.</p>
+<ul>
+<li><a href="https://python-prompt-toolkit.readthedocs.io/en/master/">prompt_toolkit</a></li>
+<li><a href="http://click.pocoo.org/5/">click</a></li>
+<li><a href="http://docs.peewee-orm.com/en/latest/">peewee</a></li>
+</ul>
+<h3>1.7. Exercise 0: Project Setup</h3>
+<p>After completing the steps in setup, you should have the cloned versoin of the fork of <code>CodingWorkshop</code>
+repository in your local machine. Lets take the time to look at the structure of this
+project. All code is located under <code>/problems/py101/trackcoder</code> directory. So from your
+terminal go to the directory where you have cloned the repository.</p>
+<pre class="code literal-block"><span></span>cd path/to/CodingWorkshop/problems/py101/trackcoder
+</pre>
+
+
+<p>Make sure you are in this directory for the remainder of this project.</p>
+<p>Run <code>pwd</code> (<code>cwd</code> for Windows) on the command prompt to find out which directory you
+are on.</p>
+<p>Your output should end in <code>problems/py101/trackcoder</code> and contain the files described
+below.</p>
+<h4>1.7.1. <code>app.py</code>
+</h4>
+<p>This file contains the code required to get you started with building the project.
+You will be building on top of what has been provided in this file.</p>
+<h4>1.7.2. <code>Makefile</code>
+</h4>
+<p>This file contains the commands that are required building the project.
+You can run <code>make help</code> to see what are the options.</p>
+<p>Note Makefile would not work on Windows out of the box.</p>
+<h4>1.7.3. <code>Pipfile</code> and <code>Pipfile.lock</code>
+</h4>
+<p>These two files are used by <code>pipenv</code> to create a virtual enviornment that
+isolates all the dependencies of this project from other python projects in your computer.
+Learn more about <a href="https://docs.pipenv.org/">pipenv</a>.</p>
+<h3>1.8. Exercise 1: Build</h3>
+<p>From the <code>/problems/py101/trackcoder</code> directory, run</p>
+<pre class="code literal-block"><span></span>make
+</pre>
+
+
+<ul>
+<li>Which packages got installed?</li>
+<li>Which version of python is getting used?</li>
+</ul>
+<p>Skip this exercise for Windows. Install the dependencies using</p>
+<pre class="code literal-block"><span></span>pip install prompt_toolkit Click peewee
+</pre>
+
+
+<h3>1.9. Exercise 2: Run the program</h3>
+<p>First shell into your virtual environment</p>
+<pre class="code literal-block"><span></span>make shell
+</pre>
+
+
+<p>This should activate your virtual enviornment, i.e. give you access to a python
+environment where all the dependencies for this project has been installed.</p>
+<p>Note: If the above command errors out, or you are on Windows, run the following to get into
+a shell with the virtualenv acitvated.</p>
+<pre class="code literal-block"><span></span>pipenv shell
+</pre>
+
+
+<p>If everything fails,</p>
+<pre class="code literal-block"><span></span>pip install prompt_toolkit Click peewee
+</pre>
+
+
+<p>Start by running</p>
+<pre class="code literal-block"><span></span>python app.py --help
+</pre>
+
+
+<p>What are the possible options that command has?
+Run each option with --help option to see what is the help message provided.</p>
+<h3>1.10. Exercise 3: Fix the help message</h3>
+<h4>1.10.1. Interactive mode</h4>
+<p>Running <code>app.py</code> with <code>-i</code> - should start the app in interactive mode.
+Once in interactive mode, there are two commands <code>add</code> and <code>show</code>.</p>
+<p>The <code>add</code> command allows adding a new <code>Task</code>. The format is</p>
+<pre class="code literal-block"><span></span><span class="c">% add b 10 first paragraph of first blog post</span>
+</pre>
+
+
+<p>here <code>b</code> is the abbreviations for blogging, <code>10</code> shows the time taken for the task. Rest of the sentence is comment.
+There are only 6 possible Task types</p>
+<ul>
+<li>blogging (b)</li>
+<li>coding (c)</li>
+<li>debugging (d)</li>
+<li>pair programming at project night (p)</li>
+<li>research (r)</li>
+<li>meeting with mentor (m)</li>
+</ul>
+<p>For example, an interactive session might look like</p>
+<blockquote>
+<pre class="code literal-block"><span></span><span class="c">% add b 10 first blog post</span>
+<span class="c">% add c 10 finished cli</span>
+<span class="c">% add d 120 debugging decorators</span>
+<span class="c">% add m 120 always keep the final presentation in mind</span>
+<span class="c">% add r 60 read articles on pandas</span>
+<span class="c">% add p 120 learned about decorators</span>
+</pre>
+
+
+</blockquote>
+<p>The <code>show</code> command allows listing of all the <code>Task</code>-s added till now.</p>
+<blockquote>
+<pre class="code literal-block"><span></span><span class="c">% show</span>
+<span class="n">b</span> <span class="mi">10</span> <span class="n">first</span> <span class="n">blog</span> <span class="n">post</span>
+<span class="n">c</span> <span class="mi">10</span> <span class="n">finished</span> <span class="n">cli</span>
+<span class="n">d</span> <span class="mi">120</span> <span class="n">debugging</span> <span class="n">decorators</span>
+<span class="n">m</span> <span class="mi">120</span> <span class="n">always</span> <span class="n">keep</span> <span class="n">the</span> <span class="n">final</span> <span class="n">presentation</span> <span class="n">in</span> <span class="n">mind</span>
+<span class="n">r</span> <span class="mi">60</span> <span class="n">read</span> <span class="n">articles</span> <span class="n">on</span> <span class="n">pandas</span>
+<span class="n">p</span> <span class="mi">120</span> <span class="n">learned</span> <span class="n">about</span> <span class="n">decorators</span>
+</pre>
+
+
+</blockquote>
+<p>For this exercise you need to update add helpful messages that will summarize what each
+of the options for <code>app.py</code> stand for.</p>
+<h3>1.11. Exercise 4: Run in interactive mode</h3>
+<pre class="code literal-block"><span></span>python app.py -i
+</pre>
+
+
+<p>Add some tasks and list them out by using the commands shown above. Play around with the up/down
+arrow keys to access history of the commands.</p>
+<p>Exit the session using <code>ctrl+D</code>. From your command prompt, run <code>ls -l</code> in linux or mac or <code>dir</code>
+in windows. What is the name of the file that gets created?</p>
+<p>Using sqlite3</p>
+<pre class="code literal-block"><span></span>sqlite3 to_do_list.db 'select * from ToDo;'
+</pre>
+
+
+<p>Compare the output that you get from running <code>show</code> and using the command above.</p>
+<h3>1.12. Exercise 4: Run in non-interactive mode</h3>
+<p>For ease of entering data the program can also be run in non-interactive mode</p>
+<pre class="code literal-block"><span></span>python app.py -a b 30  "first blog post completed"
+python app.py -s
+</pre>
+
+
+<p>Add a few tasks that have been completed and list them non-interactively.
+Note you'll need to put the description in quotes in this mode.</p>
+<h4>1.12.1. Optional: For non-windows users only</h4>
+<p>You can further simplify entering tracking your time by adding a bash shell alias.</p>
+<pre class="code literal-block"><span></span><span class="n">alias</span> <span class="n">add</span><span class="o">=</span><span class="err">'</span><span class="n">function</span> <span class="n">_add</span><span class="p">(){</span> <span class="n">python</span> <span class="n">app</span><span class="p">.</span><span class="n">py</span> <span class="o">-</span><span class="n">a</span> <span class="s">"$@"</span><span class="p">;</span> <span class="p">};</span><span class="n">_add</span><span class="err">'</span>
+</pre>
+
+
+<p>Then from your shell you can</p>
+<pre class="code literal-block"><span></span>$ add c <span class="m">30</span> <span class="s2">"finished oauth"</span>
+</pre>
+
+
+<p>Add a similar shell alias for the <code>show</code> command.</p>
+<h3>1.13. Exercise 5: Error handling</h3>
+<p>Currently we have two commands <code>add</code> and <code>show</code>. Lets say the user made a typo,
+or was creative while trying to input a command.</p>
+<pre class="code literal-block"><span></span><span class="c">% add c api 30 complete</span>
+</pre>
+
+
+<p>instead of</p>
+<pre class="code literal-block"><span></span><span class="c">% add c 30 api complete</span>
+</pre>
+
+
+<p>This results in the program crashing horribly with huge stack trace.
+Add error handling to handle cases when the program is unable to <code>parse</code> the input
+passed by the user.</p>
+<h3>1.14. Exercise 6: Enhance the show command</h3>
+<p>Enhance the show command to summarize the output by task category.
+Your summary should include how much time was spent on each of the task category.</p>
+<p>As seen above, we are using sqlite3. You may choose to do your summary calculation
+using sql or write the logic in python.</p>
+<h3>1.15. Exercise 7: Add a field for task complete or not</h3>
+<p>Next take a look at</p>
+<pre class="code literal-block"><span></span><span class="kr">class</span> <span class="nx">ToDo</span><span class="p">(</span><span class="nx">Model</span><span class="p">)</span><span class="o">:</span>
+</pre>
+
+
+<p>This class has a list of fields - task, description, timestamp, mins, done.
+Till now we have not been using this field. It has a default value of <code>True</code>
+to indicate that a completed task is being added.</p>
+<p>However, it might not always be the case. You might want to log your work,
+and still have incomplete tasks. In fact, logging often and logging early is
+encouraged! In order to faciliate that we need to optionally
+take a fourth parameter in the input for adding a new task.</p>
+<p>Take a look at the decorator right above the <code>main</code> function</p>
+<pre class="code literal-block"><span></span>@click.option('--add', '-a', nargs=3, type=(click.STRING, int, click.STRING), \
+            default=(None, None, None))
+</pre>
+
+
+<p>This is the starting point for allowing taking in an extra input.
+You will find the relevant documentation <a href="http://click.pocoo.org/5/options/">here</a></p>
+<p>Hint: Note the type of the field is boolean.
+You will need to modify the <code>parse</code>, <code>add</code> and the <code>main</code> function in order to complete
+this exercise.</p>
+<h3>1.16. Exercise 8: Enhance the summary</h3>
+<p>Enhance your summary function to show how many tasks are in progress and how many are complete.
+How you want to format the information is completely up to your choice.</p>
+<h3>1.17. Exercise 9: Hashtags</h3>
+<p>Now that you have enabled the flag to indicate if a task is complete or not, you
+can log a much fine grained prorgress of your tasks. You can tag your task with
+arbitary hashtags in order to provide better semantic information. For example:</p>
+<pre class="code literal-block"><span></span><span class="c">% add p 120 #data_science learned about precision/recall</span>
+<span class="c">% add b 120 finished the blogpost</span>
+<span class="c">% add p 30 #data_science learned about roc curves</span>
+<span class="c">% add p 30 #webdev added a flask interface</span>
+<span class="c">% add d 30 #issues/7 found a bug, new github issue</span>
+<span class="c">% add p 30 #issues/7 closed github issue 7</span>
+</pre>
+
+
+<p>Enhance the show command to optionally take a hashtag as parameter, that will filter out only
+tasks which have that hashtag. Accrodingly your summary should reflect only
+data relevant to that hashtag.</p>
+<h3>1.18. Exercise 10: Add a field for effectiveness</h3>
+<p>Next its time to add a score to your efforts. Add a field to the <code>ToDo</code> class called effective,
+where you can record how effective a task was. An effective score is a number between 1 to 5,
+1 being the lowest and 5 being the highest.</p>
+<p>Armed with this data, you should be able to answer
+(i) what is taking up most of your time?
+(ii) which activities are the most effective for your growth</p>
+</div>
+    </div>
+    <aside class="postpromonav"><div>
+    <span class="hidden-print">
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></span>
+    <span class="hidden-print">
+      <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script><script type="IN/Share" data-url="https://chicagopython.github.io/posts/trackcoder/"></script></span>
+    </div>
+    <nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/cat_python-101/" rel="category"> python-101</a></li>
+      </ul>
+<ul class="pager hidden-print">
+<li>
+            <a href="../chipy-chipmunks/" rel="prev" class="previous" title="ChiPy Chipmunk Project Night "><span aria-hidden="true">‹ </span>Older</a>
+        </li>
+        <li>
+            <span class="disabled">Newer<span aria-hidden="true"> ›</span></span>
+        </li>
+    </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="chicagopython-github-io",
+            disqus_url="https://chicagopython.github.io/posts/trackcoder/",
+        disqus_title="trackcoder",
+        disqus_identifier="cache/posts/trackcoder.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="chicagopython-github-io";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script></main><footer id="footer"><p class="light-sans">© Chicago Python User Group · Subscribe via <a href="../../rss.xml">RSS</a> · Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a> · 
+<a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html">
+<img alt="Gnu Public License version 3.0" style="border-width:0;" src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"></a></p>
+            
+        </footer>
+</body>
+</html>
