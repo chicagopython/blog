@@ -1,7 +1,7 @@
 <!--
 .. title: GitHub Jobs API
 .. slug: github-jobs-api
-.. date: 2019-04-15 18:00:00 UTC-05:00
+.. date: 2019-08-15 18:00:00 UTC-05:00
 .. tags: api, EDA
 .. category: data-science 
 .. link: 
