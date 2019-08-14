@@ -3,7 +3,7 @@
 &lt;a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html"&gt;
 &lt;img alt="Gnu Public License version 3.0"
 style="border-width:0;"
-src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Thu, 18 Apr 2019 03:42:03 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Flask App for Exchange Rates</title><link>https://chicagopython.github.io/posts/flask-app-for-exchange-rates/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;Flask App for Exchange Rates&lt;/h2&gt;
+src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Wed, 14 Aug 2019 11:57:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Flask App for Exchange Rates</title><link>https://chicagopython.github.io/posts/flask-app-for-exchange-rates/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;Flask App for Exchange Rates&lt;/h2&gt;
 &lt;h3&gt;Objective&lt;/h3&gt;
 &lt;p&gt;All developers in the modern day need to understand web technologies at some level. Whether you're interacting with a Jupyter notebook or querying a web api, understanding how a CLIENT requests information from a SERVER and to see how the SERVER produces its response is incredibly valuable.&lt;/p&gt;
 &lt;h3&gt;Overview&lt;/h3&gt;
@@ -14,14 +14,14 @@ src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copy
 &lt;h3&gt;Initial Setup&lt;/h3&gt;
 &lt;p&gt;Create a folder for this project: &lt;code&gt;mkdir mentorship_web &amp;amp;&amp;amp; cd mentorship_web&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;If you are using Linux or OS X, run the following to create a new virtualenv&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python3 -m venv venv
-source venv/bin/activate
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;
+&lt;span class="k"&gt;source&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;On Windows, run the following&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python3 -m venv venv
-venv\Scripts\activate
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;
+&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Scripts&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -44,15 +44,15 @@ venv\Scripts\activate
 &lt;p&gt;It should display a link, paste that in your browser to see the running code.&lt;/p&gt;
 &lt;h3&gt;Display some Exchange Rates&lt;/h3&gt;
 &lt;p&gt;Define a dictionary with three entries like the following inside your hello route:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;exchange_rates = {
-  'EUR': '...',
-  'GBP': '...',
-    ' 
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;exchange_rates&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+  &lt;span class="s1"&gt;'EUR'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'...'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="s1"&gt;'GBP'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'...'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="err"&gt;'&lt;/span&gt; 
 &lt;/pre&gt;
 
 
 &lt;p&gt;Pick any currencies you want! We'll display the values as they convert to USD (because we are in Chicago). Better specify that now for clarity. Add this line just bellow your &lt;code&gt;app =&lt;/code&gt; definition, we'll use it later:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;BASE_CURRENCY = 'USD'
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;BASE_CURRENCY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'USD'&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -63,17 +63,17 @@ venv\Scripts\activate
 &lt;p&gt;Test your work by adding another currency to your &lt;code&gt;exchange_rates&lt;/code&gt; dictionary and watch how your page changes.&lt;/p&gt;
 &lt;h3&gt;Refactor&lt;/h3&gt;
 &lt;p&gt;Define a function right under your &lt;code&gt;BASE_CURRENCY&lt;/code&gt; definition that looks like the following:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;def exchange_rates():
-  return # Move your dictionary here
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;def&lt;/span&gt; &lt;span class="nv"&gt;exchange_rates&lt;/span&gt;&lt;span class="ss"&gt;()&lt;/span&gt;:
+  &lt;span class="k"&gt;return&lt;/span&gt; # &lt;span class="nv"&gt;Move&lt;/span&gt; &lt;span class="nv"&gt;your&lt;/span&gt; &lt;span class="nv"&gt;dictionary&lt;/span&gt; &lt;span class="nv"&gt;here&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;Then replace any references in your code to use the function instead of defining the dictionary in your route!&lt;/p&gt;
 &lt;h3&gt;Automatic Data&lt;/h3&gt;
 &lt;p&gt;Now comes the fun part. What if we could get the exchange rates on a live feed from a third party service? We can with &lt;a href="http://exchangeratesapi.io"&gt;ExchangeRatesAPI.io&lt;/a&gt;. This is a free api that runs over simple HTTPS! We'll have something like the following: &lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;def exchange_rates():
-  response = requests.get('https://api.exchangeratesapi.io/latest')
-  return # What are we going to put here now? 
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;def&lt;/span&gt; &lt;span class="nv"&gt;exchange_rates&lt;/span&gt;&lt;span class="ss"&gt;()&lt;/span&gt;:
+  &lt;span class="nv"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;requests&lt;/span&gt;.&lt;span class="nv"&gt;get&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="s"&gt;https://api.exchangeratesapi.io/latest&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; # &lt;span class="nv"&gt;What&lt;/span&gt; &lt;span class="nv"&gt;are&lt;/span&gt; &lt;span class="nv"&gt;we&lt;/span&gt; &lt;span class="nv"&gt;going&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;put&lt;/span&gt; &lt;span class="nv"&gt;here&lt;/span&gt; &lt;span class="nv"&gt;now&lt;/span&gt;? 
 &lt;/pre&gt;
 
 
@@ -139,56 +139,56 @@ venv\Scripts\activate
 &lt;h3&gt;Instructions&lt;/h3&gt;
 &lt;p&gt;In the steps that follow, instructions will generally reference exactly where code changes need to be made. In the files themselves you'll see large commented blocks of instructions indicating that you're in the right spot. If you don't see commented instructions, double check that you read the prompt correctly. Each step will also have a link to a resource that should directly help you solve the problem at hand. Even if you're not stuck, it's recommended to check out the link to improve your understanding of WHY we're doing what we're doing.&lt;/p&gt;
 &lt;p&gt;To help visualize the locations of the file, here's the full file tree:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;├── db.sqlite3
-├── django_pn_tracker
-│   ├── __init__.py
-│   ├── __pycache__
-│   ├── apps
-│   │   ├── __init__.py
-│   │   ├── __pycache__
-│   │   │   └── __init__.cpython-36.pyc
-│   │   └── challenges
-│   │       ├── __init__.py
-│   │       ├── __pycache__
-│   │       ├── admin.py
-│   │       ├── apps.py
-│   │       ├── forms.py
-│   │       ├── migrations
-│   │       │   ├── 0001_initial.py
-│   │       │   ├── __init__.py
-│   │       │   └── __pycache__
-│   │       ├── models.py
-│   │       ├── templates
-│   │       │   └── challenges
-│   │       │       ├── delete.html
-│   │       │       ├── edit.html
-│   │       │       └── list.html
-│   │       ├── tests.py
-│   │       ├── urls.py
-│   │       └── views.py
-│   ├── settings.py
-│   ├── static
-│   │   ├── css
-│   │   │   ├── bootstrap.min.css
-│   │   │   └── master.css
-│   │   └── js
-│   │       ├── bootstrap.min.js
-│   │       └── main.js
-│   ├── templates
-│   │   ├── base.html
-│   │   └── index.html
-│   ├── urls.py
-│   ├── views.py
-│   └── wsgi.py
-├── manage.py
-├── requirements.txt
-└── setup.cfg
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sqlite3&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;django_pn_tracker&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;__pycache__&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;apps&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;__pycache__&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cpython&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;36&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pyc&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;challenges&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;__pycache__&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="k"&gt;admin&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;apps&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;forms&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;migrations&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="mi"&gt;0001&lt;/span&gt;&lt;span class="n"&gt;_initial&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;__pycache__&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;templates&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;challenges&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="k"&gt;delete&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;edit&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;tests&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;urls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;views&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;settings&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;css&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;bootstrap&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;min&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;css&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;css&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;js&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;bootstrap&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;min&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;templates&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;base&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="k"&gt;index&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;urls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;views&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;wsgi&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;requirements&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
+&lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cfg&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;h4&gt;Step 0: Run the app as is&lt;/h4&gt;
 &lt;p&gt;Before we dig in, let's see what the app currently looks like. This'll also confirm that install/setup went as planned. To run the app locally:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; ./manage.py runserver
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;runserver&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -208,26 +208,26 @@ venv\Scripts\activate
 &lt;/ul&gt;
 &lt;p&gt;Read more about models here: https://docs.djangoproject.com/en/2.1/topics/db/models/&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;b. Create/complete migration.&lt;/strong&gt; In order for our changes to take effect we need to create a migration and then actually migrate it.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; ./manage.py makemigrations
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;makemigrations&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;This is a little bit of Django magic. Under the hood Django is automatically generating the SQL commands necessary to update your database. You can see the actual underlying commands in &lt;code&gt;apps/challenges/migrations&lt;/code&gt;, where a file of commands is created each time we run makemigrations.&lt;/p&gt;
 &lt;p&gt;Normally you would see a message like:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;Migrations for 'challenges':
-  django_pn_tracker/apps/challenges/migrations/0002_auto_20180816_1445.py
-    - &amp;lt;actions here&amp;gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;Migrations&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="s"&gt;challenges&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;:
+  &lt;span class="nv"&gt;django_pn_tracker&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;apps&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;challenges&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;migrations&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;0002&lt;/span&gt;&lt;span class="nv"&gt;_auto_20180816_1445&lt;/span&gt;.&lt;span class="nv"&gt;py&lt;/span&gt;
+    &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;actions&lt;/span&gt; &lt;span class="nv"&gt;here&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
     ...
 &lt;/pre&gt;
 
 
 &lt;p&gt;However, since the table for our new model actually already exists in db.sqlite3 (purely for the sake of having example records for later steps), if everything is working correctly so far you should see:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;No changes detected
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;No&lt;/span&gt; &lt;span class="n"&gt;changes&lt;/span&gt; &lt;span class="n"&gt;detected&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;In order to actually make our changes, run:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; ./manage.py migrate
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;migrate&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -380,7 +380,7 @@ lightweight yet powerful.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;If you are familiar with &lt;code&gt;git&lt;/code&gt;, run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/chicagopython/CodingWorkshops.git
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;chicagopython&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;CodingWorkshops&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -392,14 +392,14 @@ lightweight yet powerful.&lt;/p&gt;
 &lt;li&gt;From your command line, change directory to the path where you have downloaded it.&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;On linux or OS X&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; cd path/to/CodingWorkshops/problems/webdev/flask_team_project/
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;CodingWorkshops&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;problems&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;webdev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;flask_team_project&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;On Windows&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; cd path\to\CodingWorkshops\problems\webdev\flask_team_project
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;CodingWorkshops&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;problems&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;webdev&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;flask_team_project&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -408,25 +408,25 @@ lightweight yet powerful.&lt;/p&gt;
 &lt;p&gt;Here you will find the basic skeleton of the app under &lt;code&gt;app.py&lt;/code&gt;.&lt;/p&gt;
 &lt;h4&gt;Set up virtualenv&lt;/h4&gt;
 &lt;p&gt;If you are using Linux or OS X, run the following to create a new virtualenv&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-export FLASK_APP=app.py
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;
+&lt;span class="k"&gt;source&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
+&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="n"&gt;requirements&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
+&lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;FLASK_APP&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;On Windows, run the following&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python3 -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-set %FLASK_APP%=app.py
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;
+&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Scripts&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
+&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="n"&gt;requirements&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;FLASK_APP&lt;/span&gt;&lt;span class="o"&gt;%=&lt;/span&gt;&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;&lt;a href="https://asciinema.org/a/M1hP91h153PuOPEjVYbot6jPj"&gt;&lt;img alt="asciicast" src="https://asciinema.org/a/M1hP91h153PuOPEjVYbot6jPj.png"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h4&gt;Feature 0: run app.py&lt;/h4&gt;
 &lt;p&gt;With your environment now set up run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;flask run
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;flask&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -442,12 +442,12 @@ Goto tonight's meetup page and get the meetup id from the url.&lt;/p&gt;
 &lt;h4&gt;Feature 1: Read app.py&lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;app.py&lt;/code&gt; is the script is where the magic happens.&lt;/p&gt;
 &lt;p&gt;Lets start at the routes:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;@app.route('/rsvps')
-def rsvps():
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;@app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'/rsvps'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;rsvps&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
 
-@app.route('/teams', methods=['GET', 'POST'])
-def teams():
+&lt;span class="nv"&gt;@app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'/teams'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;methods&lt;/span&gt;&lt;span class="o"&gt;=[&lt;/span&gt;&lt;span class="n"&gt;'GET', 'POST'&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;teams&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -480,12 +480,12 @@ on the &lt;code&gt;/teams&lt;/code&gt; page.&lt;/p&gt;
 &lt;p&gt;As of now, everybody is listed under one team: Team 1.
 Split the list of people selected into teams of 4&lt;/p&gt;
 &lt;p&gt;Your display of each team should include&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;Team Number: XYZ
-Name of team member1, Lines of code, (pic)
-Name of team member2, Lines of code, (pic)
-Name of team member3, Lines of code, (pic)
-Name of team member4, Lines of code, (pic)
-(Total lines of code:)
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Team&lt;/span&gt; &lt;span class="nb"&gt;Number&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;XYZ&lt;/span&gt;
+&lt;span class="n"&gt;Name&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;team&lt;/span&gt; &lt;span class="n"&gt;member1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Lines&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pic&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Name&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;team&lt;/span&gt; &lt;span class="n"&gt;member2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Lines&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pic&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Name&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;team&lt;/span&gt; &lt;span class="n"&gt;member3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Lines&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pic&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Name&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;team&lt;/span&gt; &lt;span class="n"&gt;member4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Lines&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pic&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Total&lt;/span&gt; &lt;span class="n"&gt;lines&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="p"&gt;:)&lt;/span&gt;
 &lt;/pre&gt;
 
 

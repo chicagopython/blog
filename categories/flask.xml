@@ -3,7 +3,7 @@
 &lt;a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html"&gt;
 &lt;img alt="Gnu Public License version 3.0"
 style="border-width:0;"
-src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Thu, 18 Apr 2019 03:42:04 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Flask App for Exchange Rates</title><link>https://chicagopython.github.io/posts/flask-app-for-exchange-rates/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;Flask App for Exchange Rates&lt;/h2&gt;
+src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Wed, 14 Aug 2019 11:57:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Flask App for Exchange Rates</title><link>https://chicagopython.github.io/posts/flask-app-for-exchange-rates/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;Flask App for Exchange Rates&lt;/h2&gt;
 &lt;h3&gt;Objective&lt;/h3&gt;
 &lt;p&gt;All developers in the modern day need to understand web technologies at some level. Whether you're interacting with a Jupyter notebook or querying a web api, understanding how a CLIENT requests information from a SERVER and to see how the SERVER produces its response is incredibly valuable.&lt;/p&gt;
 &lt;h3&gt;Overview&lt;/h3&gt;
@@ -14,14 +14,14 @@ src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copy
 &lt;h3&gt;Initial Setup&lt;/h3&gt;
 &lt;p&gt;Create a folder for this project: &lt;code&gt;mkdir mentorship_web &amp;amp;&amp;amp; cd mentorship_web&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;If you are using Linux or OS X, run the following to create a new virtualenv&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python3 -m venv venv
-source venv/bin/activate
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;
+&lt;span class="k"&gt;source&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;On Windows, run the following&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python3 -m venv venv
-venv\Scripts\activate
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;
+&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Scripts&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -44,15 +44,15 @@ venv\Scripts\activate
 &lt;p&gt;It should display a link, paste that in your browser to see the running code.&lt;/p&gt;
 &lt;h3&gt;Display some Exchange Rates&lt;/h3&gt;
 &lt;p&gt;Define a dictionary with three entries like the following inside your hello route:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;exchange_rates = {
-  'EUR': '...',
-  'GBP': '...',
-    ' 
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;exchange_rates&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+  &lt;span class="s1"&gt;'EUR'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'...'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="s1"&gt;'GBP'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'...'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="err"&gt;'&lt;/span&gt; 
 &lt;/pre&gt;
 
 
 &lt;p&gt;Pick any currencies you want! We'll display the values as they convert to USD (because we are in Chicago). Better specify that now for clarity. Add this line just bellow your &lt;code&gt;app =&lt;/code&gt; definition, we'll use it later:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;BASE_CURRENCY = 'USD'
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;BASE_CURRENCY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'USD'&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -63,17 +63,17 @@ venv\Scripts\activate
 &lt;p&gt;Test your work by adding another currency to your &lt;code&gt;exchange_rates&lt;/code&gt; dictionary and watch how your page changes.&lt;/p&gt;
 &lt;h3&gt;Refactor&lt;/h3&gt;
 &lt;p&gt;Define a function right under your &lt;code&gt;BASE_CURRENCY&lt;/code&gt; definition that looks like the following:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;def exchange_rates():
-  return # Move your dictionary here
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;def&lt;/span&gt; &lt;span class="nv"&gt;exchange_rates&lt;/span&gt;&lt;span class="ss"&gt;()&lt;/span&gt;:
+  &lt;span class="k"&gt;return&lt;/span&gt; # &lt;span class="nv"&gt;Move&lt;/span&gt; &lt;span class="nv"&gt;your&lt;/span&gt; &lt;span class="nv"&gt;dictionary&lt;/span&gt; &lt;span class="nv"&gt;here&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;Then replace any references in your code to use the function instead of defining the dictionary in your route!&lt;/p&gt;
 &lt;h3&gt;Automatic Data&lt;/h3&gt;
 &lt;p&gt;Now comes the fun part. What if we could get the exchange rates on a live feed from a third party service? We can with &lt;a href="http://exchangeratesapi.io"&gt;ExchangeRatesAPI.io&lt;/a&gt;. This is a free api that runs over simple HTTPS! We'll have something like the following: &lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;def exchange_rates():
-  response = requests.get('https://api.exchangeratesapi.io/latest')
-  return # What are we going to put here now? 
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;def&lt;/span&gt; &lt;span class="nv"&gt;exchange_rates&lt;/span&gt;&lt;span class="ss"&gt;()&lt;/span&gt;:
+  &lt;span class="nv"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;requests&lt;/span&gt;.&lt;span class="nv"&gt;get&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="s"&gt;https://api.exchangeratesapi.io/latest&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; # &lt;span class="nv"&gt;What&lt;/span&gt; &lt;span class="nv"&gt;are&lt;/span&gt; &lt;span class="nv"&gt;we&lt;/span&gt; &lt;span class="nv"&gt;going&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;put&lt;/span&gt; &lt;span class="nv"&gt;here&lt;/span&gt; &lt;span class="nv"&gt;now&lt;/span&gt;? 
 &lt;/pre&gt;
 
 
@@ -223,7 +223,7 @@ lightweight yet powerful.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;If you are familiar with &lt;code&gt;git&lt;/code&gt;, run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/chicagopython/CodingWorkshops.git
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;chicagopython&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;CodingWorkshops&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -235,14 +235,14 @@ lightweight yet powerful.&lt;/p&gt;
 &lt;li&gt;From your command line, change directory to the path where you have downloaded it.&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;On linux or OS X&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; cd path/to/CodingWorkshops/problems/webdev/flask_team_project/
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;CodingWorkshops&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;problems&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;webdev&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;flask_team_project&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;On Windows&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; cd path\to\CodingWorkshops\problems\webdev\flask_team_project
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;CodingWorkshops&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;problems&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;webdev&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;flask_team_project&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -251,25 +251,25 @@ lightweight yet powerful.&lt;/p&gt;
 &lt;p&gt;Here you will find the basic skeleton of the app under &lt;code&gt;app.py&lt;/code&gt;.&lt;/p&gt;
 &lt;h4&gt;Set up virtualenv&lt;/h4&gt;
 &lt;p&gt;If you are using Linux or OS X, run the following to create a new virtualenv&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-export FLASK_APP=app.py
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;
+&lt;span class="k"&gt;source&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
+&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="n"&gt;requirements&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
+&lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;FLASK_APP&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;On Windows, run the following&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python3 -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-set %FLASK_APP%=app.py
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;
+&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Scripts&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
+&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="n"&gt;requirements&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
+&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="n"&gt;FLASK_APP&lt;/span&gt;&lt;span class="o"&gt;%=&lt;/span&gt;&lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;&lt;a href="https://asciinema.org/a/M1hP91h153PuOPEjVYbot6jPj"&gt;&lt;img alt="asciicast" src="https://asciinema.org/a/M1hP91h153PuOPEjVYbot6jPj.png"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h4&gt;Feature 0: run app.py&lt;/h4&gt;
 &lt;p&gt;With your environment now set up run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;flask run
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;flask&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -285,12 +285,12 @@ Goto tonight's meetup page and get the meetup id from the url.&lt;/p&gt;
 &lt;h4&gt;Feature 1: Read app.py&lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;app.py&lt;/code&gt; is the script is where the magic happens.&lt;/p&gt;
 &lt;p&gt;Lets start at the routes:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;@app.route('/rsvps')
-def rsvps():
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;@app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'/rsvps'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;rsvps&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 
 
-@app.route('/teams', methods=['GET', 'POST'])
-def teams():
+&lt;span class="nv"&gt;@app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'/teams'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;methods&lt;/span&gt;&lt;span class="o"&gt;=[&lt;/span&gt;&lt;span class="n"&gt;'GET', 'POST'&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;teams&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -323,12 +323,12 @@ on the &lt;code&gt;/teams&lt;/code&gt; page.&lt;/p&gt;
 &lt;p&gt;As of now, everybody is listed under one team: Team 1.
 Split the list of people selected into teams of 4&lt;/p&gt;
 &lt;p&gt;Your display of each team should include&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;Team Number: XYZ
-Name of team member1, Lines of code, (pic)
-Name of team member2, Lines of code, (pic)
-Name of team member3, Lines of code, (pic)
-Name of team member4, Lines of code, (pic)
-(Total lines of code:)
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Team&lt;/span&gt; &lt;span class="nb"&gt;Number&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;XYZ&lt;/span&gt;
+&lt;span class="n"&gt;Name&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;team&lt;/span&gt; &lt;span class="n"&gt;member1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Lines&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pic&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Name&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;team&lt;/span&gt; &lt;span class="n"&gt;member2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Lines&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pic&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Name&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;team&lt;/span&gt; &lt;span class="n"&gt;member3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Lines&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pic&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Name&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;team&lt;/span&gt; &lt;span class="n"&gt;member4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Lines&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pic&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Total&lt;/span&gt; &lt;span class="n"&gt;lines&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="p"&gt;:)&lt;/span&gt;
 &lt;/pre&gt;
 
 

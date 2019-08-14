@@ -3,7 +3,7 @@
 &lt;a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html"&gt;
 &lt;img alt="Gnu Public License version 3.0"
 style="border-width:0;"
-src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Thu, 18 Apr 2019 03:42:04 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Unit Testing and Continuous Integration with Pytest &amp; Travis</title><link>https://chicagopython.github.io/posts/unit-testing-and-continuous-integration-with-pytest-travis/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;1. Introduction to PyTest and Continuous Integration&lt;/h2&gt;
+src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Wed, 14 Aug 2019 11:57:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Unit Testing and Continuous Integration with Pytest &amp; Travis</title><link>https://chicagopython.github.io/posts/unit-testing-and-continuous-integration-with-pytest-travis/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;1. Introduction to PyTest and Continuous Integration&lt;/h2&gt;
 &lt;p&gt;Testing and Continuous Integration is at the heart of building good software.
 For this project we will be focus on writing tests for a given problem and use
 travis-ci for running the tests automatically everytime code is checked into Github.&lt;/p&gt;
@@ -52,11 +52,11 @@ of the repository (CodingWorkshop) in the search bar on the dashboard page.&lt;/
 &lt;p&gt;Recommended version: Python 3.6&lt;/p&gt;
 &lt;h3&gt;1.3. Quick Git command refresher&lt;/h3&gt;
 &lt;p&gt;Below are the few most used git commands&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git checkout master          # checkout to master branch
-git checkout -b feature/cool # crate a new branch feature/cool
-git add -u                   # stage all the updates for commit
-git commit -am "Adding changes and commiting with a comment"
-git push origin master       # push commits to develop/ci branch
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;checkout&lt;/span&gt; &lt;span class="nv"&gt;master&lt;/span&gt;          # &lt;span class="nv"&gt;checkout&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;master&lt;/span&gt; &lt;span class="nv"&gt;branch&lt;/span&gt;
+&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;checkout&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;b&lt;/span&gt; &lt;span class="nv"&gt;feature&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;cool&lt;/span&gt; # &lt;span class="nv"&gt;crate&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="nv"&gt;new&lt;/span&gt; &lt;span class="nv"&gt;branch&lt;/span&gt; &lt;span class="nv"&gt;feature&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;cool&lt;/span&gt;
+&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;u&lt;/span&gt;                   # &lt;span class="nv"&gt;stage&lt;/span&gt; &lt;span class="nv"&gt;all&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;updates&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;commit&lt;/span&gt;
+&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;am&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;Adding changes and commiting with a comment&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;push&lt;/span&gt; &lt;span class="nv"&gt;origin&lt;/span&gt; &lt;span class="nv"&gt;master&lt;/span&gt;       # &lt;span class="nv"&gt;push&lt;/span&gt; &lt;span class="nv"&gt;commits&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;develop&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;ci&lt;/span&gt; &lt;span class="nv"&gt;branch&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -68,7 +68,7 @@ would first go to a branch, get tested, code reviewed and finally merged to mast
 repository in your local machine. Lets take the time to look at the structure of this
 project. All code is located under &lt;code&gt;/problems/py101/testing&lt;/code&gt; directory. So from your
 terminal go to the directory where you have cloned the repository.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;cd path/to/clone/problems/py101/testing
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;clone&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;problems&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;py101&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;testing&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -101,8 +101,8 @@ is a file called &lt;code&gt;.travis.yml&lt;/code&gt;. This is used by the conti
 This contains the information on how to build this python project.&lt;/p&gt;
 &lt;h4&gt;1.4.7. Test your setup is working&lt;/h4&gt;
 &lt;p&gt;Just make a small edit on this file (README.md), commit and push the changes.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git commit -am "Demo commit to check everything is working"
-git push origin master
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="k"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;am&lt;/span&gt; &lt;span class="ss"&gt;"Demo commit to check everything is working"&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -115,7 +115,7 @@ of this file (README.md).&lt;/p&gt;
 &lt;p&gt;If you run into issues, &lt;a href="https://chipy.slack.com/messages/C093F7W8P/details/"&gt;ask your question on slack&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;1.5. Exercise 1: Build&lt;/h3&gt;
 &lt;p&gt;From the &lt;code&gt;/problems/py101/testing&lt;/code&gt; directory, run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;make
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;make&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -128,7 +128,7 @@ of this file (README.md).&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h3&gt;1.6. Exercise 2: Run the program&lt;/h3&gt;
 &lt;p&gt;Start by running&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python team_organizer.py
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;team_organizer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -139,52 +139,52 @@ Following that, we run the &lt;code&gt;print&lt;/code&gt; command where the user
 are grouped in to max of size four where two users have
 written less lines of code than the others.&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;```
-t (master *) testing $ python team_organizer.py
-Welcome to Chicago Python Project Night Team Organizer
-org&amp;gt; help
-help
+&lt;span class="nv"&gt;t&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;master&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;testing&lt;/span&gt; $ &lt;span class="nv"&gt;python&lt;/span&gt; &lt;span class="nv"&gt;team_organizer&lt;/span&gt;.&lt;span class="nv"&gt;py&lt;/span&gt;
+&lt;span class="nv"&gt;Welcome&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;Chicago&lt;/span&gt; &lt;span class="nv"&gt;Python&lt;/span&gt; &lt;span class="nv"&gt;Project&lt;/span&gt; &lt;span class="nv"&gt;Night&lt;/span&gt; &lt;span class="nv"&gt;Team&lt;/span&gt; &lt;span class="nv"&gt;Organizer&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;help&lt;/span&gt;
+&lt;span class="nv"&gt;help&lt;/span&gt;
 
-Documented commands (type help &amp;lt;topic&amp;gt;):
-========================================
-add  help  print
+&lt;span class="nv"&gt;Documented&lt;/span&gt; &lt;span class="nv"&gt;commands&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;type&lt;/span&gt; &lt;span class="nv"&gt;help&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;topic&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;:
+&lt;span class="o"&gt;========================================&lt;/span&gt;
+&lt;span class="nv"&gt;add&lt;/span&gt;  &lt;span class="nv"&gt;help&lt;/span&gt;  &lt;span class="nv"&gt;print&lt;/span&gt;
 
-Undocumented commands:
-======================
-exit
+&lt;span class="nv"&gt;Undocumented&lt;/span&gt; &lt;span class="nv"&gt;commands&lt;/span&gt;:
+&lt;span class="o"&gt;======================&lt;/span&gt;
+&lt;span class="k"&gt;exit&lt;/span&gt;
 
-org&amp;gt; help add
-help add
-Adds a new user. Needs Name slackhandle number_of_lines separated by space
-org&amp;gt; add a @a 100
-add a @a 100
-org&amp;gt; add b @b 200
-add b @b 200
-org&amp;gt; add c @c 300
-add c @c 300
-org&amp;gt; add d @d 400
-add d @d 400
-org&amp;gt; add e @e 500
-add e @e 500
-org&amp;gt; add f @f 50
-add f @f 50
-org&amp;gt; print
-print
-['f, a, e, d']
-b, c
-org&amp;gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;help&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt;
+&lt;span class="nv"&gt;help&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt;
+&lt;span class="nv"&gt;Adds&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="nv"&gt;new&lt;/span&gt; &lt;span class="nv"&gt;user&lt;/span&gt;. &lt;span class="nv"&gt;Needs&lt;/span&gt; &lt;span class="nv"&gt;Name&lt;/span&gt; &lt;span class="nv"&gt;slackhandle&lt;/span&gt; &lt;span class="nv"&gt;number_of_lines&lt;/span&gt; &lt;span class="nv"&gt;separated&lt;/span&gt; &lt;span class="nv"&gt;by&lt;/span&gt; &lt;span class="nv"&gt;space&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; @&lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;
+&lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; @&lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;b&lt;/span&gt; @&lt;span class="nv"&gt;b&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;
+&lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;b&lt;/span&gt; @&lt;span class="nv"&gt;b&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;c&lt;/span&gt; @&lt;span class="nv"&gt;c&lt;/span&gt; &lt;span class="mi"&gt;300&lt;/span&gt;
+&lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;c&lt;/span&gt; @&lt;span class="nv"&gt;c&lt;/span&gt; &lt;span class="mi"&gt;300&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;d&lt;/span&gt; @&lt;span class="nv"&gt;d&lt;/span&gt; &lt;span class="mi"&gt;400&lt;/span&gt;
+&lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;d&lt;/span&gt; @&lt;span class="nv"&gt;d&lt;/span&gt; &lt;span class="mi"&gt;400&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;e&lt;/span&gt; @&lt;span class="nv"&gt;e&lt;/span&gt; &lt;span class="mi"&gt;500&lt;/span&gt;
+&lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;e&lt;/span&gt; @&lt;span class="nv"&gt;e&lt;/span&gt; &lt;span class="mi"&gt;500&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;f&lt;/span&gt; @&lt;span class="nv"&gt;f&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt;
+&lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;f&lt;/span&gt; @&lt;span class="nv"&gt;f&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;print&lt;/span&gt;
+&lt;span class="nv"&gt;print&lt;/span&gt;
+[&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="s"&gt;f, a, e, d&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;]
+&lt;span class="nv"&gt;b&lt;/span&gt;, &lt;span class="nv"&gt;c&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 ```
 &lt;/pre&gt;
 
 
 &lt;h3&gt;1.7. Exercise 3: Running the tests&lt;/h3&gt;
 &lt;p&gt;Run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;make test
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;This will run the tests in the &lt;code&gt;test_team_organizer.py&lt;/code&gt; file.&lt;/p&gt;
 &lt;p&gt;Run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pipenv run pytest --help
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pipenv&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;pytest&lt;/span&gt; &lt;span class="c1"&gt;--help&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -202,13 +202,13 @@ Click on &lt;code&gt;team_organizer.py&lt;/code&gt; to see which lines are outsi
 find &lt;code&gt;test_add_a_person_with_lower_than_median&lt;/code&gt; test. Notice this test is
 skipped when run with pytest. To fix it remove the decorator &lt;code&gt;pytest.mark.skip&lt;/code&gt;
 and run &lt;code&gt;pytest&lt;/code&gt; again. Commit the code and run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;make test
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;Make the necessary changes so that the test passes.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git commit -am "Fixed failing test"
-git push origin master
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="k"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;am&lt;/span&gt; &lt;span class="ss"&gt;"Fixed failing test"&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -221,7 +221,7 @@ reliably and repeatedly execute.&lt;/p&gt;
 as needed by &lt;code&gt;organizer&lt;/code&gt; fixture.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;test_count_number_of_teams&lt;/code&gt; is broken as well. How can you fix it?&lt;/p&gt;
 &lt;p&gt;Tip: To run a singe test, use&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pipenv run pytest -k &amp;lt;name-of-test&amp;gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pipenv&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;pytest&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;of&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;
 
 

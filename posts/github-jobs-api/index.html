@@ -2,14 +2,14 @@
 <html prefix="            og: http://ogp.me/ns# article: http://ogp.me/ns/article#     " vocab="http://ogp.me/ns" lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Explore questions surrounding the amazing ChiPy chipmunks. ">
+<meta name="description" content="Use the GitHub jobs API to explore open job postings.">
 <meta name="viewport" content="width=device-width">
-<title>ChiPy Chipmunk Project Night  | Python Project Night Challenges</title>
+<title>GitHub Jobs API | Python Project Night Challenges</title>
 <link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#18354c">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
-<link rel="canonical" href="https://chicagopython.github.io/posts/chipy-chipmunks/">
+<link rel="canonical" href="https://chicagopython.github.io/posts/github-jobs-api/">
 <link rel="icon" href="../../favicon.ico" sizes="16x16">
 <link rel="manifest" href="../../site.webmanifest">
 <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#1f91c2">
@@ -17,8 +17,8 @@
 <meta name="theme-color" content="#cceeff">
 <!-- favicons generated using http://realfavicongenerator.net/ --><!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <meta name="author" content="Chicago Python User Group">
-<link rel="prev" href="../chipmunks-data-science/" title="Chipmunks Data Science" type="text/html">
-<link rel="next" href="../trackcoder/" title="trackcoder" type="text/html">
+<link rel="prev" href="../flask-app-for-exchange-rates/" title="Flask App for Exchange Rates" type="text/html">
+<link rel="next" href="../chipmunks-data-science/" title="Chipmunks Data Science" type="text/html">
 <meta name="twitter:card" content="summary">
 </head>
 <body>
@@ -37,7 +37,7 @@
     </ul></nav></header><main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><div class="metadata">
               <p class="commentline">
         
-    <a href="#disqus_thread" data-disqus-identifier="cache/posts/chipy-chipmunks.html">Comments</a>
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/github-jobs-api.html">Comments</a>
 
 
           
@@ -45,28 +45,40 @@
         </p>
 </div>
         
-    <h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">ChiPy Chipmunk Project Night </a></h1>
+    <h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">GitHub Jobs API</a></h1>
 
-        <time datetime="2019-04-18T18:00:00-05:00" itemprop="datePublished">April 18, 2019</time><a href="../../categories/cat_data-science+">data-science </a>
+        <time datetime="2019-04-15T18:00:00-05:00" itemprop="datePublished">April 15, 2019</time><a href="../../categories/cat_data-science+">data-science </a>
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <h3>Project Night Purpose</h3>
-<p>Many people assume data scientists spend all day visualizing data and making impressive predictive models. While this isn’t untrue, the luckiest and most productive data scientists spend a lot of their time communicating. They communicate their model results - as well as their assumptions and limitations when making their models and doing analysis - in a way that is digestible to their stakeholders and colleagues. </p>
-<p>Tonight’s project is aimed towards that aspect of communication. You will be asked to make assumptions as a team - particularly as they pertain to this problem and what the stakeholders need. There are no exactly correct assumptions or answers for this project night. There may be assumptions and answers that clearly don’t have evidence to support them, but do not feel bogged down by getting the “right” answer.</p>
-<p>Most importantly - have fun. While this project night covers serious concepts, it is ridiculously silly and meant to be taken with a bit of lighthearted exploration and plenty of opportunities to make mistakes.</p>
+<p>All of us need to look for a job at some point; and most every job board has its own API for users to post and pull data (though usually they charge money for access). The <a href="https://jobs.github.com">GitHub Jobs page</a> is a great simple API for a first look at this kind of data acqusition and analysis.</p>
+<p>Tonight's project uses the very popular Python HTTP library <a href="https://2.python-requests.org/en/master/">requests</a> along with <a href="https://docs.python.org/3/library/json.html">json</a> from the standard library. You will explore the data in the jobs API with the intent of learning something about the current job market for devs. There are a ton of caveats here: for example,</p>
+<ul>
+<li>Who chooses to post to GitHub Jobs? Are they representative of the overall population?</li>
+<li>How old are the postings?</li>
+<li>Is it safe to extrapolate statistics to the country? to Illinois? to Chicago?</li>
+</ul>
+<p>Although the topic is a little serious we want to make sure you don't get discouraged by the data you pull (ask around--how many people in your group got their job from a GitHub posting?). The GitHub site shouldn't be taken as a good primary source for job availability or category...but that's part of data acquistition and analysis: assessing the strenghts and shortcomings of your data source. Possible discusison points for the group are things like:</p>
+<ul>
+<li>Where might you get additional information?</li>
+<li>How often should you pull the data? What would capture over time give you?</li>
+<li>Does the dataset tell you anything about which companies use the GitHub for hiring at all? In which cities? Should we move to a different part of the country?</li>
+<li>Choose your own adventure and share with the group what you have learned!</li>
+</ul>
+<p>Most importantly - have fun! Accessing an API is a great core skill for data analysis and all experience is good experience. We hope that you are creative in your explanation and that each group discovers different things!</p>
 <h3>Setting up your environment</h3>
-<p>This project is contained in a jupyter notebook and is assuming you have Python 3.+ installed on your machine. If this is your fisrt project night, we recommend creating a folder for the project night repo: <code>mkdir chipy_projects &amp;&amp; cd chipy_projects</code>. If you already have the project night repository on your machine, go to that directory and pull from master.</p>
+<p>There is no pre-written code for this project, but we assume you have Python 3.+ installed on your machine.  If this is your fisrt project night, we recommend creating a folder for the project night repo: <code>mkdir chipy_projects &amp;&amp; cd chipy_projects</code>. If you already have the project night repository on your machine, go to that directory and pull from master.</p>
 <p>If you are using Linux or OS X, run the following to create a new virtualenv:</p>
-<pre class="code literal-block"><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">chipmunk</span>
-<span class="k">source</span> <span class="n">chipmunk</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">activate</span>
+<pre class="code literal-block"><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">github_jobs_api</span>
+<span class="k">source</span> <span class="n">github_jobs_api</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">activate</span>
 </pre>
 
 
 <p>On Windows, run the following</p>
-<pre class="code literal-block"><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">chipmunk</span> 
-<span class="n">chipmunk</span><span class="err">\</span><span class="n">Scripts</span><span class="err">\</span><span class="n">activate</span>
+<pre class="code literal-block"><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">github_jobs_api</span> 
+<span class="n">github_jobs_api</span><span class="err">\</span><span class="n">Scripts</span><span class="err">\</span><span class="n">activate</span>
 </pre>
 
 
@@ -78,7 +90,7 @@
 
 <p>Now we will:</p>
 <p>Go to the project:</p>
-<pre class="code literal-block"><span></span><span class="n">cd</span> <span class="n">CodingWorkshops</span><span class="o">/</span><span class="n">problems</span><span class="o">/</span><span class="n">data_science</span><span class="o">/</span><span class="n">chipmunks</span>
+<pre class="code literal-block"><span></span><span class="n">cd</span> <span class="n">CodingWorkshops</span><span class="o">/</span><span class="n">problems</span><span class="o">/</span><span class="n">data_science</span><span class="o">/</span><span class="n">github_jobs_api</span>
 </pre>
 
 
@@ -87,8 +99,8 @@
 </pre>
 
 
-<p>Run our jupyter notebook server for the project:</p>
-<pre class="code literal-block"><span></span><span class="n">jupyter</span> <span class="n">notebook</span>
+<p>view the <em>README.md</em> file for additional information:</p>
+<pre class="code literal-block"><span></span><span class="n">cat</span> <span class="n">README</span><span class="p">.</span><span class="n">md</span>
 </pre>
 
 
@@ -100,21 +112,19 @@
       <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></span>
     <span class="hidden-print">
-      <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script><script type="IN/Share" data-url="https://chicagopython.github.io/posts/chipy-chipmunks/"></script></span>
+      <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script><script type="IN/Share" data-url="https://chicagopython.github.io/posts/github-jobs-api/"></script></span>
     </div>
     <nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../categories/cat_data-science/" rel="category"> data-science </a></li>
-            <li><a class="tag p-category" href="../../categories/analytics/" rel="tag">analytics</a></li>
+            <li><a class="tag p-category" href="../../categories/api/" rel="tag">api</a></li>
             <li><a class="tag p-category" href="../../categories/eda/" rel="tag">EDA</a></li>
-            <li><a class="tag p-category" href="../../categories/pandas/" rel="tag">pandas</a></li>
-            <li><a class="tag p-category" href="../../categories/statistics/" rel="tag">statistics</a></li>
       </ul>
 <ul class="pager hidden-print">
 <li>
-            <a href="../chipmunks-data-science/" rel="prev" class="previous" title="Chipmunks Data Science"><span aria-hidden="true">‹ </span>Older</a>
+            <a href="../flask-app-for-exchange-rates/" rel="prev" class="previous" title="Flask App for Exchange Rates"><span aria-hidden="true">‹ </span>Older</a>
         </li>
         <li>
-            <a href="../trackcoder/" rel="next" class="next" title="trackcoder">Newer<span aria-hidden="true"> ›</span></a>
+            <a href="../chipmunks-data-science/" rel="next" class="next" title="Chipmunks Data Science">Newer<span aria-hidden="true"> ›</span></a>
         </li>
     </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         
@@ -122,9 +132,9 @@
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="chicagopython-github-io",
-            disqus_url="https://chicagopython.github.io/posts/chipy-chipmunks/",
-        disqus_title="ChiPy Chipmunk Project Night ",
-        disqus_identifier="cache/posts/chipy-chipmunks.html",
+            disqus_url="https://chicagopython.github.io/posts/github-jobs-api/",
+        disqus_title="GitHub Jobs API",
+        disqus_identifier="cache/posts/github-jobs-api.html",
         disqus_config = function () {
             this.language = "en";
         };

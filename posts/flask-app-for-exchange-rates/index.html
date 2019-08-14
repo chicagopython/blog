@@ -18,7 +18,7 @@
 <!-- favicons generated using http://realfavicongenerator.net/ --><!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <meta name="author" content="Chicago Python User Group">
 <link rel="prev" href="../data-analysis-with-pandas/" title="Data Analysis with Pandas" type="text/html">
-<link rel="next" href="../chipmunks-data-science/" title="Chipmunks Data Science" type="text/html">
+<link rel="next" href="../github-jobs-api/" title="GitHub Jobs API Project Night " type="text/html">
 <meta name="twitter:card" content="summary">
 </head>
 <body>
@@ -63,14 +63,14 @@
 <h3>Initial Setup</h3>
 <p>Create a folder for this project: <code>mkdir mentorship_web &amp;&amp; cd mentorship_web</code></p>
 <p>If you are using Linux or OS X, run the following to create a new virtualenv</p>
-<pre class="code literal-block"><span></span>python3 -m venv venv
-source venv/bin/activate
+<pre class="code literal-block"><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">venv</span>
+<span class="k">source</span> <span class="n">venv</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">activate</span>
 </pre>
 
 
 <p>On Windows, run the following</p>
-<pre class="code literal-block"><span></span>python3 -m venv venv
-venv\Scripts\activate
+<pre class="code literal-block"><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">venv</span>
+<span class="n">venv</span><span class="err">\</span><span class="n">Scripts</span><span class="err">\</span><span class="n">activate</span>
 </pre>
 
 
@@ -93,15 +93,15 @@ venv\Scripts\activate
 <p>It should display a link, paste that in your browser to see the running code.</p>
 <h3>Display some Exchange Rates</h3>
 <p>Define a dictionary with three entries like the following inside your hello route:</p>
-<pre class="code literal-block"><span></span>exchange_rates = {
-  'EUR': '...',
-  'GBP': '...',
-    ' 
+<pre class="code literal-block"><span></span><span class="n">exchange_rates</span> <span class="o">=</span> <span class="err">{</span>
+  <span class="s1">'EUR'</span><span class="p">:</span> <span class="s1">'...'</span><span class="p">,</span>
+  <span class="s1">'GBP'</span><span class="p">:</span> <span class="s1">'...'</span><span class="p">,</span>
+    <span class="err">'</span> 
 </pre>
 
 
 <p>Pick any currencies you want! We'll display the values as they convert to USD (because we are in Chicago). Better specify that now for clarity. Add this line just bellow your <code>app =</code> definition, we'll use it later:</p>
-<pre class="code literal-block"><span></span>BASE_CURRENCY = 'USD'
+<pre class="code literal-block"><span></span><span class="n">BASE_CURRENCY</span> <span class="o">=</span> <span class="s1">'USD'</span>
 </pre>
 
 
@@ -112,17 +112,17 @@ venv\Scripts\activate
 <p>Test your work by adding another currency to your <code>exchange_rates</code> dictionary and watch how your page changes.</p>
 <h3>Refactor</h3>
 <p>Define a function right under your <code>BASE_CURRENCY</code> definition that looks like the following:</p>
-<pre class="code literal-block"><span></span>def exchange_rates():
-  return # Move your dictionary here
+<pre class="code literal-block"><span></span><span class="nv">def</span> <span class="nv">exchange_rates</span><span class="ss">()</span>:
+  <span class="k">return</span> # <span class="nv">Move</span> <span class="nv">your</span> <span class="nv">dictionary</span> <span class="nv">here</span>
 </pre>
 
 
 <p>Then replace any references in your code to use the function instead of defining the dictionary in your route!</p>
 <h3>Automatic Data</h3>
 <p>Now comes the fun part. What if we could get the exchange rates on a live feed from a third party service? We can with <a href="http://exchangeratesapi.io">ExchangeRatesAPI.io</a>. This is a free api that runs over simple HTTPS! We'll have something like the following: </p>
-<pre class="code literal-block"><span></span>def exchange_rates():
-  response = requests.get('https://api.exchangeratesapi.io/latest')
-  return # What are we going to put here now? 
+<pre class="code literal-block"><span></span><span class="nv">def</span> <span class="nv">exchange_rates</span><span class="ss">()</span>:
+  <span class="nv">response</span> <span class="o">=</span> <span class="nv">requests</span>.<span class="nv">get</span><span class="ss">(</span><span class="s1">'</span><span class="s">https://api.exchangeratesapi.io/latest</span><span class="s1">'</span><span class="ss">)</span>
+  <span class="k">return</span> # <span class="nv">What</span> <span class="nv">are</span> <span class="nv">we</span> <span class="nv">going</span> <span class="nv">to</span> <span class="nv">put</span> <span class="nv">here</span> <span class="nv">now</span>? 
 </pre>
 
 
@@ -169,7 +169,7 @@ currencies from this function. </p>
             <a href="../data-analysis-with-pandas/" rel="prev" class="previous" title="Data Analysis with Pandas"><span aria-hidden="true">‹ </span>Older</a>
         </li>
         <li>
-            <a href="../chipmunks-data-science/" rel="next" class="next" title="Chipmunks Data Science">Newer<span aria-hidden="true"> ›</span></a>
+            <a href="../github-jobs-api/" rel="next" class="next" title="GitHub Jobs API Project Night ">Newer<span aria-hidden="true"> ›</span></a>
         </li>
     </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
         

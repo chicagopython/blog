@@ -1,49 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python Project Night Challenges (Posts about data-science)</title><link>https://chicagopython.github.io/</link><description></description><atom:link href="https://chicagopython.github.io/categories/cat_data-science.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:chicago-sig-organizers@python.org"&gt;Chicago Python User Group&lt;/a&gt; 
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python Project Night Challenges (Posts about api)</title><link>https://chicagopython.github.io/</link><description></description><atom:link href="https://chicagopython.github.io/categories/api.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019 &lt;a href="mailto:chicago-sig-organizers@python.org"&gt;Chicago Python User Group&lt;/a&gt; 
 &lt;a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html"&gt;
 &lt;img alt="Gnu Public License version 3.0"
 style="border-width:0;"
-src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Wed, 14 Aug 2019 12:58:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>ChiPy Chipmunk Project Night </title><link>https://chicagopython.github.io/posts/chipy-chipmunks/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Project Night Purpose&lt;/h3&gt;
-&lt;p&gt;Many people assume data scientists spend all day visualizing data and making impressive predictive models. While this isn’t untrue, the luckiest and most productive data scientists spend a lot of their time communicating. They communicate their model results - as well as their assumptions and limitations when making their models and doing analysis - in a way that is digestible to their stakeholders and colleagues. &lt;/p&gt;
-&lt;p&gt;Tonight’s project is aimed towards that aspect of communication. You will be asked to make assumptions as a team - particularly as they pertain to this problem and what the stakeholders need. There are no exactly correct assumptions or answers for this project night. There may be assumptions and answers that clearly don’t have evidence to support them, but do not feel bogged down by getting the “right” answer.&lt;/p&gt;
-&lt;p&gt;Most importantly - have fun. While this project night covers serious concepts, it is ridiculously silly and meant to be taken with a bit of lighthearted exploration and plenty of opportunities to make mistakes.&lt;/p&gt;
-&lt;h3&gt;Setting up your environment&lt;/h3&gt;
-&lt;p&gt;This project is contained in a jupyter notebook and is assuming you have Python 3.+ installed on your machine. If this is your fisrt project night, we recommend creating a folder for the project night repo: &lt;code&gt;mkdir chipy_projects &amp;amp;&amp;amp; cd chipy_projects&lt;/code&gt;. If you already have the project night repository on your machine, go to that directory and pull from master.&lt;/p&gt;
-&lt;p&gt;If you are using Linux or OS X, run the following to create a new virtualenv:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;chipmunk&lt;/span&gt;
-&lt;span class="k"&gt;source&lt;/span&gt; &lt;span class="n"&gt;chipmunk&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;On Windows, run the following&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;chipmunk&lt;/span&gt; 
-&lt;span class="n"&gt;chipmunk&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Scripts&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;h3&gt;Getting the project&lt;/h3&gt;
-&lt;p&gt;The project is in the ChiPy project night repo. If you do not have the repository already, run &lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;chicagopython&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;CodingWorkshops&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;Now we will:&lt;/p&gt;
-&lt;p&gt;Go to the project:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;CodingWorkshops&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;problems&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;data_science&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;chipmunks&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;Install the packages we need into our environment:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="n"&gt;requirements&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;Run our jupyter notebook server for the project:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;jupyter&lt;/span&gt; &lt;span class="n"&gt;notebook&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;h3&gt;Have fun!&lt;/h3&gt;&lt;/div&gt;</description><category>analytics</category><category>EDA</category><category>pandas</category><category>statistics</category><guid>https://chicagopython.github.io/posts/chipy-chipmunks/</guid><pubDate>Thu, 18 Apr 2019 23:00:00 GMT</pubDate></item><item><title>GitHub Jobs API</title><link>https://chicagopython.github.io/posts/github-jobs-api/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Project Night Purpose&lt;/h3&gt;
+src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Wed, 14 Aug 2019 12:58:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>GitHub Jobs API</title><link>https://chicagopython.github.io/posts/github-jobs-api/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Project Night Purpose&lt;/h3&gt;
 &lt;p&gt;All of us need to look for a job at some point; and most every job board has its own API for users to post and pull data (though usually they charge money for access). The &lt;a href="https://jobs.github.com"&gt;GitHub Jobs page&lt;/a&gt; is a great simple API for a first look at this kind of data acqusition and analysis.&lt;/p&gt;
 &lt;p&gt;Tonight's project uses the very popular Python HTTP library &lt;a href="https://2.python-requests.org/en/master/"&gt;requests&lt;/a&gt; along with &lt;a href="https://docs.python.org/3/library/json.html"&gt;json&lt;/a&gt; from the standard library. You will explore the data in the jobs API with the intent of learning something about the current job market for devs. There are a ton of caveats here: for example,&lt;/p&gt;
 &lt;ul&gt;

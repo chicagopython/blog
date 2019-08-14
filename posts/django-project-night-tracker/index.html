@@ -89,56 +89,56 @@ venv\Scripts\activate
 <h3>Instructions</h3>
 <p>In the steps that follow, instructions will generally reference exactly where code changes need to be made. In the files themselves you'll see large commented blocks of instructions indicating that you're in the right spot. If you don't see commented instructions, double check that you read the prompt correctly. Each step will also have a link to a resource that should directly help you solve the problem at hand. Even if you're not stuck, it's recommended to check out the link to improve your understanding of WHY we're doing what we're doing.</p>
 <p>To help visualize the locations of the file, here's the full file tree:</p>
-<pre class="code literal-block"><span></span>├── db.sqlite3
-├── django_pn_tracker
-│   ├── __init__.py
-│   ├── __pycache__
-│   ├── apps
-│   │   ├── __init__.py
-│   │   ├── __pycache__
-│   │   │   └── __init__.cpython-36.pyc
-│   │   └── challenges
-│   │       ├── __init__.py
-│   │       ├── __pycache__
-│   │       ├── admin.py
-│   │       ├── apps.py
-│   │       ├── forms.py
-│   │       ├── migrations
-│   │       │   ├── 0001_initial.py
-│   │       │   ├── __init__.py
-│   │       │   └── __pycache__
-│   │       ├── models.py
-│   │       ├── templates
-│   │       │   └── challenges
-│   │       │       ├── delete.html
-│   │       │       ├── edit.html
-│   │       │       └── list.html
-│   │       ├── tests.py
-│   │       ├── urls.py
-│   │       └── views.py
-│   ├── settings.py
-│   ├── static
-│   │   ├── css
-│   │   │   ├── bootstrap.min.css
-│   │   │   └── master.css
-│   │   └── js
-│   │       ├── bootstrap.min.js
-│   │       └── main.js
-│   ├── templates
-│   │   ├── base.html
-│   │   └── index.html
-│   ├── urls.py
-│   ├── views.py
-│   └── wsgi.py
-├── manage.py
-├── requirements.txt
-└── setup.cfg
+<pre class="code literal-block"><span></span><span class="err">├──</span> <span class="n">db</span><span class="p">.</span><span class="n">sqlite3</span>
+<span class="err">├──</span> <span class="n">django_pn_tracker</span>
+<span class="err">│</span>   <span class="err">├──</span> <span class="n">__init__</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">├──</span> <span class="n">__pycache__</span>
+<span class="err">│</span>   <span class="err">├──</span> <span class="n">apps</span>
+<span class="err">│</span>   <span class="err">│</span>   <span class="err">├──</span> <span class="n">__init__</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">│</span>   <span class="err">├──</span> <span class="n">__pycache__</span>
+<span class="err">│</span>   <span class="err">│</span>   <span class="err">│</span>   <span class="err">└──</span> <span class="n">__init__</span><span class="p">.</span><span class="n">cpython</span><span class="o">-</span><span class="mi">36</span><span class="p">.</span><span class="n">pyc</span>
+<span class="err">│</span>   <span class="err">│</span>   <span class="err">└──</span> <span class="n">challenges</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">├──</span> <span class="n">__init__</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">├──</span> <span class="n">__pycache__</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">├──</span> <span class="k">admin</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">├──</span> <span class="n">apps</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">├──</span> <span class="n">forms</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">├──</span> <span class="n">migrations</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">│</span>   <span class="err">├──</span> <span class="mi">0001</span><span class="n">_initial</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">│</span>   <span class="err">├──</span> <span class="n">__init__</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">│</span>   <span class="err">└──</span> <span class="n">__pycache__</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">├──</span> <span class="n">models</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">├──</span> <span class="n">templates</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">│</span>   <span class="err">└──</span> <span class="n">challenges</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">│</span>       <span class="err">├──</span> <span class="k">delete</span><span class="p">.</span><span class="n">html</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">│</span>       <span class="err">├──</span> <span class="n">edit</span><span class="p">.</span><span class="n">html</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">│</span>       <span class="err">└──</span> <span class="n">list</span><span class="p">.</span><span class="n">html</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">├──</span> <span class="n">tests</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">├──</span> <span class="n">urls</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">└──</span> <span class="n">views</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">├──</span> <span class="n">settings</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">├──</span> <span class="k">static</span>
+<span class="err">│</span>   <span class="err">│</span>   <span class="err">├──</span> <span class="n">css</span>
+<span class="err">│</span>   <span class="err">│</span>   <span class="err">│</span>   <span class="err">├──</span> <span class="n">bootstrap</span><span class="p">.</span><span class="k">min</span><span class="p">.</span><span class="n">css</span>
+<span class="err">│</span>   <span class="err">│</span>   <span class="err">│</span>   <span class="err">└──</span> <span class="n">master</span><span class="p">.</span><span class="n">css</span>
+<span class="err">│</span>   <span class="err">│</span>   <span class="err">└──</span> <span class="n">js</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">├──</span> <span class="n">bootstrap</span><span class="p">.</span><span class="k">min</span><span class="p">.</span><span class="n">js</span>
+<span class="err">│</span>   <span class="err">│</span>       <span class="err">└──</span> <span class="n">main</span><span class="p">.</span><span class="n">js</span>
+<span class="err">│</span>   <span class="err">├──</span> <span class="n">templates</span>
+<span class="err">│</span>   <span class="err">│</span>   <span class="err">├──</span> <span class="n">base</span><span class="p">.</span><span class="n">html</span>
+<span class="err">│</span>   <span class="err">│</span>   <span class="err">└──</span> <span class="k">index</span><span class="p">.</span><span class="n">html</span>
+<span class="err">│</span>   <span class="err">├──</span> <span class="n">urls</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">├──</span> <span class="n">views</span><span class="p">.</span><span class="n">py</span>
+<span class="err">│</span>   <span class="err">└──</span> <span class="n">wsgi</span><span class="p">.</span><span class="n">py</span>
+<span class="err">├──</span> <span class="n">manage</span><span class="p">.</span><span class="n">py</span>
+<span class="err">├──</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
+<span class="err">└──</span> <span class="n">setup</span><span class="p">.</span><span class="n">cfg</span>
 </pre>
 
 
 <h4>Step 0: Run the app as is</h4>
 <p>Before we dig in, let's see what the app currently looks like. This'll also confirm that install/setup went as planned. To run the app locally:</p>
-<pre class="code literal-block"><span></span>&gt; ./manage.py runserver
+<pre class="code literal-block"><span></span><span class="o">&gt;</span> <span class="p">.</span><span class="o">/</span><span class="n">manage</span><span class="p">.</span><span class="n">py</span> <span class="n">runserver</span>
 </pre>
 
 
@@ -162,26 +162,26 @@ venv\Scripts\activate
 </ul>
 <p>Read more about models here: https://docs.djangoproject.com/en/2.1/topics/db/models/</p>
 <p><strong>b. Create/complete migration.</strong> In order for our changes to take effect we need to create a migration and then actually migrate it.</p>
-<pre class="code literal-block"><span></span>&gt; ./manage.py makemigrations
+<pre class="code literal-block"><span></span><span class="o">&gt;</span> <span class="p">.</span><span class="o">/</span><span class="n">manage</span><span class="p">.</span><span class="n">py</span> <span class="n">makemigrations</span>
 </pre>
 
 
 <p>This is a little bit of Django magic. Under the hood Django is automatically generating the SQL commands necessary to update your database. You can see the actual underlying commands in <code>apps/challenges/migrations</code>, where a file of commands is created each time we run makemigrations.</p>
 <p>Normally you would see a message like:</p>
-<pre class="code literal-block"><span></span>Migrations for 'challenges':
-  django_pn_tracker/apps/challenges/migrations/0002_auto_20180816_1445.py
-    - &lt;actions here&gt;
+<pre class="code literal-block"><span></span><span class="nv">Migrations</span> <span class="k">for</span> <span class="s1">'</span><span class="s">challenges</span><span class="s1">'</span>:
+  <span class="nv">django_pn_tracker</span><span class="o">/</span><span class="nv">apps</span><span class="o">/</span><span class="nv">challenges</span><span class="o">/</span><span class="nv">migrations</span><span class="o">/</span><span class="mi">0002</span><span class="nv">_auto_20180816_1445</span>.<span class="nv">py</span>
+    <span class="o">-</span> <span class="o">&lt;</span><span class="nv">actions</span> <span class="nv">here</span><span class="o">&gt;</span>
     ...
 </pre>
 
 
 <p>However, since the table for our new model actually already exists in db.sqlite3 (purely for the sake of having example records for later steps), if everything is working correctly so far you should see:</p>
-<pre class="code literal-block"><span></span>No changes detected
+<pre class="code literal-block"><span></span><span class="k">No</span> <span class="n">changes</span> <span class="n">detected</span>
 </pre>
 
 
 <p>In order to actually make our changes, run:</p>
-<pre class="code literal-block"><span></span>&gt; ./manage.py migrate
+<pre class="code literal-block"><span></span><span class="o">&gt;</span> <span class="p">.</span><span class="o">/</span><span class="n">manage</span><span class="p">.</span><span class="n">py</span> <span class="n">migrate</span>
 </pre>
 
 

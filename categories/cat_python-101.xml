@@ -3,7 +3,7 @@
 &lt;a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html"&gt;
 &lt;img alt="Gnu Public License version 3.0"
 style="border-width:0;"
-src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Thu, 16 May 2019 05:23:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>trackcoder</title><link>https://chicagopython.github.io/posts/trackcoder/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;1. trackcoder: The Mentorship Journal&lt;/h2&gt;
+src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Wed, 14 Aug 2019 11:57:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>trackcoder</title><link>https://chicagopython.github.io/posts/trackcoder/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;1. trackcoder: The Mentorship Journal&lt;/h2&gt;
 &lt;p&gt;Chipy's mentorship program is an extra-ordinary jounery for becoming a better developer.
 As a mentee, you are expected to do a lot - you read new articles/books, write code,
 debug and troubleshoot, pair program with other mentees in coding workshop or your mentor.
@@ -18,16 +18,16 @@ mentorship program.  &lt;/p&gt;
 &lt;p&gt;Lets say you were to keep an account of every thing you have accomplished during your mentorship.
 The minimalistic way for doing that would be noting things down in a text file - think of it as
 a journal that you update frequently.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    Date: 02/20/2019
-    first blog post completed 🏅
-    learned about using click at project night
-    updated cli for the app
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="nv"&gt;Date&lt;/span&gt;: &lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;
+    &lt;span class="nv"&gt;first&lt;/span&gt; &lt;span class="nv"&gt;blog&lt;/span&gt; &lt;span class="nv"&gt;post&lt;/span&gt; &lt;span class="nv"&gt;completed&lt;/span&gt; 🏅
+    &lt;span class="nv"&gt;learned&lt;/span&gt; &lt;span class="nv"&gt;about&lt;/span&gt; &lt;span class="nv"&gt;using&lt;/span&gt; &lt;span class="nv"&gt;click&lt;/span&gt; &lt;span class="nv"&gt;at&lt;/span&gt; &lt;span class="nv"&gt;project&lt;/span&gt; &lt;span class="nv"&gt;night&lt;/span&gt;
+    &lt;span class="nv"&gt;updated&lt;/span&gt; &lt;span class="nv"&gt;cli&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;app&lt;/span&gt;
 
-    Date: 02/21/2019
-    read good article on decorators http://realpython.org/
-    refactored to use decorators for orthogonal logic
-    debugging decorators
-    met with mentor to fix decorator issues
+    &lt;span class="nv"&gt;Date&lt;/span&gt;: &lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;
+    &lt;span class="nv"&gt;read&lt;/span&gt; &lt;span class="nv"&gt;good&lt;/span&gt; &lt;span class="nv"&gt;article&lt;/span&gt; &lt;span class="nv"&gt;on&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt; &lt;span class="nv"&gt;http&lt;/span&gt;:&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="nv"&gt;realpython&lt;/span&gt;.&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+    &lt;span class="nv"&gt;refactored&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;use&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;orthogonal&lt;/span&gt; &lt;span class="nv"&gt;logic&lt;/span&gt;
+    &lt;span class="nv"&gt;debugging&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt;
+    &lt;span class="nv"&gt;met&lt;/span&gt; &lt;span class="nv"&gt;with&lt;/span&gt; &lt;span class="nv"&gt;mentor&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;fix&lt;/span&gt; &lt;span class="nv"&gt;decorator&lt;/span&gt; &lt;span class="nv"&gt;issues&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -37,29 +37,29 @@ you are recording in this mini journal entry.&lt;/p&gt;
 (b) the type of activity&lt;/p&gt;
 &lt;p&gt;These will form the basis of gaining insights into your personal learning patterns.&lt;/p&gt;
 &lt;p&gt;For example:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="sr"&gt;/20/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;
-&lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;blogging&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="n"&gt;mins&lt;/span&gt;
-&lt;span class="n"&gt;learned&lt;/span&gt; &lt;span class="n"&gt;about&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;click&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;project&lt;/span&gt; &lt;span class="n"&gt;night&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pair_programming&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="n"&gt;mins&lt;/span&gt;
-&lt;span class="n"&gt;updated&lt;/span&gt; &lt;span class="n"&gt;cli&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;coding&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt; &lt;span class="n"&gt;mins&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;Date&lt;/span&gt;: &lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;
+&lt;span class="nv"&gt;first&lt;/span&gt; &lt;span class="nv"&gt;blog&lt;/span&gt; &lt;span class="nv"&gt;post&lt;/span&gt;, &lt;span class="nv"&gt;blogging&lt;/span&gt;, &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;
+&lt;span class="nv"&gt;learned&lt;/span&gt; &lt;span class="nv"&gt;about&lt;/span&gt; &lt;span class="nv"&gt;using&lt;/span&gt; &lt;span class="nv"&gt;click&lt;/span&gt; &lt;span class="nv"&gt;at&lt;/span&gt; &lt;span class="nv"&gt;project&lt;/span&gt; &lt;span class="nv"&gt;night&lt;/span&gt;, &lt;span class="nv"&gt;pair_programming&lt;/span&gt;, &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;
+&lt;span class="nv"&gt;updated&lt;/span&gt; &lt;span class="nv"&gt;cli&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;app&lt;/span&gt;, &lt;span class="nv"&gt;coding&lt;/span&gt;, &lt;span class="mi"&gt;20&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;
 
-&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="sr"&gt;/21/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;
-&lt;span class="n"&gt;read&lt;/span&gt; &lt;span class="n"&gt;good&lt;/span&gt; &lt;span class="n"&gt;article&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;decorators&lt;/span&gt; &lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;://&lt;/span&gt;&lt;span class="n"&gt;realpython&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;org&lt;/span&gt;&lt;span class="o"&gt;/,&lt;/span&gt; &lt;span class="n"&gt;research&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;45&lt;/span&gt; &lt;span class="n"&gt;mins&lt;/span&gt;
-&lt;span class="n"&gt;refactored&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;use&lt;/span&gt; &lt;span class="n"&gt;decorators&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;orthogonal&lt;/span&gt; &lt;span class="n"&gt;logic&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;coding&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="n"&gt;mins&lt;/span&gt;
-&lt;span class="n"&gt;debugging&lt;/span&gt; &lt;span class="n"&gt;decorators&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debugging&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="n"&gt;mins&lt;/span&gt;
-&lt;span class="n"&gt;met&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;mentor&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;fix&lt;/span&gt; &lt;span class="n"&gt;decorator&lt;/span&gt; &lt;span class="n"&gt;issues&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;mentor&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt; &lt;span class="n"&gt;mins&lt;/span&gt;
+&lt;span class="nv"&gt;Date&lt;/span&gt;: &lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;
+&lt;span class="nv"&gt;read&lt;/span&gt; &lt;span class="nv"&gt;good&lt;/span&gt; &lt;span class="nv"&gt;article&lt;/span&gt; &lt;span class="nv"&gt;on&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt; &lt;span class="nv"&gt;http&lt;/span&gt;:&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="nv"&gt;realpython&lt;/span&gt;.&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;, &lt;span class="nv"&gt;research&lt;/span&gt;, &lt;span class="mi"&gt;45&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;
+&lt;span class="nv"&gt;refactored&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;use&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;orthogonal&lt;/span&gt; &lt;span class="nv"&gt;logic&lt;/span&gt;, &lt;span class="nv"&gt;coding&lt;/span&gt;, &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;
+&lt;span class="nv"&gt;debugging&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt;, &lt;span class="nv"&gt;debugging&lt;/span&gt;, &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;
+&lt;span class="nv"&gt;met&lt;/span&gt; &lt;span class="nv"&gt;with&lt;/span&gt; &lt;span class="nv"&gt;mentor&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;fix&lt;/span&gt; &lt;span class="nv"&gt;decorator&lt;/span&gt; &lt;span class="nv"&gt;issues&lt;/span&gt;, &lt;span class="nv"&gt;mentor&lt;/span&gt;, &lt;span class="mi"&gt;60&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;While recording each of these activities have taken up time, you'll probably find one was
 more useful than the other. So add another field to your
 entry, effectiveness and refactor a little bit.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;02/20/2019, first blog post, blogging, 120 mins, 4
-02/20/2019, learned about using click at project night, pair_programming, 120 mins, 4
-02/20/2019, updated cli for the app, coding, 20 mins, 3
-02/21/2019, read good article on decorators http://realpython.org/, research, 45 mins, 4
-02/21/2019, refactored to use decorators for orthogonal logic, coding, 30 mins, 3
-02/21/2019, debugging decorators, debugging, 30 mins, 2
-02/21/2019, met with mentor to fix decorator issues, mentor, 60 mins, 5
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;, &lt;span class="nv"&gt;first&lt;/span&gt; &lt;span class="nv"&gt;blog&lt;/span&gt; &lt;span class="nv"&gt;post&lt;/span&gt;, &lt;span class="nv"&gt;blogging&lt;/span&gt;, &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;, &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;, &lt;span class="nv"&gt;learned&lt;/span&gt; &lt;span class="nv"&gt;about&lt;/span&gt; &lt;span class="nv"&gt;using&lt;/span&gt; &lt;span class="nv"&gt;click&lt;/span&gt; &lt;span class="nv"&gt;at&lt;/span&gt; &lt;span class="nv"&gt;project&lt;/span&gt; &lt;span class="nv"&gt;night&lt;/span&gt;, &lt;span class="nv"&gt;pair_programming&lt;/span&gt;, &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;, &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;, &lt;span class="nv"&gt;updated&lt;/span&gt; &lt;span class="nv"&gt;cli&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;app&lt;/span&gt;, &lt;span class="nv"&gt;coding&lt;/span&gt;, &lt;span class="mi"&gt;20&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;, &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;, &lt;span class="nv"&gt;read&lt;/span&gt; &lt;span class="nv"&gt;good&lt;/span&gt; &lt;span class="nv"&gt;article&lt;/span&gt; &lt;span class="nv"&gt;on&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt; &lt;span class="nv"&gt;http&lt;/span&gt;:&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="nv"&gt;realpython&lt;/span&gt;.&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;, &lt;span class="nv"&gt;research&lt;/span&gt;, &lt;span class="mi"&gt;45&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;, &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;, &lt;span class="nv"&gt;refactored&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;use&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;orthogonal&lt;/span&gt; &lt;span class="nv"&gt;logic&lt;/span&gt;, &lt;span class="nv"&gt;coding&lt;/span&gt;, &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;, &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;, &lt;span class="nv"&gt;debugging&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt;, &lt;span class="nv"&gt;debugging&lt;/span&gt;, &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;, &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;, &lt;span class="nv"&gt;met&lt;/span&gt; &lt;span class="nv"&gt;with&lt;/span&gt; &lt;span class="nv"&gt;mentor&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;fix&lt;/span&gt; &lt;span class="nv"&gt;decorator&lt;/span&gt; &lt;span class="nv"&gt;issues&lt;/span&gt;, &lt;span class="nv"&gt;mentor&lt;/span&gt;, &lt;span class="mi"&gt;60&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;, &lt;span class="mi"&gt;5&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -70,12 +70,12 @@ for the last but one column. Taking the next step, you can very easily build a b
 &lt;h4&gt;1.1.1. The Data structure&lt;/h4&gt;
 &lt;p&gt;Having looked at the data we intend to capture, lets try to reason how each entry in the row
 can be represented by variables in a script and what their type would be like.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    task: str
-    description: str
-    timestamp: datetime.timestamp
-    mins: int
-    effective: int
-    done: bool
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="n"&gt;task&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;str&lt;/span&gt;
+    &lt;span class="n"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;str&lt;/span&gt;
+    &lt;span class="k"&gt;timestamp&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;timestamp&lt;/span&gt;
+    &lt;span class="n"&gt;mins&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;
+    &lt;span class="n"&gt;effective&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;
+    &lt;span class="n"&gt;done&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;bool&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -140,11 +140,11 @@ you will need to do the following:&lt;/p&gt;
 &lt;p&gt;Recommended version: Python 3.6 or higher.&lt;/p&gt;
 &lt;h3&gt;1.5. Quick Git command refresher [Optional]&lt;/h3&gt;
 &lt;p&gt;Below are the few most used git commands&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git checkout master          # checkout to master branch
-git checkout -b feature/cool # crate a new branch feature/cool
-git add -u                   # stage all the updates for commit
-git commit -am "Adding changes and commiting with a comment"
-git push origin master       # push commits to develop/ci branch
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;checkout&lt;/span&gt; &lt;span class="nv"&gt;master&lt;/span&gt;          # &lt;span class="nv"&gt;checkout&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;master&lt;/span&gt; &lt;span class="nv"&gt;branch&lt;/span&gt;
+&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;checkout&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;b&lt;/span&gt; &lt;span class="nv"&gt;feature&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;cool&lt;/span&gt; # &lt;span class="nv"&gt;crate&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="nv"&gt;new&lt;/span&gt; &lt;span class="nv"&gt;branch&lt;/span&gt; &lt;span class="nv"&gt;feature&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;cool&lt;/span&gt;
+&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;u&lt;/span&gt;                   # &lt;span class="nv"&gt;stage&lt;/span&gt; &lt;span class="nv"&gt;all&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;updates&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;commit&lt;/span&gt;
+&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;am&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;Adding changes and commiting with a comment&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;push&lt;/span&gt; &lt;span class="nv"&gt;origin&lt;/span&gt; &lt;span class="nv"&gt;master&lt;/span&gt;       # &lt;span class="nv"&gt;push&lt;/span&gt; &lt;span class="nv"&gt;commits&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;develop&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;ci&lt;/span&gt; &lt;span class="nv"&gt;branch&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -163,7 +163,7 @@ would first go to a branch, get tested, code reviewed and finally merged to mast
 repository in your local machine. Lets take the time to look at the structure of this
 project. All code is located under &lt;code&gt;/problems/py101/trackcoder&lt;/code&gt; directory. So from your
 terminal go to the directory where you have cloned the repository.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;cd path/to/CodingWorkshop/problems/py101/trackcoder
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;CodingWorkshop&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;problems&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;py101&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;trackcoder&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -185,7 +185,7 @@ isolates all the dependencies of this project from other python projects in your
 Learn more about &lt;a href="https://docs.pipenv.org/"&gt;pipenv&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;1.8. Exercise 1: Build&lt;/h3&gt;
 &lt;p&gt;From the &lt;code&gt;/problems/py101/trackcoder&lt;/code&gt; directory, run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;make
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;make&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -194,13 +194,13 @@ Learn more about &lt;a href="https://docs.pipenv.org/"&gt;pipenv&lt;/a&gt;.&lt;/
 &lt;li&gt;Which version of python is getting used?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Skip this exercise for Windows. Install the dependencies using&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pip install prompt_toolkit Click peewee
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;prompt_toolkit&lt;/span&gt; &lt;span class="n"&gt;Click&lt;/span&gt; &lt;span class="n"&gt;peewee&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;h3&gt;1.9. Exercise 2: Run the program&lt;/h3&gt;
 &lt;p&gt;First shell into your virtual environment&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;make shell
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -208,17 +208,17 @@ Learn more about &lt;a href="https://docs.pipenv.org/"&gt;pipenv&lt;/a&gt;.&lt;/
 environment where all the dependencies for this project has been installed.&lt;/p&gt;
 &lt;p&gt;Note: If the above command errors out, or you are on Windows, run the following to get into
 a shell with the virtualenv acitvated.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pipenv shell
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pipenv&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;If everything fails,&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pip install prompt_toolkit Click peewee
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;prompt_toolkit&lt;/span&gt; &lt;span class="n"&gt;Click&lt;/span&gt; &lt;span class="n"&gt;peewee&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;Start by running&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python app.py --help
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="c1"&gt;--help&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -257,13 +257,13 @@ There are only 6 possible Task types&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;The &lt;code&gt;show&lt;/code&gt; command allows listing of all the &lt;code&gt;Task&lt;/code&gt;-s added till now.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;% show&lt;/span&gt;
-&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;
-&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="n"&gt;finished&lt;/span&gt; &lt;span class="n"&gt;cli&lt;/span&gt;
-&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="n"&gt;debugging&lt;/span&gt; &lt;span class="n"&gt;decorators&lt;/span&gt;
-&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="n"&gt;always&lt;/span&gt; &lt;span class="n"&gt;keep&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;final&lt;/span&gt; &lt;span class="n"&gt;presentation&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;mind&lt;/span&gt;
-&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt; &lt;span class="n"&gt;read&lt;/span&gt; &lt;span class="n"&gt;articles&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;pandas&lt;/span&gt;
-&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="n"&gt;learned&lt;/span&gt; &lt;span class="n"&gt;about&lt;/span&gt; &lt;span class="n"&gt;decorators&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="k"&gt;show&lt;/span&gt;
+&lt;span class="nv"&gt;b&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="nv"&gt;first&lt;/span&gt; &lt;span class="nv"&gt;blog&lt;/span&gt; &lt;span class="nv"&gt;post&lt;/span&gt;
+&lt;span class="nv"&gt;c&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="nv"&gt;finished&lt;/span&gt; &lt;span class="nv"&gt;cli&lt;/span&gt;
+&lt;span class="nv"&gt;d&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="nv"&gt;debugging&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt;
+&lt;span class="nv"&gt;m&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="nv"&gt;always&lt;/span&gt; &lt;span class="nv"&gt;keep&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;final&lt;/span&gt; &lt;span class="nv"&gt;presentation&lt;/span&gt; &lt;span class="nv"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;mind&lt;/span&gt;
+&lt;span class="nv"&gt;r&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt; &lt;span class="nv"&gt;read&lt;/span&gt; &lt;span class="nv"&gt;articles&lt;/span&gt; &lt;span class="nv"&gt;on&lt;/span&gt; &lt;span class="nv"&gt;pandas&lt;/span&gt;
+&lt;span class="nv"&gt;p&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="nv"&gt;learned&lt;/span&gt; &lt;span class="nv"&gt;about&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -271,7 +271,7 @@ There are only 6 possible Task types&lt;/p&gt;
 &lt;p&gt;For this exercise you need to update add helpful messages that will summarize what each
 of the options for &lt;code&gt;app.py&lt;/code&gt; stand for.&lt;/p&gt;
 &lt;h3&gt;1.11. Exercise 4: Run in interactive mode&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python app.py -i
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -280,15 +280,15 @@ arrow keys to access history of the commands.&lt;/p&gt;
 &lt;p&gt;Exit the session using &lt;code&gt;ctrl+D&lt;/code&gt;. From your command prompt, run &lt;code&gt;ls -l&lt;/code&gt; in linux or mac or &lt;code&gt;dir&lt;/code&gt;
 in windows. What is the name of the file that gets created?&lt;/p&gt;
 &lt;p&gt;Using sqlite3&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sqlite3 to_do_list.db 'select * from ToDo;'
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sqlite3&lt;/span&gt; &lt;span class="n"&gt;to_do_list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt; &lt;span class="s1"&gt;'select * from ToDo;'&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;Compare the output that you get from running &lt;code&gt;show&lt;/code&gt; and using the command above.&lt;/p&gt;
 &lt;h3&gt;1.12. Exercise 4: Run in non-interactive mode&lt;/h3&gt;
 &lt;p&gt;For ease of entering data the program can also be run in non-interactive mode&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python app.py -a b 30  "first blog post completed"
-python app.py -s
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;  &lt;span class="ss"&gt;"first blog post completed"&lt;/span&gt;
+&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -328,7 +328,7 @@ Your summary should include how much time was spent on each of the task category
 using sql or write the logic in python.&lt;/p&gt;
 &lt;h3&gt;1.15. Exercise 7: Add a field for task complete or not&lt;/h3&gt;
 &lt;p&gt;Next take a look at&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;ToDo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Model&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;ToDo&lt;/span&gt;(&lt;span class="n"&gt;Model&lt;/span&gt;):
 &lt;/pre&gt;
 
 
@@ -340,8 +340,8 @@ and still have incomplete tasks. In fact, logging often and logging early is
 encouraged! In order to faciliate that we need to optionally
 take a fourth parameter in the input for adding a new task.&lt;/p&gt;
 &lt;p&gt;Take a look at the decorator right above the &lt;code&gt;main&lt;/code&gt; function&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;@click.option('--add', '-a', nargs=3, type=(click.STRING, int, click.STRING), \
-            default=(None, None, None))
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;@click&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;option&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'--add'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'-a'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;nargs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;click&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;STRING&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;click&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;STRING&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;None&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -424,11 +424,11 @@ of the repository (CodingWorkshop) in the search bar on the dashboard page.&lt;/
 &lt;p&gt;Recommended version: Python 3.6&lt;/p&gt;
 &lt;h3&gt;1.3. Quick Git command refresher&lt;/h3&gt;
 &lt;p&gt;Below are the few most used git commands&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git checkout master          # checkout to master branch
-git checkout -b feature/cool # crate a new branch feature/cool
-git add -u                   # stage all the updates for commit
-git commit -am "Adding changes and commiting with a comment"
-git push origin master       # push commits to develop/ci branch
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;checkout&lt;/span&gt; &lt;span class="nv"&gt;master&lt;/span&gt;          # &lt;span class="nv"&gt;checkout&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;master&lt;/span&gt; &lt;span class="nv"&gt;branch&lt;/span&gt;
+&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;checkout&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;b&lt;/span&gt; &lt;span class="nv"&gt;feature&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;cool&lt;/span&gt; # &lt;span class="nv"&gt;crate&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="nv"&gt;new&lt;/span&gt; &lt;span class="nv"&gt;branch&lt;/span&gt; &lt;span class="nv"&gt;feature&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;cool&lt;/span&gt;
+&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;u&lt;/span&gt;                   # &lt;span class="nv"&gt;stage&lt;/span&gt; &lt;span class="nv"&gt;all&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;updates&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;commit&lt;/span&gt;
+&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;am&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;Adding changes and commiting with a comment&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;push&lt;/span&gt; &lt;span class="nv"&gt;origin&lt;/span&gt; &lt;span class="nv"&gt;master&lt;/span&gt;       # &lt;span class="nv"&gt;push&lt;/span&gt; &lt;span class="nv"&gt;commits&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;develop&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;ci&lt;/span&gt; &lt;span class="nv"&gt;branch&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -440,7 +440,7 @@ would first go to a branch, get tested, code reviewed and finally merged to mast
 repository in your local machine. Lets take the time to look at the structure of this
 project. All code is located under &lt;code&gt;/problems/py101/testing&lt;/code&gt; directory. So from your
 terminal go to the directory where you have cloned the repository.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;cd path/to/clone/problems/py101/testing
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;clone&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;problems&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;py101&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;testing&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -473,8 +473,8 @@ is a file called &lt;code&gt;.travis.yml&lt;/code&gt;. This is used by the conti
 This contains the information on how to build this python project.&lt;/p&gt;
 &lt;h4&gt;1.4.7. Test your setup is working&lt;/h4&gt;
 &lt;p&gt;Just make a small edit on this file (README.md), commit and push the changes.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git commit -am "Demo commit to check everything is working"
-git push origin master
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="k"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;am&lt;/span&gt; &lt;span class="ss"&gt;"Demo commit to check everything is working"&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -487,7 +487,7 @@ of this file (README.md).&lt;/p&gt;
 &lt;p&gt;If you run into issues, &lt;a href="https://chipy.slack.com/messages/C093F7W8P/details/"&gt;ask your question on slack&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;1.5. Exercise 1: Build&lt;/h3&gt;
 &lt;p&gt;From the &lt;code&gt;/problems/py101/testing&lt;/code&gt; directory, run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;make
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;make&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -500,7 +500,7 @@ of this file (README.md).&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h3&gt;1.6. Exercise 2: Run the program&lt;/h3&gt;
 &lt;p&gt;Start by running&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python team_organizer.py
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;team_organizer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -511,52 +511,52 @@ Following that, we run the &lt;code&gt;print&lt;/code&gt; command where the user
 are grouped in to max of size four where two users have
 written less lines of code than the others.&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;```
-t (master *) testing $ python team_organizer.py
-Welcome to Chicago Python Project Night Team Organizer
-org&amp;gt; help
-help
+&lt;span class="nv"&gt;t&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;master&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;testing&lt;/span&gt; $ &lt;span class="nv"&gt;python&lt;/span&gt; &lt;span class="nv"&gt;team_organizer&lt;/span&gt;.&lt;span class="nv"&gt;py&lt;/span&gt;
+&lt;span class="nv"&gt;Welcome&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;Chicago&lt;/span&gt; &lt;span class="nv"&gt;Python&lt;/span&gt; &lt;span class="nv"&gt;Project&lt;/span&gt; &lt;span class="nv"&gt;Night&lt;/span&gt; &lt;span class="nv"&gt;Team&lt;/span&gt; &lt;span class="nv"&gt;Organizer&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;help&lt;/span&gt;
+&lt;span class="nv"&gt;help&lt;/span&gt;
 
-Documented commands (type help &amp;lt;topic&amp;gt;):
-========================================
-add  help  print
+&lt;span class="nv"&gt;Documented&lt;/span&gt; &lt;span class="nv"&gt;commands&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;type&lt;/span&gt; &lt;span class="nv"&gt;help&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;topic&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;:
+&lt;span class="o"&gt;========================================&lt;/span&gt;
+&lt;span class="nv"&gt;add&lt;/span&gt;  &lt;span class="nv"&gt;help&lt;/span&gt;  &lt;span class="nv"&gt;print&lt;/span&gt;
 
-Undocumented commands:
-======================
-exit
+&lt;span class="nv"&gt;Undocumented&lt;/span&gt; &lt;span class="nv"&gt;commands&lt;/span&gt;:
+&lt;span class="o"&gt;======================&lt;/span&gt;
+&lt;span class="k"&gt;exit&lt;/span&gt;
 
-org&amp;gt; help add
-help add
-Adds a new user. Needs Name slackhandle number_of_lines separated by space
-org&amp;gt; add a @a 100
-add a @a 100
-org&amp;gt; add b @b 200
-add b @b 200
-org&amp;gt; add c @c 300
-add c @c 300
-org&amp;gt; add d @d 400
-add d @d 400
-org&amp;gt; add e @e 500
-add e @e 500
-org&amp;gt; add f @f 50
-add f @f 50
-org&amp;gt; print
-print
-['f, a, e, d']
-b, c
-org&amp;gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;help&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt;
+&lt;span class="nv"&gt;help&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt;
+&lt;span class="nv"&gt;Adds&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="nv"&gt;new&lt;/span&gt; &lt;span class="nv"&gt;user&lt;/span&gt;. &lt;span class="nv"&gt;Needs&lt;/span&gt; &lt;span class="nv"&gt;Name&lt;/span&gt; &lt;span class="nv"&gt;slackhandle&lt;/span&gt; &lt;span class="nv"&gt;number_of_lines&lt;/span&gt; &lt;span class="nv"&gt;separated&lt;/span&gt; &lt;span class="nv"&gt;by&lt;/span&gt; &lt;span class="nv"&gt;space&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; @&lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;
+&lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; @&lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;b&lt;/span&gt; @&lt;span class="nv"&gt;b&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;
+&lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;b&lt;/span&gt; @&lt;span class="nv"&gt;b&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;c&lt;/span&gt; @&lt;span class="nv"&gt;c&lt;/span&gt; &lt;span class="mi"&gt;300&lt;/span&gt;
+&lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;c&lt;/span&gt; @&lt;span class="nv"&gt;c&lt;/span&gt; &lt;span class="mi"&gt;300&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;d&lt;/span&gt; @&lt;span class="nv"&gt;d&lt;/span&gt; &lt;span class="mi"&gt;400&lt;/span&gt;
+&lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;d&lt;/span&gt; @&lt;span class="nv"&gt;d&lt;/span&gt; &lt;span class="mi"&gt;400&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;e&lt;/span&gt; @&lt;span class="nv"&gt;e&lt;/span&gt; &lt;span class="mi"&gt;500&lt;/span&gt;
+&lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;e&lt;/span&gt; @&lt;span class="nv"&gt;e&lt;/span&gt; &lt;span class="mi"&gt;500&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;f&lt;/span&gt; @&lt;span class="nv"&gt;f&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt;
+&lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;f&lt;/span&gt; @&lt;span class="nv"&gt;f&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;print&lt;/span&gt;
+&lt;span class="nv"&gt;print&lt;/span&gt;
+[&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="s"&gt;f, a, e, d&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;]
+&lt;span class="nv"&gt;b&lt;/span&gt;, &lt;span class="nv"&gt;c&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 ```
 &lt;/pre&gt;
 
 
 &lt;h3&gt;1.7. Exercise 3: Running the tests&lt;/h3&gt;
 &lt;p&gt;Run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;make test
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;This will run the tests in the &lt;code&gt;test_team_organizer.py&lt;/code&gt; file.&lt;/p&gt;
 &lt;p&gt;Run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pipenv run pytest --help
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pipenv&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;pytest&lt;/span&gt; &lt;span class="c1"&gt;--help&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -574,13 +574,13 @@ Click on &lt;code&gt;team_organizer.py&lt;/code&gt; to see which lines are outsi
 find &lt;code&gt;test_add_a_person_with_lower_than_median&lt;/code&gt; test. Notice this test is
 skipped when run with pytest. To fix it remove the decorator &lt;code&gt;pytest.mark.skip&lt;/code&gt;
 and run &lt;code&gt;pytest&lt;/code&gt; again. Commit the code and run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;make test
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;Make the necessary changes so that the test passes.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git commit -am "Fixed failing test"
-git push origin master
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="k"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;am&lt;/span&gt; &lt;span class="ss"&gt;"Fixed failing test"&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -593,7 +593,7 @@ reliably and repeatedly execute.&lt;/p&gt;
 as needed by &lt;code&gt;organizer&lt;/code&gt; fixture.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;test_count_number_of_teams&lt;/code&gt; is broken as well. How can you fix it?&lt;/p&gt;
 &lt;p&gt;Tip: To run a singe test, use&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pipenv run pytest -k &amp;lt;name-of-test&amp;gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pipenv&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;pytest&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;of&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -660,7 +660,7 @@ reference, the linux kernel is over 23 million lines of code!&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;If you are familiar with &lt;code&gt;git&lt;/code&gt;, run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/chicagopython/CodingWorkshops.git
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;chicagopython&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;CodingWorkshops&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -672,14 +672,14 @@ reference, the linux kernel is over 23 million lines of code!&lt;/p&gt;
 &lt;li&gt;From your command line, change directory to the path where you have downloaded it.&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;On linux or OS X&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; cd path/to/CodingWorkshops/problems/py101/python_team_project/
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;CodingWorkshops&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;problems&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;py101&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;python_team_project&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;On Windows&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; cd path\to\CodingWorkshops\problems\py101\python_team_project
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;CodingWorkshops&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;problems&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;py101&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;python_team_project&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -688,18 +688,18 @@ reference, the linux kernel is over 23 million lines of code!&lt;/p&gt;
 &lt;p&gt;Here you will find the basic skeleton of the app under &lt;code&gt;app.py&lt;/code&gt;. (after September 21, 2017)&lt;/p&gt;
 &lt;h4&gt;Set up virtualenv&lt;/h4&gt;
 &lt;p&gt;If you are using Linux or OS X, run the following to create a new virtualenv&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-python app.py
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;
+&lt;span class="k"&gt;source&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
+&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="n"&gt;requirements&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
+&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;On Windows, run the following&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python3 -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-python app.py
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;
+&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Scripts&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
+&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="n"&gt;requirements&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
+&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -709,8 +709,8 @@ python app.py
 &lt;p&gt;app.py is the script contains some code to get you started.
 We will be using two external libraries for this
 program.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python_prompt_toolkit
-meetup-api
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python_prompt_toolkit&lt;/span&gt;
+&lt;span class="n"&gt;meetup&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;api&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -722,29 +722,29 @@ meetup-api
 &lt;p&gt;&lt;code&gt;execute&lt;/code&gt; function is where you would be writing your application logic.&lt;/p&gt;
 &lt;p&gt;You should not require to make changes to &lt;code&gt;main&lt;/code&gt; and &lt;code&gt;get_names&lt;/code&gt; functions. In an upcoming project nights we will dig into &lt;code&gt;get_names&lt;/code&gt; and make changes to it.&lt;/p&gt;
 &lt;p&gt;Next let's run app.py&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   python3 app.py
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;   &lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;This should drop you to a prompt.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;Type in something to that prompt.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; Hola amigo
-&amp;gt; You issued: Hola amigo
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Hola&lt;/span&gt; &lt;span class="n"&gt;amigo&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;You&lt;/span&gt; &lt;span class="n"&gt;issued&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Hola&lt;/span&gt; &lt;span class="n"&gt;amigo&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;Try a few more&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; Gracias
-&amp;gt; You issued:Gracias
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Gracias&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;You&lt;/span&gt; &lt;span class="n"&gt;issued&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;Gracias&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;You can now press the up arrow key and access the history of the commands you have issued. To exit out of the program, you can type Ctrl-D.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -752,7 +752,7 @@ meetup-api
 &lt;h4&gt;Feature 1: Implement the Add command&lt;/h4&gt;
 &lt;p&gt;Next let's create a command where the user of the program can register new participants to build up the list of users from whom teams will be formed.&lt;/p&gt;
 &lt;p&gt;The command should look like the following&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;add &amp;lt;name&amp;gt; &amp;lt;number of lines&amp;gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;add&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nb"&gt;number&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;lines&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -766,8 +766,8 @@ that person has written in Python or a similar programming language in their lif
 &lt;p&gt;You might be asking what if the user incorrectly types something that is not a number
 for the &lt;code&gt;number of lines&lt;/code&gt;. Indeed that would be incorrect. Show an error message
 if &lt;number of lines&gt; is not a number.&lt;/number&gt;&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    &amp;gt; add Tathagata Dasgupta o
-    ERROR: number of lines should be, er, a "number"
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;add&lt;/span&gt; &lt;span class="n"&gt;Tathagata&lt;/span&gt; &lt;span class="n"&gt;Dasgupta&lt;/span&gt; &lt;span class="n"&gt;o&lt;/span&gt;
+    &lt;span class="n"&gt;ERROR&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;number&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;lines&lt;/span&gt; &lt;span class="n"&gt;should&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;er&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="ss"&gt;"number"&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -776,21 +776,21 @@ if &lt;number of lines&gt; is not a number.&lt;/number&gt;&lt;/p&gt;
 &lt;p&gt;Next add a new command list.
 Show the number of people added and prints the total count
 and the median of the line count.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    &amp;gt; add Tathagata Dasgupta 1
-    &amp;gt; add Jason Wirth 2
-    &amp;gt; add Adam Bain 3
-    &amp;gt; add Brian Ray 4
-    &amp;gt; add Guido van Rossum 5
-    &amp;gt; list
-    &amp;gt; People added so far:
-    Tathagata Dasgupta, 1
-    Jason Wirth, 2
-    Adam Bain, 3
-    Brian Ray, 4
-    Guido Van Rossum, 5
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;add&lt;/span&gt; &lt;span class="n"&gt;Tathagata&lt;/span&gt; &lt;span class="n"&gt;Dasgupta&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;add&lt;/span&gt; &lt;span class="n"&gt;Jason&lt;/span&gt; &lt;span class="n"&gt;Wirth&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;add&lt;/span&gt; &lt;span class="n"&gt;Adam&lt;/span&gt; &lt;span class="n"&gt;Bain&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;add&lt;/span&gt; &lt;span class="n"&gt;Brian&lt;/span&gt; &lt;span class="n"&gt;Ray&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;add&lt;/span&gt; &lt;span class="n"&gt;Guido&lt;/span&gt; &lt;span class="n"&gt;van&lt;/span&gt; &lt;span class="n"&gt;Rossum&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;People&lt;/span&gt; &lt;span class="n"&gt;added&lt;/span&gt; &lt;span class="n"&gt;so&lt;/span&gt; &lt;span class="n"&gt;far&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;Tathagata&lt;/span&gt; &lt;span class="n"&gt;Dasgupta&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="n"&gt;Jason&lt;/span&gt; &lt;span class="n"&gt;Wirth&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+    &lt;span class="n"&gt;Adam&lt;/span&gt; &lt;span class="n"&gt;Bain&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+    &lt;span class="n"&gt;Brian&lt;/span&gt; &lt;span class="n"&gt;Ray&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;
+    &lt;span class="n"&gt;Guido&lt;/span&gt; &lt;span class="n"&gt;Van&lt;/span&gt; &lt;span class="n"&gt;Rossum&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
 
-    Number of people: 5
-    Median line count: 3
+    &lt;span class="nb"&gt;Number&lt;/span&gt; &lt;span class="k"&gt;of&lt;/span&gt; &lt;span class="n"&gt;people&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;
+    &lt;span class="n"&gt;Median&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="k"&gt;count&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -814,9 +814,9 @@ it should output teams of four such that each team contains
 together.&lt;/p&gt;
 &lt;p&gt;With our running example, there would be a team of four, and the
 remaining 1 should be in another group.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    &amp;gt; teams
-    Group 1: Tathagata Dasgupta, Jason Wirth, Brian Ray, Guido Van Rossum
-    Group 2: Adam Bain
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;teams&lt;/span&gt;
+    &lt;span class="k"&gt;Group&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Tathagata&lt;/span&gt; &lt;span class="n"&gt;Dasgupta&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Jason&lt;/span&gt; &lt;span class="n"&gt;Wirth&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Brian&lt;/span&gt; &lt;span class="n"&gt;Ray&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Guido&lt;/span&gt; &lt;span class="n"&gt;Van&lt;/span&gt; &lt;span class="n"&gt;Rossum&lt;/span&gt;
+    &lt;span class="k"&gt;Group&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Adam&lt;/span&gt; &lt;span class="n"&gt;Bain&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -829,7 +829,7 @@ remaining 1 should be in another group.&lt;/p&gt;
 &lt;h3&gt;Feature 7. Auto-completion for commands (optional)&lt;/h3&gt;
 &lt;p&gt;Adding auto completion is easy with &lt;code&gt;prompt_toolkit&lt;/code&gt;. In &lt;code&gt;app.py&lt;/code&gt; the following line is used to include the
 &lt;code&gt;add&lt;/code&gt; command to auto-completion.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    command_completer = WordCompleter(['add'], ignore_case=True)
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="n"&gt;command_completer&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;WordCompleter&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;'add'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;ignore_case&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -843,19 +843,19 @@ All you need to do is include a call to &lt;code&gt;get_names&lt;/code&gt; in th
 &lt;p&gt;We have also installed asciinema - a tool that allows you
 to create recordings of your terminal sessions. In order to tell
 the world what your team has made, let's make a small recording.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt; ascriinmea rec teamname.json
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt; &lt;span class="n"&gt;ascriinmea&lt;/span&gt; &lt;span class="n"&gt;rec&lt;/span&gt; &lt;span class="n"&gt;teamname&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;Run your program and show off all the cool features you have built in your app.
 To finish recording hit Ctrl-D.
 Next play the recordings&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt; asciinema play teamname.json
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt; &lt;span class="n"&gt;asciinema&lt;/span&gt; &lt;span class="n"&gt;play&lt;/span&gt; &lt;span class="n"&gt;teamname&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;Once the playback looks good, upload it to the interwebs.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt; asciinema upload teamname.json
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt; &lt;span class="n"&gt;asciinema&lt;/span&gt; &lt;span class="n"&gt;upload&lt;/span&gt; &lt;span class="n"&gt;teamname&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;json&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -864,12 +864,12 @@ Mentorship". Include the twitter handles of your team members.&lt;/p&gt;
 &lt;p&gt;Note: This is tested only in OS X. Let me know your experience for running it on
 other operating systems.
 If you see an error&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    asciinema needs a UTF-8 native locale to run. Check the output of `locale` command.
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="n"&gt;asciinema&lt;/span&gt; &lt;span class="n"&gt;needs&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;UTF&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="n"&gt;native&lt;/span&gt; &lt;span class="n"&gt;locale&lt;/span&gt; &lt;span class="k"&gt;to&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="k"&gt;Check&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="n"&gt;of&lt;/span&gt; &lt;span class="ss"&gt;`locale`&lt;/span&gt; &lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;the run the following command before running asciinema.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    export LC_ALL=en_US.UTF-8
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="n"&gt;export&lt;/span&gt; &lt;span class="n"&gt;LC_ALL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;en_US&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;UTF&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;
 &lt;/pre&gt;
 
 

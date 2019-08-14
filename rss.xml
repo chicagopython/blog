@@ -3,7 +3,7 @@
 &lt;a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html"&gt;
 &lt;img alt="Gnu Public License version 3.0"
 style="border-width:0;"
-src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Thu, 16 May 2019 05:23:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>trackcoder</title><link>https://chicagopython.github.io/posts/trackcoder/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;1. trackcoder: The Mentorship Journal&lt;/h2&gt;
+src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Wed, 14 Aug 2019 12:58:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>trackcoder</title><link>https://chicagopython.github.io/posts/trackcoder/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;1. trackcoder: The Mentorship Journal&lt;/h2&gt;
 &lt;p&gt;Chipy's mentorship program is an extra-ordinary jounery for becoming a better developer.
 As a mentee, you are expected to do a lot - you read new articles/books, write code,
 debug and troubleshoot, pair program with other mentees in coding workshop or your mentor.
@@ -18,16 +18,16 @@ mentorship program.  &lt;/p&gt;
 &lt;p&gt;Lets say you were to keep an account of every thing you have accomplished during your mentorship.
 The minimalistic way for doing that would be noting things down in a text file - think of it as
 a journal that you update frequently.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    Date: 02/20/2019
-    first blog post completed 🏅
-    learned about using click at project night
-    updated cli for the app
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="nv"&gt;Date&lt;/span&gt;: &lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;
+    &lt;span class="nv"&gt;first&lt;/span&gt; &lt;span class="nv"&gt;blog&lt;/span&gt; &lt;span class="nv"&gt;post&lt;/span&gt; &lt;span class="nv"&gt;completed&lt;/span&gt; 🏅
+    &lt;span class="nv"&gt;learned&lt;/span&gt; &lt;span class="nv"&gt;about&lt;/span&gt; &lt;span class="nv"&gt;using&lt;/span&gt; &lt;span class="nv"&gt;click&lt;/span&gt; &lt;span class="nv"&gt;at&lt;/span&gt; &lt;span class="nv"&gt;project&lt;/span&gt; &lt;span class="nv"&gt;night&lt;/span&gt;
+    &lt;span class="nv"&gt;updated&lt;/span&gt; &lt;span class="nv"&gt;cli&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;app&lt;/span&gt;
 
-    Date: 02/21/2019
-    read good article on decorators http://realpython.org/
-    refactored to use decorators for orthogonal logic
-    debugging decorators
-    met with mentor to fix decorator issues
+    &lt;span class="nv"&gt;Date&lt;/span&gt;: &lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;
+    &lt;span class="nv"&gt;read&lt;/span&gt; &lt;span class="nv"&gt;good&lt;/span&gt; &lt;span class="nv"&gt;article&lt;/span&gt; &lt;span class="nv"&gt;on&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt; &lt;span class="nv"&gt;http&lt;/span&gt;:&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="nv"&gt;realpython&lt;/span&gt;.&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+    &lt;span class="nv"&gt;refactored&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;use&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;orthogonal&lt;/span&gt; &lt;span class="nv"&gt;logic&lt;/span&gt;
+    &lt;span class="nv"&gt;debugging&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt;
+    &lt;span class="nv"&gt;met&lt;/span&gt; &lt;span class="nv"&gt;with&lt;/span&gt; &lt;span class="nv"&gt;mentor&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;fix&lt;/span&gt; &lt;span class="nv"&gt;decorator&lt;/span&gt; &lt;span class="nv"&gt;issues&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -37,29 +37,29 @@ you are recording in this mini journal entry.&lt;/p&gt;
 (b) the type of activity&lt;/p&gt;
 &lt;p&gt;These will form the basis of gaining insights into your personal learning patterns.&lt;/p&gt;
 &lt;p&gt;For example:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="sr"&gt;/20/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;
-&lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;blogging&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="n"&gt;mins&lt;/span&gt;
-&lt;span class="n"&gt;learned&lt;/span&gt; &lt;span class="n"&gt;about&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;click&lt;/span&gt; &lt;span class="n"&gt;at&lt;/span&gt; &lt;span class="n"&gt;project&lt;/span&gt; &lt;span class="n"&gt;night&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;pair_programming&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="n"&gt;mins&lt;/span&gt;
-&lt;span class="n"&gt;updated&lt;/span&gt; &lt;span class="n"&gt;cli&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;coding&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt; &lt;span class="n"&gt;mins&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;Date&lt;/span&gt;: &lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;
+&lt;span class="nv"&gt;first&lt;/span&gt; &lt;span class="nv"&gt;blog&lt;/span&gt; &lt;span class="nv"&gt;post&lt;/span&gt;, &lt;span class="nv"&gt;blogging&lt;/span&gt;, &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;
+&lt;span class="nv"&gt;learned&lt;/span&gt; &lt;span class="nv"&gt;about&lt;/span&gt; &lt;span class="nv"&gt;using&lt;/span&gt; &lt;span class="nv"&gt;click&lt;/span&gt; &lt;span class="nv"&gt;at&lt;/span&gt; &lt;span class="nv"&gt;project&lt;/span&gt; &lt;span class="nv"&gt;night&lt;/span&gt;, &lt;span class="nv"&gt;pair_programming&lt;/span&gt;, &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;
+&lt;span class="nv"&gt;updated&lt;/span&gt; &lt;span class="nv"&gt;cli&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;app&lt;/span&gt;, &lt;span class="nv"&gt;coding&lt;/span&gt;, &lt;span class="mi"&gt;20&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;
 
-&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="sr"&gt;/21/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;
-&lt;span class="n"&gt;read&lt;/span&gt; &lt;span class="n"&gt;good&lt;/span&gt; &lt;span class="n"&gt;article&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;decorators&lt;/span&gt; &lt;span class="n"&gt;http&lt;/span&gt;&lt;span class="o"&gt;://&lt;/span&gt;&lt;span class="n"&gt;realpython&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;org&lt;/span&gt;&lt;span class="o"&gt;/,&lt;/span&gt; &lt;span class="n"&gt;research&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;45&lt;/span&gt; &lt;span class="n"&gt;mins&lt;/span&gt;
-&lt;span class="n"&gt;refactored&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;use&lt;/span&gt; &lt;span class="n"&gt;decorators&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;orthogonal&lt;/span&gt; &lt;span class="n"&gt;logic&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;coding&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="n"&gt;mins&lt;/span&gt;
-&lt;span class="n"&gt;debugging&lt;/span&gt; &lt;span class="n"&gt;decorators&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;debugging&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="n"&gt;mins&lt;/span&gt;
-&lt;span class="n"&gt;met&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;mentor&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;fix&lt;/span&gt; &lt;span class="n"&gt;decorator&lt;/span&gt; &lt;span class="n"&gt;issues&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;mentor&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt; &lt;span class="n"&gt;mins&lt;/span&gt;
+&lt;span class="nv"&gt;Date&lt;/span&gt;: &lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;
+&lt;span class="nv"&gt;read&lt;/span&gt; &lt;span class="nv"&gt;good&lt;/span&gt; &lt;span class="nv"&gt;article&lt;/span&gt; &lt;span class="nv"&gt;on&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt; &lt;span class="nv"&gt;http&lt;/span&gt;:&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="nv"&gt;realpython&lt;/span&gt;.&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;, &lt;span class="nv"&gt;research&lt;/span&gt;, &lt;span class="mi"&gt;45&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;
+&lt;span class="nv"&gt;refactored&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;use&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;orthogonal&lt;/span&gt; &lt;span class="nv"&gt;logic&lt;/span&gt;, &lt;span class="nv"&gt;coding&lt;/span&gt;, &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;
+&lt;span class="nv"&gt;debugging&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt;, &lt;span class="nv"&gt;debugging&lt;/span&gt;, &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;
+&lt;span class="nv"&gt;met&lt;/span&gt; &lt;span class="nv"&gt;with&lt;/span&gt; &lt;span class="nv"&gt;mentor&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;fix&lt;/span&gt; &lt;span class="nv"&gt;decorator&lt;/span&gt; &lt;span class="nv"&gt;issues&lt;/span&gt;, &lt;span class="nv"&gt;mentor&lt;/span&gt;, &lt;span class="mi"&gt;60&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;While recording each of these activities have taken up time, you'll probably find one was
 more useful than the other. So add another field to your
 entry, effectiveness and refactor a little bit.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;02/20/2019, first blog post, blogging, 120 mins, 4
-02/20/2019, learned about using click at project night, pair_programming, 120 mins, 4
-02/20/2019, updated cli for the app, coding, 20 mins, 3
-02/21/2019, read good article on decorators http://realpython.org/, research, 45 mins, 4
-02/21/2019, refactored to use decorators for orthogonal logic, coding, 30 mins, 3
-02/21/2019, debugging decorators, debugging, 30 mins, 2
-02/21/2019, met with mentor to fix decorator issues, mentor, 60 mins, 5
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;, &lt;span class="nv"&gt;first&lt;/span&gt; &lt;span class="nv"&gt;blog&lt;/span&gt; &lt;span class="nv"&gt;post&lt;/span&gt;, &lt;span class="nv"&gt;blogging&lt;/span&gt;, &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;, &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;, &lt;span class="nv"&gt;learned&lt;/span&gt; &lt;span class="nv"&gt;about&lt;/span&gt; &lt;span class="nv"&gt;using&lt;/span&gt; &lt;span class="nv"&gt;click&lt;/span&gt; &lt;span class="nv"&gt;at&lt;/span&gt; &lt;span class="nv"&gt;project&lt;/span&gt; &lt;span class="nv"&gt;night&lt;/span&gt;, &lt;span class="nv"&gt;pair_programming&lt;/span&gt;, &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;, &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;, &lt;span class="nv"&gt;updated&lt;/span&gt; &lt;span class="nv"&gt;cli&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;app&lt;/span&gt;, &lt;span class="nv"&gt;coding&lt;/span&gt;, &lt;span class="mi"&gt;20&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;, &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;, &lt;span class="nv"&gt;read&lt;/span&gt; &lt;span class="nv"&gt;good&lt;/span&gt; &lt;span class="nv"&gt;article&lt;/span&gt; &lt;span class="nv"&gt;on&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt; &lt;span class="nv"&gt;http&lt;/span&gt;:&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="nv"&gt;realpython&lt;/span&gt;.&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;, &lt;span class="nv"&gt;research&lt;/span&gt;, &lt;span class="mi"&gt;45&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;, &lt;span class="mi"&gt;4&lt;/span&gt;
+&lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;, &lt;span class="nv"&gt;refactored&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;use&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;orthogonal&lt;/span&gt; &lt;span class="nv"&gt;logic&lt;/span&gt;, &lt;span class="nv"&gt;coding&lt;/span&gt;, &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;, &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;, &lt;span class="nv"&gt;debugging&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt;, &lt;span class="nv"&gt;debugging&lt;/span&gt;, &lt;span class="mi"&gt;30&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;, &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="mi"&gt;02&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;21&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2019&lt;/span&gt;, &lt;span class="nv"&gt;met&lt;/span&gt; &lt;span class="nv"&gt;with&lt;/span&gt; &lt;span class="nv"&gt;mentor&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;fix&lt;/span&gt; &lt;span class="nv"&gt;decorator&lt;/span&gt; &lt;span class="nv"&gt;issues&lt;/span&gt;, &lt;span class="nv"&gt;mentor&lt;/span&gt;, &lt;span class="mi"&gt;60&lt;/span&gt; &lt;span class="nv"&gt;mins&lt;/span&gt;, &lt;span class="mi"&gt;5&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -70,12 +70,12 @@ for the last but one column. Taking the next step, you can very easily build a b
 &lt;h4&gt;1.1.1. The Data structure&lt;/h4&gt;
 &lt;p&gt;Having looked at the data we intend to capture, lets try to reason how each entry in the row
 can be represented by variables in a script and what their type would be like.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    task: str
-    description: str
-    timestamp: datetime.timestamp
-    mins: int
-    effective: int
-    done: bool
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="n"&gt;task&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;str&lt;/span&gt;
+    &lt;span class="n"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;str&lt;/span&gt;
+    &lt;span class="k"&gt;timestamp&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;timestamp&lt;/span&gt;
+    &lt;span class="n"&gt;mins&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;
+    &lt;span class="n"&gt;effective&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;
+    &lt;span class="n"&gt;done&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;bool&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -140,11 +140,11 @@ you will need to do the following:&lt;/p&gt;
 &lt;p&gt;Recommended version: Python 3.6 or higher.&lt;/p&gt;
 &lt;h3&gt;1.5. Quick Git command refresher [Optional]&lt;/h3&gt;
 &lt;p&gt;Below are the few most used git commands&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git checkout master          # checkout to master branch
-git checkout -b feature/cool # crate a new branch feature/cool
-git add -u                   # stage all the updates for commit
-git commit -am "Adding changes and commiting with a comment"
-git push origin master       # push commits to develop/ci branch
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;checkout&lt;/span&gt; &lt;span class="nv"&gt;master&lt;/span&gt;          # &lt;span class="nv"&gt;checkout&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;master&lt;/span&gt; &lt;span class="nv"&gt;branch&lt;/span&gt;
+&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;checkout&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;b&lt;/span&gt; &lt;span class="nv"&gt;feature&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;cool&lt;/span&gt; # &lt;span class="nv"&gt;crate&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="nv"&gt;new&lt;/span&gt; &lt;span class="nv"&gt;branch&lt;/span&gt; &lt;span class="nv"&gt;feature&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;cool&lt;/span&gt;
+&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;u&lt;/span&gt;                   # &lt;span class="nv"&gt;stage&lt;/span&gt; &lt;span class="nv"&gt;all&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;updates&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;commit&lt;/span&gt;
+&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;am&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;Adding changes and commiting with a comment&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;push&lt;/span&gt; &lt;span class="nv"&gt;origin&lt;/span&gt; &lt;span class="nv"&gt;master&lt;/span&gt;       # &lt;span class="nv"&gt;push&lt;/span&gt; &lt;span class="nv"&gt;commits&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;develop&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;ci&lt;/span&gt; &lt;span class="nv"&gt;branch&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -163,7 +163,7 @@ would first go to a branch, get tested, code reviewed and finally merged to mast
 repository in your local machine. Lets take the time to look at the structure of this
 project. All code is located under &lt;code&gt;/problems/py101/trackcoder&lt;/code&gt; directory. So from your
 terminal go to the directory where you have cloned the repository.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;cd path/to/CodingWorkshop/problems/py101/trackcoder
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;CodingWorkshop&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;problems&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;py101&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;trackcoder&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -185,7 +185,7 @@ isolates all the dependencies of this project from other python projects in your
 Learn more about &lt;a href="https://docs.pipenv.org/"&gt;pipenv&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;1.8. Exercise 1: Build&lt;/h3&gt;
 &lt;p&gt;From the &lt;code&gt;/problems/py101/trackcoder&lt;/code&gt; directory, run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;make
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;make&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -194,13 +194,13 @@ Learn more about &lt;a href="https://docs.pipenv.org/"&gt;pipenv&lt;/a&gt;.&lt;/
 &lt;li&gt;Which version of python is getting used?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Skip this exercise for Windows. Install the dependencies using&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pip install prompt_toolkit Click peewee
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;prompt_toolkit&lt;/span&gt; &lt;span class="n"&gt;Click&lt;/span&gt; &lt;span class="n"&gt;peewee&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;h3&gt;1.9. Exercise 2: Run the program&lt;/h3&gt;
 &lt;p&gt;First shell into your virtual environment&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;make shell
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -208,17 +208,17 @@ Learn more about &lt;a href="https://docs.pipenv.org/"&gt;pipenv&lt;/a&gt;.&lt;/
 environment where all the dependencies for this project has been installed.&lt;/p&gt;
 &lt;p&gt;Note: If the above command errors out, or you are on Windows, run the following to get into
 a shell with the virtualenv acitvated.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pipenv shell
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pipenv&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;If everything fails,&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pip install prompt_toolkit Click peewee
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;prompt_toolkit&lt;/span&gt; &lt;span class="n"&gt;Click&lt;/span&gt; &lt;span class="n"&gt;peewee&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;Start by running&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python app.py --help
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="c1"&gt;--help&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -257,13 +257,13 @@ There are only 6 possible Task types&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;The &lt;code&gt;show&lt;/code&gt; command allows listing of all the &lt;code&gt;Task&lt;/code&gt;-s added till now.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;% show&lt;/span&gt;
-&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;
-&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="n"&gt;finished&lt;/span&gt; &lt;span class="n"&gt;cli&lt;/span&gt;
-&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="n"&gt;debugging&lt;/span&gt; &lt;span class="n"&gt;decorators&lt;/span&gt;
-&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="n"&gt;always&lt;/span&gt; &lt;span class="n"&gt;keep&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;final&lt;/span&gt; &lt;span class="n"&gt;presentation&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;mind&lt;/span&gt;
-&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt; &lt;span class="n"&gt;read&lt;/span&gt; &lt;span class="n"&gt;articles&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;pandas&lt;/span&gt;
-&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="n"&gt;learned&lt;/span&gt; &lt;span class="n"&gt;about&lt;/span&gt; &lt;span class="n"&gt;decorators&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="k"&gt;show&lt;/span&gt;
+&lt;span class="nv"&gt;b&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="nv"&gt;first&lt;/span&gt; &lt;span class="nv"&gt;blog&lt;/span&gt; &lt;span class="nv"&gt;post&lt;/span&gt;
+&lt;span class="nv"&gt;c&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="nv"&gt;finished&lt;/span&gt; &lt;span class="nv"&gt;cli&lt;/span&gt;
+&lt;span class="nv"&gt;d&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="nv"&gt;debugging&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt;
+&lt;span class="nv"&gt;m&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="nv"&gt;always&lt;/span&gt; &lt;span class="nv"&gt;keep&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;final&lt;/span&gt; &lt;span class="nv"&gt;presentation&lt;/span&gt; &lt;span class="nv"&gt;in&lt;/span&gt; &lt;span class="nv"&gt;mind&lt;/span&gt;
+&lt;span class="nv"&gt;r&lt;/span&gt; &lt;span class="mi"&gt;60&lt;/span&gt; &lt;span class="nv"&gt;read&lt;/span&gt; &lt;span class="nv"&gt;articles&lt;/span&gt; &lt;span class="nv"&gt;on&lt;/span&gt; &lt;span class="nv"&gt;pandas&lt;/span&gt;
+&lt;span class="nv"&gt;p&lt;/span&gt; &lt;span class="mi"&gt;120&lt;/span&gt; &lt;span class="nv"&gt;learned&lt;/span&gt; &lt;span class="nv"&gt;about&lt;/span&gt; &lt;span class="nv"&gt;decorators&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -271,7 +271,7 @@ There are only 6 possible Task types&lt;/p&gt;
 &lt;p&gt;For this exercise you need to update add helpful messages that will summarize what each
 of the options for &lt;code&gt;app.py&lt;/code&gt; stand for.&lt;/p&gt;
 &lt;h3&gt;1.11. Exercise 4: Run in interactive mode&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python app.py -i
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -280,15 +280,15 @@ arrow keys to access history of the commands.&lt;/p&gt;
 &lt;p&gt;Exit the session using &lt;code&gt;ctrl+D&lt;/code&gt;. From your command prompt, run &lt;code&gt;ls -l&lt;/code&gt; in linux or mac or &lt;code&gt;dir&lt;/code&gt;
 in windows. What is the name of the file that gets created?&lt;/p&gt;
 &lt;p&gt;Using sqlite3&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;sqlite3 to_do_list.db 'select * from ToDo;'
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;sqlite3&lt;/span&gt; &lt;span class="n"&gt;to_do_list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt; &lt;span class="s1"&gt;'select * from ToDo;'&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;Compare the output that you get from running &lt;code&gt;show&lt;/code&gt; and using the command above.&lt;/p&gt;
 &lt;h3&gt;1.12. Exercise 4: Run in non-interactive mode&lt;/h3&gt;
 &lt;p&gt;For ease of entering data the program can also be run in non-interactive mode&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python app.py -a b 30  "first blog post completed"
-python app.py -s
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="mi"&gt;30&lt;/span&gt;  &lt;span class="ss"&gt;"first blog post completed"&lt;/span&gt;
+&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -328,7 +328,7 @@ Your summary should include how much time was spent on each of the task category
 using sql or write the logic in python.&lt;/p&gt;
 &lt;h3&gt;1.15. Exercise 7: Add a field for task complete or not&lt;/h3&gt;
 &lt;p&gt;Next take a look at&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;ToDo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;Model&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;ToDo&lt;/span&gt;(&lt;span class="n"&gt;Model&lt;/span&gt;):
 &lt;/pre&gt;
 
 
@@ -340,8 +340,8 @@ and still have incomplete tasks. In fact, logging often and logging early is
 encouraged! In order to faciliate that we need to optionally
 take a fourth parameter in the input for adding a new task.&lt;/p&gt;
 &lt;p&gt;Take a look at the decorator right above the &lt;code&gt;main&lt;/code&gt; function&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;@click.option('--add', '-a', nargs=3, type=(click.STRING, int, click.STRING), \
-            default=(None, None, None))
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;@click&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;option&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'--add'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;'-a'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;nargs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;click&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;STRING&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nc"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;click&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;STRING&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="w"&gt;            &lt;/span&gt;&lt;span class="k"&gt;default&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;None&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -382,36 +382,36 @@ where you can record how effective a task was. An effective score is a number be
 &lt;h3&gt;Setting up your environment&lt;/h3&gt;
 &lt;p&gt;This project is contained in a jupyter notebook and is assuming you have Python 3.+ installed on your machine. If this is your fisrt project night, we recommend creating a folder for the project night repo: &lt;code&gt;mkdir chipy_projects &amp;amp;&amp;amp; cd chipy_projects&lt;/code&gt;. If you already have the project night repository on your machine, go to that directory and pull from master.&lt;/p&gt;
 &lt;p&gt;If you are using Linux or OS X, run the following to create a new virtualenv:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python3 -m venv chipmunk
-source chipmunk/bin/activate
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;chipmunk&lt;/span&gt;
+&lt;span class="k"&gt;source&lt;/span&gt; &lt;span class="n"&gt;chipmunk&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;On Windows, run the following&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python3 -m venv chipmunk 
-chipmunk\Scripts\activate
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;chipmunk&lt;/span&gt; 
+&lt;span class="n"&gt;chipmunk&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Scripts&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;h3&gt;Getting the project&lt;/h3&gt;
 &lt;p&gt;The project is in the ChiPy project night repo. If you do not have the repository already, run &lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/chicagopython/CodingWorkshops.git
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;chicagopython&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;CodingWorkshops&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;Now we will:&lt;/p&gt;
 &lt;p&gt;Go to the project:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;cd CodingWorkshops/problems/data_science/chipmunks
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;CodingWorkshops&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;problems&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;data_science&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;chipmunks&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;Install the packages we need into our environment:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pip install -r requirements.txt
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="n"&gt;requirements&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;Run our jupyter notebook server for the project:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;jupyter notebook
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;jupyter&lt;/span&gt; &lt;span class="n"&gt;notebook&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -910,7 +910,59 @@ chipmunk\Scripts\activate&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;&lt;/div&gt;</description><guid>https://chicagopython.github.io/posts/chipmunks-data-science/</guid><pubDate>Thu, 18 Apr 2019 03:39:06 GMT</pubDate></item><item><title>Flask App for Exchange Rates</title><link>https://chicagopython.github.io/posts/flask-app-for-exchange-rates/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;Flask App for Exchange Rates&lt;/h2&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>https://chicagopython.github.io/posts/chipmunks-data-science/</guid><pubDate>Thu, 18 Apr 2019 03:39:06 GMT</pubDate></item><item><title>GitHub Jobs API</title><link>https://chicagopython.github.io/posts/github-jobs-api/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Project Night Purpose&lt;/h3&gt;
+&lt;p&gt;All of us need to look for a job at some point; and most every job board has its own API for users to post and pull data (though usually they charge money for access). The &lt;a href="https://jobs.github.com"&gt;GitHub Jobs page&lt;/a&gt; is a great simple API for a first look at this kind of data acqusition and analysis.&lt;/p&gt;
+&lt;p&gt;Tonight's project uses the very popular Python HTTP library &lt;a href="https://2.python-requests.org/en/master/"&gt;requests&lt;/a&gt; along with &lt;a href="https://docs.python.org/3/library/json.html"&gt;json&lt;/a&gt; from the standard library. You will explore the data in the jobs API with the intent of learning something about the current job market for devs. There are a ton of caveats here: for example,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Who chooses to post to GitHub Jobs? Are they representative of the overall population?&lt;/li&gt;
+&lt;li&gt;How old are the postings?&lt;/li&gt;
+&lt;li&gt;Is it safe to extrapolate statistics to the country? to Illinois? to Chicago?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Although the topic is a little serious we want to make sure you don't get discouraged by the data you pull (ask around--how many people in your group got their job from a GitHub posting?). The GitHub site shouldn't be taken as a good primary source for job availability or category...but that's part of data acquistition and analysis: assessing the strenghts and shortcomings of your data source. Possible discusison points for the group are things like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Where might you get additional information?&lt;/li&gt;
+&lt;li&gt;How often should you pull the data? What would capture over time give you?&lt;/li&gt;
+&lt;li&gt;Does the dataset tell you anything about which companies use the GitHub for hiring at all? In which cities? Should we move to a different part of the country?&lt;/li&gt;
+&lt;li&gt;Choose your own adventure and share with the group what you have learned!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Most importantly - have fun! Accessing an API is a great core skill for data analysis and all experience is good experience. We hope that you are creative in your explanation and that each group discovers different things!&lt;/p&gt;
+&lt;h3&gt;Setting up your environment&lt;/h3&gt;
+&lt;p&gt;There is no pre-written code for this project, but we assume you have Python 3.+ installed on your machine.  If this is your fisrt project night, we recommend creating a folder for the project night repo: &lt;code&gt;mkdir chipy_projects &amp;amp;&amp;amp; cd chipy_projects&lt;/code&gt;. If you already have the project night repository on your machine, go to that directory and pull from master.&lt;/p&gt;
+&lt;p&gt;If you are using Linux or OS X, run the following to create a new virtualenv:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;github_jobs_api&lt;/span&gt;
+&lt;span class="k"&gt;source&lt;/span&gt; &lt;span class="n"&gt;github_jobs_api&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;On Windows, run the following&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;github_jobs_api&lt;/span&gt; 
+&lt;span class="n"&gt;github_jobs_api&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Scripts&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;h3&gt;Getting the project&lt;/h3&gt;
+&lt;p&gt;The project is in the ChiPy project night repo. If you do not have the repository already, run &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;chicagopython&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;CodingWorkshops&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;Now we will:&lt;/p&gt;
+&lt;p&gt;Go to the project:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;CodingWorkshops&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;problems&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;data_science&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;github_jobs_api&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;Install the packages we need into our environment:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;r&lt;/span&gt; &lt;span class="n"&gt;requirements&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;view the &lt;em&gt;README.md&lt;/em&gt; file for additional information:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="n"&gt;README&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;md&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;h3&gt;Have fun!&lt;/h3&gt;&lt;/div&gt;</description><category>api</category><category>EDA</category><guid>https://chicagopython.github.io/posts/github-jobs-api/</guid><pubDate>Mon, 15 Apr 2019 23:00:00 GMT</pubDate></item><item><title>Flask App for Exchange Rates</title><link>https://chicagopython.github.io/posts/flask-app-for-exchange-rates/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;Flask App for Exchange Rates&lt;/h2&gt;
 &lt;h3&gt;Objective&lt;/h3&gt;
 &lt;p&gt;All developers in the modern day need to understand web technologies at some level. Whether you're interacting with a Jupyter notebook or querying a web api, understanding how a CLIENT requests information from a SERVER and to see how the SERVER produces its response is incredibly valuable.&lt;/p&gt;
 &lt;h3&gt;Overview&lt;/h3&gt;
@@ -921,14 +973,14 @@ chipmunk\Scripts\activate&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;Initial Setup&lt;/h3&gt;
 &lt;p&gt;Create a folder for this project: &lt;code&gt;mkdir mentorship_web &amp;amp;&amp;amp; cd mentorship_web&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;If you are using Linux or OS X, run the following to create a new virtualenv&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python3 -m venv venv
-source venv/bin/activate
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;
+&lt;span class="k"&gt;source&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;On Windows, run the following&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python3 -m venv venv
-venv\Scripts\activate
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt; &lt;span class="n"&gt;venv&lt;/span&gt;
+&lt;span class="n"&gt;venv&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Scripts&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;activate&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -951,15 +1003,15 @@ venv\Scripts\activate
 &lt;p&gt;It should display a link, paste that in your browser to see the running code.&lt;/p&gt;
 &lt;h3&gt;Display some Exchange Rates&lt;/h3&gt;
 &lt;p&gt;Define a dictionary with three entries like the following inside your hello route:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;exchange_rates = {
-  'EUR': '...',
-  'GBP': '...',
-    ' 
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;exchange_rates&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;{&lt;/span&gt;
+  &lt;span class="s1"&gt;'EUR'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'...'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="s1"&gt;'GBP'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'...'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="err"&gt;'&lt;/span&gt; 
 &lt;/pre&gt;
 
 
 &lt;p&gt;Pick any currencies you want! We'll display the values as they convert to USD (because we are in Chicago). Better specify that now for clarity. Add this line just bellow your &lt;code&gt;app =&lt;/code&gt; definition, we'll use it later:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;BASE_CURRENCY = 'USD'
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;BASE_CURRENCY&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'USD'&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -970,17 +1022,17 @@ venv\Scripts\activate
 &lt;p&gt;Test your work by adding another currency to your &lt;code&gt;exchange_rates&lt;/code&gt; dictionary and watch how your page changes.&lt;/p&gt;
 &lt;h3&gt;Refactor&lt;/h3&gt;
 &lt;p&gt;Define a function right under your &lt;code&gt;BASE_CURRENCY&lt;/code&gt; definition that looks like the following:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;def exchange_rates():
-  return # Move your dictionary here
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;def&lt;/span&gt; &lt;span class="nv"&gt;exchange_rates&lt;/span&gt;&lt;span class="ss"&gt;()&lt;/span&gt;:
+  &lt;span class="k"&gt;return&lt;/span&gt; # &lt;span class="nv"&gt;Move&lt;/span&gt; &lt;span class="nv"&gt;your&lt;/span&gt; &lt;span class="nv"&gt;dictionary&lt;/span&gt; &lt;span class="nv"&gt;here&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;Then replace any references in your code to use the function instead of defining the dictionary in your route!&lt;/p&gt;
 &lt;h3&gt;Automatic Data&lt;/h3&gt;
 &lt;p&gt;Now comes the fun part. What if we could get the exchange rates on a live feed from a third party service? We can with &lt;a href="http://exchangeratesapi.io"&gt;ExchangeRatesAPI.io&lt;/a&gt;. This is a free api that runs over simple HTTPS! We'll have something like the following: &lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;def exchange_rates():
-  response = requests.get('https://api.exchangeratesapi.io/latest')
-  return # What are we going to put here now? 
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;def&lt;/span&gt; &lt;span class="nv"&gt;exchange_rates&lt;/span&gt;&lt;span class="ss"&gt;()&lt;/span&gt;:
+  &lt;span class="nv"&gt;response&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nv"&gt;requests&lt;/span&gt;.&lt;span class="nv"&gt;get&lt;/span&gt;&lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="s"&gt;https://api.exchangeratesapi.io/latest&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; # &lt;span class="nv"&gt;What&lt;/span&gt; &lt;span class="nv"&gt;are&lt;/span&gt; &lt;span class="nv"&gt;we&lt;/span&gt; &lt;span class="nv"&gt;going&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;put&lt;/span&gt; &lt;span class="nv"&gt;here&lt;/span&gt; &lt;span class="nv"&gt;now&lt;/span&gt;? 
 &lt;/pre&gt;
 
 
@@ -2082,56 +2134,56 @@ venv\Scripts\activate
 &lt;h3&gt;Instructions&lt;/h3&gt;
 &lt;p&gt;In the steps that follow, instructions will generally reference exactly where code changes need to be made. In the files themselves you'll see large commented blocks of instructions indicating that you're in the right spot. If you don't see commented instructions, double check that you read the prompt correctly. Each step will also have a link to a resource that should directly help you solve the problem at hand. Even if you're not stuck, it's recommended to check out the link to improve your understanding of WHY we're doing what we're doing.&lt;/p&gt;
 &lt;p&gt;To help visualize the locations of the file, here's the full file tree:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;├── db.sqlite3
-├── django_pn_tracker
-│   ├── __init__.py
-│   ├── __pycache__
-│   ├── apps
-│   │   ├── __init__.py
-│   │   ├── __pycache__
-│   │   │   └── __init__.cpython-36.pyc
-│   │   └── challenges
-│   │       ├── __init__.py
-│   │       ├── __pycache__
-│   │       ├── admin.py
-│   │       ├── apps.py
-│   │       ├── forms.py
-│   │       ├── migrations
-│   │       │   ├── 0001_initial.py
-│   │       │   ├── __init__.py
-│   │       │   └── __pycache__
-│   │       ├── models.py
-│   │       ├── templates
-│   │       │   └── challenges
-│   │       │       ├── delete.html
-│   │       │       ├── edit.html
-│   │       │       └── list.html
-│   │       ├── tests.py
-│   │       ├── urls.py
-│   │       └── views.py
-│   ├── settings.py
-│   ├── static
-│   │   ├── css
-│   │   │   ├── bootstrap.min.css
-│   │   │   └── master.css
-│   │   └── js
-│   │       ├── bootstrap.min.js
-│   │       └── main.js
-│   ├── templates
-│   │   ├── base.html
-│   │   └── index.html
-│   ├── urls.py
-│   ├── views.py
-│   └── wsgi.py
-├── manage.py
-├── requirements.txt
-└── setup.cfg
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sqlite3&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;django_pn_tracker&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;__pycache__&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;apps&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;__pycache__&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cpython&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;36&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pyc&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;challenges&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;__pycache__&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="k"&gt;admin&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;apps&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;forms&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;migrations&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="mi"&gt;0001&lt;/span&gt;&lt;span class="n"&gt;_initial&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;__pycache__&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;models&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;templates&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;challenges&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="k"&gt;delete&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;edit&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;tests&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;urls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;views&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;settings&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;css&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;bootstrap&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;min&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;css&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;css&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;js&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;bootstrap&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="k"&gt;min&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;       &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;templates&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;base&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="k"&gt;index&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;urls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;views&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;wsgi&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;requirements&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
+&lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cfg&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;h4&gt;Step 0: Run the app as is&lt;/h4&gt;
 &lt;p&gt;Before we dig in, let's see what the app currently looks like. This'll also confirm that install/setup went as planned. To run the app locally:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; ./manage.py runserver
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;runserver&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -2151,26 +2203,26 @@ venv\Scripts\activate
 &lt;/ul&gt;
 &lt;p&gt;Read more about models here: https://docs.djangoproject.com/en/2.1/topics/db/models/&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;b. Create/complete migration.&lt;/strong&gt; In order for our changes to take effect we need to create a migration and then actually migrate it.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; ./manage.py makemigrations
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;makemigrations&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;This is a little bit of Django magic. Under the hood Django is automatically generating the SQL commands necessary to update your database. You can see the actual underlying commands in &lt;code&gt;apps/challenges/migrations&lt;/code&gt;, where a file of commands is created each time we run makemigrations.&lt;/p&gt;
 &lt;p&gt;Normally you would see a message like:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;Migrations for 'challenges':
-  django_pn_tracker/apps/challenges/migrations/0002_auto_20180816_1445.py
-    - &amp;lt;actions here&amp;gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;Migrations&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="s"&gt;challenges&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;:
+  &lt;span class="nv"&gt;django_pn_tracker&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;apps&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;challenges&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;migrations&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;0002&lt;/span&gt;&lt;span class="nv"&gt;_auto_20180816_1445&lt;/span&gt;.&lt;span class="nv"&gt;py&lt;/span&gt;
+    &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;actions&lt;/span&gt; &lt;span class="nv"&gt;here&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
     ...
 &lt;/pre&gt;
 
 
 &lt;p&gt;However, since the table for our new model actually already exists in db.sqlite3 (purely for the sake of having example records for later steps), if everything is working correctly so far you should see:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;No changes detected
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;No&lt;/span&gt; &lt;span class="n"&gt;changes&lt;/span&gt; &lt;span class="n"&gt;detected&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;In order to actually make our changes, run:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; ./manage.py migrate
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;manage&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt; &lt;span class="n"&gt;migrate&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -2250,11 +2302,11 @@ of the repository (CodingWorkshop) in the search bar on the dashboard page.&lt;/
 &lt;p&gt;Recommended version: Python 3.6&lt;/p&gt;
 &lt;h3&gt;1.3. Quick Git command refresher&lt;/h3&gt;
 &lt;p&gt;Below are the few most used git commands&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git checkout master          # checkout to master branch
-git checkout -b feature/cool # crate a new branch feature/cool
-git add -u                   # stage all the updates for commit
-git commit -am "Adding changes and commiting with a comment"
-git push origin master       # push commits to develop/ci branch
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;checkout&lt;/span&gt; &lt;span class="nv"&gt;master&lt;/span&gt;          # &lt;span class="nv"&gt;checkout&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;master&lt;/span&gt; &lt;span class="nv"&gt;branch&lt;/span&gt;
+&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;checkout&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;b&lt;/span&gt; &lt;span class="nv"&gt;feature&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;cool&lt;/span&gt; # &lt;span class="nv"&gt;crate&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="nv"&gt;new&lt;/span&gt; &lt;span class="nv"&gt;branch&lt;/span&gt; &lt;span class="nv"&gt;feature&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;cool&lt;/span&gt;
+&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;u&lt;/span&gt;                   # &lt;span class="nv"&gt;stage&lt;/span&gt; &lt;span class="nv"&gt;all&lt;/span&gt; &lt;span class="nv"&gt;the&lt;/span&gt; &lt;span class="nv"&gt;updates&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="nv"&gt;commit&lt;/span&gt;
+&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;am&lt;/span&gt; &lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="s"&gt;Adding changes and commiting with a comment&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+&lt;span class="nv"&gt;git&lt;/span&gt; &lt;span class="nv"&gt;push&lt;/span&gt; &lt;span class="nv"&gt;origin&lt;/span&gt; &lt;span class="nv"&gt;master&lt;/span&gt;       # &lt;span class="nv"&gt;push&lt;/span&gt; &lt;span class="nv"&gt;commits&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;develop&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;ci&lt;/span&gt; &lt;span class="nv"&gt;branch&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -2266,7 +2318,7 @@ would first go to a branch, get tested, code reviewed and finally merged to mast
 repository in your local machine. Lets take the time to look at the structure of this
 project. All code is located under &lt;code&gt;/problems/py101/testing&lt;/code&gt; directory. So from your
 terminal go to the directory where you have cloned the repository.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;cd path/to/clone/problems/py101/testing
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;clone&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;problems&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;py101&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;testing&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -2299,8 +2351,8 @@ is a file called &lt;code&gt;.travis.yml&lt;/code&gt;. This is used by the conti
 This contains the information on how to build this python project.&lt;/p&gt;
 &lt;h4&gt;1.4.7. Test your setup is working&lt;/h4&gt;
 &lt;p&gt;Just make a small edit on this file (README.md), commit and push the changes.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git commit -am "Demo commit to check everything is working"
-git push origin master
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="k"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;am&lt;/span&gt; &lt;span class="ss"&gt;"Demo commit to check everything is working"&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -2313,7 +2365,7 @@ of this file (README.md).&lt;/p&gt;
 &lt;p&gt;If you run into issues, &lt;a href="https://chipy.slack.com/messages/C093F7W8P/details/"&gt;ask your question on slack&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;1.5. Exercise 1: Build&lt;/h3&gt;
 &lt;p&gt;From the &lt;code&gt;/problems/py101/testing&lt;/code&gt; directory, run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;make
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;make&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -2326,7 +2378,7 @@ of this file (README.md).&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h3&gt;1.6. Exercise 2: Run the program&lt;/h3&gt;
 &lt;p&gt;Start by running&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python team_organizer.py
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;team_organizer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -2337,52 +2389,52 @@ Following that, we run the &lt;code&gt;print&lt;/code&gt; command where the user
 are grouped in to max of size four where two users have
 written less lines of code than the others.&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;```
-t (master *) testing $ python team_organizer.py
-Welcome to Chicago Python Project Night Team Organizer
-org&amp;gt; help
-help
+&lt;span class="nv"&gt;t&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;master&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;testing&lt;/span&gt; $ &lt;span class="nv"&gt;python&lt;/span&gt; &lt;span class="nv"&gt;team_organizer&lt;/span&gt;.&lt;span class="nv"&gt;py&lt;/span&gt;
+&lt;span class="nv"&gt;Welcome&lt;/span&gt; &lt;span class="nv"&gt;to&lt;/span&gt; &lt;span class="nv"&gt;Chicago&lt;/span&gt; &lt;span class="nv"&gt;Python&lt;/span&gt; &lt;span class="nv"&gt;Project&lt;/span&gt; &lt;span class="nv"&gt;Night&lt;/span&gt; &lt;span class="nv"&gt;Team&lt;/span&gt; &lt;span class="nv"&gt;Organizer&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;help&lt;/span&gt;
+&lt;span class="nv"&gt;help&lt;/span&gt;
 
-Documented commands (type help &amp;lt;topic&amp;gt;):
-========================================
-add  help  print
+&lt;span class="nv"&gt;Documented&lt;/span&gt; &lt;span class="nv"&gt;commands&lt;/span&gt; &lt;span class="ss"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;type&lt;/span&gt; &lt;span class="nv"&gt;help&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nv"&gt;topic&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="ss"&gt;)&lt;/span&gt;:
+&lt;span class="o"&gt;========================================&lt;/span&gt;
+&lt;span class="nv"&gt;add&lt;/span&gt;  &lt;span class="nv"&gt;help&lt;/span&gt;  &lt;span class="nv"&gt;print&lt;/span&gt;
 
-Undocumented commands:
-======================
-exit
+&lt;span class="nv"&gt;Undocumented&lt;/span&gt; &lt;span class="nv"&gt;commands&lt;/span&gt;:
+&lt;span class="o"&gt;======================&lt;/span&gt;
+&lt;span class="k"&gt;exit&lt;/span&gt;
 
-org&amp;gt; help add
-help add
-Adds a new user. Needs Name slackhandle number_of_lines separated by space
-org&amp;gt; add a @a 100
-add a @a 100
-org&amp;gt; add b @b 200
-add b @b 200
-org&amp;gt; add c @c 300
-add c @c 300
-org&amp;gt; add d @d 400
-add d @d 400
-org&amp;gt; add e @e 500
-add e @e 500
-org&amp;gt; add f @f 50
-add f @f 50
-org&amp;gt; print
-print
-['f, a, e, d']
-b, c
-org&amp;gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;help&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt;
+&lt;span class="nv"&gt;help&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt;
+&lt;span class="nv"&gt;Adds&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="nv"&gt;new&lt;/span&gt; &lt;span class="nv"&gt;user&lt;/span&gt;. &lt;span class="nv"&gt;Needs&lt;/span&gt; &lt;span class="nv"&gt;Name&lt;/span&gt; &lt;span class="nv"&gt;slackhandle&lt;/span&gt; &lt;span class="nv"&gt;number_of_lines&lt;/span&gt; &lt;span class="nv"&gt;separated&lt;/span&gt; &lt;span class="nv"&gt;by&lt;/span&gt; &lt;span class="nv"&gt;space&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; @&lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;
+&lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;a&lt;/span&gt; @&lt;span class="nv"&gt;a&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;b&lt;/span&gt; @&lt;span class="nv"&gt;b&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;
+&lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;b&lt;/span&gt; @&lt;span class="nv"&gt;b&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;c&lt;/span&gt; @&lt;span class="nv"&gt;c&lt;/span&gt; &lt;span class="mi"&gt;300&lt;/span&gt;
+&lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;c&lt;/span&gt; @&lt;span class="nv"&gt;c&lt;/span&gt; &lt;span class="mi"&gt;300&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;d&lt;/span&gt; @&lt;span class="nv"&gt;d&lt;/span&gt; &lt;span class="mi"&gt;400&lt;/span&gt;
+&lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;d&lt;/span&gt; @&lt;span class="nv"&gt;d&lt;/span&gt; &lt;span class="mi"&gt;400&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;e&lt;/span&gt; @&lt;span class="nv"&gt;e&lt;/span&gt; &lt;span class="mi"&gt;500&lt;/span&gt;
+&lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;e&lt;/span&gt; @&lt;span class="nv"&gt;e&lt;/span&gt; &lt;span class="mi"&gt;500&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;f&lt;/span&gt; @&lt;span class="nv"&gt;f&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt;
+&lt;span class="nv"&gt;add&lt;/span&gt; &lt;span class="nv"&gt;f&lt;/span&gt; @&lt;span class="nv"&gt;f&lt;/span&gt; &lt;span class="mi"&gt;50&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nv"&gt;print&lt;/span&gt;
+&lt;span class="nv"&gt;print&lt;/span&gt;
+[&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="s"&gt;f, a, e, d&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;]
+&lt;span class="nv"&gt;b&lt;/span&gt;, &lt;span class="nv"&gt;c&lt;/span&gt;
+&lt;span class="nv"&gt;org&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 ```
 &lt;/pre&gt;
 
 
 &lt;h3&gt;1.7. Exercise 3: Running the tests&lt;/h3&gt;
 &lt;p&gt;Run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;make test
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;This will run the tests in the &lt;code&gt;test_team_organizer.py&lt;/code&gt; file.&lt;/p&gt;
 &lt;p&gt;Run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pipenv run pytest --help
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pipenv&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;pytest&lt;/span&gt; &lt;span class="c1"&gt;--help&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -2400,13 +2452,13 @@ Click on &lt;code&gt;team_organizer.py&lt;/code&gt; to see which lines are outsi
 find &lt;code&gt;test_add_a_person_with_lower_than_median&lt;/code&gt; test. Notice this test is
 skipped when run with pytest. To fix it remove the decorator &lt;code&gt;pytest.mark.skip&lt;/code&gt;
 and run &lt;code&gt;pytest&lt;/code&gt; again. Commit the code and run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;make test
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt;
 &lt;/pre&gt;
 
 
 &lt;p&gt;Make the necessary changes so that the test passes.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git commit -am "Fixed failing test"
-git push origin master
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="k"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;am&lt;/span&gt; &lt;span class="ss"&gt;"Fixed failing test"&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt; &lt;span class="n"&gt;origin&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -2419,7 +2471,7 @@ reliably and repeatedly execute.&lt;/p&gt;
 as needed by &lt;code&gt;organizer&lt;/code&gt; fixture.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;test_count_number_of_teams&lt;/code&gt; is broken as well. How can you fix it?&lt;/p&gt;
 &lt;p&gt;Tip: To run a singe test, use&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pipenv run pytest -k &amp;lt;name-of-test&amp;gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pipenv&lt;/span&gt; &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="n"&gt;pytest&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;of&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;test&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;
 
 
@@ -2514,176 +2566,4 @@ On a successful search, it should display that person and their name. On failure
 meetup page. Can you fetch the thumbnails from both the pages, eliminate the
 duplicates, and merge them to generate the collage?&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><category>flask</category><category>web-dev</category><guid>https://chicagopython.github.io/posts/flask-collage-for-project-night-challengers/</guid><pubDate>Sun, 17 Mar 2019 05:20:18 GMT</pubDate></item><item><title>Flask App for Project Night Challengers</title><link>https://chicagopython.github.io/posts/flask-app-to-group-project-night-challengers/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;Flask App for Project Night Challengers&lt;/h2&gt;
-&lt;p&gt;In this project we will be building a fully functional web app using Flask.&lt;/p&gt;
-&lt;p&gt;In the &lt;a href="https://github.com/chicagopython/CodingWorkshops/tree/master/problems/py101/python_team_project"&gt;team project command line application&lt;/a&gt;, we built an awesome command line
-application for creating teams out of people who have RSVP-ed for a Python Project
-Night. However, it is much easier to give a link of your app to someone
-than asking them to use a command line. So, we will create a web app, that allows
-forming teams from the list of RSVP-s from meetup.com. We
-will ask for the number of lines of code that a person has written in
-Python or an equivalent language and use it for putting them in a team. The number of lines is just a rough estimate. As a reference, the linux kernel is over 23 million lines of code!&lt;/p&gt;
-&lt;p&gt;In short, imagine this as a tool that one of the
-organizers uses to checkin attendees as they start coming in on the day of
-Project Night.&lt;/p&gt;
-&lt;p&gt;Short url for this page: &lt;strong&gt;https://git.io/vdQj6&lt;/strong&gt;&lt;/p&gt;
-&lt;h4&gt;Is this project for you&lt;/h4&gt;
-&lt;p&gt;Before you progress further, let's check if we are ready to solve this. You should&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Have a personal computer with working wifi and power cord&lt;/li&gt;
-&lt;li&gt;Have Python 3 installed on your computer. Yep, Python 3 only.&lt;/li&gt;
-&lt;li&gt;Have &lt;a href="https://atom.io/"&gt;Atom&lt;/a&gt; or &lt;a href="https://www.sublimetext.com/3"&gt;Sublime Text&lt;/a&gt; installed in your computer.&lt;/li&gt;
-&lt;li&gt;Have written &amp;amp; ran programs in Python from the command line&lt;/li&gt;
-&lt;li&gt;Have some idea about lists, dictionaries and functions&lt;/li&gt;
-&lt;li&gt;Have created a virtual environment and installing packages with &lt;code&gt;pip&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;You have read the &lt;a href="http://flask.pocoo.org/docs/0.12/quickstart/"&gt;flask quick introduction&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;What is not supported&lt;/h4&gt;
-&lt;p&gt;This project is not tested using Jupyter Notebook, PyCharm,
-Spider, or any other ide/text editor/programming environment for that matter.
-Atom or Sublime Text and the command line are the only supported development
-environment for this project.&lt;/p&gt;
-&lt;p&gt;Sounds good? Then let's dive into building a fully functional web app using flask.&lt;/p&gt;
-&lt;h4&gt;Minimum Viable Product&lt;/h4&gt;
-&lt;p&gt;Our objective is to build an web based interface using Flask that&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Shows a list of people who have RSVP-ed for the project Night&lt;/li&gt;
-&lt;li&gt;Each entry in the list should have&lt;/li&gt;
-&lt;li&gt;The name of the person&lt;/li&gt;
-&lt;li&gt;The meetup.com profile image of the person&lt;/li&gt;
-&lt;li&gt;An input text box that allows entering lines of code&lt;/li&gt;
-&lt;li&gt;On hitting the submit button we should get teams of four&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;Flask&lt;/h4&gt;
-&lt;p&gt;For building the web interface, we will be using Flask.
-Flask is a micro web framework - it takes care of handling of the HTTP
-protocol for you and allows you focus on your application. It is flexible,
-lightweight yet powerful.&lt;/p&gt;
-&lt;h4&gt;Setup your environment&lt;/h4&gt;
-&lt;h5&gt;Get the source code&lt;/h5&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;If you are familiar with &lt;code&gt;git&lt;/code&gt;, run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/chicagopython/CodingWorkshops.git
-&lt;/pre&gt;
-
-
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;If not, go to https://github.com/chicagopython/CodingWorkshops&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;Click on the Download Zip and unzip the file that gets downloaded&lt;/li&gt;
-&lt;li&gt;From your command line, change directory to the path where you have downloaded it.&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;On linux or OS X&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; cd path/to/CodingWorkshops/problems/webdev/flask_team_project/
-&lt;/pre&gt;
-
-
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;On Windows&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&amp;gt; cd path\to\CodingWorkshops\problems\webdev\flask_team_project
-&lt;/pre&gt;
-
-
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Here you will find the basic skeleton of the app under &lt;code&gt;app.py&lt;/code&gt;.&lt;/p&gt;
-&lt;h4&gt;Set up virtualenv&lt;/h4&gt;
-&lt;p&gt;If you are using Linux or OS X, run the following to create a new virtualenv&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-export FLASK_APP=app.py
-&lt;/pre&gt;
-
-
-&lt;p&gt;On Windows, run the following&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;python3 -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-set %FLASK_APP%=app.py
-&lt;/pre&gt;
-
-
-&lt;p&gt;&lt;a href="https://asciinema.org/a/M1hP91h153PuOPEjVYbot6jPj"&gt;&lt;img alt="asciicast" src="https://asciinema.org/a/M1hP91h153PuOPEjVYbot6jPj.png"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4&gt;Feature 0: run app.py&lt;/h4&gt;
-&lt;p&gt;With your environment now set up run&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;flask run
-&lt;/pre&gt;
-
-
-&lt;p&gt;And you'll see 🔥.&lt;/p&gt;
-&lt;p&gt;The reason is there is a string in the &lt;code&gt;app.py&lt;/code&gt; file that allows meetup.com to identify who is trying to get data from them. It is called the API key. The one currently in the code is one of my old ones. You need to get one for your team from &lt;a href="https://secure.meetup.com/meetup_api/key/"&gt;here&lt;/a&gt; - obviously, you'll have to be logged into meetup.com to get the key.
-Plug in your key whereever most relevant in &lt;code&gt;app.py&lt;/code&gt; and run the above command again.&lt;/p&gt;
-&lt;p&gt;This will start a &lt;a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server"&gt;web server&lt;/a&gt; on port 5000.
-Next load up http://locahost:5000/rsvps in your web browser. &lt;/p&gt;
-&lt;p&gt;This will show you the list of people who RSVPed for a previous meetup.
-Goto tonight's meetup page and get the meetup id from the url.&lt;/p&gt;
-&lt;p&gt;https://www.meetup.com/&lt;em&gt;ChiPy&lt;/em&gt;/events/244121900/&lt;/p&gt;
-&lt;p&gt;The last section of the url is the &lt;code&gt;event_id&lt;/code&gt;.&lt;/p&gt;
-&lt;h4&gt;Feature 1: Read app.py&lt;/h4&gt;
-&lt;p&gt;&lt;code&gt;app.py&lt;/code&gt; is the script is where the magic happens.&lt;/p&gt;
-&lt;p&gt;Lets start at the routes:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;@app.route('/rsvps')
-def rsvps():
-
-
-@app.route('/teams', methods=['GET', 'POST'])
-def teams():
-&lt;/pre&gt;
-
-
-&lt;p&gt;Discuss among the team how render_template function is used in rsvps and teams
-function.&lt;/p&gt;
-&lt;p&gt;Two useful tools are pretty print and &lt;code&gt;pdb&lt;/code&gt;&lt;/p&gt;
-&lt;h5&gt;Pretty print&lt;/h5&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pprint&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;pprint&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;pp&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;pp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;member_rsvps&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;This will give you a better view of what the function &lt;code&gt;get_names()&lt;/code&gt; returns.&lt;/p&gt;
-&lt;h5&gt;pdb&lt;/h5&gt;
-&lt;p&gt;Python comes with a debugger &lt;code&gt;pdb&lt;/code&gt;. Here's a &lt;a href="https://appletree.or.kr/quick_reference_cards/Python/Python%20Debugger%20Cheatsheet.pdf"&gt;cheat sheet&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;You can stick the following line anywhere in the code and make it halt so that you can better inspect the data and flow.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pdb&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;pdb&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_trace&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;h4&gt;Feature 2: Show profile images in rsvps&lt;/h4&gt;
-&lt;p&gt;Make changes to rsvps.html (inside templates) to show images of next to the
-names of the people.&lt;/p&gt;
-&lt;h4&gt;Feature 3: Add a text box next for lines of code&lt;/h4&gt;
-&lt;p&gt;Add an input type textbox that will take a number as input&lt;/p&gt;
-&lt;h4&gt;Feature 4: Display the lines of code&lt;/h4&gt;
-&lt;p&gt;On hitting submit, the numbers you entered against each person should show up
-on the &lt;code&gt;/teams&lt;/code&gt; page.&lt;/p&gt;
-&lt;h4&gt;Feature 5: Display teams&lt;/h4&gt;
-&lt;p&gt;As of now, everybody is listed under one team: Team 1.
-Split the list of people selected into teams of 4&lt;/p&gt;
-&lt;p&gt;Your display of each team should include&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;Team Number: XYZ
-Name of team member1, Lines of code, (pic)
-Name of team member2, Lines of code, (pic)
-Name of team member3, Lines of code, (pic)
-Name of team member4, Lines of code, (pic)
-(Total lines of code:)
-&lt;/pre&gt;
-
-
-&lt;p&gt;where things in () are optional.
-There is no specific criteria for creating the teams as of now. We handle that
-next.&lt;/p&gt;
-&lt;h4&gt;Feature 6: Tell the world&lt;/h4&gt;
-&lt;p&gt;Record a gif of your app in motion and tweet tweet the link to @chicagopython with "Python Project Night Mentorship". Include the twitter handles of your team members.&lt;/p&gt;
-&lt;h4&gt;Feature 7: Integrate team creating logic (optional)&lt;/h4&gt;
-&lt;p&gt;Code reuse is a hallmark well written code base. Of course, we are
-not talking about copy pasting the code, but using the abstractions that a
-programming language provides so that there is minimum duplication of code.&lt;/p&gt;
-&lt;p&gt;Use the code that you wrote in the team project command line application. The logic
-that you have implemented earlier for grouping your list of people into teams
-should now be used for creating your teams.&lt;/p&gt;
-&lt;p&gt;Thanks! Thats all folks!
-If you found a bug or think you some instructions are missing - just open a issue in this repository.&lt;/p&gt;&lt;/div&gt;</description><category>flask</category><category>web-dev</category><guid>https://chicagopython.github.io/posts/flask-app-to-group-project-night-challengers/</guid><pubDate>Sun, 17 Mar 2019 05:12:37 GMT</pubDate></item></channel></rss>
+&lt;/ol&gt;&lt;/div&gt;</description><category>flask</category><category>web-dev</category><guid>https://chicagopython.github.io/posts/flask-collage-for-project-night-challengers/</guid><pubDate>Sun, 17 Mar 2019 05:20:18 GMT</pubDate></item></channel></rss>

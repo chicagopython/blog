@@ -104,11 +104,11 @@ of the repository (CodingWorkshop) in the search bar on the dashboard page.</p>
 <p>Recommended version: Python 3.6</p>
 <h3>1.3. Quick Git command refresher</h3>
 <p>Below are the few most used git commands</p>
-<pre class="code literal-block"><span></span>git checkout master          # checkout to master branch
-git checkout -b feature/cool # crate a new branch feature/cool
-git add -u                   # stage all the updates for commit
-git commit -am "Adding changes and commiting with a comment"
-git push origin master       # push commits to develop/ci branch
+<pre class="code literal-block"><span></span><span class="nv">git</span> <span class="nv">checkout</span> <span class="nv">master</span>          # <span class="nv">checkout</span> <span class="nv">to</span> <span class="nv">master</span> <span class="nv">branch</span>
+<span class="nv">git</span> <span class="nv">checkout</span> <span class="o">-</span><span class="nv">b</span> <span class="nv">feature</span><span class="o">/</span><span class="nv">cool</span> # <span class="nv">crate</span> <span class="nv">a</span> <span class="nv">new</span> <span class="nv">branch</span> <span class="nv">feature</span><span class="o">/</span><span class="nv">cool</span>
+<span class="nv">git</span> <span class="nv">add</span> <span class="o">-</span><span class="nv">u</span>                   # <span class="nv">stage</span> <span class="nv">all</span> <span class="nv">the</span> <span class="nv">updates</span> <span class="k">for</span> <span class="nv">commit</span>
+<span class="nv">git</span> <span class="nv">commit</span> <span class="o">-</span><span class="nv">am</span> <span class="s2">"</span><span class="s">Adding changes and commiting with a comment</span><span class="s2">"</span>
+<span class="nv">git</span> <span class="nv">push</span> <span class="nv">origin</span> <span class="nv">master</span>       # <span class="nv">push</span> <span class="nv">commits</span> <span class="nv">to</span> <span class="nv">develop</span><span class="o">/</span><span class="nv">ci</span> <span class="nv">branch</span>
 </pre>
 
 
@@ -120,7 +120,7 @@ would first go to a branch, get tested, code reviewed and finally merged to mast
 repository in your local machine. Lets take the time to look at the structure of this
 project. All code is located under <code>/problems/py101/testing</code> directory. So from your
 terminal go to the directory where you have cloned the repository.</p>
-<pre class="code literal-block"><span></span>cd path/to/clone/problems/py101/testing
+<pre class="code literal-block"><span></span><span class="n">cd</span> <span class="n">path</span><span class="o">/</span><span class="k">to</span><span class="o">/</span><span class="n">clone</span><span class="o">/</span><span class="n">problems</span><span class="o">/</span><span class="n">py101</span><span class="o">/</span><span class="n">testing</span>
 </pre>
 
 
@@ -159,8 +159,8 @@ is a file called <code>.travis.yml</code>. This is used by the continuous interg
 This contains the information on how to build this python project.</p>
 <h4>1.4.7. Test your setup is working</h4>
 <p>Just make a small edit on this file (README.md), commit and push the changes.</p>
-<pre class="code literal-block"><span></span>git commit -am "Demo commit to check everything is working"
-git push origin master
+<pre class="code literal-block"><span></span><span class="n">git</span> <span class="k">commit</span> <span class="o">-</span><span class="n">am</span> <span class="ss">"Demo commit to check everything is working"</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">master</span>
 </pre>
 
 
@@ -173,7 +173,7 @@ of this file (README.md).</p>
 <p>If you run into issues, <a href="https://chipy.slack.com/messages/C093F7W8P/details/">ask your question on slack</a></p>
 <h3>1.5. Exercise 1: Build</h3>
 <p>From the <code>/problems/py101/testing</code> directory, run</p>
-<pre class="code literal-block"><span></span>make
+<pre class="code literal-block"><span></span><span class="n">make</span>
 </pre>
 
 
@@ -186,7 +186,7 @@ of this file (README.md).</p>
 </ul>
 <h3>1.6. Exercise 2: Run the program</h3>
 <p>Start by running</p>
-<pre class="code literal-block"><span></span>python team_organizer.py
+<pre class="code literal-block"><span></span><span class="n">python</span> <span class="n">team_organizer</span><span class="p">.</span><span class="n">py</span>
 </pre>
 
 
@@ -197,52 +197,52 @@ Following that, we run the <code>print</code> command where the users
 are grouped in to max of size four where two users have
 written less lines of code than the others.</p>
 <pre class="code literal-block"><span></span>```
-t (master *) testing $ python team_organizer.py
-Welcome to Chicago Python Project Night Team Organizer
-org&gt; help
-help
+<span class="nv">t</span> <span class="ss">(</span><span class="nv">master</span> <span class="o">*</span><span class="ss">)</span> <span class="nv">testing</span> $ <span class="nv">python</span> <span class="nv">team_organizer</span>.<span class="nv">py</span>
+<span class="nv">Welcome</span> <span class="nv">to</span> <span class="nv">Chicago</span> <span class="nv">Python</span> <span class="nv">Project</span> <span class="nv">Night</span> <span class="nv">Team</span> <span class="nv">Organizer</span>
+<span class="nv">org</span><span class="o">&gt;</span> <span class="nv">help</span>
+<span class="nv">help</span>
 
-Documented commands (type help &lt;topic&gt;):
-========================================
-add  help  print
+<span class="nv">Documented</span> <span class="nv">commands</span> <span class="ss">(</span><span class="nv">type</span> <span class="nv">help</span> <span class="o">&lt;</span><span class="nv">topic</span><span class="o">&gt;</span><span class="ss">)</span>:
+<span class="o">========================================</span>
+<span class="nv">add</span>  <span class="nv">help</span>  <span class="nv">print</span>
 
-Undocumented commands:
-======================
-exit
+<span class="nv">Undocumented</span> <span class="nv">commands</span>:
+<span class="o">======================</span>
+<span class="k">exit</span>
 
-org&gt; help add
-help add
-Adds a new user. Needs Name slackhandle number_of_lines separated by space
-org&gt; add a @a 100
-add a @a 100
-org&gt; add b @b 200
-add b @b 200
-org&gt; add c @c 300
-add c @c 300
-org&gt; add d @d 400
-add d @d 400
-org&gt; add e @e 500
-add e @e 500
-org&gt; add f @f 50
-add f @f 50
-org&gt; print
-print
-['f, a, e, d']
-b, c
-org&gt;
+<span class="nv">org</span><span class="o">&gt;</span> <span class="nv">help</span> <span class="nv">add</span>
+<span class="nv">help</span> <span class="nv">add</span>
+<span class="nv">Adds</span> <span class="nv">a</span> <span class="nv">new</span> <span class="nv">user</span>. <span class="nv">Needs</span> <span class="nv">Name</span> <span class="nv">slackhandle</span> <span class="nv">number_of_lines</span> <span class="nv">separated</span> <span class="nv">by</span> <span class="nv">space</span>
+<span class="nv">org</span><span class="o">&gt;</span> <span class="nv">add</span> <span class="nv">a</span> @<span class="nv">a</span> <span class="mi">100</span>
+<span class="nv">add</span> <span class="nv">a</span> @<span class="nv">a</span> <span class="mi">100</span>
+<span class="nv">org</span><span class="o">&gt;</span> <span class="nv">add</span> <span class="nv">b</span> @<span class="nv">b</span> <span class="mi">200</span>
+<span class="nv">add</span> <span class="nv">b</span> @<span class="nv">b</span> <span class="mi">200</span>
+<span class="nv">org</span><span class="o">&gt;</span> <span class="nv">add</span> <span class="nv">c</span> @<span class="nv">c</span> <span class="mi">300</span>
+<span class="nv">add</span> <span class="nv">c</span> @<span class="nv">c</span> <span class="mi">300</span>
+<span class="nv">org</span><span class="o">&gt;</span> <span class="nv">add</span> <span class="nv">d</span> @<span class="nv">d</span> <span class="mi">400</span>
+<span class="nv">add</span> <span class="nv">d</span> @<span class="nv">d</span> <span class="mi">400</span>
+<span class="nv">org</span><span class="o">&gt;</span> <span class="nv">add</span> <span class="nv">e</span> @<span class="nv">e</span> <span class="mi">500</span>
+<span class="nv">add</span> <span class="nv">e</span> @<span class="nv">e</span> <span class="mi">500</span>
+<span class="nv">org</span><span class="o">&gt;</span> <span class="nv">add</span> <span class="nv">f</span> @<span class="nv">f</span> <span class="mi">50</span>
+<span class="nv">add</span> <span class="nv">f</span> @<span class="nv">f</span> <span class="mi">50</span>
+<span class="nv">org</span><span class="o">&gt;</span> <span class="nv">print</span>
+<span class="nv">print</span>
+[<span class="s1">'</span><span class="s">f, a, e, d</span><span class="s1">'</span>]
+<span class="nv">b</span>, <span class="nv">c</span>
+<span class="nv">org</span><span class="o">&gt;</span>
 ```
 </pre>
 
 
 <h3>1.7. Exercise 3: Running the tests</h3>
 <p>Run</p>
-<pre class="code literal-block"><span></span>make test
+<pre class="code literal-block"><span></span><span class="n">make</span> <span class="n">test</span>
 </pre>
 
 
 <p>This will run the tests in the <code>test_team_organizer.py</code> file.</p>
 <p>Run</p>
-<pre class="code literal-block"><span></span>pipenv run pytest --help
+<pre class="code literal-block"><span></span><span class="n">pipenv</span> <span class="n">run</span> <span class="n">pytest</span> <span class="c1">--help</span>
 </pre>
 
 
@@ -260,13 +260,13 @@ Click on <code>team_organizer.py</code> to see which lines are outside coverage.
 find <code>test_add_a_person_with_lower_than_median</code> test. Notice this test is
 skipped when run with pytest. To fix it remove the decorator <code>pytest.mark.skip</code>
 and run <code>pytest</code> again. Commit the code and run</p>
-<pre class="code literal-block"><span></span>make test
+<pre class="code literal-block"><span></span><span class="n">make</span> <span class="n">test</span>
 </pre>
 
 
 <p>Make the necessary changes so that the test passes.</p>
-<pre class="code literal-block"><span></span>git commit -am "Fixed failing test"
-git push origin master
+<pre class="code literal-block"><span></span><span class="n">git</span> <span class="k">commit</span> <span class="o">-</span><span class="n">am</span> <span class="ss">"Fixed failing test"</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">master</span>
 </pre>
 
 
@@ -279,7 +279,7 @@ reliably and repeatedly execute.</p>
 as needed by <code>organizer</code> fixture.</p>
 <p><code>test_count_number_of_teams</code> is broken as well. How can you fix it?</p>
 <p>Tip: To run a singe test, use</p>
-<pre class="code literal-block"><span></span>pipenv run pytest -k &lt;name-of-test&gt;
+<pre class="code literal-block"><span></span><span class="n">pipenv</span> <span class="n">run</span> <span class="n">pytest</span> <span class="o">-</span><span class="n">k</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">-</span><span class="k">of</span><span class="o">-</span><span class="n">test</span><span class="o">&gt;</span>
 </pre>
 
 

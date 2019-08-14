@@ -7,70 +7,74 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://chicagopython.github.io/categories/analytics.xml</loc>
-  <lastmod>2019-04-18T22:52:00Z</lastmod>
+  <lastmod>2019-08-14T11:57:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://chicagopython.github.io/categories/api.xml</loc>
+  <lastmod>2019-08-14T12:58:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/cat_data-science.xml</loc>
-  <lastmod>2019-04-18T22:52:00Z</lastmod>
+  <lastmod>2019-08-14T12:58:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/cat_python-101.xml</loc>
-  <lastmod>2019-05-16T05:23:00Z</lastmod>
+  <lastmod>2019-08-14T11:57:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/cat_web-dev.xml</loc>
-  <lastmod>2019-04-18T03:42:00Z</lastmod>
+  <lastmod>2019-08-14T11:57:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/cicd.xml</loc>
-  <lastmod>2019-04-18T03:42:00Z</lastmod>
+  <lastmod>2019-08-14T11:57:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/cli.xml</loc>
-  <lastmod>2019-04-18T03:42:00Z</lastmod>
+  <lastmod>2019-08-14T11:57:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/django.xml</loc>
-  <lastmod>2019-04-18T03:42:00Z</lastmod>
+  <lastmod>2019-08-14T11:57:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/eda.xml</loc>
-  <lastmod>2019-04-18T22:52:00Z</lastmod>
+  <lastmod>2019-08-14T12:58:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/flask.xml</loc>
-  <lastmod>2019-04-18T03:42:00Z</lastmod>
+  <lastmod>2019-08-14T11:57:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/pandas.xml</loc>
-  <lastmod>2019-04-18T22:52:00Z</lastmod>
+  <lastmod>2019-08-14T11:57:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/pytest.xml</loc>
-  <lastmod>2019-04-18T03:42:00Z</lastmod>
+  <lastmod>2019-08-14T11:57:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/python-101.xml</loc>
-  <lastmod>2019-04-18T03:42:00Z</lastmod>
+  <lastmod>2019-08-14T11:57:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/statistics.xml</loc>
-  <lastmod>2019-04-18T22:52:00Z</lastmod>
+  <lastmod>2019-08-14T11:57:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/testing.xml</loc>
-  <lastmod>2019-04-18T03:42:00Z</lastmod>
+  <lastmod>2019-08-14T11:57:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/categories/web-dev.xml</loc>
-  <lastmod>2019-04-18T03:42:00Z</lastmod>
+  <lastmod>2019-08-14T11:57:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/rss.xml</loc>
-  <lastmod>2019-05-16T05:23:00Z</lastmod>
+  <lastmod>2019-08-14T12:58:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://chicagopython.github.io/sitemap.xml</loc>
-  <lastmod>2019-05-16T05:23:00Z</lastmod>
+  <lastmod>2019-08-14T12:58:00Z</lastmod>
  </sitemap>
 </sitemapindex>
