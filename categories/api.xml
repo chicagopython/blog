@@ -3,7 +3,7 @@
 &lt;a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html"&gt;
 &lt;img alt="Gnu Public License version 3.0"
 style="border-width:0;"
-src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Wed, 14 Aug 2019 12:58:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>GitHub Jobs API</title><link>https://chicagopython.github.io/posts/github-jobs-api/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Project Night Purpose&lt;/h3&gt;
+src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Wed, 14 Aug 2019 13:06:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>GitHub Jobs API</title><link>https://chicagopython.github.io/posts/github-jobs-api/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Project Night Purpose&lt;/h3&gt;
 &lt;p&gt;All of us need to look for a job at some point; and most every job board has its own API for users to post and pull data (though usually they charge money for access). The &lt;a href="https://jobs.github.com"&gt;GitHub Jobs page&lt;/a&gt; is a great simple API for a first look at this kind of data acqusition and analysis.&lt;/p&gt;
 &lt;p&gt;Tonight's project uses the very popular Python HTTP library &lt;a href="https://2.python-requests.org/en/master/"&gt;requests&lt;/a&gt; along with &lt;a href="https://docs.python.org/3/library/json.html"&gt;json&lt;/a&gt; from the standard library. You will explore the data in the jobs API with the intent of learning something about the current job market for devs. There are a ton of caveats here: for example,&lt;/p&gt;
 &lt;ul&gt;
@@ -55,4 +55,4 @@ src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copy
 &lt;/pre&gt;
 
 
-&lt;h3&gt;Have fun!&lt;/h3&gt;&lt;/div&gt;</description><category>api</category><category>EDA</category><guid>https://chicagopython.github.io/posts/github-jobs-api/</guid><pubDate>Mon, 15 Apr 2019 23:00:00 GMT</pubDate></item></channel></rss>
+&lt;h3&gt;Have fun!&lt;/h3&gt;&lt;/div&gt;</description><category>api</category><category>EDA</category><guid>https://chicagopython.github.io/posts/github-jobs-api/</guid><pubDate>Thu, 15 Aug 2019 23:00:00 GMT</pubDate></item></channel></rss>

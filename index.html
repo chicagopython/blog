@@ -17,7 +17,7 @@
 <meta name="theme-color" content="#cceeff">
 <!-- favicons generated using http://realfavicongenerator.net/ --><link rel="next" href="index-1.html" type="text/html">
 <!--[if lt IE 9]><script src="assets/js/html5shiv-printshiv.min.js"></script><![endif]--><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="prefetch" href="posts/trackcoder/" type="text/html">
+<link rel="prefetch" href="posts/github-jobs-api/" type="text/html">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-beta/katex.min.css" integrity="sha256-sI/DdD47R/Sa54XZDNFjRWlS+Dv8MC5xfkqQLRh0Jes=" crossorigin="anonymous">
 </head>
 <body>
@@ -34,7 +34,72 @@
     
     
     </ul></nav></header><main id="content"><div class="postindex">
-    <article class="h-entry post-text"><img src="https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2850&amp;q=80" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/trackcoder/" class="u-url">trackcoder</a></h3>
+    <article class="h-entry post-text"><img src="assets/img/team-sales-business-meeting_4460x4460.jpg" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/github-jobs-api/" class="u-url">GitHub Jobs API</a></h3>
+    <span class="metadata">
+        <time datetime="2019-08-15T18:00:00-05:00">August 15, 2019</time><i class="fas fa-tags"></i>
+        
+      <ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="categories/cat_data-science/" rel="category"> data-science </a></li>
+            <li><a class="tag p-category" href="categories/api/" rel="tag">api</a></li>
+            <li><a class="tag p-category" href="categories/eda/" rel="tag">EDA</a></li>
+      </ul></span>
+    <!--
+    <div class="p-summary entry-summary">
+    <div><h3>Project Night Purpose</h3>
+<p>All of us need to look for a job at some point; and most every job board has its own API for users to post and pull data (though usually they charge money for access). The <a href="https://jobs.github.com">GitHub Jobs page</a> is a great simple API for a first look at this kind of data acqusition and analysis.</p>
+<p>Tonight's project uses the very popular Python HTTP library <a href="https://2.python-requests.org/en/master/">requests</a> along with <a href="https://docs.python.org/3/library/json.html">json</a> from the standard library. You will explore the data in the jobs API with the intent of learning something about the current job market for devs. There are a ton of caveats here: for example,</p>
+<ul>
+<li>Who chooses to post to GitHub Jobs? Are they representative of the overall population?</li>
+<li>How old are the postings?</li>
+<li>Is it safe to extrapolate statistics to the country? to Illinois? to Chicago?</li>
+</ul>
+<p>Although the topic is a little serious we want to make sure you don't get discouraged by the data you pull (ask around--how many people in your group got their job from a GitHub posting?). The GitHub site shouldn't be taken as a good primary source for job availability or category...but that's part of data acquistition and analysis: assessing the strenghts and shortcomings of your data source. Possible discusison points for the group are things like:</p>
+<ul>
+<li>Where might you get additional information?</li>
+<li>How often should you pull the data? What would capture over time give you?</li>
+<li>Does the dataset tell you anything about which companies use the GitHub for hiring at all? In which cities? Should we move to a different part of the country?</li>
+<li>Choose your own adventure and share with the group what you have learned!</li>
+</ul>
+<p>Most importantly - have fun! Accessing an API is a great core skill for data analysis and all experience is good experience. We hope that you are creative in your explanation and that each group discovers different things!</p>
+<h3>Setting up your environment</h3>
+<p>There is no pre-written code for this project, but we assume you have Python 3.+ installed on your machine.  If this is your fisrt project night, we recommend creating a folder for the project night repo: <code>mkdir chipy_projects &amp;&amp; cd chipy_projects</code>. If you already have the project night repository on your machine, go to that directory and pull from master.</p>
+<p>If you are using Linux or OS X, run the following to create a new virtualenv:</p>
+<pre class="code literal-block"><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">github_jobs_api</span>
+<span class="k">source</span> <span class="n">github_jobs_api</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">activate</span>
+</pre>
+
+
+<p>On Windows, run the following</p>
+<pre class="code literal-block"><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">github_jobs_api</span> 
+<span class="n">github_jobs_api</span><span class="err">\</span><span class="n">Scripts</span><span class="err">\</span><span class="n">activate</span>
+</pre>
+
+
+<h3>Getting the project</h3>
+<p>The project is in the ChiPy project night repo. If you do not have the repository already, run </p>
+<pre class="code literal-block"><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">chicagopython</span><span class="o">/</span><span class="n">CodingWorkshops</span><span class="p">.</span><span class="n">git</span>
+</pre>
+
+
+<p>Now we will:</p>
+<p>Go to the project:</p>
+<pre class="code literal-block"><span></span><span class="n">cd</span> <span class="n">CodingWorkshops</span><span class="o">/</span><span class="n">problems</span><span class="o">/</span><span class="n">data_science</span><span class="o">/</span><span class="n">github_jobs_api</span>
+</pre>
+
+
+<p>Install the packages we need into our environment:</p>
+<pre class="code literal-block"><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
+</pre>
+
+
+<p>view the <em>README.md</em> file for additional information:</p>
+<pre class="code literal-block"><span></span><span class="n">cat</span> <span class="n">README</span><span class="p">.</span><span class="n">md</span>
+</pre>
+
+
+<h3>Have fun!</h3></div>    <hr/>
+    </div>-->
+    </article><article class="h-entry post-text"><img src="https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2850&amp;q=80" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/trackcoder/" class="u-url">trackcoder</a></h3>
     <span class="metadata">
         <time datetime="2019-05-15T23:48:53-05:00">May 15, 2019</time><i class="fas fa-tags"></i>
         
@@ -976,71 +1041,6 @@ chipmunk\Scripts\activate</code></pre>
 </div>
 
 </div></div>    <hr/>
-    </div>-->
-    </article><article class="h-entry post-text"><img src="assets/img/team-sales-business-meeting_4460x4460.jpg" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/github-jobs-api/" class="u-url">GitHub Jobs API</a></h3>
-    <span class="metadata">
-        <time datetime="2019-04-15T18:00:00-05:00">April 15, 2019</time><i class="fas fa-tags"></i>
-        
-      <ul itemprop="keywords" class="tags">
-<li><a class="tag p-category" href="categories/cat_data-science/" rel="category"> data-science </a></li>
-            <li><a class="tag p-category" href="categories/api/" rel="tag">api</a></li>
-            <li><a class="tag p-category" href="categories/eda/" rel="tag">EDA</a></li>
-      </ul></span>
-    <!--
-    <div class="p-summary entry-summary">
-    <div><h3>Project Night Purpose</h3>
-<p>All of us need to look for a job at some point; and most every job board has its own API for users to post and pull data (though usually they charge money for access). The <a href="https://jobs.github.com">GitHub Jobs page</a> is a great simple API for a first look at this kind of data acqusition and analysis.</p>
-<p>Tonight's project uses the very popular Python HTTP library <a href="https://2.python-requests.org/en/master/">requests</a> along with <a href="https://docs.python.org/3/library/json.html">json</a> from the standard library. You will explore the data in the jobs API with the intent of learning something about the current job market for devs. There are a ton of caveats here: for example,</p>
-<ul>
-<li>Who chooses to post to GitHub Jobs? Are they representative of the overall population?</li>
-<li>How old are the postings?</li>
-<li>Is it safe to extrapolate statistics to the country? to Illinois? to Chicago?</li>
-</ul>
-<p>Although the topic is a little serious we want to make sure you don't get discouraged by the data you pull (ask around--how many people in your group got their job from a GitHub posting?). The GitHub site shouldn't be taken as a good primary source for job availability or category...but that's part of data acquistition and analysis: assessing the strenghts and shortcomings of your data source. Possible discusison points for the group are things like:</p>
-<ul>
-<li>Where might you get additional information?</li>
-<li>How often should you pull the data? What would capture over time give you?</li>
-<li>Does the dataset tell you anything about which companies use the GitHub for hiring at all? In which cities? Should we move to a different part of the country?</li>
-<li>Choose your own adventure and share with the group what you have learned!</li>
-</ul>
-<p>Most importantly - have fun! Accessing an API is a great core skill for data analysis and all experience is good experience. We hope that you are creative in your explanation and that each group discovers different things!</p>
-<h3>Setting up your environment</h3>
-<p>There is no pre-written code for this project, but we assume you have Python 3.+ installed on your machine.  If this is your fisrt project night, we recommend creating a folder for the project night repo: <code>mkdir chipy_projects &amp;&amp; cd chipy_projects</code>. If you already have the project night repository on your machine, go to that directory and pull from master.</p>
-<p>If you are using Linux or OS X, run the following to create a new virtualenv:</p>
-<pre class="code literal-block"><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">github_jobs_api</span>
-<span class="k">source</span> <span class="n">github_jobs_api</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">activate</span>
-</pre>
-
-
-<p>On Windows, run the following</p>
-<pre class="code literal-block"><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">github_jobs_api</span> 
-<span class="n">github_jobs_api</span><span class="err">\</span><span class="n">Scripts</span><span class="err">\</span><span class="n">activate</span>
-</pre>
-
-
-<h3>Getting the project</h3>
-<p>The project is in the ChiPy project night repo. If you do not have the repository already, run </p>
-<pre class="code literal-block"><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">chicagopython</span><span class="o">/</span><span class="n">CodingWorkshops</span><span class="p">.</span><span class="n">git</span>
-</pre>
-
-
-<p>Now we will:</p>
-<p>Go to the project:</p>
-<pre class="code literal-block"><span></span><span class="n">cd</span> <span class="n">CodingWorkshops</span><span class="o">/</span><span class="n">problems</span><span class="o">/</span><span class="n">data_science</span><span class="o">/</span><span class="n">github_jobs_api</span>
-</pre>
-
-
-<p>Install the packages we need into our environment:</p>
-<pre class="code literal-block"><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
-</pre>
-
-
-<p>view the <em>README.md</em> file for additional information:</p>
-<pre class="code literal-block"><span></span><span class="n">cat</span> <span class="n">README</span><span class="p">.</span><span class="n">md</span>
-</pre>
-
-
-<h3>Have fun!</h3></div>    <hr/>
     </div>-->
     </article><article class="h-entry post-text"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2850&amp;q=80" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/flask-app-for-exchange-rates/" class="u-url">Flask App for Exchange Rates</a></h3>
     <span class="metadata">
