@@ -4,6 +4,8 @@
 
 ## Useful commands
 
+* `pip install --upgrade "Nikola[extras]"` to install
+* `nikola new_post -f markdown` to add a new markdown post
 * `nikola build` to build the site locally
 * `nikola serve` to view it
 
