@@ -31,11 +31,13 @@ Your task for this evening is to, working together, create something fun to play
 	```
 	git clone https://github.com/chicagopython/CodingWorkshops.git
 	```
+
 3. Navigate to the folder for this challenge:
 
 	```
 	cd CodingWorkshops/problems/py101/make_a_game
-	``` 
+	```
+
 4. Run `pipenv install`, which will install all of the libraries we have recommended for this exercise.
 5. After you've installed all of the libraries, run `pipenv shell`, which will turn on a virtual environment running Python 3.7.
 6. Run `python run.py` to see the program in its current state or `pytest -vv` to run all tests.
