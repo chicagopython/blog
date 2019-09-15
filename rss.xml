@@ -3,7 +3,7 @@
 &lt;a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html"&gt;
 &lt;img alt="Gnu Public License version 3.0"
 style="border-width:0;"
-src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Sun, 15 Sep 2019 16:19:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Make a Game</title><link>https://chicagopython.github.io/posts/make-a-game/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Overview&lt;/h3&gt;
+src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Sun, 15 Sep 2019 16:24:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Make a Game</title><link>https://chicagopython.github.io/posts/make-a-game/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Overview&lt;/h3&gt;
 &lt;p&gt;For a long time, computer games made use of few, if any, graphics. Many of them were text based adventures that you could run directly on your command line. Some examples included:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Zork"&gt;Zork&lt;/a&gt;&lt;/li&gt;
@@ -16,24 +16,16 @@ src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copy
 &lt;h3&gt;Setup&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;You'll need one computer that your group will share that can install and run &lt;a href="https://pipenv-fork.readthedocs.io/en/latest/"&gt;Pipenv&lt;/a&gt;. While an OS-X or Linux machine will likely do the best for this step, a Windows machine will be able to do it as well. If you run into any challenges installing Pipenv, please ask for help!&lt;/li&gt;
-&lt;li&gt;The project is in the ChiPy project night repo. If you do not have the repository already, run &lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;chicagopython&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;CodingWorkshops&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;ol&gt;
-&lt;li&gt;Navigate to the folder for this challenge:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;CodingWorkshops&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;problems&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;py101&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;make_a_game&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;ol&gt;
-&lt;li&gt;Run &lt;code&gt;pipenv install&lt;/code&gt;, which will install all of the libraries we have recommended for this exercise.&lt;/li&gt;
-&lt;li&gt;After you've installed all of the libraries, run &lt;code&gt;pipenv shell&lt;/code&gt;, which will turn on a virtual environment running Python 3.7.&lt;/li&gt;
-&lt;li&gt;Run &lt;code&gt;python run.py&lt;/code&gt; to see the program in its current state or &lt;code&gt;pytest -vv&lt;/code&gt; to run all tests.&lt;/li&gt;
-&lt;li&gt;If you make changes, this project uses a library called &lt;a href="https://github.com/psf/black"&gt;Black&lt;/a&gt; to automatically format the code for you (this known as a &lt;a href="https://en.wikipedia.org/wiki/Lint_(software)"&gt;linter&lt;/a&gt;. To run it, from the root of the directory, run &lt;code&gt;black .&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The project is in the ChiPy project night repo. If you do not have the repository already, run &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone https://github.com/chicagopython/CodingWorkshops.git&lt;/code&gt;
+3. Navigate to the folder for this challenge:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cd CodingWorkshops/problems/py101/make_a_game&lt;/code&gt; 
+4. Run &lt;code&gt;pipenv install&lt;/code&gt;, which will install all of the libraries we have recommended for this exercise.
+5. After you've installed all of the libraries, run &lt;code&gt;pipenv shell&lt;/code&gt;, which will turn on a virtual environment running Python 3.7.
+6. Run &lt;code&gt;python run.py&lt;/code&gt; to see the program in its current state or &lt;code&gt;pytest -vv&lt;/code&gt; to run all tests.
+7. If you make changes, this project uses a library called &lt;a href="https://github.com/psf/black"&gt;Black&lt;/a&gt; to automatically format the code for you (this known as a &lt;a href="https://en.wikipedia.org/wiki/Lint_(software)"&gt;linter&lt;/a&gt;. To run it, from the root of the directory, run &lt;code&gt;black .&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3&gt;What's in this repository?&lt;/h3&gt;
 &lt;p&gt;In this repository is a basic shell of a game. This game sets up a &lt;code&gt;Player()&lt;/code&gt; which parrots back what the player writes to it until they decide to leave. Some of the key features here that you might want to use or modify or extend are:&lt;/p&gt;
