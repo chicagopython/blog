@@ -3,7 +3,53 @@
 &lt;a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html"&gt;
 &lt;img alt="Gnu Public License version 3.0"
 style="border-width:0;"
-src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Wed, 14 Aug 2019 13:06:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>GitHub Jobs API</title><link>https://chicagopython.github.io/posts/github-jobs-api/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Project Night Purpose&lt;/h3&gt;
+src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Sun, 15 Sep 2019 16:19:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Make a Game</title><link>https://chicagopython.github.io/posts/make-a-game/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Overview&lt;/h3&gt;
+&lt;p&gt;For a long time, computer games made use of few, if any, graphics. Many of them were text based adventures that you could run directly on your command line. Some examples included:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Zork"&gt;Zork&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Adventureland&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://en.wikipedia.org/wiki/Dwarf_Fortress"&gt;Dwarf Fortress&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and many others. Players would input their directions using words and the computer would return back what happened. &lt;/p&gt;
+&lt;h3&gt;Your Task&lt;/h3&gt;
+&lt;p&gt;Your task for this evening is to, working together, create something fun to play! Your group will take turns typing (in other words, one computer per group and only one person typing at a time) and helping to develop (offering ideas, thoughts on what to do next, etc.). It can be helpful to have another person with their computer open to research, but ultimately, this is a group effort! Everyone should have a chance to write code, offer suggestions, research libraries, etc. &lt;/p&gt;
+&lt;h3&gt;Setup&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;You'll need one computer that your group will share that can install and run &lt;a href="https://pipenv-fork.readthedocs.io/en/latest/"&gt;Pipenv&lt;/a&gt;. While an OS-X or Linux machine will likely do the best for this step, a Windows machine will be able to do it as well. If you run into any challenges installing Pipenv, please ask for help!&lt;/li&gt;
+&lt;li&gt;The project is in the ChiPy project night repo. If you do not have the repository already, run &lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;chicagopython&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;CodingWorkshops&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Navigate to the folder for this challenge:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;CodingWorkshops&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;problems&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;py101&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;make_a_game&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Run &lt;code&gt;pipenv install&lt;/code&gt;, which will install all of the libraries we have recommended for this exercise.&lt;/li&gt;
+&lt;li&gt;After you've installed all of the libraries, run &lt;code&gt;pipenv shell&lt;/code&gt;, which will turn on a virtual environment running Python 3.7.&lt;/li&gt;
+&lt;li&gt;Run &lt;code&gt;python run.py&lt;/code&gt; to see the program in its current state or &lt;code&gt;pytest -vv&lt;/code&gt; to run all tests.&lt;/li&gt;
+&lt;li&gt;If you make changes, this project uses a library called &lt;a href="https://github.com/psf/black"&gt;Black&lt;/a&gt; to automatically format the code for you (this known as a &lt;a href="https://en.wikipedia.org/wiki/Lint_(software)"&gt;linter&lt;/a&gt;. To run it, from the root of the directory, run &lt;code&gt;black .&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;What's in this repository?&lt;/h3&gt;
+&lt;p&gt;In this repository is a basic shell of a game. This game sets up a &lt;code&gt;Player()&lt;/code&gt; which parrots back what the player writes to it until they decide to leave. Some of the key features here that you might want to use or modify or extend are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;Tests&lt;/em&gt; -- in the &lt;code&gt;tests/&lt;/code&gt; folder are a series of tests to make sure that the &lt;code&gt;Player()&lt;/code&gt; object continues to work as expected. As you add new functionality, you might want to practice &lt;a href="https://en.wikipedia.org/wiki/Test-driven_development"&gt;test-driven development&lt;/a&gt; to ensure that your code continues to work as you want it to!&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;run.py&lt;/em&gt; -- This is the main file that the player will run to play the game. One thing to note is the section that starts with &lt;code&gt;while player.in_game:&lt;/code&gt; -- this section sets up a loop that will keep running until the &lt;code&gt;in_game&lt;/code&gt; attribute is set to False. This way, your players can continue to do things and the game won't run once through the code and immediately finish. You'll likely add extra things into this section.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Player() class&lt;/em&gt; -- This class holds information about the player -- what its name is, what message it wants to repeat, whether it still wants to play the game...classes are useful for persisting or modifying some sort of collected state or values about a "thing", as well as defining actions that that thing may take. For example, our &lt;code&gt;Player()&lt;/code&gt; can currently &lt;code&gt;say_hello()&lt;/code&gt; and it has an &lt;code&gt;in_game&lt;/code&gt; status that can be either &lt;code&gt;True&lt;/code&gt; or &lt;code&gt;False&lt;/code&gt;. A different object might have different behaviors or different attributes that can be set. Depending on your game, you may want to set up more of these classes -- for example, you could set up a &lt;code&gt;Map()&lt;/code&gt; class to hold onto information about a map (what room the player is currently in, what rooms they can go to, etc.) or an &lt;code&gt;Enemy()&lt;/code&gt; class (what the enemy can do, how it interacts with the player, whether it is defeated or not, etc.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;So what should we do?&lt;/h3&gt;
+&lt;p&gt;A good way to begin might be the following:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Decide what type of game you want to make: do you want to make a madlibs clone? Tic-tac-toe? A small dungeon? A word game? Put together a couple of ideas and identify what you'd like to build (and don't worry if you don't finish in time! This exercise is for you to be introduced to some Python concepts, not to emerge with a fully-developed game).&lt;/li&gt;
+&lt;li&gt;Identify what basic building blocks you would need to interact with in the game. For example, if you were making a madlibs clone, you would want to identify what the user could enter, some scripts for those words to be entered into, and something that reads the story out after all the words have been entered. This can help with figuring out the basic flow of the game (for example, you would not want the story to be revealed before all the words are entered!)&lt;/li&gt;
+&lt;li&gt;Start adding code and testing the game -- you could both add automated tests (like the ones in &lt;code&gt;tests/&lt;/code&gt; or try playing your game to see if it works. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Happy Developing!&lt;/p&gt;&lt;/div&gt;</description><guid>https://chicagopython.github.io/posts/make-a-game/</guid><pubDate>Thu, 19 Sep 2019 11:00:00 GMT</pubDate></item><item><title>GitHub Jobs API</title><link>https://chicagopython.github.io/posts/github-jobs-api/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Project Night Purpose&lt;/h3&gt;
 &lt;p&gt;All of us need to look for a job at some point; and most every job board has its own API for users to post and pull data (though usually they charge money for access). The &lt;a href="https://jobs.github.com"&gt;GitHub Jobs page&lt;/a&gt; is a great simple API for a first look at this kind of data acqusition and analysis.&lt;/p&gt;
 &lt;p&gt;Tonight's project uses the very popular Python HTTP library &lt;a href="https://2.python-requests.org/en/master/"&gt;requests&lt;/a&gt; along with &lt;a href="https://docs.python.org/3/library/json.html"&gt;json&lt;/a&gt; from the standard library. You will explore the data in the jobs API with the intent of learning something about the current job market for devs. There are a ton of caveats here: for example,&lt;/p&gt;
 &lt;ul&gt;
@@ -2494,76 +2540,4 @@ Once your implementation is complete, run &lt;code&gt;make test&lt;/code&gt;.&lt
 &lt;ul&gt;
 &lt;li&gt;test_adding_person_with_negative_lines_of_code_throws_exception&lt;/li&gt;
 &lt;li&gt;test_handle_duplicate_additions&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ci/cd</category><category>pytest</category><category>testing</category><guid>https://chicagopython.github.io/posts/unit-testing-and-continuous-integration-with-pytest-travis/</guid><pubDate>Sun, 17 Mar 2019 06:08:40 GMT</pubDate></item><item><title>Flask Collage for Project Night Challengers</title><link>https://chicagopython.github.io/posts/flask-collage-for-project-night-challengers/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;Flask Collage for Project Night Challengers&lt;/h2&gt;
-&lt;p&gt;Build a small web app using Flask which accepts the meetup.com event id for tonight
-as a parameter and would fetch the profile pictures of all the attendees to create a
-collage. &lt;a href="https://twitter.com/Tathagata/status/746302962830540801"&gt;Here&lt;/a&gt; is an example
-of such a collage.&lt;/p&gt;
-&lt;p&gt;You'll need:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;pip install flask&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;pip install Flask-WTF&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;pip install meetup-api&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;How to create a basic Flask app:
-Follow the instructions &lt;a href="http://flask.pocoo.org/docs/0.11/quickstart/"&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;flask&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Flask&lt;/span&gt;
-&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Flask&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="vm"&gt;__name__&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="nd"&gt;@app.route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'/'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;hello_world&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;'Hello World!'&lt;/span&gt;
-
-&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;'__main__'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;debug&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;&lt;code&gt;python testflask.py&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;To get you started, the following piece of code will help you fetch the thumbnail
-images from meetup.com.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;meetup.api&lt;/span&gt;
-&lt;span class="n"&gt;client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;meetup&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;api&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Client&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'your_key'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="n"&gt;rsvps&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetRsvps&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;event_id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'235484841'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;urlname&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'_ChiPy_'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;member_id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;','&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'member'&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s1"&gt;'member_id'&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;rsvps&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;results&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;span class="n"&gt;members&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetMembers&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;member_id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;member_id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;member&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;members&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;results&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s1"&gt;'{0},{1},{2}'&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;member&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'name'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;member&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'id'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;member&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'photo'&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="s1"&gt;'thumb_link'&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-    &lt;span class="k"&gt;except&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;pass&lt;/span&gt; &lt;span class="c1"&gt;# ignore those who do not have a complete profile&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Can you include the name along with the images in your collage?&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Add a search box to your collage, where you can search some one by name. 
-On a successful search, it should display that person and their name. On failure, it should give a proper error message.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Add the following list of questions to your search result page that collects feedback on what an attendee would like to do &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Choices:
-- Help others with Python 101 questions
-- Help others with Python Data Science questions
-- Help others with Python Web Dev questions
-- Python 101 course (Beginner)
-- Attend Coding Workshop (Intermediate)
-- Attend RasberryPi Lab (Intermediate)
-- Work on my own project, get help from others &lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Deploy your app to a public hosting, share the link with the world!&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Currently we are accepting RSVPs on both ChiPy's site and Chicago Pythonista's
-meetup page. Can you fetch the thumbnails from both the pages, eliminate the
-duplicates, and merge them to generate the collage?&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><category>flask</category><category>web-dev</category><guid>https://chicagopython.github.io/posts/flask-collage-for-project-night-challengers/</guid><pubDate>Sun, 17 Mar 2019 05:20:18 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;&lt;/div&gt;</description><category>ci/cd</category><category>pytest</category><category>testing</category><guid>https://chicagopython.github.io/posts/unit-testing-and-continuous-integration-with-pytest-travis/</guid><pubDate>Sun, 17 Mar 2019 06:08:40 GMT</pubDate></item></channel></rss>

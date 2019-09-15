@@ -17,7 +17,7 @@
 <meta name="theme-color" content="#cceeff">
 <!-- favicons generated using http://realfavicongenerator.net/ --><link rel="next" href="index-1.html" type="text/html">
 <!--[if lt IE 9]><script src="assets/js/html5shiv-printshiv.min.js"></script><![endif]--><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="prefetch" href="posts/github-jobs-api/" type="text/html">
+<link rel="prefetch" href="posts/make-a-game/" type="text/html">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-beta/katex.min.css" integrity="sha256-sI/DdD47R/Sa54XZDNFjRWlS+Dv8MC5xfkqQLRh0Jes=" crossorigin="anonymous">
 </head>
 <body>
@@ -34,7 +34,64 @@
     
     
     </ul></nav></header><main id="content"><div class="postindex">
-    <article class="h-entry post-text"><img src="assets/img/team-sales-business-meeting_4460x4460.jpg" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/github-jobs-api/" class="u-url">GitHub Jobs API</a></h3>
+    <article class="h-entry post-text"><img src="https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2850&amp;q=80" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/make-a-game/" class="u-url">Make a Game</a></h3>
+    <span class="metadata">
+        <time datetime="2019-09-19T06:00:00-05:00">September 19, 2019</time><i class="fas fa-tags"></i>
+        
+      <ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="categories/cat_python-101/" rel="category"> python-101</a></li>
+      </ul></span>
+    <!--
+    <div class="p-summary entry-summary">
+    <div><h3>Overview</h3>
+<p>For a long time, computer games made use of few, if any, graphics. Many of them were text based adventures that you could run directly on your command line. Some examples included:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Zork">Zork</a></li>
+<li>Adventureland</li>
+<li><a href="https://en.wikipedia.org/wiki/Dwarf_Fortress">Dwarf Fortress</a></li>
+</ul>
+<p>and many others. Players would input their directions using words and the computer would return back what happened. </p>
+<h3>Your Task</h3>
+<p>Your task for this evening is to, working together, create something fun to play! Your group will take turns typing (in other words, one computer per group and only one person typing at a time) and helping to develop (offering ideas, thoughts on what to do next, etc.). It can be helpful to have another person with their computer open to research, but ultimately, this is a group effort! Everyone should have a chance to write code, offer suggestions, research libraries, etc. </p>
+<h3>Setup</h3>
+<ol>
+<li>You'll need one computer that your group will share that can install and run <a href="https://pipenv-fork.readthedocs.io/en/latest/">Pipenv</a>. While an OS-X or Linux machine will likely do the best for this step, a Windows machine will be able to do it as well. If you run into any challenges installing Pipenv, please ask for help!</li>
+<li>The project is in the ChiPy project night repo. If you do not have the repository already, run </li>
+</ol>
+<pre class="code literal-block"><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">chicagopython</span><span class="o">/</span><span class="n">CodingWorkshops</span><span class="p">.</span><span class="n">git</span>
+</pre>
+
+
+<ol>
+<li>Navigate to the folder for this challenge:</li>
+</ol>
+<pre class="code literal-block"><span></span><span class="n">cd</span> <span class="n">CodingWorkshops</span><span class="o">/</span><span class="n">problems</span><span class="o">/</span><span class="n">py101</span><span class="o">/</span><span class="n">make_a_game</span>
+</pre>
+
+
+<ol>
+<li>Run <code>pipenv install</code>, which will install all of the libraries we have recommended for this exercise.</li>
+<li>After you've installed all of the libraries, run <code>pipenv shell</code>, which will turn on a virtual environment running Python 3.7.</li>
+<li>Run <code>python run.py</code> to see the program in its current state or <code>pytest -vv</code> to run all tests.</li>
+<li>If you make changes, this project uses a library called <a href="https://github.com/psf/black">Black</a> to automatically format the code for you (this known as a <a href="https://en.wikipedia.org/wiki/Lint_(software)">linter</a>. To run it, from the root of the directory, run <code>black .</code></li>
+</ol>
+<h3>What's in this repository?</h3>
+<p>In this repository is a basic shell of a game. This game sets up a <code>Player()</code> which parrots back what the player writes to it until they decide to leave. Some of the key features here that you might want to use or modify or extend are:</p>
+<ol>
+<li><em>Tests</em> -- in the <code>tests/</code> folder are a series of tests to make sure that the <code>Player()</code> object continues to work as expected. As you add new functionality, you might want to practice <a href="https://en.wikipedia.org/wiki/Test-driven_development">test-driven development</a> to ensure that your code continues to work as you want it to!</li>
+<li><em>run.py</em> -- This is the main file that the player will run to play the game. One thing to note is the section that starts with <code>while player.in_game:</code> -- this section sets up a loop that will keep running until the <code>in_game</code> attribute is set to False. This way, your players can continue to do things and the game won't run once through the code and immediately finish. You'll likely add extra things into this section.</li>
+<li><em>Player() class</em> -- This class holds information about the player -- what its name is, what message it wants to repeat, whether it still wants to play the game...classes are useful for persisting or modifying some sort of collected state or values about a "thing", as well as defining actions that that thing may take. For example, our <code>Player()</code> can currently <code>say_hello()</code> and it has an <code>in_game</code> status that can be either <code>True</code> or <code>False</code>. A different object might have different behaviors or different attributes that can be set. Depending on your game, you may want to set up more of these classes -- for example, you could set up a <code>Map()</code> class to hold onto information about a map (what room the player is currently in, what rooms they can go to, etc.) or an <code>Enemy()</code> class (what the enemy can do, how it interacts with the player, whether it is defeated or not, etc.</li>
+</ol>
+<h3>So what should we do?</h3>
+<p>A good way to begin might be the following:</p>
+<ol>
+<li>Decide what type of game you want to make: do you want to make a madlibs clone? Tic-tac-toe? A small dungeon? A word game? Put together a couple of ideas and identify what you'd like to build (and don't worry if you don't finish in time! This exercise is for you to be introduced to some Python concepts, not to emerge with a fully-developed game).</li>
+<li>Identify what basic building blocks you would need to interact with in the game. For example, if you were making a madlibs clone, you would want to identify what the user could enter, some scripts for those words to be entered into, and something that reads the story out after all the words have been entered. This can help with figuring out the basic flow of the game (for example, you would not want the story to be revealed before all the words are entered!)</li>
+<li>Start adding code and testing the game -- you could both add automated tests (like the ones in <code>tests/</code> or try playing your game to see if it works. </li>
+</ol>
+<p>Happy Developing!</p></div>    <hr/>
+    </div>-->
+    </article><article class="h-entry post-text"><img src="assets/img/team-sales-business-meeting_4460x4460.jpg" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/github-jobs-api/" class="u-url">GitHub Jobs API</a></h3>
     <span class="metadata">
         <time datetime="2019-08-15T18:00:00-05:00">August 15, 2019</time><i class="fas fa-tags"></i>
         
@@ -2631,91 +2688,6 @@ Once your implementation is complete, run <code>make test</code>.</p>
 <li>test_adding_person_with_negative_lines_of_code_throws_exception</li>
 <li>test_handle_duplicate_additions</li>
 </ul></div>    <hr/>
-    </div>-->
-    </article><article class="h-entry post-text"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2850&amp;q=80" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/flask-collage-for-project-night-challengers/" class="u-url">Flask Collage for Project Night Challengers</a></h3>
-    <span class="metadata">
-        <time datetime="2019-03-17T00:20:18-05:00">March 17, 2019</time><i class="fas fa-tags"></i>
-        
-      <ul itemprop="keywords" class="tags">
-<li><a class="tag p-category" href="categories/cat_web-dev/" rel="category"> web-dev</a></li>
-            <li><a class="tag p-category" href="categories/flask/" rel="tag">flask</a></li>
-            <li><a class="tag p-category" href="categories/web-dev/" rel="tag">web-dev</a></li>
-      </ul></span>
-    <!--
-    <div class="p-summary entry-summary">
-    <div><h2>Flask Collage for Project Night Challengers</h2>
-<p>Build a small web app using Flask which accepts the meetup.com event id for tonight
-as a parameter and would fetch the profile pictures of all the attendees to create a
-collage. <a href="https://twitter.com/Tathagata/status/746302962830540801">Here</a> is an example
-of such a collage.</p>
-<p>You'll need:</p>
-<ul>
-<li><code>pip install flask</code></li>
-<li><code>pip install Flask-WTF</code></li>
-<li><code>pip install meetup-api</code></li>
-</ul>
-<p>How to create a basic Flask app:
-Follow the instructions <a href="http://flask.pocoo.org/docs/0.11/quickstart/">here</a></p>
-<pre class="code literal-block"><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
-<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
-
-<span class="nd">@app.route</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
-    <span class="k">return</span> <span class="s1">'Hello World!'</span>
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</pre>
-
-
-<p><code>python testflask.py</code></p>
-<p>To get you started, the following piece of code will help you fetch the thumbnail
-images from meetup.com.</p>
-<pre class="code literal-block"><span></span><span class="kn">import</span> <span class="nn">meetup.api</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">meetup</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s1">'your_key'</span><span class="p">)</span>
-
-<span class="n">rsvps</span><span class="o">=</span><span class="n">client</span><span class="o">.</span><span class="n">GetRsvps</span><span class="p">(</span><span class="n">event_id</span><span class="o">=</span><span class="s1">'235484841'</span><span class="p">,</span> <span class="n">urlname</span><span class="o">=</span><span class="s1">'_ChiPy_'</span><span class="p">)</span>
-<span class="n">member_id</span> <span class="o">=</span> <span class="s1">','</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s1">'member'</span><span class="p">][</span><span class="s1">'member_id'</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">rsvps</span><span class="o">.</span><span class="n">results</span><span class="p">])</span>
-<span class="n">members</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">GetMembers</span><span class="p">(</span><span class="n">member_id</span><span class="o">=</span><span class="n">member_id</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="n">members</span><span class="o">.</span><span class="n">results</span><span class="p">:</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="k">print</span> <span class="s1">'{0},{1},{2}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">member</span><span class="p">[</span><span class="s1">'name'</span><span class="p">],</span> <span class="n">member</span><span class="p">[</span><span class="s1">'id'</span><span class="p">],</span> <span class="n">member</span><span class="p">[</span><span class="s1">'photo'</span><span class="p">][</span><span class="s1">'thumb_link'</span><span class="p">])</span>
-    <span class="k">except</span><span class="p">:</span>
-        <span class="k">pass</span> <span class="c1"># ignore those who do not have a complete profile</span>
-</pre>
-
-
-<ol>
-<li>
-<p>Can you include the name along with the images in your collage?</p>
-</li>
-<li>
-<p>Add a search box to your collage, where you can search some one by name. 
-On a successful search, it should display that person and their name. On failure, it should give a proper error message.</p>
-</li>
-<li>
-<p>Add the following list of questions to your search result page that collects feedback on what an attendee would like to do </p>
-</li>
-</ol>
-<p>Choices:
-- Help others with Python 101 questions
-- Help others with Python Data Science questions
-- Help others with Python Web Dev questions
-- Python 101 course (Beginner)
-- Attend Coding Workshop (Intermediate)
-- Attend RasberryPi Lab (Intermediate)
-- Work on my own project, get help from others </p>
-<ol>
-<li>
-<p>Deploy your app to a public hosting, share the link with the world!</p>
-</li>
-<li>
-<p>Currently we are accepting RSVPs on both ChiPy's site and Chicago Pythonista's
-meetup page. Can you fetch the thumbnails from both the pages, eliminate the
-duplicates, and merge them to generate the collage?</p>
-</li>
-</ol></div>    <hr/>
     </div>-->
     </article>
 </div>

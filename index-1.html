@@ -32,7 +32,92 @@
     
     
     </ul></nav></header><main id="content"><div class="postindex">
-    <article class="h-entry post-text"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2850&amp;q=80" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/flask-app-to-group-project-night-challengers/" class="u-url">Flask App for Project Night Challengers</a></h3>
+    <article class="h-entry post-text"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2850&amp;q=80" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/flask-collage-for-project-night-challengers/" class="u-url">Flask Collage for Project Night Challengers</a></h3>
+    <span class="metadata">
+        <time datetime="2019-03-17T00:20:18-05:00">March 17, 2019</time><i class="fas fa-tags"></i>
+        
+      <ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="categories/cat_web-dev/" rel="category"> web-dev</a></li>
+            <li><a class="tag p-category" href="categories/flask/" rel="tag">flask</a></li>
+            <li><a class="tag p-category" href="categories/web-dev/" rel="tag">web-dev</a></li>
+      </ul></span>
+    <!--
+    <div class="p-summary entry-summary">
+    <div><h2>Flask Collage for Project Night Challengers</h2>
+<p>Build a small web app using Flask which accepts the meetup.com event id for tonight
+as a parameter and would fetch the profile pictures of all the attendees to create a
+collage. <a href="https://twitter.com/Tathagata/status/746302962830540801">Here</a> is an example
+of such a collage.</p>
+<p>You'll need:</p>
+<ul>
+<li><code>pip install flask</code></li>
+<li><code>pip install Flask-WTF</code></li>
+<li><code>pip install meetup-api</code></li>
+</ul>
+<p>How to create a basic Flask app:
+Follow the instructions <a href="http://flask.pocoo.org/docs/0.11/quickstart/">here</a></p>
+<pre class="code literal-block"><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">'Hello World!'</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre>
+
+
+<p><code>python testflask.py</code></p>
+<p>To get you started, the following piece of code will help you fetch the thumbnail
+images from meetup.com.</p>
+<pre class="code literal-block"><span></span><span class="kn">import</span> <span class="nn">meetup.api</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">meetup</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s1">'your_key'</span><span class="p">)</span>
+
+<span class="n">rsvps</span><span class="o">=</span><span class="n">client</span><span class="o">.</span><span class="n">GetRsvps</span><span class="p">(</span><span class="n">event_id</span><span class="o">=</span><span class="s1">'235484841'</span><span class="p">,</span> <span class="n">urlname</span><span class="o">=</span><span class="s1">'_ChiPy_'</span><span class="p">)</span>
+<span class="n">member_id</span> <span class="o">=</span> <span class="s1">','</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="s1">'member'</span><span class="p">][</span><span class="s1">'member_id'</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">rsvps</span><span class="o">.</span><span class="n">results</span><span class="p">])</span>
+<span class="n">members</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">GetMembers</span><span class="p">(</span><span class="n">member_id</span><span class="o">=</span><span class="n">member_id</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">member</span> <span class="ow">in</span> <span class="n">members</span><span class="o">.</span><span class="n">results</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s1">'{0},{1},{2}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">member</span><span class="p">[</span><span class="s1">'name'</span><span class="p">],</span> <span class="n">member</span><span class="p">[</span><span class="s1">'id'</span><span class="p">],</span> <span class="n">member</span><span class="p">[</span><span class="s1">'photo'</span><span class="p">][</span><span class="s1">'thumb_link'</span><span class="p">])</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">pass</span> <span class="c1"># ignore those who do not have a complete profile</span>
+</pre>
+
+
+<ol>
+<li>
+<p>Can you include the name along with the images in your collage?</p>
+</li>
+<li>
+<p>Add a search box to your collage, where you can search some one by name. 
+On a successful search, it should display that person and their name. On failure, it should give a proper error message.</p>
+</li>
+<li>
+<p>Add the following list of questions to your search result page that collects feedback on what an attendee would like to do </p>
+</li>
+</ol>
+<p>Choices:
+- Help others with Python 101 questions
+- Help others with Python Data Science questions
+- Help others with Python Web Dev questions
+- Python 101 course (Beginner)
+- Attend Coding Workshop (Intermediate)
+- Attend RasberryPi Lab (Intermediate)
+- Work on my own project, get help from others </p>
+<ol>
+<li>
+<p>Deploy your app to a public hosting, share the link with the world!</p>
+</li>
+<li>
+<p>Currently we are accepting RSVPs on both ChiPy's site and Chicago Pythonista's
+meetup page. Can you fetch the thumbnails from both the pages, eliminate the
+duplicates, and merge them to generate the collage?</p>
+</li>
+</ol></div>    <hr/>
+    </div>-->
+    </article><article class="h-entry post-text"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2850&amp;q=80" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/flask-app-to-group-project-night-challengers/" class="u-url">Flask App for Project Night Challengers</a></h3>
     <span class="metadata">
         <time datetime="2019-03-17T00:12:37-05:00">March 17, 2019</time><i class="fas fa-tags"></i>
         
