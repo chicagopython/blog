@@ -27,13 +27,15 @@ Your task for this evening is to, working together, create something fun to play
 
 1. You'll need one computer that your group will share that can install and run [Pipenv](https://pipenv-fork.readthedocs.io/en/latest/). While an OS-X or Linux machine will likely do the best for this step, a Windows machine will be able to do it as well. If you run into any challenges installing Pipenv, please ask for help!
 2. The project is in the ChiPy project night repo. If you do not have the repository already, run 
-```
-git clone https://github.com/chicagopython/CodingWorkshops.git
-```
+
+	```
+	git clone https://github.com/chicagopython/CodingWorkshops.git
+	```
 3. Navigate to the folder for this challenge:
-```
-cd CodingWorkshops/problems/py101/make_a_game
-``` 
+
+	```
+	cd CodingWorkshops/problems/py101/make_a_game
+	``` 
 4. Run `pipenv install`, which will install all of the libraries we have recommended for this exercise.
 5. After you've installed all of the libraries, run `pipenv shell`, which will turn on a virtual environment running Python 3.7.
 6. Run `python run.py` to see the program in its current state or `pytest -vv` to run all tests.
