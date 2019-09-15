@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>https://chicagopython.github.io/archive.html</loc>
-  <lastmod>2019-09-15T16:25:00Z</lastmod>
+  <lastmod>2019-09-15T16:34:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/categories/</loc>
@@ -87,11 +87,15 @@
  </url>
  <url>
   <loc>https://chicagopython.github.io/index-1.html</loc>
-  <lastmod>2019-09-15T16:19:00Z</lastmod>
+  <lastmod>2019-09-15T16:34:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/</loc>
-  <lastmod>2019-09-15T16:19:00Z</lastmod>
+  <lastmod>2019-09-15T16:34:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://chicagopython.github.io/posts/battery-life/</loc>
+  <lastmod>2019-09-15T16:34:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/chipmunks-data-science/</loc>

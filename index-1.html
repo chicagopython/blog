@@ -32,7 +32,262 @@
     
     
     </ul></nav></header><main id="content"><div class="postindex">
-    <article class="h-entry post-text"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2850&amp;q=80" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/flask-collage-for-project-night-challengers/" class="u-url">Flask Collage for Project Night Challengers</a></h3>
+    <article class="h-entry post-text"><img src="https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2850&amp;q=80" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/unit-testing-and-continuous-integration-with-pytest-travis/" class="u-url">Unit Testing and Continuous Integration with Pytest &amp; Travis</a></h3>
+    <span class="metadata">
+        <time datetime="2019-03-17T01:08:40-05:00">March 17, 2019</time><i class="fas fa-tags"></i>
+        
+      <ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="categories/cat_python-101/" rel="category"> python-101</a></li>
+            <li><a class="tag p-category" href="categories/cicd/" rel="tag">ci/cd</a></li>
+            <li><a class="tag p-category" href="categories/pytest/" rel="tag">pytest</a></li>
+            <li><a class="tag p-category" href="categories/testing/" rel="tag">testing</a></li>
+      </ul></span>
+    <!--
+    <div class="p-summary entry-summary">
+    <div><h2>1. Introduction to PyTest and Continuous Integration</h2>
+<p>Testing and Continuous Integration is at the heart of building good software.
+For this project we will be focus on writing tests for a given problem and use
+travis-ci for running the tests automatically everytime code is checked into Github.</p>
+<p><strong>Objectives</strong>:
+In this project we will explore</p>
+<ul>
+<li>Introduction to unit testing with pytest</li>
+<li>How to setup continuous integration with Github and Travis-CI</li>
+</ul>
+<h3>1.1. Setup Instructions</h3>
+<p>For doing this project you will need a Github account, a Travis-ci.org account and git
+installed locally.</p>
+<h4>1.1.1. Git and Github</h4>
+<p>After completing the steps below you should have a github account and be able to push
+your local changes to this repository to github.</p>
+<ul>
+<li>Follow the setup steps described <a href="https://help.github.com/articles/set-up-git/">here</a></li>
+<li>Read the steps described in <a href="https://help.github.com/articles/fork-a-repo">fork a repo</a></li>
+<li>Use the steps described above to fork this repository <a href="https://github.com/chicagopython/CodingWorkshops">CodingWorkshops</a></li>
+</ul>
+<p>The changes that you make as a part of this exercise, will be pushed to the fork you created for this
+repository.</p>
+<p>In case you have already have created a fork of this repository in your github account, you will
+want to bring it up to date with the recent changes. In that case,
+you will need to do the following:</p>
+<ul>
+<li><a href="https://help.github.com/articles/configuring-a-remote-for-a-fork/">configuring a remote fork</a></li>
+<li><a href="https://help.github.com/articles/syncing-a-fork/">syncing a fok</a></li>
+</ul>
+<h4>1.1.2. Travis setup</h4>
+<p>Continuous Integrration is a critical part of building your software. It automatically runs
+the tests when you check in code into your version control (git) and paves the way for
+continuous delivery, i.e. release often and release early.
+In this section we will set up a Continuous Integration pipeline with Travis-ci.</p>
+<ul>
+<li>First, head over to <a href="https://travis-ci.org/.">Travis-CI.org</a></li>
+<li>Sign in with your Github account, and accept the terms and conditions.</li>
+<li>On success, you will be landing on your profile page that lists the CodingWorkshop repository</li>
+<li>Once you have located the repo, toggle the button next to the repository to enable travis CI</li>
+</ul>
+<p><img alt="travi-build-img" src="/posts/unit-testing-and-continuous-integration-with-pytest-travis/EnableTravisCI.png"></p>
+<p>If you have multiple repositories, you will have to search for the repository by typing in the name
+of the repository (CodingWorkshop) in the search bar on the dashboard page.</p>
+<h3>1.2. Python</h3>
+<p>This project has made no attempt to be compatible with Python 2.7. 😎</p>
+<p>Recommended version: Python 3.6</p>
+<h3>1.3. Quick Git command refresher</h3>
+<p>Below are the few most used git commands</p>
+<pre class="code literal-block"><span></span><span class="nv">git</span> <span class="nv">checkout</span> <span class="nv">master</span>          # <span class="nv">checkout</span> <span class="nv">to</span> <span class="nv">master</span> <span class="nv">branch</span>
+<span class="nv">git</span> <span class="nv">checkout</span> <span class="o">-</span><span class="nv">b</span> <span class="nv">feature</span><span class="o">/</span><span class="nv">cool</span> # <span class="nv">crate</span> <span class="nv">a</span> <span class="nv">new</span> <span class="nv">branch</span> <span class="nv">feature</span><span class="o">/</span><span class="nv">cool</span>
+<span class="nv">git</span> <span class="nv">add</span> <span class="o">-</span><span class="nv">u</span>                   # <span class="nv">stage</span> <span class="nv">all</span> <span class="nv">the</span> <span class="nv">updates</span> <span class="k">for</span> <span class="nv">commit</span>
+<span class="nv">git</span> <span class="nv">commit</span> <span class="o">-</span><span class="nv">am</span> <span class="s2">"</span><span class="s">Adding changes and commiting with a comment</span><span class="s2">"</span>
+<span class="nv">git</span> <span class="nv">push</span> <span class="nv">origin</span> <span class="nv">master</span>       # <span class="nv">push</span> <span class="nv">commits</span> <span class="nv">to</span> <span class="nv">develop</span><span class="o">/</span><span class="nv">ci</span> <span class="nv">branch</span>
+</pre>
+
+
+<p>Note for this exercise, we will be working on the master branch directly. However,
+that is NOT the best practice. Branches are cheap in git, so a new feature or fix
+would first go to a branch, get tested, code reviewed and finally merged to master.</p>
+<h3>1.4. Exercise 0: Project Setup</h3>
+<p>After completing the steps in setup, you should have the cloned versoin of the fork of CodingWorkshop
+repository in your local machine. Lets take the time to look at the structure of this
+project. All code is located under <code>/problems/py101/testing</code> directory. So from your
+terminal go to the directory where you have cloned the repository.</p>
+<pre class="code literal-block"><span></span><span class="n">cd</span> <span class="n">path</span><span class="o">/</span><span class="k">to</span><span class="o">/</span><span class="n">clone</span><span class="o">/</span><span class="n">problems</span><span class="o">/</span><span class="n">py101</span><span class="o">/</span><span class="n">testing</span>
+</pre>
+
+
+<p>Make sure you are in this directory for the remainder of this project.</p>
+<p>Run <code>pwd</code> (<code>cwd</code> for Windows) on the command prompt to find out which directory you
+are on.</p>
+<p>Your output should end in <code>problems/py101/testing</code> and contain the files described
+below.</p>
+<h4>1.4.1. <code>team_organizer.py</code></h4>
+<p>This file is a simplified implementation of the problem of grouping the project
+night attendees into teams of four based on the number of lines of code they have
+written such that in each team, two team members have more lines of code than the other.
+This is the system under test.</p>
+<h4>1.4.2. <code>test_team_organizer.py</code></h4>
+<p>This file is the test for the above module written using Pytest.</p>
+<p>These two files mentioned above are the only two files that we will be making
+modifications to for this project.</p>
+<h4>1.4.3. <code>Makefile</code></h4>
+<p>This file contains the commands that are required building the project.
+You can run <code>make help</code> to see what are the options.</p>
+<h4>1.4.4. <code>Pipfile</code> and <code>Pipfile.lock</code></h4>
+<p>These two files are used by <code>pipenv</code> to create a virtual enviornment that
+isolates all the dependencies of this project from other python projects in your computer.
+Learn more about <a href="https://docs.pipenv.org/">pipenv</a>.</p>
+<h4>1.4.5. <code>pytest.ini</code></h4>
+<p>This file contains the configuration for <code>pytest</code>.</p>
+<h4>1.4.6. <code>travis.yml</code></h4>
+<p>In addition to all the files in this directory, located at the root of the repository,
+is a file called <code>.travis.yml</code>. This is used by the continuous intergration tool travis-ci.
+This contains the information on how to build this python project.</p>
+<h4>1.4.7. Test your setup is working</h4>
+<p>Just make a small edit on this file (README.md), commit and push the changes.</p>
+<pre class="code literal-block"><span></span><span class="n">git</span> <span class="k">commit</span> <span class="o">-</span><span class="n">am</span> <span class="ss">"Demo commit to check everything is working"</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">master</span>
+</pre>
+
+
+<p>If travis-ci.org gets triggered and is all green, your push has successfully ran through
+the linting and testing pipeline.</p>
+<p>To display that badge of honor, click on the build button next on the travis page and select
+Markdown from the second dropdown. Copy the markdown code displayed and add it to the top
+of this file (README.md).</p>
+<p><img alt="travi-build-img" src="/posts/unit-testing-and-continuous-integration-with-pytest-travis/travis-build-img.png"></p>
+<p>If you run into issues, <a href="https://chipy.slack.com/messages/C093F7W8P/details/">ask your question on slack</a></p>
+<h3>1.5. Exercise 1: Build</h3>
+<p>From the <code>/problems/py101/testing</code> directory, run</p>
+<pre class="code literal-block"><span></span><span class="n">make</span>
+</pre>
+
+
+<ul>
+<li>Which packages got installed?</li>
+<li>Which version of python is getting used?</li>
+<li>How many tests pass, skipped and how long did it take?</li>
+<li>Note a new directory <code>htmlcov</code> was created. We will revisit this in Exericse 5.</li>
+<li>What is difference in output when you run the <code>make</code> command again?</li>
+</ul>
+<h3>1.6. Exercise 2: Run the program</h3>
+<p>Start by running</p>
+<pre class="code literal-block"><span></span><span class="n">python</span> <span class="n">team_organizer</span><span class="p">.</span><span class="n">py</span>
+</pre>
+
+
+<p>This will drop you to the program's interactive prompt.
+Below is a sample interaction where users named a, b, c,
+d, e and f are added using the add command.
+Following that, we run the <code>print</code> command where the users
+are grouped in to max of size four where two users have
+written less lines of code than the others.</p>
+<pre class="code literal-block"><span></span>```
+<span class="nv">t</span> <span class="ss">(</span><span class="nv">master</span> <span class="o">*</span><span class="ss">)</span> <span class="nv">testing</span> $ <span class="nv">python</span> <span class="nv">team_organizer</span>.<span class="nv">py</span>
+<span class="nv">Welcome</span> <span class="nv">to</span> <span class="nv">Chicago</span> <span class="nv">Python</span> <span class="nv">Project</span> <span class="nv">Night</span> <span class="nv">Team</span> <span class="nv">Organizer</span>
+<span class="nv">org</span><span class="o">&gt;</span> <span class="nv">help</span>
+<span class="nv">help</span>
+
+<span class="nv">Documented</span> <span class="nv">commands</span> <span class="ss">(</span><span class="nv">type</span> <span class="nv">help</span> <span class="o">&lt;</span><span class="nv">topic</span><span class="o">&gt;</span><span class="ss">)</span>:
+<span class="o">========================================</span>
+<span class="nv">add</span>  <span class="nv">help</span>  <span class="nv">print</span>
+
+<span class="nv">Undocumented</span> <span class="nv">commands</span>:
+<span class="o">======================</span>
+<span class="k">exit</span>
+
+<span class="nv">org</span><span class="o">&gt;</span> <span class="nv">help</span> <span class="nv">add</span>
+<span class="nv">help</span> <span class="nv">add</span>
+<span class="nv">Adds</span> <span class="nv">a</span> <span class="nv">new</span> <span class="nv">user</span>. <span class="nv">Needs</span> <span class="nv">Name</span> <span class="nv">slackhandle</span> <span class="nv">number_of_lines</span> <span class="nv">separated</span> <span class="nv">by</span> <span class="nv">space</span>
+<span class="nv">org</span><span class="o">&gt;</span> <span class="nv">add</span> <span class="nv">a</span> @<span class="nv">a</span> <span class="mi">100</span>
+<span class="nv">add</span> <span class="nv">a</span> @<span class="nv">a</span> <span class="mi">100</span>
+<span class="nv">org</span><span class="o">&gt;</span> <span class="nv">add</span> <span class="nv">b</span> @<span class="nv">b</span> <span class="mi">200</span>
+<span class="nv">add</span> <span class="nv">b</span> @<span class="nv">b</span> <span class="mi">200</span>
+<span class="nv">org</span><span class="o">&gt;</span> <span class="nv">add</span> <span class="nv">c</span> @<span class="nv">c</span> <span class="mi">300</span>
+<span class="nv">add</span> <span class="nv">c</span> @<span class="nv">c</span> <span class="mi">300</span>
+<span class="nv">org</span><span class="o">&gt;</span> <span class="nv">add</span> <span class="nv">d</span> @<span class="nv">d</span> <span class="mi">400</span>
+<span class="nv">add</span> <span class="nv">d</span> @<span class="nv">d</span> <span class="mi">400</span>
+<span class="nv">org</span><span class="o">&gt;</span> <span class="nv">add</span> <span class="nv">e</span> @<span class="nv">e</span> <span class="mi">500</span>
+<span class="nv">add</span> <span class="nv">e</span> @<span class="nv">e</span> <span class="mi">500</span>
+<span class="nv">org</span><span class="o">&gt;</span> <span class="nv">add</span> <span class="nv">f</span> @<span class="nv">f</span> <span class="mi">50</span>
+<span class="nv">add</span> <span class="nv">f</span> @<span class="nv">f</span> <span class="mi">50</span>
+<span class="nv">org</span><span class="o">&gt;</span> <span class="nv">print</span>
+<span class="nv">print</span>
+[<span class="s1">'</span><span class="s">f, a, e, d</span><span class="s1">'</span>]
+<span class="nv">b</span>, <span class="nv">c</span>
+<span class="nv">org</span><span class="o">&gt;</span>
+```
+</pre>
+
+
+<h3>1.7. Exercise 3: Running the tests</h3>
+<p>Run</p>
+<pre class="code literal-block"><span></span><span class="n">make</span> <span class="n">test</span>
+</pre>
+
+
+<p>This will run the tests in the <code>test_team_organizer.py</code> file.</p>
+<p>Run</p>
+<pre class="code literal-block"><span></span><span class="n">pipenv</span> <span class="n">run</span> <span class="n">pytest</span> <span class="c1">--help</span>
+</pre>
+
+
+<p>Now check the flags that are present in the <code>pytest.ini</code> file against
+the output of the <code>--help</code> command to see what each one does.</p>
+<h3>1.8. Execrise 4: Coverage</h3>
+<p>When we first ran <code>make</code>, <code>pytest</code> created a directory called <code>htmlcov</code>
+that show you the coverage information about <code>team_organizr,py</code> code.
+Open the <code>index.html</code> file inside <code>htmlcov</code> to check the lines that
+has not been covered by the tests in the <code>test_team_organizer.py</code>.</p>
+<p>What is the % coverage of the code at this point?
+Click on <code>team_organizer.py</code> to see which lines are outside coverage.</p>
+<h3>1.9. Exercise 6: Fail, Fix, Pass</h3>
+<p>You are now all set to fix the tests. Goto <code>test_team_organizer.py</code> and
+find <code>test_add_a_person_with_lower_than_median</code> test. Notice this test is
+skipped when run with pytest. To fix it remove the decorator <code>pytest.mark.skip</code>
+and run <code>pytest</code> again. Commit the code and run</p>
+<pre class="code literal-block"><span></span><span class="n">make</span> <span class="n">test</span>
+</pre>
+
+
+<p>Make the necessary changes so that the test passes.</p>
+<pre class="code literal-block"><span></span><span class="n">git</span> <span class="k">commit</span> <span class="o">-</span><span class="n">am</span> <span class="ss">"Fixed failing test"</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">master</span>
+</pre>
+
+
+<p>Go to travis-ci.org and inspect the output before and after fixing the test.
+What is the coverage value at this point?</p>
+<h3>1.10. Exercise 7: Fixtures</h3>
+<p>The purpose of test fixtures is to provide a fixed baseline upon which tests can
+reliably and repeatedly execute.</p>
+<p>We are making use of two fixtures - one factory method <code>person</code> that churns out Persons
+as needed by <code>organizer</code> fixture.</p>
+<p><code>test_count_number_of_teams</code> is broken as well. How can you fix it?</p>
+<p>Tip: To run a singe test, use</p>
+<pre class="code literal-block"><span></span><span class="n">pipenv</span> <span class="n">run</span> <span class="n">pytest</span> <span class="o">-</span><span class="n">k</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">-</span><span class="k">of</span><span class="o">-</span><span class="n">test</span><span class="o">&gt;</span>
+</pre>
+
+
+<h3>1.11. Exercise 8: Implement the tests</h3>
+<p>The two functions below have been left for you to implement.</p>
+<ul>
+<li>test_add_a_person_who_has_never_written_code_before</li>
+<li>test_add_two_person_with_same_name_but_different_slack_handles</li>
+</ul>
+<p>Note the names of the tests are long and verbose to give you an idea of what
+what exactly you need to test.</p>
+<p>Does implementing these tests have any effect on coverage results?
+Would it be still useful if there is no improvement in coverage?</p>
+<h3>1.12. Exercise 9: Implement the tests first, then implement the feature</h3>
+<p>For the following two tests, first implement the test that asserts the
+expected behavior. From the test name it should be evident from the test name.
+If you run the tests at this point, they should fail. Then go back to
+<code>team_organizer.py</code> and implement the feature by changing the code.
+Once your implementation is complete, run <code>make test</code>.</p>
+<ul>
+<li>test_adding_person_with_negative_lines_of_code_throws_exception</li>
+<li>test_handle_duplicate_additions</li>
+</ul></div>    <hr/>
+    </div>-->
+    </article><article class="h-entry post-text"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2850&amp;q=80" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/flask-collage-for-project-night-challengers/" class="u-url">Flask Collage for Project Night Challengers</a></h3>
     <span class="metadata">
         <time datetime="2019-03-17T00:20:18-05:00">March 17, 2019</time><i class="fas fa-tags"></i>
         
