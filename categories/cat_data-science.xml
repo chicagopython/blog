@@ -3,7 +3,57 @@
 &lt;a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html"&gt;
 &lt;img alt="Gnu Public License version 3.0"
 style="border-width:0;"
-src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Sun, 15 Sep 2019 16:34:38 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>GitHub Jobs API</title><link>https://chicagopython.github.io/posts/github-jobs-api/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Project Night Purpose&lt;/h3&gt;
+src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Thu, 17 Oct 2019 22:49:04 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Predict Home Credit Defaults</title><link>https://chicagopython.github.io/posts/home-credit-default-risk/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Overview&lt;/h3&gt;
+&lt;p&gt;Many people struggle to get loans due to insufficient or non-existent credit histories. And, unfortunately, this population is often taken advantage of by untrustworthy lenders.&lt;/p&gt;
+&lt;p&gt;Tonight's project examines a dataset from a real bank that focuses on lending to people with little or no credit history. Their goal is to ensure that clients capable of repayment are not rejected. You will explore the dataset and make predictions whether someone will default or not, based on their application for a loan.&lt;/p&gt;
+&lt;h3&gt;Your Task&lt;/h3&gt;
+&lt;p&gt;Your goal is to train a binary classification model on the data in &lt;code&gt;default_risk_train_data.csv&lt;/code&gt; that optimized area under the ROC curve between the predicted probability and the observed target. For each &lt;code&gt;SK_ID_CURR&lt;/code&gt; in &lt;code&gt;default_risk_train_data.csv&lt;/code&gt;, you must predict a probability for the TARGET variable. Your deliverable to the bank will be a CSV with predictions for each SK_ID_CURR in the test set.&lt;/p&gt;
+&lt;h3&gt;Setup&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;For this challenge you will need Python 3.7, pipenv, and git installed. If you're not familiar with pipenv, it's a packaing tool for Python that effectively replaced the pip+virtualenv+requirements.txt workflow. If you already have pip installed, the easiest way to install pipenv is with &lt;code&gt;pip install --user pipenv&lt;/code&gt;; however, a better way for Mac/Linux Homebrew users is to instead run &lt;code&gt;brew install pipenv&lt;/code&gt;. More options can be found &lt;a href="https://pipenv-fork.readthedocs.io/en/latest/install.html#installing-pipenv"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The project is in the ChiPy project night repo. If you do not have the repository already, run &lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone https://github.com/chicagopython/CodingWorkshops.git&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Navigate to the folder for this challenge:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;cd CodingWorkshops/problems/data_science/home_credit_default_risk&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run &lt;code&gt;pipenv install&lt;/code&gt;, which will install all of the libraries we have recommended for this exercise.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;After you've installed all of the libraries, run &lt;code&gt;pipenv shell&lt;/code&gt;, which will turn on a virtual environment running Python 3.7.&lt;/li&gt;
+&lt;li&gt;From within the shell, run &lt;code&gt;jupyter lab default_risk.ipynb&lt;/code&gt; to launch the pre-started notebook.&lt;/li&gt;
+&lt;li&gt;To exit the pipenv shell when you are done, simply type &lt;code&gt;exit&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;What's in this repository?&lt;/h3&gt;
+&lt;p&gt;There are three data files, one metadata file, and a jupyter notebook.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;default_risk_train_data.csv -- The data you will use to train your models. Includes all potential features and the target.&lt;/li&gt;
+&lt;li&gt;default_risk_test_data.csv -- The data you will use to test your models. Includes all potential features, but NOT the target (which theoretically reflect unknown future default status).&lt;/li&gt;
+&lt;li&gt;perfect_deliverable.csv -- The CSV with perfect predictions for each SK_ID_CURR in the test set. You should only use this at the very end to test the model and NEVER factor it into training your model. To prevent overfitting, you should test models sparingly. This is the same format the final deliverable should be submitted to the bank in.&lt;/li&gt;
+&lt;li&gt;default_risk_column_descriptions.csv -- Descriptive metadata for the columns found in the train and test datasets.&lt;/li&gt;
+&lt;li&gt;default_risk.ipynb -- The jupyer notebook where all coding should be completed, unless you opt to work in a different environment.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This project is based on a Kaggle competition, with a subset of the data provided for the sake of download size. Note that this data has not been cleaned for you, and you should expect to deal with real world data issues, such as missing values, bad values, class imbalances, etc.&lt;/p&gt;
+&lt;h3&gt;So what should we do?&lt;/h3&gt;
+&lt;p&gt;To successfully complete this challenge, you'll need to:
+    1. become an expert on the data,
+    2. clean the data,
+    3. engineer the features for your model(s),
+    4. test/validate your models,
+    5. generate the deliverable the bank expects.&lt;/p&gt;
+&lt;p&gt;Here are some tips/questions to consider along the way:
+- Identify which columns are numerical and which are categorical
+- Which columns are missing values, and what should be done about the missing values?
+- Which features are relevant and why?
+- Which features might you want to remove?
+- What new features might you create?
+- How will you deal with categorical data (e.g. Label Encoding, One-Hot encoding, etc).
+- Is there any class imbalance?
+- What models will you try? sklearn has been installed in your environment; and &lt;a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html"&gt;linear regression&lt;/a&gt;, &lt;a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression"&gt;logistic regression&lt;/a&gt;, and &lt;a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn.ensemble.RandomForestClassifier"&gt;random forest&lt;/a&gt; models have been imported in the given notebook. Feel free, however, to use the library/models of your choice.&lt;/p&gt;&lt;/div&gt;</description><guid>https://chicagopython.github.io/posts/home-credit-default-risk/</guid><pubDate>Thu, 17 Oct 2019 11:00:00 GMT</pubDate></item><item><title>GitHub Jobs API</title><link>https://chicagopython.github.io/posts/github-jobs-api/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Project Night Purpose&lt;/h3&gt;
 &lt;p&gt;All of us need to look for a job at some point; and most every job board has its own API for users to post and pull data (though usually they charge money for access). The &lt;a href="https://jobs.github.com"&gt;GitHub Jobs page&lt;/a&gt; is a great simple API for a first look at this kind of data acqusition and analysis.&lt;/p&gt;
 &lt;p&gt;Tonight's project uses the very popular Python HTTP library &lt;a href="https://2.python-requests.org/en/master/"&gt;requests&lt;/a&gt; along with &lt;a href="https://docs.python.org/3/library/json.html"&gt;json&lt;/a&gt; from the standard library. You will explore the data in the jobs API with the intent of learning something about the current job market for devs. There are a ton of caveats here: for example,&lt;/p&gt;
 &lt;ul&gt;

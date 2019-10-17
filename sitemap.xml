@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>https://chicagopython.github.io/archive.html</loc>
-  <lastmod>2019-09-15T16:34:00Z</lastmod>
+  <lastmod>2019-10-17T22:49:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/categories/</loc>
@@ -87,11 +87,11 @@
  </url>
  <url>
   <loc>https://chicagopython.github.io/index-1.html</loc>
-  <lastmod>2019-09-15T16:34:00Z</lastmod>
+  <lastmod>2019-10-17T22:49:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/</loc>
-  <lastmod>2019-09-15T16:34:00Z</lastmod>
+  <lastmod>2019-10-17T22:49:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/battery-life/</loc>
@@ -132,6 +132,10 @@
  <url>
   <loc>https://chicagopython.github.io/posts/github-jobs-api/</loc>
   <lastmod>2019-09-15T16:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://chicagopython.github.io/posts/home-credit-default-risk/</loc>
+  <lastmod>2019-10-17T22:49:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/introduction-to-text-analysis-with-sklearn/</loc>

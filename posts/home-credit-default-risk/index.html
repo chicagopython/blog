@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html prefix="            og: http://ogp.me/ns# article: http://ogp.me/ns/article#     " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Predict Home Credit Defaults | Python Project Night Challenges</title>
+<link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#18354c">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://chicagopython.github.io/posts/home-credit-default-risk/">
+<link rel="icon" href="../../favicon.ico" sizes="16x16">
+<link rel="manifest" href="../../site.webmanifest">
+<link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#1f91c2">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="theme-color" content="#cceeff">
+<!-- favicons generated using http://realfavicongenerator.net/ --><!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<meta name="author" content="Chicago Python User Group">
+<link rel="prev" href="../make-a-game/" title="Make a Game" type="text/html">
+<meta name="twitter:card" content="summary">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+         
+    <header id="header" class="hidden-print"><nav id="menu"><a href="https://chicagopython.github.io/" title="Python Project Night Challenges" rel="home">
+        <img src="../../assets/img/chipy-chipmunk.png" alt="Python Project Night Challenges" id="logo" aria-hidden>
+          Python Project Night Challenges
+    </a>
+
+    <ul>
+<li><a href="../../categories/">Categories</a></li>
+                <li><a href="../../about/">About</a></li>
+    
+    
+    </ul></nav></header><main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><div class="metadata">
+              <p class="commentline">
+        
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/home-credit-default-risk.html">Comments</a>
+
+
+          
+
+        </p>
+</div>
+        
+    <h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Predict Home Credit Defaults</a></h1>
+
+        <time datetime="2019-10-17T06:00:00-05:00" itemprop="datePublished">October 17, 2019</time><a href="../../categories/cat_data-science">data-science</a>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<h3>Overview</h3>
+<p>Many people struggle to get loans due to insufficient or non-existent credit histories. And, unfortunately, this population is often taken advantage of by untrustworthy lenders.</p>
+<p>Tonight's project examines a dataset from a real bank that focuses on lending to people with little or no credit history. Their goal is to ensure that clients capable of repayment are not rejected. You will explore the dataset and make predictions whether someone will default or not, based on their application for a loan.</p>
+<h3>Your Task</h3>
+<p>Your goal is to train a binary classification model on the data in <code>default_risk_train_data.csv</code> that optimized area under the ROC curve between the predicted probability and the observed target. For each <code>SK_ID_CURR</code> in <code>default_risk_train_data.csv</code>, you must predict a probability for the TARGET variable. Your deliverable to the bank will be a CSV with predictions for each SK_ID_CURR in the test set.</p>
+<h3>Setup</h3>
+<ol>
+<li>
+<p>For this challenge you will need Python 3.7, pipenv, and git installed. If you're not familiar with pipenv, it's a packaing tool for Python that effectively replaced the pip+virtualenv+requirements.txt workflow. If you already have pip installed, the easiest way to install pipenv is with <code>pip install --user pipenv</code>; however, a better way for Mac/Linux Homebrew users is to instead run <code>brew install pipenv</code>. More options can be found <a href="https://pipenv-fork.readthedocs.io/en/latest/install.html#installing-pipenv">here</a>.</p>
+</li>
+<li>
+<p>The project is in the ChiPy project night repo. If you do not have the repository already, run </p>
+<p><code>git clone https://github.com/chicagopython/CodingWorkshops.git</code></p>
+</li>
+<li>
+<p>Navigate to the folder for this challenge:</p>
+<p><code>cd CodingWorkshops/problems/data_science/home_credit_default_risk</code></p>
+</li>
+<li>
+<p>Run <code>pipenv install</code>, which will install all of the libraries we have recommended for this exercise.</p>
+</li>
+<li>After you've installed all of the libraries, run <code>pipenv shell</code>, which will turn on a virtual environment running Python 3.7.</li>
+<li>From within the shell, run <code>jupyter lab default_risk.ipynb</code> to launch the pre-started notebook.</li>
+<li>To exit the pipenv shell when you are done, simply type <code>exit</code>.</li>
+</ol>
+<h3>What's in this repository?</h3>
+<p>There are three data files, one metadata file, and a jupyter notebook.</p>
+<ol>
+<li>default_risk_train_data.csv -- The data you will use to train your models. Includes all potential features and the target.</li>
+<li>default_risk_test_data.csv -- The data you will use to test your models. Includes all potential features, but NOT the target (which theoretically reflect unknown future default status).</li>
+<li>perfect_deliverable.csv -- The CSV with perfect predictions for each SK_ID_CURR in the test set. You should only use this at the very end to test the model and NEVER factor it into training your model. To prevent overfitting, you should test models sparingly. This is the same format the final deliverable should be submitted to the bank in.</li>
+<li>default_risk_column_descriptions.csv -- Descriptive metadata for the columns found in the train and test datasets.</li>
+<li>default_risk.ipynb -- The jupyer notebook where all coding should be completed, unless you opt to work in a different environment.</li>
+</ol>
+<p>This project is based on a Kaggle competition, with a subset of the data provided for the sake of download size. Note that this data has not been cleaned for you, and you should expect to deal with real world data issues, such as missing values, bad values, class imbalances, etc.</p>
+<h3>So what should we do?</h3>
+<p>To successfully complete this challenge, you'll need to:
+    1. become an expert on the data,
+    2. clean the data,
+    3. engineer the features for your model(s),
+    4. test/validate your models,
+    5. generate the deliverable the bank expects.</p>
+<p>Here are some tips/questions to consider along the way:
+- Identify which columns are numerical and which are categorical
+- Which columns are missing values, and what should be done about the missing values?
+- Which features are relevant and why?
+- Which features might you want to remove?
+- What new features might you create?
+- How will you deal with categorical data (e.g. Label Encoding, One-Hot encoding, etc).
+- Is there any class imbalance?
+- What models will you try? sklearn has been installed in your environment; and <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html">linear regression</a>, <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html#sklearn.linear_model.LogisticRegression">logistic regression</a>, and <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn.ensemble.RandomForestClassifier">random forest</a> models have been imported in the given notebook. Feel free, however, to use the library/models of your choice.</p>
+</div>
+    </div>
+    <aside class="postpromonav"><div>
+    <span class="hidden-print">
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></span>
+    <span class="hidden-print">
+      <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script><script type="IN/Share" data-url="https://chicagopython.github.io/posts/home-credit-default-risk/"></script></span>
+    </div>
+    <nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/cat_data-science/" rel="category"> data-science</a></li>
+      </ul>
+<ul class="pager hidden-print">
+<li>
+            <a href="../make-a-game/" rel="prev" class="previous" title="Make a Game"><span aria-hidden="true">‹ </span>Older</a>
+        </li>
+        <li>
+            <span class="disabled">Newer<span aria-hidden="true"> ›</span></span>
+        </li>
+    </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="chicagopython-github-io",
+            disqus_url="https://chicagopython.github.io/posts/home-credit-default-risk/",
+        disqus_title="Predict Home Credit Defaults",
+        disqus_identifier="cache/posts/home-credit-default-risk.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="chicagopython-github-io";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script></main><footer id="footer"><p class="light-sans">© Chicago Python User Group · Subscribe via <a href="../../rss.xml">RSS</a> · Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a> · 
+<a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html">
+<img alt="Gnu Public License version 3.0" style="border-width:0;" src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"></a></p>
+            
+        </footer>
+</body>
+</html>
