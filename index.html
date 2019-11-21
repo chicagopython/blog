@@ -17,7 +17,7 @@
 <meta name="theme-color" content="#cceeff">
 <!-- favicons generated using http://realfavicongenerator.net/ --><link rel="next" href="index-1.html" type="text/html">
 <!--[if lt IE 9]><script src="assets/js/html5shiv-printshiv.min.js"></script><![endif]--><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="prefetch" href="posts/home-credit-default-risk/" type="text/html">
+<link rel="prefetch" href="posts/django-rest-framework/" type="text/html">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-beta/katex.min.css" integrity="sha256-sI/DdD47R/Sa54XZDNFjRWlS+Dv8MC5xfkqQLRh0Jes=" crossorigin="anonymous">
 </head>
 <body>
@@ -34,7 +34,104 @@
     
     
     </ul></nav></header><main id="content"><div class="postindex">
-    <article class="h-entry post-text"><img src="https://github.com/pandas-dev/pandas/blob/master/doc/logo/pandas_logo.png" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/home-credit-default-risk/" class="u-url">Predict Home Credit Defaults</a></h3>
+    <article class="h-entry post-text"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2850&amp;q=80" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/django-rest-framework/" class="u-url">Build an API with Django REST Framework</a></h3>
+    <span class="metadata">
+        <time datetime="2019-11-21T06:00:00-05:00">November 21, 2019</time><i class="fas fa-tags"></i>
+        
+      <ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="categories/cat_web-dev/" rel="category"> web-dev</a></li>
+      </ul></span>
+    <!--
+    <div class="p-summary entry-summary">
+    <div><h2>Build an API with Django REST Framework</h2>
+<h3>Overview</h3>
+<p>For this project, we will be creating a functioning REST API. REST APIs can help distribute useful information via GET requests, as well as post and alter databases in a user friendly fashion.</p>
+<p>This project will revolve around using Django and Django's REST framework to build an API for the dataset of your choice. Django is a full web framework capable of handling both back and front end portions of a web app; and the Django team has created great resources to make setting up a Django app quick and easy.</p>
+<p>While the project is structured around Django, feel free to use flask instead, if you're more comfortable.</p>
+<h3>Environment Setup</h3>
+<p>To avoid bloating of your primary working environment, we strongly recommend creating a virtual environment. The requirements.txt file includes the required packages, and the included versions have been tested for our needs - use different versions at your own risk.</p>
+<p>We also strong recommend using <a href="https://atom.io/">Atom</a> or <a href="https://www.sublimetext.com/3">Sublime Text</a> as your text editor. This project has also NOT been tested using Jupyter Notebook, PyCharm,
+Spider, or any other ide/text editor/programming environment.</p>
+<ol>
+<li>
+<p>For this challenge you will need Python 3.7, pipenv, and git installed. If you're not familiar with pipenv, it's a packaing tool for Python that effectively replaced the pip+virtualenv+requirements.txt workflow. If you already have pip installed, the easiest way to install pipenv is with <code>pip install --user pipenv</code>; however, a better way for Mac/Linux Homebrew users is to instead run <code>brew install pipenv</code>. More options can be found <a href="https://pipenv-fork.readthedocs.io/en/latest/install.html#installing-pipenv">here</a>.</p>
+</li>
+<li>
+<p>The project is in the ChiPy project night repo. If you do not have the repository already, run </p>
+<p><code>git clone https://github.com/chicagopython/CodingWorkshops.git</code></p>
+</li>
+<li>
+<p>Navigate to the folder for this challenge:</p>
+<p><code>cd CodingWorkshops/problems/webdev/django_rest_framework_api</code></p>
+</li>
+<li>
+<p>Run <code>pipenv install</code>, which will install all of the libraries we have recommended for this exercise.</p>
+</li>
+<li>After you've installed all of the libraries, run <code>pipenv shell</code>, which will turn on a virtual environment running Python 3.7.</li>
+<li>To exit the pipenv shell when you are done, simply type <code>exit</code>.</li>
+</ol>
+<h3>Instructions</h3>
+<h4>Find a Database</h4>
+<ul>
+<li>Before advancing, find a database that you wish to use for a REST API. It helps if the data is something you are interested in, but don't waste too much time on this part. <a href="https://www.kaggle.com/tags/databases">Kaggle</a> has a great selection of publicly available databases. If you are looking for something specific, Google has a stellar <a href="https://toolbox.google.com/datasetsearch">database search</a> feature.</li>
+</ul>
+<h4>Create Your First App</h4>
+<ul>
+<li>Create a Django app in a local directory of your choosing. Feel free to use the <a href="/posts/django-rest-framework/(https:/docs.djangoproject.com/en/2.2/intro/tutorial01/)">Django tutorial</a> to accomplish this, but please don't call your app the standard Polls App. Create a unique application inside of your Django directory to handle your database and models. Make sure the application is configured in your settings.py file!</li>
+</ul>
+<h4>Create a Django Model</h4>
+<ul>
+<li>Create a Django model custom to your database. Feel free to take liberties like creating relational databases for your models. The model field types should match the intended fields of your database. Make sure to migrate your Django model when you are finished!</li>
+</ul>
+<h4>Configure the REST framework</h4>
+<ul>
+<li>Make sure you appropriately configure Django REST Framework in your settings.py file. If you forget this step, Django to recognize the add on.</li>
+</ul>
+<h4>Serialization</h4>
+<ul>
+<li>Before creating a url or view, serialize your data. This allows Django to render data into a JSON format. Make sure you designate the table (model) and fields (features) you wish to include in your REST API.</li>
+</ul>
+<h4>Create a View</h4>
+<ul>
+<li>Use the standard Django REST framework to create your Django view. Django REST framework allows you to interact with your API in both JSON and a preset interactive template. If you feel like going the extra mile, make your database queryable to gather the information you need.</li>
+</ul>
+<h4>Designating a URL</h4>
+<ul>
+<li>Finally, designate url addresses where your page views can be found. Make sure to create a URL scheme that makes sense to how the intended user will interact with your API.</li>
+</ul>
+<h4>Running your Server</h4>
+<ul>
+<li>At this point it is time to test your API. This can be accomplished by the manage.py runserver command. Django's default location is localhost:8000/. From there, follow the naming scheme you created in your urls. Feel free to play with your API by using those filterable features you created!</li>
+</ul>
+<h3>Useful Weblinks</h3>
+<ul>
+<li>
+<p>Django Startup and Features</p>
+<p>https://docs.djangoproject.com/en/2.2/intro/tutorial01/</p>
+<p>https://docs.djangoproject.com/en/2.2/ref/applications/</p>
+</li>
+<li>
+<p>Django Models</p>
+<p>https://docs.djangoproject.com/en/2.2/ref/models/fields/</p>
+<p>https://docs.djangoproject.com/en/2.2/topics/db/models/#automatic-primary-key-fields</p>
+</li>
+<li>
+<p>Django REST Framework</p>
+<p>https://www.django-rest-framework.org/#installation</p>
+</li>
+<li>
+<p>Serialization</p>
+<p>https://www.django-rest-framework.org/api-guide/serializers/#modelserializer</p>
+<p>https://www.django-rest-framework.org/api-guide/serializers/#specifying-read-only-fields</p>
+</li>
+<li>
+<p>Views and URLS</p>
+<p>https://www.django-rest-framework.org/tutorial/quickstart/#views</p>
+<p>https://www.django-rest-framework.org/tutorial/quickstart/#urls</p>
+</li>
+</ul></div>    <hr/>
+    </div>-->
+    </article><article class="h-entry post-text"><img src="https://github.com/pandas-dev/pandas/blob/master/doc/logo/pandas_logo.png" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/home-credit-default-risk/" class="u-url">Predict Home Credit Defaults</a></h3>
     <span class="metadata">
         <time datetime="2019-10-17T06:00:00-05:00">October 17, 2019</time><i class="fas fa-tags"></i>
         
@@ -1665,682 +1762,6 @@ Also we need today's event id. The event id created under Chicago Pythonistas is
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></div>    <hr/>
-    </div>-->
-    </article><article class="h-entry post-text"><img src="assets/img/team-sales-business-meeting_4460x4460.jpg" alt="article thumbnail"><h3 class="p-name entry-title"><a href="posts/introduction-to-text-analysis-with-sklearn/" class="u-url">Introduction to Text Analysis with sklearn</a></h3>
-    <span class="metadata">
-        <time datetime="2019-03-17T11:43:40-05:00">March 17, 2019</time><i class="fas fa-tags"></i>
-        
-
-    </span>
-    <!--
-    <div class="p-summary entry-summary">
-    <div><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Introduction-to-pandas-and-sklearn">Introduction to pandas and sklearn<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Introduction-to-pandas-and-sklearn">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Recommendation-System">Recommendation System<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Recommendation-System">¶</a></h4><p>We live in a world surrounded by recommendation systems - our shopping habbits, our reading habits, political opinions are heavily influenced by recommendation algorithms. So lets take a closer look at how to build a basic recommendation system.</p>
-<p>Simply put a recommendation system learns from your previous behavior and tries to recommend items that are similar to your previous choices. While there are a multitude of approaches for building recommendation systems, we will take a simple approach that is easy to understand and has a reasonable performance.</p>
-<p>For this exercise we will build a recommendation system that predicts which talks you'll enjoy at a conference - specifically our favorite conference Pycon!</p>
-<h4 id="Before-you-proceed">Before you proceed<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Before-you-proceed">¶</a></h4><p>This project is still in alpha stage. Bugs, typos, spelling, grammar, terminologies - there's every scope of finding bugs. If you have found one - <a href="https://github.com/chicagopython/CodingWorkshops/issues/new">open an issue on github</a>. Pull Requests with corrections, fixes and enhancements will be received with open arms! Don't forget to add yourself to the <a href="https://github.com/chicagopython/CodingWorkshops/blob/master/README.md">list of contributors to this project</a>.</p>
-<h5 id="Recommendation-for-Pycon-talks">Recommendation for Pycon talks<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Recommendation-for-Pycon-talks">¶</a></h5><p>Take a look at 2018 <a href="https://us.pycon.org/2018/schedule/">schedule</a>.
-With 32 tuotorials, 12 sponsor workshops, 16 talks at the education summit, and 95 talks at the main conference - Pycon has a lot to offer. Reading through all the talk descriptions and filtering out the ones that you should go to is a tedious process. 
-Lets build a recommendation system that recommends talks from Pycon 2018, based on the ones that a person went to in 2017. This way the attendee does not waste any time deciding which talk to go to and spend more time making friends on the hallway track!</p>
-<p>We will be using <a href="https://pandas.pydata.org/"><code>pandas</code></a> and <a href="http://scikit-learn.org/"><code>scikit-learn</code></a> to build the recommnedation system using the text description of talks.</p>
-<h4 id="Definitions">Definitions<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Definitions">¶</a></h4><h5 id="Documents">Documents<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Documents">¶</a></h5><p>In our example the talk descriptions make up the documents</p>
-<h5 id="Class">Class<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Class">¶</a></h5><p>We have two classes to classify our documents</p>
-<ul>
-<li>The talks that the attendee would like to see "in person". Denoted by 1</li>
-<li>The talks that the attendee would watch "later online". Denoted by 0</li>
-</ul>
-<p>A talk description is labeled 0 would mean the user has chosen to watch it later and a label 1 would mean the user has chose to watch it in person.</p>
-<h4 id="Supervised-Learning">Supervised Learning<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Supervised-Learning">¶</a></h4><p>In Supervised learning we inspect each observation in a given dataset and manually label them. These manually labeled data is used to construct a model that can predict the labels on new data. We will use a Supervised Learning technique called Support Vector Machines.</p>
-<p>In unsupervised learning we do not need any manual labeling. The recommendation system finds the pattern in the data to build a model that can be used for recommendation.</p>
-<h4 id="Dataset">Dataset<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Dataset">¶</a></h4><p>The dataset contains the talk description and speaker details from Pycon 2017 and 2018. All the 2017 talk data has been labeled by a user who has been to Pycon 2017.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Required-packages-installation">Required packages installation<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Required-packages-installation">¶</a></h4><p>The following packages are needed for this project. Execute the cell below to install them.</p>
-
-<pre><code>numpy==1.14.2
-pandas==0.22.0
-python-dateutil==2.7.2
-pytz==2018.4
-scikit-learn==0.19.1
-scipy==1.0.1
-six==1.11.0
-sklearn==0.0</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install -r requirements.txt
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercise-A:-Load-the-data">Exercise A: Load the data<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Exercise-A:-Load-the-data">¶</a></h4><p>The data directory contains the snapshot of one such user's labeling - lets load that up and start with our analysis.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [3]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'talks.csv'</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[3]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>id</th>
-      <th>title</th>
-      <th>description</th>
-      <th>presenters</th>
-      <th>date_created</th>
-      <th>date_modified</th>
-      <th>location</th>
-      <th>talk_dt</th>
-      <th>year</th>
-      <th>label</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>5 ways to deploy your Python web app in 2017</td>
-      <td>You’ve built a fine Python web application and...</td>
-      <td>Andrew T. Baker</td>
-      <td>2018-04-19 00:59:20.151875</td>
-      <td>2018-04-19 00:59:20.151875</td>
-      <td>Portland Ballroom 252–253</td>
-      <td>2017-05-08 15:15:00.000000</td>
-      <td>2017</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>A gentle introduction to deep learning with Te...</td>
-      <td>Deep learning's explosion of spectacular resul...</td>
-      <td>Michelle Fullwood</td>
-      <td>2018-04-19 00:59:20.158338</td>
-      <td>2018-04-19 00:59:20.158338</td>
-      <td>Oregon Ballroom 203–204</td>
-      <td>2017-05-08 16:15:00.000000</td>
-      <td>2017</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>aiosmtpd - A better asyncio based SMTP server</td>
-      <td>smtpd.py has been in the standard library for ...</td>
-      <td>Barry Warsaw</td>
-      <td>2018-04-19 00:59:20.161866</td>
-      <td>2018-04-19 00:59:20.161866</td>
-      <td>Oregon Ballroom 203–204</td>
-      <td>2017-05-08 14:30:00.000000</td>
-      <td>2017</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>Algorithmic Music Generation</td>
-      <td>Music is mainly an artistic act of inspired cr...</td>
-      <td>Padmaja V Bhagwat</td>
-      <td>2018-04-19 00:59:20.165526</td>
-      <td>2018-04-19 00:59:20.165526</td>
-      <td>Portland Ballroom 251 &amp; 258</td>
-      <td>2017-05-08 17:10:00.000000</td>
-      <td>2017</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>An Introduction to Reinforcement Learning</td>
-      <td>Reinforcement learning (RL) is a subfield of m...</td>
-      <td>Jessica Forde</td>
-      <td>2018-04-19 00:59:20.169075</td>
-      <td>2018-04-19 00:59:20.169075</td>
-      <td>Portland Ballroom 252–253</td>
-      <td>2017-05-08 13:40:00.000000</td>
-      <td>2017</td>
-      <td>0.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Here is a brief description of the interesting fields.</p>
-<table>
-<thead><tr>
-<th>variable</th>
-<th>description  </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>title</code></td>
-<td>Title of the talk</td>
-</tr>
-<tr>
-<td><code>description</code></td>
-<td>Description of the talk</td>
-</tr>
-<tr>
-<td><code>year</code></td>
-<td>Is it a <code>2017</code> talk or <code>2018</code>  </td>
-</tr>
-<tr>
-<td><code>label</code></td>
-<td><code>1</code> indicates the user preferred seeing the talk in person,<br> <code>0</code> indicates they would schedule it for later.</td>
-</tr>
-</tbody>
-</table>
-<p>Note all 2018 talks are set to 1. However they are only placeholders, and are not used in training the model. We will  use 2017 data for training, and predict the labels on the 2018 talks.</p>
-<p>Lets start by selecting the 2017 talk descriptions that were labeled by the user for watching in person.</p>
-<div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">year</span><span class="o">==</span><span class="mi">2017</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">label</span><span class="o">==</span><span class="mi">1</span><span class="p">)][</span><span class="s1">'description'</span><span class="p">]</span>
-</pre></div>
-<p>Print the description of the talks that the user preferred watching in person. How many such talks are there?</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise-1:-Exploring-the-dataset">Exercise 1: Exploring the dataset<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Exercise-1:-Exploring-the-dataset">¶</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercise-1.1:-Select-2017-talk-description-and-labels-from-the-Pandas-dataframe.-How-many-of-them-are-present?-Do-the-same-for-2018-talks.">Exercise 1.1: Select 2017 talk description and labels from the Pandas dataframe. How many of them are present? Do the same for 2018 talks.<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Exercise-1.1:-Select-2017-talk-description-and-labels-from-the-Pandas-dataframe.-How-many-of-them-are-present?-Do-the-same-for-2018-talks.">¶</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The 2017 talks will be used for training and the 2018 talks will we used for predicting. Set the values of <code>year_labeled</code> and <code>year_predict</code> to appropriate values and print out the values of <code>description_labeled</code> and <code>description_predict</code>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">year_labeled</span><span class="o">=</span>
-<span class="n">year_predict</span><span class="o">=</span>
-<span class="n">description_labeled</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">year</span><span class="o">==</span><span class="n">year_labeled</span><span class="p">][</span><span class="s1">'description'</span><span class="p">]</span>
-<span class="n">description_predict</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">year</span><span class="o">==</span><span class="n">year_predict</span><span class="p">][</span><span class="s1">'description'</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quick-Introduction-to-Text-Analysis">Quick Introduction to Text Analysis<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Quick-Introduction-to-Text-Analysis">¶</a></h3><p><img src="/posts/introduction-to-text-analysis-with-sklearn/text-analysis.jpg" alt="text-analysis"></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Lets have a quick overview of text analysis. Our end goal is to train a machine learning algorithm by making it go through enough documents from each class to recognize the distingusihing characteristics in documents from a particular class.</p>
-<ol>
-<li><em>Labeling</em> - This is the step where the user (i.e. a human) reviews a set of documents and manually classifies them. For our problem, here a Pycon attendee is labeling a talk description from 2017 as "watch later"(0) or "watch now" (1).</li>
-<li><em>Training/Testing split</em> - In order to test our algorithm, we split parts of our labeled data into training (used to train the algorithm) and testing set (used to test the algorithm).</li>
-<li><em>Vectorization &amp; feature extraction</em> - Since machine learning algorithms deal with numbers rather than words, we vectorize our documents - i.e. we split the documents into individual unique words and count the frequency of their occurance across documents. There are different data normalization is possible at this stage like stop words removal, <a href="https://spacy.io/api/lemmatizer">lemmatization</a> - but we will skip them for now. Each individual token occurrence frequency (normalized or not) is treated as a feature.</li>
-<li><em>Model training</em> - This is where we build the model.</li>
-<li><em>Model testing</em> - Here we test out the model to see how it is performing against label data as we subject it to the previously set aside test set.</li>
-<li><em>Tweak and train</em> - If our measures are not satisfactory, we will change the parameters that define different aspects of the machine learning algorithm and we will train the model again.</li>
-<li>Once satisfied with the results from the previous step, we are now ready to deploy the model and have new unlabled documents be classified by it.</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercise-2:-Vectorize-and-Feature-Extraction">Exercise 2: Vectorize and Feature Extraction<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Exercise-2:-Vectorize-and-Feature-Extraction">¶</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In this step we build the feature set by tokenization, counting and normalization of the bi-grams from the text descriptions of the talk.</p>
-<p><strong>tokenizing</strong> strings and giving an integer id for each possible token, for instance by using white-spaces and punctuation as token separators</p>
-<p><strong>counting</strong> the occurrences of tokens in each document</p>
-<p><strong>normalizing</strong> and weighting with diminishing importance tokens that occur in the majority of samples / documents</p>
-<p>You can find more information on text feature extraction <a href="http://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction">here</a> and TfidfVectorizer <a href="http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html">here</a>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="k">import</span> <span class="n">TfidfVectorizer</span>
-<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span><span class="n">ngram_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">stop_words</span><span class="o">=</span><span class="s2">"english"</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Extra-Credit">Extra Credit<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Extra-Credit">¶</a></h5><p>Note that we are choosing default value on all parameters for <code>TfidfVectorizer</code>. While this is a starting point, for better results we would want to come back and tune them to reduce noise. You can try that after you have taken a first pass through all the exercises. You might consider using <a href="https://spacy.io/api/lemmatizer">spacy</a> to fine tune the input to <code>TfidfVectorizer</code>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercise-2.1-Fit_transform">Exercise 2.1 Fit_transform<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Exercise-2.1-Fit_transform">¶</a></h4><p>We will use the <a href="http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer.fit_transform">fit_transform</a> method to learn the vocabulary dictionary and return term-document matrix. What should be the input to <code>fit_transform</code>?</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [32]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vectorized_text_labeled</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span> <span class="o">...</span> <span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercise-2.2-Inspect-the-vocabulary">Exercise 2.2 Inspect the vocabulary<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Exercise-2.2-Inspect-the-vocabulary">¶</a></h4><p>Take a look at the vocabulary dictionary that is accessible by calling <code>vocabulary_</code> on the <code>vectorizer</code>. The stopwords can be accessed using <code>stop_words_</code> attribute.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Use the <code>get_feature_names</code> function on the Tfidf <code>vectorizer</code> to get the features (terms).</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">occurrences</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">vectorized_text_labeled</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
-<span class="n">terms</span> <span class="o">=</span> <span class="p">(</span> <span class="o">...</span> <span class="p">)</span>
-<span class="n">counts_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'terms'</span><span class="p">:</span> <span class="n">terms</span><span class="p">,</span> <span class="s1">'occurrences'</span><span class="p">:</span> <span class="n">occurrences</span><span class="p">})</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">'occurrences'</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">counts_df</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercise-2.3-Transform-documents-for-prediction-into-document-term-matrix">Exercise 2.3 Transform documents for prediction into document-term matrix<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Exercise-2.3-Transform-documents-for-prediction-into-document-term-matrix">¶</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>For the data on which we will do our predictions, we will use the <a href="http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html#sklearn.feature_extraction.text.TfidfVectorizer.transform">transform</a> method to get the document-term matrix.
-We will use this later, once we have our model ready. What should be the input to the <code>transform</code> function?</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [29]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vectorized_text_predict</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span> <span class="o">...</span> <span class="p">)</span>
-<span class="n">vectorized_text_predict</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercise-3:-Split-into-training-and-testing-set">Exercise 3: Split into training and testing set<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Exercise-3:-Split-into-training-and-testing-set">¶</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Next we split our data into training set and testing set. This allows us to do cross validation and avoid overfitting. Use the <code>train_test_split</code> method from <code>sklearn.model_selection</code> to split the <code>vectorized_text_labeled</code> into training and testing set with the test size as one third of the size (0.3) of the labeled.</p>
-<p><a href="http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html">Here</a> is the documentation for the function. The example usage should be helpful for understanding what <code>X_train, X_test, y_train, y_test</code> tuple represents.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
-<span class="n">labels</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">year</span> <span class="o">==</span> <span class="mi">2017</span><span class="p">][</span><span class="s1">'label'</span><span class="p">]</span>
-<span class="n">test_size</span><span class="o">=</span> <span class="o">...</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">vectorized_text_labeled</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="n">test_size</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercise-3.1-Inspect-the-shape-of-each-output-of-train_test_split">Exercise 3.1 Inspect the shape of each output of train_test_split<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Exercise-3.1-Inspect-the-shape-of-each-output-of-train_test_split">¶</a></h4><p>For each of the output above, get the shape of the matrices.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercise-4:-Train-the-model">Exercise 4: Train the model<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Exercise-4:-Train-the-model">¶</a></h4><p>Finally we get to the stage for training the model. We are going to use a linear <a href="http://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html">support vector classifier</a> and check its accuracy by using the <code>classification_report</code> function. Note that we have not done any parameter tuning done yet, so your model might not give you the best results. Like <code>TfIdfVectorizer</code> you can come back and tune these parameters later.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [49]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sklearn</span>
-<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="k">import</span> <span class="n">LinearSVC</span>
-<span class="n">classifier</span> <span class="o">=</span> <span class="n">LinearSVC</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">classifier</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[LibLinear]</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[49]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>LinearSVC(C=1.0, class_weight=None, dual=True, fit_intercept=True,
-     intercept_scaling=1, loss='squared_hinge', max_iter=1000,
-     multi_class='ovr', penalty='l2', random_state=None, tol=0.0001,
-     verbose=1)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercise-5:-Evaluate-the-model">Exercise 5: Evaluate the model<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Exercise-5:-Evaluate-the-model">¶</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Evaluate the model by using the the <code>classification_report</code> method from the <a href="http://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html">classification_report</a>. What are the values of precision, recall and f1-scores? They are defined <a href="http://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html">here</a>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span> <span class="o">...</span> <span class="p">)</span>
-<span class="n">report</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">classification_report</span><span class="p">(</span> <span class="o">...</span> <span class="p">,</span> <span class="o">...</span> <span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">report</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercise-6:-Make-Predictions">Exercise 6: Make Predictions<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Exercise-6:-Make-Predictions">¶</a></h4><p>Use the model to predict which 2018 talks the user should go to. Plugin <code>vectorized_text_predict</code> from exercise 2.3 to get the <code>predicted_talks_vector</code> into the predict function.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">predicted_talks_vector</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span> <span class="o">...</span> <span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Using the <code>predicted_talk_indexes</code> get  the talk id, description, presenters, title and location and talk date.
-How many talks should the user go to according to your model?</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [53]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_2018</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">year</span><span class="o">==</span><span class="mi">2018</span><span class="p">]</span>
-<span class="n">predicted_talk_indexes</span> <span class="o">=</span> <span class="n">predicted_talks_vector</span><span class="o">.</span><span class="n">nonzero</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">year</span><span class="o">==</span><span class="mi">2017</span><span class="p">])</span>
-
-<span class="n">df_2018_talks</span> <span class="o">=</span> <span class="n">df_2018</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">predicted_talk_indexes</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Next-Steps:">Next Steps:<a class="anchor-link" href="/posts/introduction-to-text-analysis-with-sklearn/#Next-Steps:">¶</a></h4><p>You might not be very happy with the results. You might want to reduce the manual steps for tuning the parameters. So where do you go from here?
-There are three specific next steps that can make this better.</p>
-<ul>
-<li><a href="https://spacy.io/">Spacy</a> - This is an industrial strength natural language processeing libray that has a friendly api. This would be useful in your feature extraction steps.</li>
-<li>Try using a different algorithm. <a href="http://scikit-learn.org/stable/supervised_learning.html">There is a lot</a> to choose from.</li>
-<li><a href="http://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html">Pipeline</a> and <a href="http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html">GridSearchCV</a> together make a great combination for automating the process of searching for the best models and parameters that accurately represent the patterns in your data.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>

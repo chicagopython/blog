@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>https://chicagopython.github.io/archive.html</loc>
-  <lastmod>2019-10-17T22:49:00Z</lastmod>
+  <lastmod>2019-11-21T04:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/categories/</loc>
@@ -87,11 +87,11 @@
  </url>
  <url>
   <loc>https://chicagopython.github.io/index-1.html</loc>
-  <lastmod>2019-10-17T22:49:00Z</lastmod>
+  <lastmod>2019-11-21T04:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/</loc>
-  <lastmod>2019-10-17T22:49:00Z</lastmod>
+  <lastmod>2019-11-21T04:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/battery-life/</loc>
@@ -116,6 +116,10 @@
  <url>
   <loc>https://chicagopython.github.io/posts/django-project-night-tracker/</loc>
   <lastmod>2019-09-15T16:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://chicagopython.github.io/posts/django-rest-framework/</loc>
+  <lastmod>2019-11-21T04:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://chicagopython.github.io/posts/flask-app-for-exchange-rates/</loc>

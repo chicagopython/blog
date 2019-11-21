@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html prefix="            og: http://ogp.me/ns# article: http://ogp.me/ns/article#     " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Build an API using the Django REST framekwork for a dataset of your choice.">
+<meta name="viewport" content="width=device-width">
+<title>Build an API with Django REST Framework | Python Project Night Challenges</title>
+<link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#18354c">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://chicagopython.github.io/posts/django-rest-framework/">
+<link rel="icon" href="../../favicon.ico" sizes="16x16">
+<link rel="manifest" href="../../site.webmanifest">
+<link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#1f91c2">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="theme-color" content="#cceeff">
+<!-- favicons generated using http://realfavicongenerator.net/ --><!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<meta name="author" content="Chicago Python User Group">
+<link rel="prev" href="../home-credit-default-risk/" title="Predict Home Credit Defaults" type="text/html">
+<meta name="twitter:card" content="summary">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+         
+    <header id="header" class="hidden-print"><nav id="menu"><a href="https://chicagopython.github.io/" title="Python Project Night Challenges" rel="home">
+        <img src="../../assets/img/chipy-chipmunk.png" alt="Python Project Night Challenges" id="logo" aria-hidden>
+          Python Project Night Challenges
+    </a>
+
+    <ul>
+<li><a href="../../categories/">Categories</a></li>
+                <li><a href="../../about/">About</a></li>
+    
+    
+    </ul></nav></header><main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><div class="metadata">
+              <p class="commentline">
+        
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/django-rest-framework.html">Comments</a>
+
+
+          
+
+        </p>
+</div>
+        
+    <h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Build an API with Django REST Framework</a></h1>
+
+        <time datetime="2019-11-21T06:00:00-05:00" itemprop="datePublished">November 21, 2019</time><a href="../../categories/cat_web-dev">web-dev</a>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<h2>Build an API with Django REST Framework</h2>
+<h3>Overview</h3>
+<p>For this project, we will be creating a functioning REST API. REST APIs can help distribute useful information via GET requests, as well as post and alter databases in a user friendly fashion.</p>
+<p>This project will revolve around using Django and Django's REST framework to build an API for the dataset of your choice. Django is a full web framework capable of handling both back and front end portions of a web app; and the Django team has created great resources to make setting up a Django app quick and easy.</p>
+<p>While the project is structured around Django, feel free to use flask instead, if you're more comfortable.</p>
+<h3>Environment Setup</h3>
+<p>To avoid bloating of your primary working environment, we strongly recommend creating a virtual environment. The requirements.txt file includes the required packages, and the included versions have been tested for our needs - use different versions at your own risk.</p>
+<p>We also strong recommend using <a href="https://atom.io/">Atom</a> or <a href="https://www.sublimetext.com/3">Sublime Text</a> as your text editor. This project has also NOT been tested using Jupyter Notebook, PyCharm,
+Spider, or any other ide/text editor/programming environment.</p>
+<ol>
+<li>
+<p>For this challenge you will need Python 3.7, pipenv, and git installed. If you're not familiar with pipenv, it's a packaing tool for Python that effectively replaced the pip+virtualenv+requirements.txt workflow. If you already have pip installed, the easiest way to install pipenv is with <code>pip install --user pipenv</code>; however, a better way for Mac/Linux Homebrew users is to instead run <code>brew install pipenv</code>. More options can be found <a href="https://pipenv-fork.readthedocs.io/en/latest/install.html#installing-pipenv">here</a>.</p>
+</li>
+<li>
+<p>The project is in the ChiPy project night repo. If you do not have the repository already, run </p>
+<p><code>git clone https://github.com/chicagopython/CodingWorkshops.git</code></p>
+</li>
+<li>
+<p>Navigate to the folder for this challenge:</p>
+<p><code>cd CodingWorkshops/problems/webdev/django_rest_framework_api</code></p>
+</li>
+<li>
+<p>Run <code>pipenv install</code>, which will install all of the libraries we have recommended for this exercise.</p>
+</li>
+<li>After you've installed all of the libraries, run <code>pipenv shell</code>, which will turn on a virtual environment running Python 3.7.</li>
+<li>To exit the pipenv shell when you are done, simply type <code>exit</code>.</li>
+</ol>
+<h3>Instructions</h3>
+<h4>Find a Database</h4>
+<ul>
+<li>Before advancing, find a database that you wish to use for a REST API. It helps if the data is something you are interested in, but don't waste too much time on this part. <a href="https://www.kaggle.com/tags/databases">Kaggle</a> has a great selection of publicly available databases. If you are looking for something specific, Google has a stellar <a href="https://toolbox.google.com/datasetsearch">database search</a> feature.</li>
+</ul>
+<h4>Create Your First App</h4>
+<ul>
+<li>Create a Django app in a local directory of your choosing. Feel free to use the <a href="(https:/docs.djangoproject.com/en/2.2/intro/tutorial01/)">Django tutorial</a> to accomplish this, but please don't call your app the standard Polls App. Create a unique application inside of your Django directory to handle your database and models. Make sure the application is configured in your settings.py file!</li>
+</ul>
+<h4>Create a Django Model</h4>
+<ul>
+<li>Create a Django model custom to your database. Feel free to take liberties like creating relational databases for your models. The model field types should match the intended fields of your database. Make sure to migrate your Django model when you are finished!</li>
+</ul>
+<h4>Configure the REST framework</h4>
+<ul>
+<li>Make sure you appropriately configure Django REST Framework in your settings.py file. If you forget this step, Django to recognize the add on.</li>
+</ul>
+<h4>Serialization</h4>
+<ul>
+<li>Before creating a url or view, serialize your data. This allows Django to render data into a JSON format. Make sure you designate the table (model) and fields (features) you wish to include in your REST API.</li>
+</ul>
+<h4>Create a View</h4>
+<ul>
+<li>Use the standard Django REST framework to create your Django view. Django REST framework allows you to interact with your API in both JSON and a preset interactive template. If you feel like going the extra mile, make your database queryable to gather the information you need.</li>
+</ul>
+<h4>Designating a URL</h4>
+<ul>
+<li>Finally, designate url addresses where your page views can be found. Make sure to create a URL scheme that makes sense to how the intended user will interact with your API.</li>
+</ul>
+<h4>Running your Server</h4>
+<ul>
+<li>At this point it is time to test your API. This can be accomplished by the manage.py runserver command. Django's default location is localhost:8000/. From there, follow the naming scheme you created in your urls. Feel free to play with your API by using those filterable features you created!</li>
+</ul>
+<h3>Useful Weblinks</h3>
+<ul>
+<li>
+<p>Django Startup and Features</p>
+<p>https://docs.djangoproject.com/en/2.2/intro/tutorial01/</p>
+<p>https://docs.djangoproject.com/en/2.2/ref/applications/</p>
+</li>
+<li>
+<p>Django Models</p>
+<p>https://docs.djangoproject.com/en/2.2/ref/models/fields/</p>
+<p>https://docs.djangoproject.com/en/2.2/topics/db/models/#automatic-primary-key-fields</p>
+</li>
+<li>
+<p>Django REST Framework</p>
+<p>https://www.django-rest-framework.org/#installation</p>
+</li>
+<li>
+<p>Serialization</p>
+<p>https://www.django-rest-framework.org/api-guide/serializers/#modelserializer</p>
+<p>https://www.django-rest-framework.org/api-guide/serializers/#specifying-read-only-fields</p>
+</li>
+<li>
+<p>Views and URLS</p>
+<p>https://www.django-rest-framework.org/tutorial/quickstart/#views</p>
+<p>https://www.django-rest-framework.org/tutorial/quickstart/#urls</p>
+</li>
+</ul>
+</div>
+    </div>
+    <aside class="postpromonav"><div>
+    <span class="hidden-print">
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></span>
+    <span class="hidden-print">
+      <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script><script type="IN/Share" data-url="https://chicagopython.github.io/posts/django-rest-framework/"></script></span>
+    </div>
+    <nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/cat_web-dev/" rel="category"> web-dev</a></li>
+      </ul>
+<ul class="pager hidden-print">
+<li>
+            <a href="../home-credit-default-risk/" rel="prev" class="previous" title="Predict Home Credit Defaults"><span aria-hidden="true">‹ </span>Older</a>
+        </li>
+        <li>
+            <span class="disabled">Newer<span aria-hidden="true"> ›</span></span>
+        </li>
+    </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="chicagopython-github-io",
+            disqus_url="https://chicagopython.github.io/posts/django-rest-framework/",
+        disqus_title="Build an API with Django REST Framework",
+        disqus_identifier="cache/posts/django-rest-framework.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="chicagopython-github-io";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script></main><footer id="footer"><p class="light-sans">© Chicago Python User Group · Subscribe via <a href="../../rss.xml">RSS</a> · Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a> · 
+<a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html">
+<img alt="Gnu Public License version 3.0" style="border-width:0;" src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"></a></p>
+            
+        </footer>
+</body>
+</html>
