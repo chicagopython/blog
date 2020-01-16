@@ -3,7 +3,7 @@
 &lt;a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html"&gt;
 &lt;img alt="Gnu Public License version 3.0"
 style="border-width:0;"
-src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Thu, 16 Jan 2020 02:47:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fuzzy String Matching</title><link>https://chicagopython.github.io/posts/fuzzy-string-matching/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Overview&lt;/h3&gt;
+src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Thu, 16 Jan 2020 02:57:03 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fuzzy String Matching</title><link>https://chicagopython.github.io/posts/fuzzy-string-matching/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Overview&lt;/h3&gt;
 &lt;p&gt;Data collection has and is rapidly expanding. However, data often isn’t submitted and/or collected without the required cleanliness or detail. At ChiPy we face the issue of trying to match Project Night attendees’ Meetup names with their legal names, which are needed for venue security. As a human it’s often easy to tell when names with slight variations match (Mike vs Michael; missing initials, etc), but trying to match hundreds of names one at a time is time consuming. Your job is to match the meetup and given names as accurately as possible using the fuzzy matching technique(s) of your choosing.&lt;/p&gt;
 &lt;p&gt;Background reading:&lt;br&gt;
 - &lt;a href="http://www.basistech.com/whitepapers/the-name-matching-you-need-EN.pdf"&gt;The Name Matching You Need: A Comparison of Name Matching Technologies&lt;/a&gt;&lt;br&gt;
@@ -43,6 +43,25 @@ src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copy
 &lt;li&gt;What is our true goal with matching? In other words, when evaluating our process' success, how do we balance ensuring someone has preregistered with not turning too many people away at the door? To that end, what's the right evaluation metric to choose?&lt;/li&gt;
 &lt;li&gt;How might our approach differ if instead of a couple hundred names we have 10,000, a million, or even a billion names to match?&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h3&gt;Hints (for if you're stuck)&lt;/h3&gt;
+&lt;p&gt;One easy way to load the data is with pandas:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
+
+    &lt;span class="n"&gt;read_kwargs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="s2"&gt;"header"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s2"&gt;"index_col"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s2"&gt;"skip_blank_lines"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s2"&gt;"names"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"meetup_names"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"given_names"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"fuzzy_names.csv"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;read_kwargs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dropna&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;given_names&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"given_names"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="n"&gt;meetup_names&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"meetup_names"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;The Levenshtein algorithm is one of the more basic and popular algorithms for fuzzy string matching. It has a few useful Python implementations, but fuzzywuzzy is probably the most popular.&lt;/p&gt;
+&lt;p&gt;Sklearn has modules dedicated to evaluation metrics. One very simple metric to evaluate how your matching is going is accuracy. Try starting with &lt;code&gt;from sklearn.metrics import accuracy_score&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Happy Developing!&lt;/p&gt;&lt;/div&gt;</description><guid>https://chicagopython.github.io/posts/fuzzy-string-matching/</guid><pubDate>Thu, 16 Jan 2020 11:00:00 GMT</pubDate></item><item><title>Build an API with Django REST Framework</title><link>https://chicagopython.github.io/posts/django-rest-framework/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h2&gt;Build an API with Django REST Framework&lt;/h2&gt;
 &lt;h3&gt;Overview&lt;/h3&gt;
 &lt;p&gt;For this project, we will be creating a functioning REST API. REST APIs can help distribute useful information via GET requests, as well as post and alter databases in a user friendly fashion.&lt;/p&gt;

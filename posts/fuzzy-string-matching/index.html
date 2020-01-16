@@ -91,6 +91,25 @@
 <li>What is our true goal with matching? In other words, when evaluating our process' success, how do we balance ensuring someone has preregistered with not turning too many people away at the door? To that end, what's the right evaluation metric to choose?</li>
 <li>How might our approach differ if instead of a couple hundred names we have 10,000, a million, or even a billion names to match?</li>
 </ol>
+<h3>Hints (for if you're stuck)</h3>
+<p>One easy way to load the data is with pandas:</p>
+<pre class="code literal-block"><span></span>    <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+
+    <span class="n">read_kwargs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">"header"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">"index_col"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">"skip_blank_lines"</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+        <span class="s2">"names"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"meetup_names"</span><span class="p">,</span> <span class="s2">"given_names"</span><span class="p">]</span>
+    <span class="p">}</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"fuzzy_names.csv"</span><span class="p">,</span> <span class="o">**</span><span class="n">read_kwargs</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    <span class="n">given_names</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">"given_names"</span><span class="p">]</span>
+    <span class="n">meetup_names</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">"meetup_names"</span><span class="p">]</span>
+</pre>
+
+
+<p>The Levenshtein algorithm is one of the more basic and popular algorithms for fuzzy string matching. It has a few useful Python implementations, but fuzzywuzzy is probably the most popular.</p>
+<p>Sklearn has modules dedicated to evaluation metrics. One very simple metric to evaluate how your matching is going is accuracy. Try starting with <code>from sklearn.metrics import accuracy_score</code>.</p>
 <p>Happy Developing!</p>
 </div>
     </div>
