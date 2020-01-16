@@ -3,16 +3,16 @@
 &lt;a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html"&gt;
 &lt;img alt="Gnu Public License version 3.0"
 style="border-width:0;"
-src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Thu, 16 Jan 2020 02:40:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fuzzy String Matching</title><link>https://chicagopython.github.io/posts/fuzzy-string-matching/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Overview&lt;/h3&gt;
+src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Thu, 16 Jan 2020 02:43:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fuzzy String Matching</title><link>https://chicagopython.github.io/posts/fuzzy-string-matching/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Overview&lt;/h3&gt;
 &lt;p&gt;Data collection has and is rapidly expanding. However, data often isn’t submitted and/or collected without the required cleanliness or detail. At ChiPy we face the issue of trying to match Project Night attendees’ Meetup names with their legal names, which are needed for venue security. As a human it’s often easy to tell when names with slight variations match (Mike vs Michael; missing initials, etc), but trying to match hundreds of names one at a time is time consuming. Your job is to match the meetup and given names as accurately as possible using the fuzzy matching technique(s) of your choosing.&lt;/p&gt;
-&lt;p&gt;Background reading:
-- &lt;a href="http://www.basistech.com/whitepapers/the-name-matching-you-need-EN.pdf"&gt;The Name Matching You Need: A Comparison of Name Matching Technologies&lt;/a&gt;
-- &lt;a href="https://medium.com/bcggamma/an-ensemble-approach-to-large-scale-fuzzy-name-matching-b3e3fa124e3c"&gt;An Ensemble Approach to Large-Scale Fuzzy Name Matching&lt;/a&gt;
-- &lt;a href="https://towardsdatascience.com/fuzzy-matching-at-scale-84f2bfd0c536"&gt;Fuzzy Matching at Scale&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Some Python libraries you might want to use:
-- &lt;a href="https://pypi.org/project/fuzzywuzzy/"&gt;fuzzywuzzy&lt;/a&gt;
-- &lt;a href="https://pypi.org/project/textdistance/"&gt;textdistance&lt;/a&gt;
-- &lt;a href="https://github.com/Bergvca/string_grouper"&gt;string_grouper&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Background reading:&lt;br&gt;
+- &lt;a href="http://www.basistech.com/whitepapers/the-name-matching-you-need-EN.pdf"&gt;The Name Matching You Need: A Comparison of Name Matching Technologies&lt;/a&gt;&lt;br&gt;
+- &lt;a href="https://medium.com/bcggamma/an-ensemble-approach-to-large-scale-fuzzy-name-matching-b3e3fa124e3c"&gt;An Ensemble Approach to Large-Scale Fuzzy Name Matching&lt;/a&gt;&lt;br&gt;
+- &lt;a href="https://towardsdatascience.com/fuzzy-matching-at-scale-84f2bfd0c536"&gt;Fuzzy Matching at Scale&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;Some Python libraries you might want to use:&lt;br&gt;
+- &lt;a href="https://pypi.org/project/fuzzywuzzy/"&gt;fuzzywuzzy&lt;/a&gt;&lt;br&gt;
+- &lt;a href="https://pypi.org/project/textdistance/"&gt;textdistance&lt;/a&gt;&lt;br&gt;
+- &lt;a href="https://github.com/Bergvca/string_grouper"&gt;string_grouper&lt;/a&gt;  &lt;/p&gt;
 &lt;h3&gt;Setup&lt;/h3&gt;
 &lt;p&gt;There is no existing repo for this project, and no requirements to install. All you need to start is the data, which can be downloaded &lt;a href="https://drive.google.com/file/d/1WtW89K43Rwxq5ZM8Dyryv5EQgkkauOCF/view?usp=sharing"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Feel free to work how you see fit. That said, we strongly recommend setting up a virtual environment.&lt;/p&gt;

@@ -13,15 +13,15 @@
 
 Data collection has and is rapidly expanding. However, data often isn’t submitted and/or collected without the required cleanliness or detail. At ChiPy we face the issue of trying to match Project Night attendees’ Meetup names with their legal names, which are needed for venue security. As a human it’s often easy to tell when names with slight variations match (Mike vs Michael; missing initials, etc), but trying to match hundreds of names one at a time is time consuming. Your job is to match the meetup and given names as accurately as possible using the fuzzy matching technique(s) of your choosing.
 
-Background reading:
-- [The Name Matching You Need: A Comparison of Name Matching Technologies](http://www.basistech.com/whitepapers/the-name-matching-you-need-EN.pdf)
-- [An Ensemble Approach to Large-Scale Fuzzy Name Matching](https://medium.com/bcggamma/an-ensemble-approach-to-large-scale-fuzzy-name-matching-b3e3fa124e3c)
-- [Fuzzy Matching at Scale](https://towardsdatascience.com/fuzzy-matching-at-scale-84f2bfd0c536)
+Background reading:  
+- [The Name Matching You Need: A Comparison of Name Matching Technologies](http://www.basistech.com/whitepapers/the-name-matching-you-need-EN.pdf)  
+- [An Ensemble Approach to Large-Scale Fuzzy Name Matching](https://medium.com/bcggamma/an-ensemble-approach-to-large-scale-fuzzy-name-matching-b3e3fa124e3c)  
+- [Fuzzy Matching at Scale](https://towardsdatascience.com/fuzzy-matching-at-scale-84f2bfd0c536)  
 
-Some Python libraries you might want to use:
-- [fuzzywuzzy](https://pypi.org/project/fuzzywuzzy/)
-- [textdistance](https://pypi.org/project/textdistance/)
-- [string_grouper](https://github.com/Bergvca/string_grouper)
+Some Python libraries you might want to use:  
+- [fuzzywuzzy](https://pypi.org/project/fuzzywuzzy/)  
+- [textdistance](https://pypi.org/project/textdistance/)  
+- [string_grouper](https://github.com/Bergvca/string_grouper)  
 
 
 ## Setup
