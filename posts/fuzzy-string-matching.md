@@ -59,4 +59,28 @@ Some things you might want to consider along the way:
 3. What is our true goal with matching? In other words, when evaluating our process' success, how do we balance ensuring someone has preregistered with not turning too many people away at the door? To that end, what's the right evaluation metric to choose?
 4. How might our approach differ if instead of a couple hundred names we have 10,000, a million, or even a billion names to match?
 
+
+## Hints (for if you're stuck)
+One easy way to load the data is with pandas:
+
+```
+	import pandas as pd
+
+	read_kwargs = {
+	    "header": 0,
+	    "index_col": 0,
+	    "skip_blank_lines": False,
+	    "names": ["meetup_names", "given_names"]
+	}
+
+	data = pd.read_csv("fuzzy_names.csv", **read_kwargs).dropna()
+	given_names = data["given_names"]
+	meetup_names = data["meetup_names"]
+```
+
+The Levenshtein algorithm is one of the more basic and popular algorithms for fuzzy string matching. It has a few useful Python implementations, but fuzzywuzzy is probably the most popular.
+
+Sklearn has modules dedicated to evaluation metrics. One very simple metric to evaluate how your matching is going is accuracy. Try starting with `from sklearn.metrics import accuracy_score`.
+
+
 Happy Developing!
