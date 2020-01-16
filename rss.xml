@@ -3,7 +3,7 @@
 &lt;a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html"&gt;
 &lt;img alt="Gnu Public License version 3.0"
 style="border-width:0;"
-src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Thu, 16 Jan 2020 02:43:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fuzzy String Matching</title><link>https://chicagopython.github.io/posts/fuzzy-string-matching/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Overview&lt;/h3&gt;
+src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copyright><lastBuildDate>Thu, 16 Jan 2020 02:47:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fuzzy String Matching</title><link>https://chicagopython.github.io/posts/fuzzy-string-matching/</link><dc:creator>Chicago Python User Group</dc:creator><description>&lt;div&gt;&lt;h3&gt;Overview&lt;/h3&gt;
 &lt;p&gt;Data collection has and is rapidly expanding. However, data often isn’t submitted and/or collected without the required cleanliness or detail. At ChiPy we face the issue of trying to match Project Night attendees’ Meetup names with their legal names, which are needed for venue security. As a human it’s often easy to tell when names with slight variations match (Mike vs Michael; missing initials, etc), but trying to match hundreds of names one at a time is time consuming. Your job is to match the meetup and given names as accurately as possible using the fuzzy matching technique(s) of your choosing.&lt;/p&gt;
 &lt;p&gt;Background reading:&lt;br&gt;
 - &lt;a href="http://www.basistech.com/whitepapers/the-name-matching-you-need-EN.pdf"&gt;The Name Matching You Need: A Comparison of Name Matching Technologies&lt;/a&gt;&lt;br&gt;
@@ -32,9 +32,9 @@ src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"&gt;&lt;/a&gt;</copy
 
 &lt;h3&gt;So what should we do?&lt;/h3&gt;
 &lt;p&gt;The dataset has three columns: 
-    meetup_id: The unique Meetup identifier for each user.
-    meetup_name: The publicly available display name of the Meetup user.
-    given_names: The "actual" name of the attendee, as given as a form response via Meetup.&lt;/p&gt;
+- meetup_id: The unique Meetup identifier for each user.&lt;br&gt;
+- meetup_name: The publicly available display name of the Meetup user.&lt;br&gt;
+- given_names: The "actual" name of the attendee, as given as a form response via Meetup.  &lt;/p&gt;
 &lt;p&gt;Each row in the dataset has the True matching name. In some cases, the meetup and given names match exactly, in some cases they don't. You won't need the meetup_id while actually attempting to match meetup and given names, but you can use it to validate your approach.&lt;/p&gt;
 &lt;p&gt;Some things you might want to consider along the way:&lt;/p&gt;
 &lt;ol&gt;

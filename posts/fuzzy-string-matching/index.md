@@ -46,9 +46,9 @@ On Windows, instead run the following:
 ## So what should we do?
 
 The dataset has three columns: 
-	meetup_id: The unique Meetup identifier for each user.
-	meetup_name: The publicly available display name of the Meetup user.
-	given_names: The "actual" name of the attendee, as given as a form response via Meetup.
+- meetup_id: The unique Meetup identifier for each user.  
+- meetup_name: The publicly available display name of the Meetup user.  
+- given_names: The "actual" name of the attendee, as given as a form response via Meetup.  
 
 Each row in the dataset has the True matching name. In some cases, the meetup and given names match exactly, in some cases they don't. You won't need the meetup_id while actually attempting to match meetup and given names, but you can use it to validate your approach.
 
