@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html prefix="            og: http://ogp.me/ns# article: http://ogp.me/ns/article#     " vocab="http://ogp.me/ns" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Use fuzzy string matching algorithms to match ChiPy meetup and given names.">
+<meta name="viewport" content="width=device-width">
+<title>Fuzzy String Matching | Python Project Night Challenges</title>
+<link href="../../assets/css/custom.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#18354c">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://chicagopython.github.io/posts/fuzzy-string-matching/">
+<link rel="icon" href="../../favicon.ico" sizes="16x16">
+<link rel="manifest" href="../../site.webmanifest">
+<link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#1f91c2">
+<meta name="msapplication-TileColor" content="#00aba9">
+<meta name="theme-color" content="#cceeff">
+<!-- favicons generated using http://realfavicongenerator.net/ --><!--[if lt IE 9]><script src="../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<meta name="author" content="Chicago Python User Group">
+<link rel="prev" href="../django-rest-framework/" title="Build an API with Django REST Framework" type="text/html">
+<meta name="twitter:card" content="summary">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+         
+    <header id="header" class="hidden-print"><nav id="menu"><a href="https://chicagopython.github.io/" title="Python Project Night Challenges" rel="home">
+        <img src="../../assets/img/chipy-chipmunk.png" alt="Python Project Night Challenges" id="logo" aria-hidden>
+          Python Project Night Challenges
+    </a>
+
+    <ul>
+<li><a href="../../categories/">Categories</a></li>
+                <li><a href="../../about/">About</a></li>
+    
+    
+    </ul></nav></header><main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><div class="metadata">
+              <p class="commentline">
+        
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/fuzzy-string-matching.html">Comments</a>
+
+
+          
+
+        </p>
+</div>
+        
+    <h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Fuzzy String Matching</a></h1>
+
+        <time datetime="2020-01-16T06:00:00-05:00" itemprop="datePublished">January 16, 2020</time><a href="../../categories/cat_data-science+">data-science </a>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<h3>Overview</h3>
+<p>Data collection has and is rapidly expanding. However, data often isn’t submitted and/or collected without the required cleanliness or detail. At ChiPy we face the issue of trying to match Project Night attendees’ Meetup names with their legal names, which are needed for venue security. As a human it’s often easy to tell when names with slight variations match (Mike vs Michael; missing initials, etc), but trying to match hundreds of names one at a time is time consuming. Your job is to match the meetup and given names as accurately as possible using the fuzzy matching technique(s) of your choosing.</p>
+<p>Background reading:
+- <a href="http://www.basistech.com/whitepapers/the-name-matching-you-need-EN.pdf">The Name Matching You Need: A Comparison of Name Matching Technologies</a>
+- <a href="https://medium.com/bcggamma/an-ensemble-approach-to-large-scale-fuzzy-name-matching-b3e3fa124e3c">An Ensemble Approach to Large-Scale Fuzzy Name Matching</a>
+- <a href="https://towardsdatascience.com/fuzzy-matching-at-scale-84f2bfd0c536">Fuzzy Matching at Scale</a></p>
+<p>Some Python libraries you might want to use:
+- <a href="https://pypi.org/project/fuzzywuzzy/">fuzzywuzzy</a>
+- <a href="https://pypi.org/project/textdistance/">textdistance</a>
+- <a href="https://github.com/Bergvca/string_grouper">string_grouper</a></p>
+<h3>Setup</h3>
+<p>There is no existing repo for this project, and no requirements to install. All you need to start is the data, which can be downloaded <a href="https://drive.google.com/file/d/1WtW89K43Rwxq5ZM8Dyryv5EQgkkauOCF/view?usp=sharing">here</a>.</p>
+<p>Feel free to work how you see fit. That said, we strongly recommend setting up a virtual environment.</p>
+<p>If you are using Linux or OS X, run the following to create a new virtualenv:</p>
+<pre class="code literal-block"><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">venv</span>
+<span class="k">source</span> <span class="n">venv</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">activate</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
+</pre>
+
+
+<p>On Windows, instead run the following:</p>
+<pre class="code literal-block"><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">venv</span>
+<span class="n">venv</span><span class="err">\</span><span class="n">Scripts</span><span class="err">\</span><span class="n">activate</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
+</pre>
+
+
+<h3>So what should we do?</h3>
+<p>The dataset has three columns: 
+    meetup_id: The unique Meetup identifier for each user.
+    meetup_name: The publicly available display name of the Meetup user.
+    given_names: The "actual" name of the attendee, as given as a form response via Meetup.</p>
+<p>Each row in the dataset has the True matching name. In some cases, the meetup and given names match exactly, in some cases they don't. You won't need the meetup_id while actually attempting to match meetup and given names, but you can use it to validate your approach.</p>
+<p>Some things you might want to consider along the way:</p>
+<ol>
+<li>Are all the names usable? Could a human uniquely identify matches?</li>
+<li>What patterns can be identified in the data we're working with?</li>
+<li>What is our true goal with matching? In other words, when evaluating our process' success, how do we balance ensuring someone has preregistered with not turning too many people away at the door? To that end, what's the right evaluation metric to choose?</li>
+<li>How might our approach differ if instead of a couple hundred names we have 10,000, a million, or even a billion names to match?</li>
+</ol>
+<p>Happy Developing!</p>
+</div>
+    </div>
+    <aside class="postpromonav"><div>
+    <span class="hidden-print">
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></span>
+    <span class="hidden-print">
+      <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script><script type="IN/Share" data-url="https://chicagopython.github.io/posts/fuzzy-string-matching/"></script></span>
+    </div>
+    <nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/cat_data-science/" rel="category"> data-science </a></li>
+      </ul>
+<ul class="pager hidden-print">
+<li>
+            <a href="../django-rest-framework/" rel="prev" class="previous" title="Build an API with Django REST Framework"><span aria-hidden="true">‹ </span>Older</a>
+        </li>
+        <li>
+            <span class="disabled">Newer<span aria-hidden="true"> ›</span></span>
+        </li>
+    </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="chicagopython-github-io",
+            disqus_url="https://chicagopython.github.io/posts/fuzzy-string-matching/",
+        disqus_title="Fuzzy String Matching",
+        disqus_identifier="cache/posts/fuzzy-string-matching.html",
+        disqus_config = function () {
+            this.language = "en";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="chicagopython-github-io";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script></main><footer id="footer"><p class="light-sans">© Chicago Python User Group · Subscribe via <a href="../../rss.xml">RSS</a> · Powered by <a href="https://getnikola.com" rel="nofollow">Nikola</a> · 
+<a rel="license" href="https://www.gnu.org/licenses/gpl-3.0.en.html">
+<img alt="Gnu Public License version 3.0" style="border-width:0;" src="https://www.gnu.org/graphics/gplv3-with-text-84x42.png"></a></p>
+            
+        </footer>
+</body>
+</html>
